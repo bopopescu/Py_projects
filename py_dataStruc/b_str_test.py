@@ -58,3 +58,5 @@ t_str = "automation test"
 t_enum = list(enumerate(t_str))
 print(type(t_enum)) #<class 'list'>
 print(t_enum) #[(0, 'a'), (1, 'u'), (2, 't'), (3, 'o'), (4, 'm'), (5, 'a'), (6, 't'), (7, 'i'), (8, 'o'), (9, 'n'), (10, ' '), (11
+
+print(":".join("abc")) #a:b:c
