@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Py_QA/.idea/Py_QA.iml" filepath="$PROJECT_DIR$/../Py_QA/.idea/Py_QA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Py_projects.iml" filepath="$PROJECT_DIR$/.idea/Py_projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pyProjects1/.idea/pyProjects.iml" filepath="$PROJECT_DIR$/../pyProjects1/.idea/pyProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pysql/.idea/pysql.iml" filepath="$PROJECT_DIR$/../pysql/.idea/pysql.iml" />
+    </modules>
+  </component>
+</project>

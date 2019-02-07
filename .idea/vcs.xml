@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/py_auto/Hands-On-Enterprise-Automation-with-Python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/py_auto/db_py/nsot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/py_auto/infoblox/infoblox-client" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/py_auto/jupiter/py-junos-eznc" vcs="Git" />
+  </component>
+</project>
