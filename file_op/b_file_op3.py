@@ -1,19 +1,17 @@
-from shutil import copyfile, copy2 #copytree
+from shutil import copyfile, copy2 # copytree
 import os
 import shutil
-from pathlib import Path
-
-
+"""
 with open("output_file2.txt", "w") as output:
     my_list =[]
-    in_file = "doc_dir.txt"
+    in_file = r"logoutput\log1.txt"
 
     with open(in_file, "r") as input:
         for line in input:
             my_list.append(line)
             if len(my_list) == 5:
                 output.writelines(my_list)
-                del my_list[:]
+                del my_list[:] #my_list.clear()
         output.writelines(my_list)
 
 with open("output_file1.txt","w") as output:
@@ -46,3 +44,16 @@ with open(infile, "r") as input:
     with open(newfile1, "w") as output:
         a = input.readlines()
         output.writelines(a)
+"""
+
+with open("write_log.txt", "w") as fout:
+    text = []
+    line = "wifi test passed."
+    for _ in range(5):
+        text.append(line)
+    fout.writelines(text)
+
+with open("write_log1.txt", "w") as fout:
+    line = "wifi test passed."
+    for _ in range(5):
+        fout.write(line)
