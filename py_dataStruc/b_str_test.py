@@ -20,7 +20,10 @@ print(myString[::-1]) #0987654321
 
 #s.find('other') -- searches given string,
 #returns the first index where it begins or -1 if not found
+# s.find(substring, start_pos, end_pos) , search substr in range[start_pos, end_pos), excluding end_pos
+
 #s.replace('old', 'new') -- returns a string where all occurrences of 'old' have been replaced by 'new'
+# if "old" is not found, no replacement happens
 
 #s.strip() -- returns a string with whitespace at the start and end removed.
 #s.split('delim') -- returns a list of substrings separated by the delimiter.
