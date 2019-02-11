@@ -23,12 +23,22 @@ with open(filename, 'w') as csvfile:
     csvRwriter = csv.writer(csvfile)
     csvRwriter.writerow(fields)
     # writing the data rows
-    csvRwriter.writerows(rows)
+    csvRwriter.writerows(rows1)
 with open("mps_flow.csv","w") as csvfile_a:
     csv_write = csv.writer(csvfile_a)
     csv_write.writerow(fields)
-    csv_write.writerows(rows)
+    csv_write.writerows(rows1)
+    #csv_write.writerows(rows)
 
-with open("mps_flow.csv","r") as fin_in:
-    for row in fin_in:
-        print(row)
+with open(filename,"r") as fin_in:
+    csv_reader = csv.reader(fin_in)
+    for line in csv_reader:
+        print(line)
+        #print(type(line))
+        for wd in line:
+            if wd == "":
+                print('quote', end=" ")
+            else:
+                print(wd, end=" ")
+        print()
+
