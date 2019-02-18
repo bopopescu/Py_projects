@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_op/CSV/b_csv_log4.py" beforeDir="false" afterPath="$PROJECT_DIR$/file_op/CSV/b_csv_log4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_op/CSV/dict_wifi.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file_op/CSV/dict_wifi.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_dataStruc/log_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_dataStruc/log_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,61 +14,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_op/CSV/b_json_log1.py">
+        <entry file="file://$PROJECT_DIR$/file_op/CSV/b_csv_log3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-              <folding>
-                <element signature="e#1#12#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="433">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_op/CSV/b_csv_log1.py">
+        <entry file="file://$PROJECT_DIR$/py_dataStruc/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="171">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/file_op/CSV/b_csv_log3.py">
+        <entry file="file://$PROJECT_DIR$/py_dataStruc/b_list_log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_op/CSV/write_dut_1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_op/CSV/b_json_log2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_op/CSV/write_dut.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="-85">
+              <caret line="290" column="36" selection-start-line="290" selection-start-column="24" selection-end-line="290" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -90,6 +56,8 @@
       <find>Techno</find>
       <find>mydict</find>
       <find>valore</find>
+      <find>import copy</find>
+      <find>copy</find>
     </findStrings>
     <replaceStrings>
       <replace>csvReader</replace>
@@ -119,14 +87,15 @@
         <option value="$PROJECT_DIR$/file_op/CSV/write_dut.json" />
         <option value="$PROJECT_DIR$/file_op/CSV/b_json_log2.py" />
         <option value="$PROJECT_DIR$/file_op/CSV/b_json_log1.py" />
+        <option value="$PROJECT_DIR$/py_dataStruc/log_test.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="391" />
-    <option name="y" value="291" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="390" />
+    <option name="y" value="290" />
     <option name="width" value="970" />
-    <option name="height" value="565" />
+    <option name="height" value="566" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -141,17 +110,6 @@
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="file_op" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="file_op" type="462c0819:PsiDirectoryNode" />
-              <item name="CSV" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -183,7 +141,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.b_json_log1">
+  <component name="RunManager" selected="Python.log_test">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -289,7 +247,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="log_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="log_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,11 +255,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/file_op/CSV" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py_dataStruc" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/file_op/CSV/log_csv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py_dataStruc/log_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -312,18 +270,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.b_csv_log3" />
-      <item itemvalue="Python.log_csv" />
       <item itemvalue="Python.b_csv_log4" />
       <item itemvalue="Python.b_json_log1" />
       <item itemvalue="Python.b_json_log2" />
+      <item itemvalue="Python.log_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.log_test" />
         <item itemvalue="Python.b_json_log1" />
         <item itemvalue="Python.b_json_log2" />
         <item itemvalue="Python.b_csv_log4" />
         <item itemvalue="Python.b_csv_log3" />
-        <item itemvalue="Python.log_csv" />
       </list>
     </recent_temporary>
   </component>
@@ -341,15 +299,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1170" extended-state="7" />
+    <frame x="-6" y="-6" width="1453" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10800843" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14467184" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23529412" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23418574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -574,13 +532,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/file_op/CSV/csv_split.py" />
     <entry file="file://$PROJECT_DIR$/file_op/CSV/b_json_log1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="1140">
           <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
           <folding>
             <element signature="e#1#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_op/CSV/b_csv_log1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -608,17 +574,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file_op/CSV/b_csv_log1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/file_op/CSV/split.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_op/CSV/conn_str.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/file_op/CSV/b_csv_log3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py_dataStruc/log_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py_dataStruc/b_list_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="290" column="36" selection-start-line="290" selection-start-column="24" selection-end-line="290" selection-end-column="36" />
         </state>
       </provider>
     </entry>

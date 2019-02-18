@@ -1,13 +1,9 @@
-import datetime, os
-import shutil
-print(datetime.date.today())
-print(datetime.datetime.now())
-#2019-01-31 14:35:20.771625
-test_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S" )
-test_time_list = test_time.split()
-print(test_time_list)
+test_id = ["wifi", "ax", "bt"]
 
-print(os.getcwd())
-print(os.listdir())
+test = test_id.copy()
 
-shutil.copytree("", ".\\")
+#test1 = test_id.copy.deepcopy()
+import copy
+test_1 = copy.deepcopy(test_id)
+
+print(id(test_id), id(test), id(test_1), sep="; ")
