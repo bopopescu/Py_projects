@@ -295,20 +295,25 @@ strs1_st = sorted(strs1, key=len)  ##['d', 'bb', 'ccc', 'aaaa', 'AAAA'], for sam
 sorted(strs, key=str.lower)  ##['aa', 'BB', 'CC', 'zz']
 (sorted(strs, key=str.upper))
 
+#ADD
 #list.append(elem) -- adds a single element to the end of the list.does not return the new list, just modifies the original.
 #list.insert(index, elem) -- inserts the element at the given index, shifting elements to the right.
 #list.extend(list2)--list2 must be a list or iterable; adds the elements in list2 to the end of the list.
 #Using + or += on a list is similar to using extend().
 
+#search
 #list.index(elem) -- searches the given element and returns its index.
 #list.index(elem,start_pos)
 #Throws a ValueError if the element does not appear (use "in" to check without a ValueError).
 #i = somelist.index(x) if x in somelist else None
 
+#sort
 #list.sort() -- sorts the list in place (does not return it). (The sorted() function shown below is preferred.)
 #list.reverse() -- reverses the list in place (does not return it)
 
+##
 #list.remove(elem) -- searches for the first instance of the given element and removes it (throws ValueError
+
 ##list.pop(index) -- removes and returns the element at the given index.
 #list.pop() -- remove the last element, and return the element being removed
 

@@ -1,9 +1,10 @@
-test_id = ["wifi", "ax", "bt"]
+test = dict([('wifi', 2),("bt",3),('AC',4)])
 
-test = test_id.copy()
+test_1 = [("mu",5),("su",6),("su", 7)]
 
-#test1 = test_id.copy.deepcopy()
-import copy
-test_1 = copy.deepcopy(test_id)
+test.update(test_1)
 
-print(id(test_id), id(test), id(test_1), sep="; ")
+print(type(test.items()))
+test2 = list(test.items())
+for i in test2:
+    print(i, sep="; ")

@@ -1,6 +1,6 @@
 # dictionary not sorted by default
 my_dic = dict([("ID", 1),("Test", "wifi")])# a list of tuples
-#print(my_dic.get("Test")) # "wifi"
+#print(my_dic.get("Test")) # "wifi" , "return None if key is wrong"
 
 #Some tuples can be used as dictionary keys (specifically, tuples that contain immutable values
 #like strings, numbers, and other tuples). Lists can never be used as dictionary keys,
@@ -8,10 +8,7 @@ my_dic = dict([("ID", 1),("Test", "wifi")])# a list of tuples
 
 #Tuples can be used as values in sets whereas lists can not
 
-wi = {"mimo", "rsdb",("a","b"),["c","d"]}
-print(wi)
-    wi = {"mimo", "rsdb",("a","b"),["c","d"]}
-#TypeError: unhashable type: 'list'["c","d"]
+wi = {"mimo", "rsdb",("a","b"),["c","d"]} #TypeError: unhashable type: 'list'
 
 squares = {1:1, 2:4, 3:9, 4:16, 5:25}
 #print(squares.pop(4)) #16
@@ -69,7 +66,7 @@ AC 4
 2 wifi
 3 bt
 4 AC
-##########################################
+#######################################################################
 len(test)
 #Add
 test["MIMO"] = 10
@@ -78,12 +75,18 @@ test.pop("MIMO")
 #rmv last item
 test.popitem()
 #
+test.update({"MU-MIMO": 6})
+
+#
+test = dict([('wifi', 2),("bt",3),('AC',4)])
+test_1 = [("mu",5),("su",6),("su", 7)]
+test.update(test_1)
+#
 sorted(iterable_sequence)
 sorted(iterable_sequence, reverse=True)
 del test["MIMO"]
 test.clear() # empty dic
-test.update({"MU-MIMO": 6})
-
+#
 for l,k in enumerate(test_id):
     print(l,k)
 print(l)
@@ -119,3 +122,15 @@ new_add = [("wifiz", 1), ("bzt", 2), ("rzsdb", 3)]
 dic2.update(new_add)
 for key in dic2.keys():
     print(key)
+
+##Add
+a = {"wifi": 0, "AX":1, "BT": 2}
+b = dict([("wifi", 0), ("AX", 1), ("BT", 2)])
+
+#sub
+#a.pop(key)
+
+#search (N)
+# walk through
+#a.items(), a.keys(), a.values()
+
