@@ -1,0 +1,35 @@
+[Configuration file] 
+
+# Project Name: change for each chipset and solution
+Project_Name = IQfact+_MRVL_8801  
+
+# Test_mode: This level can be set to sanity or full. default level is sanity. Case insensitive
+Test_mode = full
+
+# New_PKG_Installation: 1-New package & needs installation on QA station;
+#		    		 	0-Package already installed, skip installation;
+New_PKG_Installation = 1
+
+#Install Redistributables: 		1-Install redistributables such as VC2005, 2008, etc.
+#								0-Redistributables already installed
+Install_Redistributables = 0
+
+# Receipient Email ID : Email notification will be send to these addresses
+# Errors will only be sent to the first address
+Recipient_Email_ID = daniel.fong@litepoint.com 
+
+#Enable Email Notifications in the first place
+Enable_Emails = 0
+
+#Test lists
+Full_tests_list = 8801.txt
+Quick_tests_list = test4.txt test5.txt test6.txt
+
+#Number_of_DUTs
+Number_of_DUTs = 2
+
+#Com_Ports_List
+Com_Ports_List = 9 31
+
+#Report Template files
+Report_Template_list = IQramp-templates1.json 
