@@ -1,0 +1,37 @@
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\ax_Log_all.txt 行数：33061 字符数：2308859
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\ax_newtxt.txt 行数：1 字符数：13
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\ax_result.txt 行数：1 字符数：5
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\doc_dir_cpy.txt 行数：14 字符数：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\log_test.txt 行数：0 字符数：0
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\new_log.txt 行数：1 字符数：15
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\output_file1.txt 行数：7 字符数：145
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\result.txt 行数：1 字符数：57
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\doc_dir\doc_dir.txt 行数：14 字符数：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\doc_dir_cp2\doc_dir.txt 行数：14 字符数：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path1\doc_dir.txt 行数：14 字符数：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_1\log_all.txt 行数：1070400 字符数：89701528
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_1\XPCHost_log.txt 行数：163944 字符数：12017774
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_2\log_all.txt 行数：1070400 字符数：89707666
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_2\XPCHost_log.txt 行数：163809 字符数：12035148
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_3\log_all.txt 行数：1070400 字符数：89710009
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_3\XPCHost_log.txt 行数：165968 字符数：12175827
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\path1\doc_dir.txt 行数：14 字符数：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\ax_Log_all.txt #line：33061 #chars：2308859
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\ax_newtxt.txt #line：1 #chars：13
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\ax_result.txt #line：1 #chars：5
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\doc_dir_cpy.txt #line：14 #chars：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\log_test.txt #line：0 #chars：0
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\new_log.txt #line：1 #chars：15
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\new_res.txt #line：18 #chars：1858
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\output_file1.txt #line：7 #chars：145
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\result.txt #line：1 #chars：57
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\doc_dir\doc_dir.txt #line：14 #chars：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\doc_dir_cp2\doc_dir.txt #line：14 #chars：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path1\doc_dir.txt #line：14 #chars：174
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_1\log_all.txt #line：1070400 #chars：89701528
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_1\XPCHost_log.txt #line：163944 #chars：12017774
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_2\log_all.txt #line：1070400 #chars：89707666
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_2\XPCHost_log.txt #line：163809 #chars：12035148
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_3\log_all.txt #line：1070400 #chars：89710009
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\log_3\XPCHost_log.txt #line：165968 #chars：12175827
+C:\Users\jsun\Documents\pyProjects\Auto_Jenkins\unzipped_content\path2 - Copy\path1\doc_dir.txt #line：14 #chars：174
