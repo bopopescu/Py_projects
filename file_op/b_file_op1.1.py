@@ -60,3 +60,9 @@ for (root, dir, file) in os.walk(os.getcwd(), topdown = True):
 
 #os.path.basename(path) returns the tail of the path.
 # The basename of '/foo/bar/item' returns 'item'
+
+import shutil
+import os
+
+for i in os.listdir("."):
+    print(i, os.path.basename(os.path.abspath(i)), os.path.dirname(os.path.abspath(i)), sep=", ")
