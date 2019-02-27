@@ -8,20 +8,21 @@ cur_dir = os.getcwd() + "\logs" # <class 'str'>
 ss = os.path.basename(cur_dir)
 src_filename = os.path.abspath("__file__")
 dst_filename = src_filename +"_cpy.txt"
-#print(src_filename, '\n',dst_filename)
-#copyfile(src_filename, dst_filename) #dst must be file name
+# print(src_filename, '\n',dst_filename)
 
-#copy2(src_file, dst_dir) # dst1 can be file name or directory name, src_file can't be dir.
+# copyfile(src_filename, dst_filename) #dst must be file name
+# copy2(src_file_name, dst_dir) # dst1 can be file name or directory name, src_file can't be dir.
+
 dst_dirname  = "\\".join([os.getcwd(), "logs", "copy4_folder"])
-#copy2(src_filename,dst_dirname)
+# copy2(src_filename,dst_dirname)
 #  dst_dirname must exist
 #  src is single file
 
 #
 #
-#copy() copies the file data and the file’s permission mode (see os.chmod()).
-#Other metadata, like the file’s creation and modification times, is not preserved.
-#To preserve all file metadata from the original, use copy2() instead
+# copy() copies the file data and the file's permission mode (see os.chmod()).
+# Other metadata, like the file's creation and modification times, is not preserved.
+# To preserve all file metadata from the original, use copy2() instead
 
 src_dir = "\\".join([os.getcwd(),"logs","copy_folder"])
 #src_dir = os.path.join(os.getcwd(), "logs", "copy_folder")

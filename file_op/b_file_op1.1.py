@@ -4,8 +4,25 @@ import fnmatch
 import shutil
 #os.path.exists will also return True if there's a regular file with that name.
 #os.path.isdir will only return True if that path exists and is a directory.
-#copy, copy2 need des. folder exists
-#copy,copytree doesn't preserve meta data of copied files, copy2 does
+
+# copy, copy2 need des. folder exists
+# if file exists, copy2 will overwirte the file with same name
+# copy,copytree doesn't preserve meta data of copied files, copy2 does
+# os.remove(file_name)
+import shutil
+import os
+
+print(os.getcwd())
+#os.remove("write_log.txt")
+#src = os.path.join(os.getcwd(), "zip_op", "write_log.txt")
+#src = r".\zip_op\wriet_log.txt"
+#src = os.path.join( "zip_op", "write_log.txt")
+#src = "zip_op\\write_log.txt"
+src = ".\zip_op\write_log.txt"
+#des = "."
+des = "write_log.txt"
+shutil.copy2(src, des)
+
 py_file = glob.glob("*.py") # a list of .py files
 if not os.path.exists("py_tmp"):
     os.mkdir("py_tmp")
@@ -35,3 +52,11 @@ for (root, dir, file) in os.walk(os.getcwd(), topdown = True):
         print("---------------------------------------------------------")
 
 
+#
+#os.path.split(path) split the pathname path into a pair; (head, tail).
+
+#os.path.dirname(path) returns the head of the path.
+#The dirname of '/foo/bar/item' is '/foo/bar'.
+
+#os.path.basename(path) returns the tail of the path.
+# The basename of '/foo/bar/item' returns 'item'

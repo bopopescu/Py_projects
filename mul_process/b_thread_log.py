@@ -15,7 +15,8 @@ def load_url(url, timeout):
 
 with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
     future_to_url = {executor.submit(load_url, url, 60): url for url in URLS}
-    print(future_to_url)
+    print(type(future_to_url))
+    print("future_to_url is {}".format(future_to_url))
 for future in concurrent.futures.as_completed(future_to_url):
     url = future_to_url[future]
     try:

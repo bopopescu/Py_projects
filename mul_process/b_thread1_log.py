@@ -1,6 +1,6 @@
 from __future__ import with_statement
 """
-test_items=["wifi","ax","ac","bt"]
+test_items = ["wifi","ax","ac","bt"]
 #print("{0},{2}".format(*test_items))
 #print(test_items)
 ax_test = ["rsdb","rsdb_mimo","rxrx"]
