@@ -1,5 +1,5 @@
 from __future__ import with_statement
-"""
+########
 test_items = ["wifi","ax","ac","bt"]
 #print("{0},{2}".format(*test_items))
 #print(test_items)
@@ -68,9 +68,9 @@ for i in lt:
     sq_n = math.sqrt(i)
     sqrt_n = int(math.floor(math.sqrt(i)))
     print(i, sq_n, sqrt_n)
-"""
+########
 
-"""
+########
 import concurrent.futures
 import math
 
@@ -105,8 +105,8 @@ if __name__ == '__main__':
     print(os.cpu_count())
     print(os.getpid())
 
-"""
-"""
+########
+########
 # concurrent.futures实现进程池和线程池
 
 from concurrent.futures import ThreadPoolExecutor
@@ -136,11 +136,11 @@ if __name__ == '__main__':
         time.sleep(i)
         print("{} sec later".format(i))
 
-"""
+########
 import multiprocessing
 import random
 import time
-"""
+########
 def read(q):
     while True:
         try:
@@ -167,9 +167,9 @@ def main():
 
 if __name__ == '__main__':
     main()
-"""
+########
 
-"""
+########
 from concurrent.futures import ProcessPoolExecutor
 #import concurrent
 
@@ -196,92 +196,71 @@ def main():
 
 if __name__ == '__main__':
     main()
-"""
-"""
+########
 import threading
-from time import sleep,ctime
+from time import sleep, ctime
+
 lock = threading.Lock()
-loops = [4,2]
+test_list = [10, 5]
 
-def loop(nloop,nsec):
+def loop(num_run, nsec):
     lock.acquire()
-    print('start loop '+str(nloop)+' at : '+str(ctime()))
+    print('start run ' + str(num_run) + ' at : ' + str(ctime()) + " for " + str(nsec), " seconds")
+    sleep(nsec)
     lock.release()
-    sleep(nsec)
-    print('loop ',nloop,' done at : ',ctime())
+    print("num_run {} is idle".format(num_run))
+    if num_run == 0:
+        sleep(nsec)
+    print('run ', num_run, ' done at : ', ctime())
+
 
 def main():
-    print('starting at : ',ctime())
+    print('starting at : ', ctime())
     threads = []
-    nloops = range(len(loops))
+    runs = range(len(test_list))
 
-    for i in nloops:
-        t = threading.Thread(target=loop,args=(i,loops[i]))
+    for run in runs:
+        t = threading.Thread(target=loop, args=(run, test_list[run]))
         threads.append(t)
 
-    for i in nloops:
+    for i in runs:
         threads[i].start()
 
-    for i in nloops:
+    for i in runs:
         threads[i].join()
 
-    print('all DONE at : ',ctime())
+    print('all DONE at : ', ctime())
+
 
 if __name__ == '__main__':
+    print(5 // 2, 6 % 2, 7 / 2)
     main()
-"""
-"""
+
+
+#####
 import threading
-from time import sleep,ctime
 
-loops = [4,2]
-
-def loop(nloop,nsec):
-    print('start loop '+str(nloop)+' at : '+str(ctime()))
-    sleep(nsec)
-    print('loop ',nloop,' done at : ',ctime())
-
-def main():
-    print('starting at : ',ctime())
-    threads = []
-    nloops = range(len(loops))
-
-    for i in nloops:
-        t = threading.Thread(target=loop,args=(i,loops[i]))
-        threads.append(t)
-
-    for i in nloops:
-        threads[i].start()
-
-    for i in nloops:
-        threads[i].join()
-
-    print('all DONE at : ',ctime())
-
-if __name__ == '__main__':
-    main()
-"""
-"""
-import threading
 balance = 0
 
+
 def data_operator(n):
-    global balance  # 表明在这个函数中，balance 是使用的全局的
+    global balance  #
     balance += n
     balance -= n
-    #print(balance, "data_operator")
+    # print(balance, "data_operator")
 
 
 def change_it(n):
     print(n, "change-it")
+
     def change_it(n):
         for item in range(0, 10 * 6):
-            with main_thread_lock:  # 这里是在操作主要数据的时候，获得锁，在执行完操作之后将锁释放，这里使用with 语句更加简洁的实现，一定要注意锁的释放
+            with main_thread_lock:
                 data_operator(n)
 
 
 def thread_synchronization():
-    #print(5)
+    # print(5)
     t1 = threading.Thread(target=change_it, args=(5,))
     t2 = threading.Thread(target=change_it, args=(8,))
 
@@ -292,10 +271,12 @@ def thread_synchronization():
     global balance
     print(balance)
 
-if __name__  == "__main__":
+
+if __name__ == "__main__":
     thread_synchronization()
 
-"""
+
+####
 import threading
 import time
 class Counter():
@@ -309,14 +290,13 @@ class Counter():
 def count_up_100000(counter):
     for i in range(100000):
         counter.increment()
-"""
 
 counter = Counter()
 initial_count = counter.get_count()
 count_up_100000(counter)
 final_count = counter.get_count()
 print(final_count)
-"""
+########
 
 '''
 import threading
@@ -330,7 +310,7 @@ after_join = counter.get_count()
 print("mid_join _{}".format(mid_join))
 print(after_join)
 '''
-"""
+########
 import threading
 def conduct_trial(i):
     counter = Counter()
@@ -347,7 +327,7 @@ trial2 = conduct_trial(2)
 print(trial2)
 trial3 = conduct_trial(3)
 print(trial3)
-"""
+########
 '''
 i 1 --> inter_value 28077
 28077
@@ -358,7 +338,7 @@ i 3 --> inter_value 37597
 '''
 
 ##
-"""
+########
 import threading
 def count_up_100000(counter, lock):
     for i in range(10000):
@@ -385,9 +365,9 @@ trial2 = conduct_trial()
 print(trial2)
 trial3 = conduct_trial()
 print(trial3)
-"""
+########
 ##
-""""""
+################
 '''
 def count_up_100000(counter):
     for i in range(100000):
@@ -402,9 +382,9 @@ final_count = counter.get_count()
 print(final_count) #200000
 '''
 
-"""
-"""
-"""
+########
+########
+########
 def count_up_100000(counter):
     #lock = threading.Lock()
     for i in range(100000):
@@ -433,9 +413,9 @@ for i in range(100):
     #trial3 = conduct_trial()
     #print(trial3)
 
-"""
+########
 
-"""#####
+#############
 import threading
 class Counter():
     def __init__(self):
@@ -479,13 +459,13 @@ print(trial3)
 200000
 '''
 #####
-"""
+########
 # Example.py
 '''
 Standard Producer/Consumer Threading Pattern
 '''
 
-"""
+########
 import time
 import threading
 from multiprocessing import Queue
@@ -546,31 +526,37 @@ def Producer():
 if __name__ == '__main__':
     Producer()
 ###
-"""
-"""
+########
+########
 ### 1
-from threading import Thread
+import threading
 import multiprocessing
 import time
+import math
 
 def countdown(n):
     while n > 0:
         n -= 1
 
 def mult_threads(n):
-     t1 = Thread(target= countdown,args=(n//2,))
-     t2 = Thread(target= countdown,args=(n//2,))
-     t1.start();t2.start()
+     t1 = threading.Thread(target= countdown,args=(n//2,))
+     # t3 = threading.Thread(target=countdown, args=(n//2,))
+     t2 = threading.Thread(target= countdown,args=(n//2,))
+     t1.start()
+     t2.start()
      print('started')
-     t1.join();t2.join()
+     t1.join()
+     t2.join()
      print("delay ended")
      #time.sleep(2)
 
 def mult_process(n):
     pn1 = multiprocessing.Process(target=countdown,args=(n//2,))
     pn2 = multiprocessing.Process(target=countdown,args=(n//2,))
-    pn1.start();pn2.start()
-    pn1.join();pn2.join()
+    pn1.start()
+    pn2.start()
+    pn1.join()
+    pn2.join()
 
 
 if __name__ == '__main__':
@@ -579,18 +565,26 @@ if __name__ == '__main__':
     #单核串行
     t1_s_time = time.clock()
     countdown(num)
-    print ('1 thread 1 Process exec:' + str(time.clock() -t1_s_time))
+    print ('1 thread 1 Process exec: ', math.floor(time.clock() -t1_s_time))
     #双核2Thread
     t2_s_time = time.clock()
     mult_threads(num)
-    print ('2 threads  exec:' + str(time.clock() -t2_s_time))
+    print ('2 threads  exec: ', math.floor(time.clock() -t2_s_time))
     #双核2Process
     t3_s_time = time.clock()
     mult_process(num)
     end_time =  time.clock()
-    print ('1 Threads 2 Process execTime = ' + str(end_time - t3_s_time) )
+    print ('1 Threads 2 Process execTime = ', math.floor(end_time - t3_s_time) )
 """
+CPU_Cores = :8
+1 thread 1 Process exec:  46
+started
+delay ended
+2 threads  exec:  44
+1 Threads 2 Process execTime =  24
 """
+########
+########
 ## 2.
 
 import multiprocessing
@@ -650,9 +644,9 @@ if __name__ == "__main__":
 
     print(time.clock() - start)
 
-"""
+########
 ### 4
-"""
+########
 import os
 import time
 import subprocess
@@ -661,10 +655,10 @@ start_time = time.clock()
 subprocess.run(["TIMEOUT", "/T", "4"])
 time_lapse = time.clock() - start_time
 print("time_lapse is {}".format(time_lapse))
-"""
+########
 ###5
 # -*- coding: GBK -*-
-"""
+########
 #import urlparse
 import datetime
 import os
@@ -689,8 +683,19 @@ def getFilesize(file):
     FILE_SIZE = fstream.tell()
     fstream.close()
 
-"""
-"""
+########
+########
+# import urlparse
+import datetime
+import os
+from multiprocessing import Process, Queue, Array, RLock
+
+# 多进程分块读取文件
+
+FILE_SIZE=0
+WORKERS = 4
+BLOCKSIZE = 100_000
+
 def process_found(pid, array, file, rlock):
     global FILE_SIZE
     global JOB
@@ -720,8 +725,8 @@ def process_found(pid, array, file, rlock):
         endpossition = array[pid] = (startpossition + BLOCKSIZE) if (startpossition + BLOCKSIZE) < FILE_SIZE else FILE_SIZE
 
         rlock.release()
-        with open("ax_newtxt.txt", "w") as fw:
-            fw.write("WHat happened")
+        with open("ax_newtxt.txt", "a") as fw:
+            fw.write("WHat happened\n")
         if startpossition == FILE_SIZE:  # end of the file
             print( 'pid%s end' % (pid))
             break
@@ -747,14 +752,12 @@ def process_found(pid, array, file, rlock):
 
     fstream.close()
 
-
 def main():
-    global FILE_SIZE
     print(datetime.datetime.now().strftime("%Y/%d/%m %H:%M:%S"))
 
-    file = "ax_Log_all.txt"
-    getFilesize(file)
-    print( FILE_SIZE)
+    file = "logOutput.txt"
+    FILE_SIZE = os.path.getsize(file)
+    print( "FILE_SIZE is ", FILE_SIZE)
 
     rlock = RLock()
     array = Array('l', WORKERS, lock=rlock)
@@ -774,23 +777,30 @@ def main():
 if __name__ == '__main__':
     main()
 """
-###6
+if __name__  == "__main__":
+    import os
+    print("file size is ", os.path.getsize(__file__))
+    print("file size is ", os.stat(__file__).st_size)
+    print(getFilesize(__file__))
 """
+########
+###6
+########
 import os
 import time
 from multiprocessing import Pool
 
-def getFile(path) :
-  #获取目录下的文件list
+
+def getFile(path):
   fileList = []
-  for root, dirs, files in list(os.walk(path)) :
-    for i in files :
-      if i.endswith('.txt') or i.endswith('.10w') :
-        fileList.append(root + "\\" + i)
+  for root, dirs, files in list(os.walk(path)):
+    for i in files:
+      if i.endswith('.txt') or i.endswith('.txt'):
+        fileList.append(os.path.join(root, i))
   return fileList
 
 def operFile(filePath) :
-  #统计每个文件中行数和字符数，并返回
+  # count lines and num of chars
   filePath = filePath
   fp = open(filePath)
   content = fp.readlines()
@@ -799,39 +809,48 @@ def operFile(filePath) :
   alphaNum = 0
   for i in content :
     alphaNum += len(i.strip('\n'))
-  return lines,alphaNum,filePath
+  return lines, alphaNum, filePath
 
 def out(list1, writeFilePath) :
-  #将统计结果写入结果文件中
+  # write results
   fileLines = 0
   charNum = 0
-  fp = open(writeFilePath,'a')
-  for i in list1 :
-    fp.write(i[2] + " #line："+ str(i[0]) + " #chars："+str(i[1]) + "\n")
+  # with open(writeFilePath, 'a') as fin:
+
+
+  fp = open(writeFilePath, 'a')
+  for i in list1:
+    fp.write(i[2] + " has {} lines and {} chars\n".format(i[0], i[1]))
+    #fp.write("lines")
     fileLines += i[0]
     charNum += i[1]
   fp.close()
-  print(fileLines, charNum)
+  #print(fileLines, charNum)
 
 if __name__ == "__main__":
-  #创建多个进程去统计目录中所有文件的行数和字符数
+  # Create processes
   startTime = time.time()
   filePath = os.getcwd()
   fileList = getFile(filePath)
+
   pool = Pool(5)
-  resultList =pool.map(operFile, fileList)
+  resultList = pool.map(operFile, fileList)
+
   pool.close()
   pool.join()
 
+
   writeFilePath = "new_res.txt"
-  print(resultList)
+  print("Result List is: ")
+  for i in resultList:
+    print(i)
   out(resultList, writeFilePath)
   endTime = time.time()
-  print ("used time is ", endTime - startTime)
+  print ("\n\nused time is ", endTime - startTime)
 
-"""
+########
 ###7
-"""
+########
 import multiprocessing as mp
 def job(q):
     res = 0
@@ -850,10 +869,10 @@ if __name__ == '__main__':
     res1 = q.get()
     res2 = q.get()
     print("res1 is {},\n res2 is {}".format(res1,res2))
-"""
+########
 
 ###9
-"""
+########
 import multiprocessing as mp
 def job(x):
     return x*x
@@ -872,9 +891,9 @@ def multicore_2():
 if __name__ == '__main__':
     multicore()
     multicore_2()
-"""
+########
 ###10
-"""
+########
 import threading
 from time import sleep, ctime
 import datetime
@@ -902,9 +921,9 @@ def main():
 
 if __name__ == '__main__':
     main()
-"""
+########
 ###10
-"""
+########
 #from __future__ import with_statement
 import threading
 from time import sleep,ctime
@@ -939,9 +958,9 @@ def main():
 
 if __name__ == '__main__':
     main()
-"""
+########
 ###10
-"""
+########
 from time import ctime
 import threading
 
@@ -972,9 +991,9 @@ if __name__ == '__main__':
         t.join()  # 在这个子线程完成运行之前，主线程将一直被阻塞
 
     print('thread %s ended.' % threading.current_thread().name)
-"""
+########
 ###11
-"""
+########
 import threading
 
 money = 0 # 变量 money 被 t1和 t2 两个线程共享
@@ -1002,9 +1021,9 @@ t2.start()
 t1.join()
 t2.join()
 print(money)
-"""
+########
 #12
-"""
+########
 from multiprocessing import Process, Queue
 import os
 
@@ -1035,5 +1054,5 @@ if __name__ == '__main__':
     pr.terminate() # 强行终止pr进程
 
     print('child process stop')
-"""
+########
 ###13

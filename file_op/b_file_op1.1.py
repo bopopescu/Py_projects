@@ -66,3 +66,20 @@ import os
 
 for i in os.listdir("."):
     print(i, os.path.basename(os.path.abspath(i)), os.path.dirname(os.path.abspath(i)), sep=", ")
+
+# find file size
+
+def getFilesize(file):
+    with open(file,"r") as f:
+        f.seek(0, os.SEEK_END)# os.SEEK_SET, os.SEEK_CUR
+        #fstream = open(file, 'r')
+        #fstream.seek(0, os.SEEK_END)
+        FILE_SIZE = f.tell()
+        return FILE_SIZE
+
+if __name__  == "__main__":
+    import os
+    print("file size is ", os.path.getsize(__file__))
+    print("file size is ", os.stat(__file__).st_size)
+    print(getFilesize(__file__))
+#
