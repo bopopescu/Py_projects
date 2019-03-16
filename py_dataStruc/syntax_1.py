@@ -174,3 +174,14 @@ bd = [ [0]*8 for i in range(8)]
 pprint(bd)
 bd[0][0]=1
 pprint(bd)
+
+###
+import queue
+
+test_q = queue.Queue()
+for i in range(10):
+    test_q.put(i*10)
+
+print(test_q.qsize())
+while not test_q.empty():
+    print(test_q.get(), end=", ")

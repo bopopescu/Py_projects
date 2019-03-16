@@ -1,6 +1,9 @@
 from math import sqrt
 from timeit import default_timer as timer
 import concurrent.futures
+import time
+
+st_time = time.perf_counter() # replace timeit.defaulte_timer()
 def is_prime(x):
   if x < 2:
     return False
