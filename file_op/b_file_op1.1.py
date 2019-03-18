@@ -133,3 +133,21 @@ print("done")
 for line in exec.stdout:
     print(line.decode('utf-8').strip())
     print(line)
+
+#
+import subprocess
+
+p1 = subprocess.Popen('dir', shell=True, stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+p2 = subprocess.Popen('sort /R', shell=True, stdin=p1.stdout)
+
+p1.stdout.close()
+out, err = p2.communicate()
+
+##
+print('read:')
+proc = subprocess.Popen(
+    ['echo', '"to stdout"'],
+    stdout=subprocess.PIPE,
+)
+stdout_value = proc.communicate()[0].decode('utf-8')
+print('stdout:', repr(stdout_value))
