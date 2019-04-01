@@ -261,6 +261,41 @@ map(lambda x: x['points'] * 10, dict_a)  # Output: [100, 80]
 map(lambda x: x['name'] == "python", dict_a)  # Output: [True, False]
 a = [1, 2, 3, 4, 5, 6]
 b=filter(lambda x : x % 2 == 0, a) # Output: [2, 4, 6]
+
+dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
+b=filter(lambda x : x['name'] == 'python', dict_a) # Output: [{'name': 'python', 'points': 10}]
+
+#
+from collections import Counter
+a = Counter({'a':2, 'b':1,"c":3})
+print(a.elements())
+a['a'] =0
+print(list(a.elements()))
+del a['a']
+print(a.most_common())
+
+#____
+
+import collections
+
+print(collections.Counter(['a', 'b', 'c', 'a', 'b', 'b']))
+
+print(collections.Counter({'a': 2, 'b': 3, 'c': 1}))
+
+print(collections.Counter(a=2, b=3, c=1))
+
+import collections
+
+c = collections.Counter()
+c.update("abcdaab")
+print("*****", c, sep="    ")
+c.update({"a": 10, "d": 5})
+print(c)
+c.update(["a", "e"])
+print(c)
+
+for letter in "abcde":
+    print(letter, "--->", c[letter])
 #
 #905
 def sortA( A):
@@ -303,3 +338,111 @@ def ishtest(n):
             rst.add(sum)
             n = sum
     return False
+#415
+def add_str(num1,num2):
+    return str(int(num1) + int(num2))
+def add_str(num1,num2):
+    i, j = len(num1)-1, len(num2)-1
+    carry = 0
+    rst = ""
+    sum = 0
+    while i >=0 or j >=0:
+        sum += carry
+        sum += (int(num1[i]) if i >= 0 else 0) + (int(num2[j]) if j >= 0 else 0)
+        #sum += int(num2[j]) if j >= 0 else 0
+        carry = sum // 10
+        sum %=  10
+        rst = str(sum) + rst
+        sum = 0
+        i -= 1
+        j -= 1
+    rst = str(carry) + rst if carry > 0 else rst
+    print(rst)
+    return rst
+
+#438
+def fdana(s,p):
+    dict_p, dict_s = {}, {}
+    for item in p:
+        if item in dict_p:
+            dict_p[item] += 1
+        else:
+            dict_p[item] = 1
+
+    len_s, len_p = len(s), len(p)
+    rst = []
+    i = 0
+    while i < len_s:
+        if s[i] not in dict_p:
+            i += 1
+            if not dict_s:
+                dict_s.clear()
+            continue
+        else:
+            if s[i] not in dict_s:
+                dict_s[s[i]] = 1
+            else:
+                dict_s[s[i]] += 1
+
+            if len(dict_s) == len(dict_p):
+                if dict_s == dict_p:
+                    start_index = i - len_p + 1
+                    rst.append(start_index)
+                    i = start_index + 1
+                    if dict_s[s[start_index]] > 1:
+                        dict_s[s[start_index]] -= 1
+                    else:
+                        dict_s.pop(s[start_index])
+                else:
+                    if dict_s[s[i - len_p + 1]] > 1:
+                        dict_s[s[i - len_p + 1]] -= 1
+                    else:
+                        dict_s.pop(s[i - len_p + 1])
+
+                    i += 1
+            else:
+                i += 1
+
+    print(rst)
+    return rst
+def fdana1(s,p):
+    len_s, len_p = len(s), len(p)
+    dict_s, dict_p = {}, {}
+    rst = []
+    for item in p:
+        if item not in dict_p:
+            dict_p[item] = 1
+        else:
+            dict_p[item] += 1
+    for i in range(len(p)-1):
+        if s[i] in dict_s:
+            dict_s[s[i]] += 1
+        else:
+            dict_s[s[i]] = 1
+
+    for i in range( len_p - 1, len_s):
+        if s[i] in dict_s:
+            dict_s[s[i]] += 1
+        else:
+            dict_s[s[i]] = 1
+        if dict_s == dict_p:
+            rst.append( i - len_p + 1)
+        if dict_s[s[i - len_p + 1]] > 1:
+            dict_s[s[i - len_p + 1]] -= 1
+        else:
+            dict_s.pop(s[i - len_p + 1])
+    print(rst)
+def fdana(s,p):
+    dict_s = Counter(s[:len(p)-1])
+    dict_p = Counter(p)
+
+    rst = []
+    for i in range(len(p)-1, len(s)):
+        dict_s[s[i]] += 1
+        if dict_p == dict_s:
+            rst.append(i - len(p) + 1)
+        if dict_s[s[i - len(p) + 1]] > 1:
+            dict_s[s[i - len(p) + 1]]  -= 1
+        else:
+            del dict_s[s[i - len(p) + 1]]
+    return rst

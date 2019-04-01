@@ -1,4 +1,12 @@
 from pprint import pprint
+from collections import Counter
+import time
+s="cbaebabacd"
+p = "abc"
+def print_iterator(it):
+    for x in it:
+        print(x, end=' ')
+    print('')  # for new line
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
     for flow_name in flow_to_test:
@@ -27,14 +35,27 @@ def run_flow(run_dir, flow_to_test, result_dir):
         shutil.copytree("Result_LP", os.path.join(log_dir, "Result_LP"))
         time.sleep(1) #TreeNode
 
-def print_iterator(it):
-    for x in it:
-        print(x, end=' ')
-    print('')  # for new line
+#print_iterator(b)
 
 
 
-print_iterator(b)
+print(time.time())
+
+
+
+
+
+
+
+
+
+#fdana11(s,p)
+
+
+
+
+
+
 #
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
