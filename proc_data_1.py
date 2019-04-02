@@ -446,3 +446,83 @@ def fdana(s,p):
         else:
             del dict_s[s[i - len(p) + 1]]
     return rst
+
+#770
+J = "aA"
+S = "aAAbbbb"
+J1 = "z"
+S1 = "ZZ"
+def numtone(J, S):
+    j_set  = set()
+    for j in J:
+        if j not in j_set:
+            j_set.add(j)
+    cnt = 0
+    for s in S:
+        if s in j_set:
+            cnt += 1
+    return cnt
+#770
+J = "aA"
+S = "aAAbbbb"
+J1 = "z"
+S1 = "ZZ"
+def numtone(J, S):
+    print(type(s in J for s in S))
+    print(type(s for s in S))
+    return sum([s in J for s in S])
+print(numtone(J,S))
+
+print(time.time())
+#709
+def tolower(str):
+    diff = ord('a') - ord("A")
+    rst = ""
+    for s in str:
+        if  "A"<=s<="Z":
+            s = chr(ord(s) + diff)
+        rst = rst + s
+    print(rst)
+#
+s = "QA test"
+ss = (a if a > "A" else "QQ" for a in s)
+print(type(ss))
+
+sss = "".join([a if a > "A" else "QQ" for a in s])
+print(sss)
+#944
+def deleteC(A):
+    lenA  = len(A)
+    lenS = len(A[0])
+
+    cnt = 0
+    for i in range(lenS):
+        for j in range(lenA-1):
+            if A[j][i] > A[j+1][i]:
+                cnt += 1
+                break
+            #continue
+    return cnt
+#
+#700
+def  seaBST(root, val):
+    if not root:
+        return None
+    elif root.val == val:
+        return root
+    elif root.val > val:
+        return seaBST(root.left, val)
+    else:
+        return seaBST(root.right,val)
+
+# 965
+def isUni(root):
+    if not root:
+        return True
+    elif root.left and root.right:
+        return root.val == root.left.val == root.right.val and isUni(root.left) and isUni(root.right)
+    elif root.left:
+        return root.val == root.left.val and isUni(root.left)
+    else:
+        return root.val == root.right.val and isUni(root.right)
+
