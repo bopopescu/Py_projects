@@ -1,6 +1,7 @@
 from pprint import pprint
 from collections import Counter
 import time
+import time
 s="cbaebabacd"
 p = "abc"
 def print_iterator(it):
@@ -36,25 +37,9 @@ def run_flow(run_dir, flow_to_test, result_dir):
         time.sleep(1) #TreeNode
 
 #print_iterator(b)
-
-a = ['bella','label','roller']
-b = ['cool', 'lock', 'cook']
-#1002
-def commonCHars(A):
-    dictList = [ Counter(i) for i in A]
-    for i in dictList:
-        print(i.most_common())
-    rst = []
-    for i in set(A[0]):
-        for j in range(1, len(dictList)):
-            if dictList[0][i] != dictList[j][i]:
-                break
-            if j == len(dictList) - 1:
-                rst += [i for _ in range(dictList[0][i])]
-    return rst
-print(commonCHars(b))
-
-
+a , b = 0, 0
+def abc(a, b):
+    return a or b
 
 #
 def run_flow(run_dir, flow_to_test, result_dir):

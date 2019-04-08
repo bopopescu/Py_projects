@@ -525,4 +525,138 @@ def isUni(root):
         return root.val == root.left.val and isUni(root.left)
     else:
         return root.val == root.right.val and isUni(root.right)
+#1002
+def commonCHars(A):
+    dictList = [ Counter(i) for i in A]
+
+    for i in set(A[0]):
+        for j in range(1, len(A)):
+            if i not in A[j]:
+                del dictList[0][i]
+                break
+            dictList[0][i] = min(dictList[0][i], dictList[j][i])
+    return list(dictList[0].elements())
+def commonCHars1(A):
+    dictList = [ Counter(i) for i in A]
+
+    for i in set(A[0]):
+        for j in range(1, len(A)):
+            if i not in A[j]:
+                del dictList[0][i]
+                break
+            dictList[0][i] = min(dictList[0][i], dictList[j][i])
+    a_list = dictList[0].most_common()
+    print(type(dictList[0].most_common()))
+    print("dictList[0].most_common()", a_list)
+    b_list = dictList[0].elements()
+    print("dictList[0].elements()", type(b_list))
+    print("dictList[0].elements()", list(b_list))
+    dd = dict(dictList[0].most_common())
+    print(type(dd), dd)
+
+    print("*"*10)
+    cnter = dictList[0]
+    print(cnter.items())
+    print(cnter.values())
+
+    it_a = dictList[0].elements()
+    while True:
+        try:
+            print(next(it_a))
+        except:
+            print("end of iterator it_a")
+            break
+commonCHars1(b)
+###
+
+ad = lambda x, y : x+y
+print(ad(10, 9))
+arr1 = [ 2, 5, 6, 7]
+arr2 = [ 10, 40, 60, 80]
+cmap = map(lambda x: x % 2 == 0, arr1)
+print(list(cmap))
+cfilter = filter(lambda x: x %2==0, arr1)
+print(list(cfilter))
+list_a = [1, 2, 3, 4, 5]
+list_b = ['a', 'b', 'c', 'd', 'e']
+list_c = zip(list_a, list_b) #<zip object at 0x038144E0>
+print(type(list_c))
+#print(list(list_c))
+print(type(list_c))
+
+for j in list_c:
+    print(j[0], j[1])
+    print("*")
+
+print("hold")
+
+list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
+list2 = ['one', 'two', 'three', 'six']
+
+test = zip(list1, list2)  # zip the values
+
+testList = list(test)
+
+a, b = zip( *testList )
+print('The first list was ', list(a));
+print('The second list was ', list(b));
+
+###
+#617
+def mgebt(t1,t2):
+    root = listNode(0)
+    if not t1 and not t2:
+        return None
+    if t1:
+        root.val += t1.val
+    if t2:
+        root.val += t2.val
+    if t1 and t2:
+        root.left  = mgebt(t1.left, t2.left)
+        root.right = mgebt(t1.right, t2.right)
+    elif t1:
+        root.left  = mgebt(t1.left, None)
+        root.right = mgebt(t1.right, None)
+    else:
+        root.left  = mgebt(None, t2.left)
+        root.right = mgebt(None, t2.right)
+    return root
+#
+
+print(abc(a,b))
+class a():
+    dd = 100
+    print("dd is {}".format(dd))
+    def test(self):
+        print("self.dd is ", self.dd)
+        # print("how about dd is ", dd)
+
+
+aa = a()
+aa.test()
+# print("a.dd is " a.dd)
+class Shark:
+
+    # Class variables
+    animal_type = "fish"
+    location = "ocean"
+
+    # Constructor method with instance variables name and age
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # Method with instance variable followers
+    def set_followers(self, followers):
+        print("This user has " + str(followers) + " followers")
+bbb = Shark("jack",100)
+bbb.animal_type="Mammel"
+ccc = Shark("peter", 3)
+print(ccc.animal_type)
+
+print(time.time())
+print(round(time.time()))
+print(round(time.time()*1000))
+#944
+
 
