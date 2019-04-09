@@ -657,6 +657,61 @@ print(ccc.animal_type)
 print(time.time())
 print(round(time.time()))
 print(round(time.time()*1000))
-#944
+#852
+def peakIndexInM(A):
+    for i in range(1, len(A)-1):
+        if A[i-1] < A[i] < A[i+1]:
+            break
+    return i
+#852
+def peakIndexInM(A):
+    i, j = 0, len(A)-1
+    while i < j:
+        mid = (i+j)//2
+        if A[mid-1] < A[mid] < A[mid+1]:
+            break
+        elif A[mid] < A[mid-1]:
+            j = mid
+        elif A[mid] < A[mid+1]:
+            i = mid
+    return mid
+#509
+def fib(N):
+    numDict = {}
+    return helper(N, numDict)
+def helper(N, numDict):
+    if N < 2: return N
+    if N in numDict:
+        return numDict[N]
+    total = helper(N-1, numDict) + helper(N-2, numDict)
+    numDict[N] = total
+    return total
+print(fib(N))
+#
+def fib(N):
+    dp = [0, 1]
+    if N < 2: return N
+    for i in range(2, N+1):
+        cur = dp[i-1] + dp[i-2]
+        dp.append(cur)
+
+    return dp[N]
+#
+def fib(N):
+    n, n_nxt = 0, 1
+    if N < 2: return N
+    for i in range(2, N+1):
+        total = n + n_nxt
+        n, n_nxt = n_nxt, total
+    return total
+#
+def fib(N):
+    if N < 2: return N
+    arr = [ i for i in range(N+1)]
+    for i in range(2, N+1):
+        arr[i]= arr[i-1] + arr[i-2]
+    return arr[N]
+#590
+#276
 
 

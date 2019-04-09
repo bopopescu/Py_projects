@@ -35,11 +35,9 @@ def run_flow(run_dir, flow_to_test, result_dir):
         shutil.copytree("Log", os.path.join(log_dir, "Log"))
         shutil.copytree("Result_LP", os.path.join(log_dir, "Result_LP"))
         time.sleep(1) #TreeNode
-
-#print_iterator(b)
-a , b = 0, 0
-def abc(a, b):
-    return a or b
+N = 9 #34
+#276
+def numWays(n, k):
 
 #
 def run_flow(run_dir, flow_to_test, result_dir):
