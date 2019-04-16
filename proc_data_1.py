@@ -713,5 +713,56 @@ def fib(N):
     return arr[N]
 #590
 #276
-
-
+#141
+def hasCycle(head):
+    if not head or not head.next:
+        return False
+    temp = head.next.next
+    while head and temp:
+        if head == temp:
+            return True
+        if not temp.next:
+            return False
+        head = head.next
+        temp = temp.next.next
+    return False
+def hasCycle(head):
+    slow, fast = head, head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+    return False
+#
+#422
+def validwdSq(words):
+    num_row = len(words)
+    for r in range(num_row):
+        word_r = words[r]
+        for col in range(len(word_r)):
+            if col > len(words) - 1 or r > len(words[col])-1 or word_r[col] != words[col][r]:
+                return False
+    return True
+#434
+def countSeg(s):
+    #return len(s.split(" "))
+    cnt = 0
+    i = 0
+    while i < len(s):
+        if s[i].isspace():
+            i += 1
+            continue
+        cnt += 1
+        while i < len(s) and not s[i].isspace():
+            i += 1
+    return cnt
+#624
+def maxDis(arrays):
+    left, right = arrays[0][0], arrays[0][-1]
+    rst = 0
+    for i in range(1, len(arrays)):
+        newLeft, newRight = arrays[i][0], arrays[i][-1]
+        rst = max(abs(newRight - left), abs(right - newLeft))
+        left, right = min(left, newLeft), max(right, newRight)
+    return rst

@@ -35,11 +35,19 @@ def run_flow(run_dir, flow_to_test, result_dir):
         shutil.copytree("Log", os.path.join(log_dir, "Log"))
         shutil.copytree("Result_LP", os.path.join(log_dir, "Result_LP"))
         time.sleep(1) #TreeNode
-N = 9 #34
-#276
-def numWays(n, k):
+from collections import deque
 
-#
+
+#112
+def hasPath(root, sum):
+    if not root:
+        return False
+    return (sum - root.val == 0 and  not root.left and not root.right) ||
+            hasPath(root.left, sum - root.val) || hasPath(root.right, sum - root.val)
+
+
+
+
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
     for flow_name in flow_to_test:
