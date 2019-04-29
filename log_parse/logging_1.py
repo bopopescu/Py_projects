@@ -30,14 +30,8 @@ def main():
     logger = logging.getLogger("exampleApp")
     logger.setLevel(logging.INFO)
 
-    #
-
-
-
-    #
-
     # create the logging file handler
-    fh = logging.FileHandler("new_test.log")
+    fh = logging.FileHandler("logging_1.log")
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     fh.setFormatter(formatter)
 

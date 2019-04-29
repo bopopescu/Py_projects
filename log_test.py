@@ -35,18 +35,44 @@ def run_flow(run_dir, flow_to_test, result_dir):
         shutil.copytree("Log", os.path.join(log_dir, "Log"))
         shutil.copytree("Result_LP", os.path.join(log_dir, "Result_LP"))
         time.sleep(1) #TreeNode
-from collections import deque
+from collections import deque, Counter
+#501
 
-
-#112
-def hasPath(root, sum):
+def helper(root, cnt_mode):
     if not root:
-        return False
-    return (sum - root.val == 0 and  not root.left and not root.right) ||
-            hasPath(root.left, sum - root.val) || hasPath(root.right, sum - root.val)
+        return
+    cnt_mode.update([root.val])
+    helper(root.left, cnt_mode)
+    helper(root.right, cnt_mode)
+def findMode(root):
+    cnt_mode = Counter()
+    rst = cnt_mode.most_common()
+    rst_lst = []
+    rst_lst.append(rst[0][0])
+    i = 1
+    while i < len(rst):
+        if rst[i][1] == rst[0][1]:
+            rst_lst.append(rst[i][0])
+            i += 1
+        else:
+            break
+    return rst_lst
+#
 
+list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
+list2 = ['one', 'two', 'three', 'six']
 
+test = zip(list1, list2)  # zip the values
 
+while True:
+    aaa = next(test)
+    print(aaa, end=", ")
+print()
+testList = list(test)
+
+a, b = zip( *testList )
+print('The first list was ', list(a));
+print('The second list was ', list(b));
 
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)

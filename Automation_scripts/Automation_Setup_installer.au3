@@ -6,7 +6,7 @@
 
  Update Log:
  Last Updated:  11/22/2013
- Updated by:    ADITYA KARVA
+ Updated by:
  Change Log:    Added variables to be read from command line instead of hard coding for path installation.
 
  Script Function:

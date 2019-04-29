@@ -1,3 +1,146 @@
+###################################################################################################
+x = lambda a : a + 10
+print(x(5))
+
+t = lambda a, b : a+ b
+print(t(100,1))
+
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
+
+#map returns an iterator
+def multiply2(x):
+    return x * 2
+
+a = map(multiply2, [1, 2, 3, 4])  # Output [2, 4, 6, 8]
+
+print(type(a), a, sep=", ")
+for i in a:
+    print(i, sep=", ")
+#
+def to_upper_case(s):
+    return str(s).upper()
+def print_iterator(it):
+    for x in it:
+        print(x, end=' ')
+    print('')  # for new line
+
+map_iterator = map(to_upper_case, 'abc')
+print(type(map_iterator))
+print_iterator(map_iterator)
+#
+def print_iterator(it):
+    for x in it:
+        print(x, end=' ')
+    print('')  # for new line
+list_numbers = [1, 2, 3, 4]
+
+map_iterator = map(lambda x: x * 2, list_numbers)
+print_iterator(map_iterator)
+#
+list_numbers = [1, 2, 3, 4]
+tuple_numbers = (5, 6, 7, 8)
+map_iterator = map(lambda x, y: x * y, list_numbers, tuple_numbers)
+print_iterator(map_iterator)
+# filter returns an iterator
+dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
+
+map(lambda x: x['name'], dict_a)  # Output: ['python', 'java']
+
+map(lambda x: x['points'] * 10, dict_a)  # Output: [100, 80]
+
+map(lambda x: x['name'] == "python", dict_a)  # Output: [True, False]
+a = [1, 2, 3, 4, 5, 6]
+b=filter(lambda x : x % 2 == 0, a) # Output: [2, 4, 6]
+
+dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
+b=filter(lambda x : x['name'] == 'python', dict_a) # Output: [{'name': 'python', 'points': 10}]
+
+#
+from collections import Counter
+# Counter is a sub-class of dict, has all dict's interfaces
+#elements() returns an iterator
+# most_common() returns a list of tuple of key and value
+a = Counter({'a':2, 'b':1,"c":3})
+print(a.elements())
+a['a'] =0
+print(list(a.elements()))
+del a['a']
+print(a.most_common())
+#print("Counter is of".format(type(a)), a.elements())
+aa = a.elements()
+try:
+    while True:
+        print(next(aa), end=", ")
+except:
+    print("\nExit")
+
+bb = a.most_common()
+print(type(bb), bb)
+# <class 'list'> [('c', 3), ('a', 2), ('b', 1)]
+#____
+
+import collections
+
+print(collections.Counter(['a', 'b', 'c', 'a', 'b', 'b']))
+
+print(collections.Counter({'a': 2, 'b': 3, 'c': 1}))
+
+print(collections.Counter(a=2, b=3, c=1))
+
+import collections
+
+c = collections.Counter()
+c.update("abcdaab")
+print("*****", c, sep="    ")
+c.update({"a": 10, "d": 5})
+print(c)
+c.update(["a", "e"])
+print(c)
+
+for letter in "abcde":
+    print(letter, "--->", c[letter])
+##
+ad = lambda x, y : x+y
+print(ad(10, 9))
+arr1 = [ 2, 5, 6, 7]
+arr2 = [ 10, 40, 60, 80]
+cmap = map(lambda x: x % 2 == 0, arr1)
+print(list(cmap))
+cfilter = filter(lambda x: x %2==0, arr1)
+print(list(cfilter))
+list_a = [1, 2, 3, 4, 5]
+list_b = ['a', 'b', 'c', 'd', 'e']
+list_c = zip(list_a, list_b) #<zip object at 0x038144E0>
+print(type(list_c))
+#print(list(list_c))
+
+for j in list_c:
+    print("({0}, {1})".format(j[0], j[1]), end = ", ")
+
+list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
+list2 = ['one', 'two', 'three', 'six']
+
+test = zip(list1, list2)  # zip the values # test is an iterator
+# ('Alpha', 'one'), ('Beta', 'two'), ('Gamma', 'three'), ('Sigma', 'six')
+testList = list(test)
+
+a, b = zip( *testList )
+print('The first list was ', list(a));
+print('The second list was ', list(b));
+
+
+
+
+
+
+
+
+###################################################################################################
 #258
 def addDigits( num):
     while num >= 10:
@@ -204,98 +347,6 @@ def isPal(str):
             return True
     return False
 
-x = lambda a : a + 10
-print(x(5))
-
-t = lambda a, b : a+ b
-print(t(100,1))
-
-def myfunc(n):
-  return lambda a : a * n
-
-mydoubler = myfunc(2)
-
-print(mydoubler(11))
-
-#
-def multiply2(x):
-    return x * 2
-
-a = map(multiply2, [1, 2, 3, 4])  # Output [2, 4, 6, 8]
-
-print(type(a), a, sep=", ")
-for i in a:
-    print(i, sep=", ")
-#
-def to_upper_case(s):
-    return str(s).upper()
-def print_iterator(it):
-    for x in it:
-        print(x, end=' ')
-    print('')  # for new line
-
-map_iterator = map(to_upper_case, 'abc')
-print(type(map_iterator))
-print_iterator(map_iterator)
-#
-def print_iterator(it):
-    for x in it:
-        print(x, end=' ')
-    print('')  # for new line
-list_numbers = [1, 2, 3, 4]
-
-map_iterator = map(lambda x: x * 2, list_numbers)
-print_iterator(map_iterator)
-#
-list_numbers = [1, 2, 3, 4]
-tuple_numbers = (5, 6, 7, 8)
-map_iterator = map(lambda x, y: x * y, list_numbers, tuple_numbers)
-print_iterator(map_iterator)
-#
-dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
-
-map(lambda x: x['name'], dict_a)  # Output: ['python', 'java']
-
-map(lambda x: x['points'] * 10, dict_a)  # Output: [100, 80]
-
-map(lambda x: x['name'] == "python", dict_a)  # Output: [True, False]
-a = [1, 2, 3, 4, 5, 6]
-b=filter(lambda x : x % 2 == 0, a) # Output: [2, 4, 6]
-
-dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
-b=filter(lambda x : x['name'] == 'python', dict_a) # Output: [{'name': 'python', 'points': 10}]
-
-#
-from collections import Counter
-a = Counter({'a':2, 'b':1,"c":3})
-print(a.elements())
-a['a'] =0
-print(list(a.elements()))
-del a['a']
-print(a.most_common())
-
-#____
-
-import collections
-
-print(collections.Counter(['a', 'b', 'c', 'a', 'b', 'b']))
-
-print(collections.Counter({'a': 2, 'b': 3, 'c': 1}))
-
-print(collections.Counter(a=2, b=3, c=1))
-
-import collections
-
-c = collections.Counter()
-c.update("abcdaab")
-print("*****", c, sep="    ")
-c.update({"a": 10, "d": 5})
-print(c)
-c.update(["a", "e"])
-print(c)
-
-for letter in "abcde":
-    print(letter, "--->", c[letter])
 #
 #905
 def sortA( A):
@@ -569,37 +620,6 @@ def commonCHars1(A):
 commonCHars1(b)
 ###
 
-ad = lambda x, y : x+y
-print(ad(10, 9))
-arr1 = [ 2, 5, 6, 7]
-arr2 = [ 10, 40, 60, 80]
-cmap = map(lambda x: x % 2 == 0, arr1)
-print(list(cmap))
-cfilter = filter(lambda x: x %2==0, arr1)
-print(list(cfilter))
-list_a = [1, 2, 3, 4, 5]
-list_b = ['a', 'b', 'c', 'd', 'e']
-list_c = zip(list_a, list_b) #<zip object at 0x038144E0>
-print(type(list_c))
-#print(list(list_c))
-print(type(list_c))
-
-for j in list_c:
-    print(j[0], j[1])
-    print("*")
-
-print("hold")
-
-list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
-list2 = ['one', 'two', 'three', 'six']
-
-test = zip(list1, list2)  # zip the values
-
-testList = list(test)
-
-a, b = zip( *testList )
-print('The first list was ', list(a));
-print('The second list was ', list(b));
 
 ###
 #617
@@ -766,3 +786,50 @@ def maxDis(arrays):
         rst = max(abs(newRight - left), abs(right - newLeft))
         left, right = min(left, newLeft), max(right, newRight)
     return rst
+#441
+#5, 2; 8, 3
+
+def arrCoin(n):
+    cnt = 0
+    return log_helper(cnt, n)
+
+def log_helper(cnt, n):
+    if n < cnt:
+        return cnt - 1
+    return log_helper(cnt + 1, n - cnt)
+
+#67
+def addBina(a,b):
+    sum_str = ""
+    i, carry  = -1,0
+    while -i <= len(a) or -i <= len(b):
+        if -i <= len(a) and -i <= len(b):
+            sum_int = carry + int(a[i]) + int(b[i])
+            carry = 1 if sum_int > 1 else 0
+            sum_str = str(sum_int % 2) + sum_str
+        elif -i <= len(a):
+            sum_int = carry + int(a[i])
+            carry = 1 if sum_int > 1 else 0
+            sum_str = str(sum_int % 2) + sum_str
+        elif -i <= len(b):
+            sum_int = carry + int(b[i])
+            carry = 1 if sum_int > 1 else 0
+            sum_str = str(sum_int % 2) + sum_str
+        i -= 1
+    sum_str = sum_str if carry == 0 else str(carry) + sum_str
+    return sum_str
+def addBina(a,b):
+    sum_str = ""
+    i, carry  = -1,0
+    while -i <= len(a) or -i <= len(b):
+        if -i <= len(a) and -i <= len(b):
+            sum_int = carry + int(a[i]) + int(b[i])
+        elif -i <= len(a):
+            sum_int = carry + int(a[i])
+        elif -i <= len(b):
+            sum_int = carry + int(b[i])
+        carry = 1 if sum_int > 1 else 0
+        sum_str = str(sum_int % 2) + sum_str
+        i -= 1
+    sum_str = sum_str if carry == 0 else str(carry) + sum_str
+    return sum_str
