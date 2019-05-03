@@ -1,0 +1,6 @@
+Measurement_Data = 1  //Keep the spaces
+Time_Data = 1
+Error_Messages = 1
+QA_report_Level = RX,EVM,Power 
+Bluetooth = 1
+#QA report level None means no report; Power/RX/EVM can be used to added accordingly.

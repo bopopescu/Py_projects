@@ -1,0 +1,25 @@
+[Configuration file] 
+
+# Project Name: change for each chipset and solution
+Project_Name = IQfact+_QCA_6174
+
+# Test_mode: This level can be set to sanity or full. default level is sanity. Case insensitive
+Test_mode = sanity
+
+# New_PKG_Installation: 1-New package & needs installation on QA station;
+		     0-Package already installed, skip installation;
+		     Default value is 1 means needs Installation;
+
+New_PKG_Installation = 1
+
+# Addtional Package Path: Additional path to locate package on network
+Additional_Package_Path = QCA_6174
+
+#Receipient Email ID : Email notification will be send to these addresses
+Recipient_Email_ID = jian.sun@litepoint.com
+
+#Path of QA_Automation scripts on your machine
+Script_path = C:\\QA_files\\Automation_Scripts
+
+#Choice of Windows OS
+Win_OS = WIN7

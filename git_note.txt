@@ -34,6 +34,74 @@ git push -u origin master
 git pull origin master
 
 
+##
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects/93xx_QA_files (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects/93xx_QA_files (master)
+$ git reset HEAD~4
+Unstaged changes after reset:
+M       .idea/misc.xml
+M       .idea/vcs.xml
+M       .idea/workspace.xml
+M       file_op/b_file_op1.1.py
+M       git_note.txt
+D       log_test.py
+D       proc_data_1.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects/93xx_QA_files (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../.idea/misc.xml
+        modified:   ../.idea/vcs.xml
+        modified:   ../.idea/workspace.xml
+        modified:   ../file_op/b_file_op1.1.py
+        modified:   ../git_note.txt
+        deleted:    ../log_test.py
+        deleted:    ../proc_data_1.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ./
+        ../Post Processing/
+        ../log_test_std.py
+        ../proc_lt_std.py
+        ../rest_ex1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+##
+##
+$ git clone https://github.com/DjangoPatternsBook/superbook2.git
+Next, install pipenv system-wide or locally, but outside a virtualenv, 
+as recommended in pipenv installation documents. Alternatively, follow these commands:
+
+$ pip install -U pip
+$ pip install pipenv
+Now go to the project directory and install the dependencies:
+
+$ cd superbook2
+$ pipenv install --dev
+
+$ pipenv shell
+Finally, run the project after executing the typical management commands:
+
+$ cd src
+$ python manage.py migrate
+$ python manage.py createsuperuser
+$ python manage.py runserver
 
 #####2. Linux . __________________________________________#
 Linux:

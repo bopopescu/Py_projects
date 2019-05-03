@@ -151,3 +151,10 @@ proc = subprocess.Popen(
 )
 stdout_value = proc.communicate()[0].decode('utf-8')
 print('stdout:', repr(stdout_value))
+
+import os
+base = os.path.abspath(__file__)
+print(base)
+a= os.path.dirname(base)
+b = os.path.dirname(a)
+print(a,b,sep=", ")
