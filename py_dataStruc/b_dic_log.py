@@ -118,6 +118,7 @@ for k, v in test.items():
 dic1 = {"wifi": 1, "bt": 2, "rsdb": 3}
 dic2 = dict([("wifi", 1), ("bt", 2), ("rsdb", 3)])
 
+###
 new_add = [("wifiz", 1), ("bzt", 2), ("rzsdb", 3)]
 dic2.update(new_add)
 for key in dic2.keys():
@@ -134,3 +135,13 @@ b = dict([("wifi", 0), ("AX", 1), ("BT", 2)])
 # walk through
 #a.items(), a.keys(), a.values()
 
+ck = dict([(1,"wifi"), (2,"UWB"),(3, "OFDMA")])
+dk = [(4,"wifi"),(5, "bt"), (6, "rsdb")]
+ddk = dict(dk)
+
+ck.update({10: "ax"})
+ee = ck.items()
+ee = list(ee)
+for i in ee:
+    print(i, end=", ")
+# (1, 'wifi'), (2, 'UWB'), (3, 'OFDMA'), (10, 'ax'),

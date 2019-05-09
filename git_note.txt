@@ -83,6 +83,13 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 ##
+
+To remove folder/directory only from git repository and not from the local try 3 simple commands.
+Steps to remove directory
+
+git rm -r --cached FolderName
+git commit -m "Removed folder from repository"
+git push origin master
 ##
 $ git clone https://github.com/DjangoPatternsBook/superbook2.git
 Next, install pipenv system-wide or locally, but outside a virtualenv, 

@@ -36,11 +36,11 @@ print(arr) #[0, 0, 0, 0, 0]
 
 
 #5.
-#range(start, stop, step)
+#range(start, stop, step), is iterable, but not iterator
 for i in range(4,1,-1):
     print(i," ", end="") #4  3  2  , exclude end = 1
 print()
-for i in range(5, -1, -1):
+for i in range(5, -1, -1): #won't work range(5,-1)
     print(i," ", end="") #5 4  3  2  1  0 exclude end = -1
 
 print()
@@ -68,8 +68,14 @@ pprint(dp)
  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
 #8
-numbers = range(1_000_000) #<class 'range'>
-#squares = (n**2 for n in numbers) #<class 'generator'>
+numbers = range(1_0) #<class 'range'>
+squares = (n**2 for n in numbers) #<class 'generator'>, generator is an iterator
+try:
+    while True:
+        print(next(squares))
+except:
+    print("done")
+
 squares = [n**2 for n in numbers]#<class 'list'>
 new_list = list(n*n for n in range(5))
 #squares = n**2 for n in numbers  #error
@@ -92,6 +98,10 @@ sum = 0
 for num in squares:
     sum += num
 print(sum)  # 30
+
+##
+ss = sum(squares)
+print(ss)
 #######################
 
 # The sort() method changes the underlying list and returns None, so use it like this:
@@ -102,8 +112,6 @@ print(type(a)) #<class 'generator'>
 b = []
 b.extend(a)
 print(b) #[0, 1, 4, 9, 16]
-
-
 
 case = ["wifi"]
 case1 = ['wifi']
@@ -154,13 +162,14 @@ all_indices("testID", ["testID","testr","station","testID"])
 #Shallow copy
 ls = [[1,2,3],"wifi","bt","tk"]
 cp = ls.copy()
+
 ls[0][0]=[1,23]
 print("cp is ", cp)
 print("ls is ",ls)
 print(id(cp), ", ", id(ls))
-cp is  [[[1, 23], 2, 3], 'wifi', 'bt', 'tk']
-ls is  [[[1, 23], 2, 3], 'wifi', 'bt', 'tk']
-2924848129544 ,  2924846536456
+# cp is  [[[1, 23], 2, 3], 'wifi', 'bt', 'tk']
+# ls is  [[[1, 23], 2, 3], 'wifi', 'bt', 'tk']
+# 2924848129544 ,  2924846536456
 #
 ls = [[1,2,3],"wifi","bt","tk"]
 cp = ls.copy()
@@ -189,8 +198,10 @@ def find_element_in_list(element, list_element):
         return None
 ##
 a = ["foo","bar","baz",'bar','any','much']
-
 indexes = [index for index in range(len(a)) if a[index] == 'bar']
+
+rst = [i for i,j in enumerate(a) if j == 'bar']
+print(rst)
 #
 test = ["wifi", "bt",'ac']
 if "ac" in test:
@@ -205,16 +216,16 @@ print('{0} {2} {1} {2} {3} {2} {4} {2}'.format(*tu))  # wifi ac agn ac ax ac bt 
 # list.extend(1)  #TypeError: 'int' object is not iterable
 test = ["wifi", "bt",'ac',"11ax","ad"]
 test[1:-1]       #['bt', 'ac', '11ax'], skip the first one and the last one
-print(test[1:])      #['bt', 'ac', '11ax', 'ad'] skip the last one
+print(test[1:])      #['bt', 'ac', '11ax', 'ad'] skip the first one
 print(test[1:4:2])   #['bt', '11ax']
 test[1:3] = ["ac","BT"] # ['wifi', 'ac', 'BT', '11ax', 'ad']
 test[:]                 # ['wifi', 'ac', 'BT', '11ax', 'ad']
 test[::-1]              #reverse list, ['ad', '11ax', 'BT', 'ac', 'wifi']
 test[-1]                #last element "ad"
 
-a[start:]    # items start through the rest of the array
-a[:end]      # items from the beginning through end-1
-a[:]         # a copy of the whole array
+# a[start:]    # items start through the rest of the array
+# a[:end]      # items from the beginning through end-1
+# a[:]         # a copy of the whole array
 
 a[-1]    # last item in the array
 a[-2:]   # last two items in the array
@@ -274,8 +285,6 @@ print(chr(32)) # 1
 left = list(filter(lambda x: x.end < start, intervals))
 right = list(filter(lambda x: x.start > end, intervals))
 
-
-
 # 11. index(element)
 test_list = ['WIFI', 'abgn', 'Ax',"bt"]
 if 'bt' in test_list: # find first
@@ -313,7 +322,6 @@ sorted(strs, key=str.lower)  ##['aa', 'BB', 'CC', 'zz']
 
 ##
 #list.remove(elem) -- searches for the first instance of the given element and removes it (throws ValueError
-
 ##list.pop(index) -- removes and returns the element at the given index.
 #list.pop() -- remove the last element, and return the element being removed
 
