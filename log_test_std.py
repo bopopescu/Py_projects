@@ -37,26 +37,8 @@ def run_flow(run_dir, flow_to_test, result_dir):
         time.sleep(1) #TreeNode
 from collections import deque, Counter
 from pprint import pprint
+
 #1025
-arr = ['Wifi','bt','ax','Rsdb']
-add_v = "uwb"
-# arr.append(add_v)
-# arr += add_v
-# arr.insert(1, add_v)
-##
-# arr.pop()
-# arr.remove("wifi")
-##
-# print(arr.index('bt'))
-##
-# arr_sorted = sorted(arr, key=len)
-#arr_sorted = sorted(arr, key=str.lower)
-# arr_sorted = sorted(arr, reverse=True)
-##
-
-print(arr_sorted)
-
-
 
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)

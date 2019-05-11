@@ -55,8 +55,98 @@ add_v = "uwb"
 ##
 # print(arr[:],arr[:2], arr[:-1],arr[::-1],arr[3:0:-1], arr[:0:-1], sep="\n")
 #######dic
+dct = {1:"wifi", 2:"bt", 3:"ax", 4:"rsdb"}
+dct[5] = "ac"
+dct_tuple = [(6, 'bgn'), (7, 'uwb'), (8, 'n')]
+dct.update(dct_tuple )
+dct_1 = dict(dct_tuple)
 
+# dct.pop(3)
+# dct.popitem()
+for k, v in dct.items():
+    print(k, v)
 
+###set
+st = ['wifi','bt','ac','ax']
+st = set(st)
+
+st.add("uwb")
+st.update(["b",'g','n'])
+
+st.remove('n')
+st.discard('ax')
+st.pop()
+print(st)
+
+###
+def minim(*n):
+    print(type(n))
+    if n:
+        mn = n[0]
+        # print(mn)
+        for v in n[1:]:
+            # print(v)
+            mn = v if mn > v else mn
+    print("mn is {}".format(mn))
+# minim(*(1,3,0,-1))
+#minim(1,3,0,-1)
+# minim((1,3,0,-1))
+
+####
+def func_vKwargs(**kwargs):
+    print(kwargs)
+
+func_vKwargs(a=1, b=2)
+func_vKwargs(**{'wifi':1, "bt":2})
+func_vKwargs(**dict([("wifi",1),("bt", 2)]))
+###
+
+def divide_tup(a,b):
+    return a//b, a/b
+
+rst = divide_tup(10,5)
+print("type is {0} and rst is {1}".format(type(rst), rst))
+print(dir(list(divide_tup)))
+###
+def get_squares(n): # classic function approach
+    return [x ** 2 for x in range(n)]
+print(get_squares(10))
+
+def get_squares_gen(n):  # generator approach
+    for x in range(n):
+        yield x ** 2  # we yield, we don't return
+print(list(get_squares_gen(10)))
+
+###
+def get_square(n):
+    for i in range(n):
+        yield i**2
+sq = get_square(5)
+# for i in sq:
+#     print(i, end=", ")
+sq = list(sq)
+print(sq)
+###
+def geometric_progression(a, q):
+    k = 0
+    while True:
+        result = a * q**k
+        if result <= 100000:
+            yield result
+        else:
+            return
+        k += 1
+
+for n in geometric_progression(2, 5):
+    if n < 100:
+        print(n)
+print("*"*10)
+for n in geometric_progression(2,5):
+    if n > 100:
+        print(n)
+###
+
+###
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
     for flow_name in flow_to_test:
