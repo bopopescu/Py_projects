@@ -1,0 +1,27 @@
+#1. Create venv @ \HillarDjangoREST\01, not need to create separate folder, . is important
+C:\Users\jsun\Documents\Py_projects>python -m venv .\HillarDjangoREST\01
+
+#2. Before installing any third party package
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip list
+Package    Version
+---------- -------
+pip        18.1
+setuptools 40.6.2
+You are using pip version 18.1, however version 19.1.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+#3. Install Django
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip install django==1.11.5
+
+#4 Install Django REST framework
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip install djangorestframework==3.6.4
+
+#5 Create a Ddjango project
+python Scripts\django-admin.exe startproject restful01
+
+#6 create a new Django app
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>python manage.py startapp toys
+
+#7. install curl
+#8 install HTTPie
+pip install --upgrade httpie
