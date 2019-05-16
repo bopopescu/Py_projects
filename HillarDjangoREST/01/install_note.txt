@@ -25,3 +25,80 @@ python Scripts\django-admin.exe startproject restful01
 #7. install curl
 #8 install HTTPie
 pip install --upgrade httpie
+#9. install postman
+#10 install Stoplight
+
+
+
+#url
+http://localhost:8000/toys/
+http://localhost:8000/toys/5
+
+#11.1 Create first model: 
+/01/restful01/toys/models.py
+#11.2 First migrations
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>python manage.py makemigrations toys
+Migrations for 'toys':
+  toys\migrations\0001_initial.py
+    - Create model Toy
+#11.2 Apply Migration
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, toys
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying toys.0001_initial... OK
+#11.3 Download sqlite3.exe command-line utility
+#11.4 check database
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>sqlite3 db.sqlite3 ".tables"
+auth_group                  django_admin_log
+auth_group_permissions      django_content_type
+auth_permission             django_migrations
+auth_user                   django_session
+auth_user_groups            toys_toy
+auth_user_user_permissions
+#sqlite3 query
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>sqlite3 db.sqlite3 "SELECT * FROM toys_toy ORDER BY name;"
+#
+sqlite3 db.sqlite3 ".schema toys_toy"
+
+CREATE TABLE IF NOT EXISTS "toys_toy" 
+    (
+        "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+        "created" datetime NOT NULL, 
+        "name" varchar(150) NOT NULL, 
+        "description" varchar(250) NOT NULL, 
+        "toy_category" varchar(200) NOT NULL, 
+        "release_date" datetime NOT NULL, 
+        "was_included_in_home" bool NOT NULL
+    );
+# python interactive shell
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>python manage.py shell
+Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 22:20:52) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+
+>>> from datetime import datetime
+>>> from django.utils import timezone
+>>> from django.utils.six import BytesIO
+>>> from rest_framework.renderers import JSONRenderer
+>>> from rest_framework.parsers import JSONParser
+>>> from toys.models import Toy
+>>> from toys.serializers import ToySerializer
+>>> toy_release_date = timezone.make_aware(datetime.now(), timezone.get_current_timezone())
+>>> toy1 = Toy(name='Snoopy talking action figure', description='Snoopy speaks five languages', release_date=toy_release_date, toy_category='Action figures', was_included_in_home=False)
+>>> toy1.save()
+>>> toy2 = Toy(name='Hawaiian Barbie', description='Barbie loves Hawaii', release_date=toy_release_date, toy_category='Dolls', was_included_in_home=True)
+>>> toy2.save()
