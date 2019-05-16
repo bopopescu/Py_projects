@@ -102,3 +102,156 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> toy1.save()
 >>> toy2 = Toy(name='Hawaiian Barbie', description='Barbie loves Hawaii', release_date=toy_release_date, toy_category='Dolls', was_included_in_home=True)
 >>> toy2.save()
+
+#12. Start Server
+#python manage.py runserver 0.0.0.0:8000
+#192.168.2.103:8000
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 16, 2019 - 10:31:58
+Django version 1.11.17, using settings 'restful01.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+#13. HTTP request through curl: GET localhost:8000/toys/
+C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>curl X GET localhost:8000/toys/
+curl: (6) Could not resolve host: X
+curl: (6) Could not resolve host: GET
+[{"pk":3,"name":"Clash Royale play set","description":"6 figures from Clash Royale","release_date":"2017-10-09T12:1
+                                   0:00.776594Z","toy_category":"Playset","was_included_in_home":false},{"pk":2,"name":"Hawaiian Barbie","description"                                   :"Barbie loves Hawaii","release_date":"2019-05-14T17:42:13.029376Z","toy_category":"Dolls","was_included_in_home":t                                   rue},{"pk":1,"name":"Snoopy talking action figure","description":"Snoopy speaks five languages","release_date":"201                                   9-05-14T17:42:13.029376Z","toy_category":"Action figures","was_included_in_home":false}]
+
+# i option to show HTTP header
+C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>curl -iX GET localhost:8000/toys/
+HTTP/1.0 200 OK
+Date: Thu, 16 May 2019 18:30:53 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+X-Frame-Options: SAMEORIGIN
+Content-Length: 548
+
+[{"pk":3,"name":"Clash Royale play set","description":"6 figures from Clash Royale","release_date":"2017-10-09T12:10:00.776594Z","toy_category":"Playset","was_included_in_home":false},{"pk":2,"name":"Hawaiian Barbie","description":"Barbie loves Hawaii","release_date":"2019-05-14T17:42:13.029376Z","toy_category":"Dolls","was_included_in_home":true},{"pk":1,"name":"Snoopy talking action figure","description":"Snoopy speaks five languages","release_date":"2019-05-14T17:42:13.029376Z","toy_category":"Action figures","was_included_in_home":false}]
+
+#14. Use HTTPie utility
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http localhost:8000/toys/
+HTTP/1.0 200 OK
+Content-Length: 548
+Content-Type: application/json
+Date: Thu, 16 May 2019 19:00:41 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+[
+    {
+        "description": "6 figures from Clash Royale",
+        "name": "Clash Royale play set",
+        "pk": 3,
+        "release_date": "2017-10-09T12:10:00.776594Z",
+        "toy_category": "Playset",
+        "was_included_in_home": false
+    },
+    {
+        "description": "Barbie loves Hawaii",
+        "name": "Hawaiian Barbie",
+        "pk": 2,
+        "release_date": "2019-05-14T17:42:13.029376Z",
+        "toy_category": "Dolls",
+        "was_included_in_home": true
+    },
+    {
+        "description": "Snoopy speaks five languages",
+        "name": "Snoopy talking action figure",
+        "pk": 1,
+        "release_date": "2019-05-14T17:42:13.029376Z",
+        "toy_category": "Action figures",
+        "was_included_in_home": false
+    }
+]
+## ignore header with -b option
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http  -b :8000/toys/
+[
+    {
+        "description": "6 figures from Clash Royale",
+        "name": "Clash Royale play set",
+        "pk": 3,
+        "release_date": "2017-10-09T12:10:00.776594Z",
+        "toy_category": "Playset",
+        "was_included_in_home": false
+    },
+    {
+        "description": "Barbie loves Hawaii",
+        "name": "Hawaiian Barbie",
+        "pk": 2,
+        "release_date": "2019-05-14T17:42:13.029376Z",
+        "toy_category": "Dolls",
+        "was_included_in_home": true
+    },
+    {
+        "description": "Snoopy speaks five languages",
+        "name": "Snoopy talking action figure",
+        "pk": 1,
+        "release_date": "2019-05-14T17:42:13.029376Z",
+        "toy_category": "Action figures",
+        "was_included_in_home": false
+    }
+]
+
+## GET http://localhost:8000/toys/3
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http :8000/toys/3
+HTTP/1.0 200 OK
+Content-Length: 182
+Content-Type: application/json
+Date: Thu, 16 May 2019 19:15:56 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+{
+    "description": "6 figures from Clash Royale",
+    "name": "Clash Royale play set",
+    "pk": 3,
+    "release_date": "2017-10-09T12:10:00.776594Z",
+    "toy_category": "Playset",
+    "was_included_in_home": false
+}
+## curl
+C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>curl -iX GET localhost:8000/toys/3
+HTTP/1.0 200 OK
+Date: Thu, 16 May 2019 19:18:36 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+X-Frame-Options: SAMEORIGIN
+Content-Length: 182
+
+{"pk":3,"name":"Clash Royale play set","description":"6 figures from Clash Royale","release_date":"2017-10-09T12:10:00.776594Z","toy_category":"Playset","was_included_in_home":false}
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http :8000/toys/90
+HTTP/1.0 404 Not Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Thu, 16 May 2019 19:40:35 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+## POST command
+
+http POST :8000/toys/ name="PvZ 2 puzzle" description="Plants vs Zombies 2 puzzle" toy_category="Puzzle" was_included_in_home=false  release_date="2017-10-08T01:01:00.776594Z"
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http POST :8000/toys/ name="PvZ 2 puzzle" description="Plants vs Zombies 2 puzzle" toy_category="Puzzle" was_included_in_home=false  release_date="2017-10-08T01:01:00.776594Z"
+
+HTTP/1.0 201 Created
+Content-Length: 171
+Content-Type: application/json
+Date: Thu, 16 May 2019 19:52:07 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+{
+    "description": "Plants vs Zombies 2 puzzle",
+    "name": "PvZ 2 puzzle",
+    "pk": 4,
+    "release_date": "2017-10-08T01:01:00.776594Z",
+    "toy_category": "Puzzle",
+    "was_included_in_home": false
+}
+ 
