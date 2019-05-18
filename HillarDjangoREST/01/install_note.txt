@@ -254,4 +254,59 @@ X-Frame-Options: SAMEORIGIN
     "toy_category": "Puzzle",
     "was_included_in_home": false
 }
+
+## PUT command
+
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http PUT :8000/toys/4 name="PvZ 3 puzzle" description="Plants vs Zombies 3 puzzle" toy_category="Puzzles & Games" was_included_in_home=false release_date="2017-10-08T01:01:00.776594Z"
+HTTP/1.0 200 OK
+Content-Length: 180
+Content-Type: application/json
+Date: Thu, 16 May 2019 21:47:11 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+{
+    "description": "Plants vs Zombies 3 puzzle",
+    "name": "PvZ 3 puzzle",
+    "pk": 4,
+    "release_date": "2017-10-08T01:01:00.776594Z",
+    "toy_category": "Puzzles & Games",
+    "was_included_in_home": false
+}
  
+##As we didn't provide all the required values for a Toy instance, the toy_serializer.is_valid() method will return False 
+and the function will return an HTTP 400 Bad Request status code
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http PUT :8000/toys/4 name="PvZ 4 puzzle"
+HTTP/1.0 400 Bad Request
+Content-Length: 129
+Content-Type: application/json
+Date: Thu, 16 May 2019 22:02:23 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+{
+    "description": [
+        "This field is required."
+    ],
+    "release_date": [
+        "This field is required."
+    ],
+    "toy_category": [
+        "This field is required."
+    ]
+}
+##
+When we want our API to be able to update a single field for an existing resource, in this case, an existing toy, 
+we should provide an implementation for the PATCH method. The PUT method is meant to replace an entire resource 
+and the PATCH method is meant to apply a delta to an existing resource. 
+
+## DELETE command
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http DELETE :8000/toys/4
+HTTP/1.0 204 No Content
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Thu, 16 May 2019 22:16:52 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+##

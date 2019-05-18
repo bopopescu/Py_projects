@@ -39,8 +39,23 @@ from collections import deque, Counter
 from pprint import pprint
 
 #1025
-tt = "\n"
-print(len(tt.split("\n")))
+
+lst = ['wifi','bt','ax', 'ac', 'bde']
+# add, remove, search, sort,
+l
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def run_flow(run_dir, flow_to_test, result_dir):

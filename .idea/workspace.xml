@@ -4,8 +4,11 @@
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/class_log2.py" beforeDir="false" afterPath="$PROJECT_DIR$/cls/cls6_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/git_note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_test_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test_std.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_dataStruc/excpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_except/excpt.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,26 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#28#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/views.py">
+        <entry file="file://$PROJECT_DIR$/cls/cls13_log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="672">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -57,12 +45,16 @@
       <find>valore</find>
       <find>import copy</find>
       <find>copy</find>
+      <find>John</find>
+      <find>&gt;&gt;&gt;</find>
+      <find>&gt;&gt;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>csvReader</replace>
       <replace>csvRwriter</replace>
       <replace>test_v</replace>
       <replace>wifi</replace>
+      <replace>QA</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -94,7 +86,6 @@
         <option value="$PROJECT_DIR$/py_dataStruc/b_dic_log.py" />
         <option value="$PROJECT_DIR$/log_test_summ.py" />
         <option value="$PROJECT_DIR$/cls/cla2.py" />
-        <option value="$PROJECT_DIR$/log_test_std.py" />
         <option value="$PROJECT_DIR$/cls/cla3.py" />
         <option value="$PROJECT_DIR$/file_op/b_file_op1.1.py" />
         <option value="$PROJECT_DIR$/file_op/b_file_IO.py" />
@@ -107,14 +98,25 @@
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/urls.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/views.py" />
+        <option value="$PROJECT_DIR$/cls/point.py" />
+        <option value="$PROJECT_DIR$/cls/cls7_log.py" />
+        <option value="$PROJECT_DIR$/cls/cls8_log.py" />
+        <option value="$PROJECT_DIR$/cls/cls9_log.py" />
+        <option value="$PROJECT_DIR$/cls/cls10_log.py" />
+        <option value="$PROJECT_DIR$/log_test_std.py" />
+        <option value="$PROJECT_DIR$/cls/cls12_log.py" />
+        <option value="$PROJECT_DIR$/cls/cls13_log.py" />
+        <option value="$PROJECT_DIR$/py_dataStruc/excpt1.py" />
+        <option value="$PROJECT_DIR$/log_except/excpt0.py" />
+        <option value="$PROJECT_DIR$/log_except/excpt2.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1104" />
-    <option name="y" value="66" />
-    <option name="width" value="784" />
-    <option name="height" value="1115" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1058" />
+    <option name="y" value="5" />
+    <option name="width" value="856" />
+    <option name="height" value="1116" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -128,102 +130,6 @@
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="toys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter03" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_03_01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter03" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_03_01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter03" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_03_01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter03" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_03_01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="toys" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -264,15 +170,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/file_op" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/log_except" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jsun\Documents\Py_projects\log_except" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jsun\Documents\Py_projects\file_op" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\log_except" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\py_dataStruc" />
       <recent name="C:\Users\jsun\Documents\Py_projects\cls" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\file_op" />
       <recent name="C:\Users\jsun\Documents\Py_projects" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\file_op\CSV" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -287,7 +197,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.excpt">
+  <component name="RunManager" selected="Python.excpt2">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -309,28 +219,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="b_file_IO" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Py_projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/file_op" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/file_op/b_file_IO.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="cla2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cls10_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -342,7 +231,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\jsun\Documents\Py_projects\cls\cla2_decorator1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cls/cls10_log.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -351,7 +240,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cla3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cls13_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -363,7 +252,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cls/cla3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cls/cls13_log.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,7 +261,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="excpt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="excpt0" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Py_projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/log_except" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_except/excpt0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="excpt1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -384,7 +294,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py_dataStruc/excpt.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\jsun\Documents\Py_projects\log_except\excpt1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -393,7 +303,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="log_test_std" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="excpt2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -401,11 +311,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/log_except" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_test_std.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_except/excpt2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -415,19 +325,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.log_test_std" />
-      <item itemvalue="Python.cla2" />
-      <item itemvalue="Python.cla3" />
-      <item itemvalue="Python.b_file_IO" />
-      <item itemvalue="Python.excpt" />
+      <item itemvalue="Python.cls10_log" />
+      <item itemvalue="Python.cls13_log" />
+      <item itemvalue="Python.excpt1" />
+      <item itemvalue="Python.excpt0" />
+      <item itemvalue="Python.excpt2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.excpt" />
-        <item itemvalue="Python.b_file_IO" />
-        <item itemvalue="Python.cla3" />
-        <item itemvalue="Python.log_test_std" />
-        <item itemvalue="Python.cla2" />
+        <item itemvalue="Python.excpt2" />
+        <item itemvalue="Python.excpt0" />
+        <item itemvalue="Python.excpt1" />
+        <item itemvalue="Python.cls13_log" />
+        <item itemvalue="Python.cls10_log" />
       </list>
     </recent_temporary>
   </component>
@@ -445,20 +355,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1104" y="66" width="784" height="1115" extended-state="0" />
-    <editor active="true" />
+    <frame x="1058" y="5" width="856" height="1116" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15141048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34718826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18329939" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27975586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32960325" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -469,72 +378,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rest_ex1/superbook2/src/profiles/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_ex1/superbook2/src/posts/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_ex1/superher_log_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_ex1/superbook2/src/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_ex1/superbook2/src/profiles/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_ex1/superbook2/src/profiles/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py_dataStruc/b_list_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="328" column="23" lean-forward="true" selection-start-line="328" selection-start-column="23" selection-end-line="328" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py_dataStruc/b_dic_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3212">
-          <caret line="146" column="52" selection-start-line="146" selection-start-column="52" selection-end-line="146" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python script/WiFi_11acMPS_MIMO.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python script/ex2_wifi_mps.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18370">
-          <caret line="835" column="1" selection-start-line="835" selection-start-column="1" selection-end-line="835" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py_dataStruc/b_set_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -542,56 +385,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/class1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/class_Empl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/class_log2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls1_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls2_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls3_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls4_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cls/cla1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls_log.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls5_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cls/cla2_decorator1.py">
@@ -615,13 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cla3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
         </state>
       </provider>
     </entry>
@@ -675,20 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py_dataStruc/excpt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log_test_summ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="147" selection-start-line="147" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file_op/b_file_op3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -715,16 +492,6 @@
           <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#74#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log_test_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,7 +560,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="176">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#28#60#0" expanded="true" />
@@ -803,11 +570,157 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+        <state relative-caret-position="616">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/point.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cla3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/class1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/class_Empl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls6_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls5_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls4_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls3_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls2_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls1_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_summ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls7_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls10_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls9_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="37" selection-start-line="37" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <marker date="1558135456807" expanded="true" signature="805:962" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls8_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls11_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls12_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_except/excpt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_except/excpt1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_except/excpt0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_except/excpt2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cls/cls13_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>

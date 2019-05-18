@@ -220,6 +220,15 @@ drwxr-xr-x 1 jsun 1049089     0 Mar 20 21:52 venv_3.7.2/
 drwxr-xr-x 1 jsun 1049089     0 Mar 22 11:17 web_log/
 
 ######3. Python
+#create venv
+cd project_directory
+python -m venv env
+source env/bin/activate  # on Linux or macOS
+env/bin/activate.bat     # on Windows  
+
+python -i  point.py
+python -m 
+python -c
 
 sudo apt install python-pip
 sudo apt-get install tcpdump graphviz imagemagick python-gnuplot python-cryptography python-pyx
