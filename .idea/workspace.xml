@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cls/class_log2.py" beforeDir="false" afterPath="$PROJECT_DIR$/cls/cls6_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/git_note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_test_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test_std.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py_dataStruc/excpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_except/excpt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cla1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cla2_decorator1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cla2_decorator2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cla3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/class1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/class_Empl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls10_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls11_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls12_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls13_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls1_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls2_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls3_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls4_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls5_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls6_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls7_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls8_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls9_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/cls_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls/point.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +32,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cls/cls13_log.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls13_log.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/QA_cls_auto1/test_class_1.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -175,6 +194,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jsun\Documents\Py_projects\QA_cls_auto1" />
       <recent name="C:\Users\jsun\Documents\Py_projects\log_except" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -355,7 +375,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1058" y="5" width="856" height="1116" extended-state="0" />
+    <frame x="1058" y="5" width="856" height="1116" extended-state="1" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34718826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -378,21 +398,14 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/py_dataStruc/b_set_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cla1.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cla1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cla2_decorator1.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cla2_decorator1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
@@ -409,7 +422,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cla2_decorator2.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cla2_decorator2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
@@ -578,53 +591,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/point.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/point.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="652">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cla3.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cla3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="163" selection-start-line="163" selection-end-line="163" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/class1.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/class1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/class_Empl.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/class_Empl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls6_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls6_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls5_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls5_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls4_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls4_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls3_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls3_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls2_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls2_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls1_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls1_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/log_test_summ.py">
@@ -634,21 +647,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls7_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls7_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
           <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls10_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls10_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls9_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls9_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="37" selection-start-line="37" selection-end-line="41" selection-end-column="28" />
@@ -658,14 +671,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls8_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls8_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls11_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls11_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
@@ -682,7 +695,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls12_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls12_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
           <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
@@ -717,12 +730,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cls/cls13_log.py">
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/cls/cls13_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QA_cls_auto1/test_class_1.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
