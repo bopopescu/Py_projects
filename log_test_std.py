@@ -42,7 +42,9 @@ from pprint import pprint
 
 lst = ['wifi','bt','ax', 'ac', 'bde']
 # add, remove, search, sort,
-l
+s = "WifiBT11AC11AXrsdbz"
+
+
 
 
 

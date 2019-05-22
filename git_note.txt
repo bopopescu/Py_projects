@@ -1,4 +1,11 @@
 #1/24/2019
+relational database
+client/server architecture
+network protocol
+file system management
+sw lifecycle
+TCP/IP, UDP, DHCP, ARP, ICMP,
+############################################################################################
 #####1. git . __________________________________________#
 git init
 git clone https://github.com/brb45/sampleproject 
@@ -109,13 +116,40 @@ $ cd src
 $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
-
+############################################################################################
 #####2. Linux . __________________________________________#
 Linux:
 nmap:10.0.2.15
 awk, sed,
 ps aux
 /usr/share?/usr/local  #software installed path
+
+service name start/restart
+
+#compare two files 
+cmp
+
+ifconfig eth0 192.168.1.12 netmask 255.255.255.0 broadcast 192.168.1.255
+
+netstat -a   #network info ,
+netsta  -s
+
+nslookup     # DNS info
+dig          # query DNS server, replacing nslookup
+
+free # memory usage
+
+mysqldump -u root -ptecmint rsyslog > rsyslog.sql  # database backup
+
+crontab -e 
+0 3 * * * /root/backup.sh  # run backup.sh at specified time
+
+ip address
+
+
+
+
+
 
 apt --version
 apt 1.6.8 (amd64)
@@ -154,6 +188,15 @@ $ source env/bin/activate
 
 mkdir -p /just/one/dir
 mkdir -p -- a/foo b/bar a/baz
+
+#search files/directory
+ find -name l*
+# grep 
+-i , ignore word cases
+-r , search recursively
+
+grep -w -c , combined with wc
+grep -w "pattern" -c file
 
 jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
 $ grep -c "git init" git_note.txt
@@ -219,6 +262,8 @@ drwxr-xr-x 1 jsun 1049089     0 Mar 23 20:32 Slen/
 drwxr-xr-x 1 jsun 1049089     0 Mar 20 21:52 venv_3.7.2/
 drwxr-xr-x 1 jsun 1049089     0 Mar 22 11:17 web_log/
 
+
+############################################################################################
 ######3. Python
 #create venv
 cd project_directory
@@ -254,7 +299,7 @@ activate       activate.ps1      easy_install      pip3    python3        wheel
 activate.csh   activate_this.py  easy_install-3.6  pip3.6  python3.6
 activate.fish  activate.xsh      pip               python  python-config
 (gmapenv) wuding@wuding-VirtualBox:~/Documents/env/gmapenv$ 
-
+############################################################################################
 ######4. networking . __________________________________________#
 10.*.*.*, 172.16–31.*.*, 192.168.*.*
 ping , nmap , ip route, iptables, traceroute
@@ -270,7 +315,7 @@ Logging utilities
 System\Environment handling
 Application mapping functions
 System messaging or system API enhancements and wrappers
-
+############################################################################################
 ######5. Py test . __________________________________________#
 #Python module
 subprocess.Popen
