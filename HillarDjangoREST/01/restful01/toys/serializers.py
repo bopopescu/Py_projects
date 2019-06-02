@@ -1,8 +1,24 @@
+
+from rest_framework import serializers
+from .models import Toy
+
+class ToySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Toy
+        fields = ('id',
+            'name',
+            'description',
+            'release_date',
+            'toy_category',
+            'was_included_in_home')
+
+#********************************************************
+
 from rest_framework import serializers
 # from toys.models import Toy
 from .models import Toy
 
-class ToySerializer(serializers.Serializer):
+class ToySerializer_original(serializers.Serializer):
     pk = serializers.IntegerField(read_only=True)
     name = serializers.CharField(max_length=150)
     description = serializers.CharField(max_length=250)
@@ -21,3 +37,4 @@ class ToySerializer(serializers.Serializer):
         instance.was_included_in_home = validated_data.get('was_included_in_home', instance.was_included_in_home)
         instance.save()
         return instance
+

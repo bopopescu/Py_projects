@@ -8,6 +8,11 @@ def print_iterator(it):
     for x in it:
         print(x, end=' ')
     print('')  # for new line
+
+#224
+def calculate(s):
+    pass
+
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
     for flow_name in flow_to_test:

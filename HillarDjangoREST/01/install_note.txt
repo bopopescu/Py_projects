@@ -310,3 +310,57 @@ Server: WSGIServer/0.2 CPython/3.7.2
 X-Frame-Options: SAMEORIGIN
 
 ##
+#curl -H "Accept: text/html" -iX GET localhost:8000/toys/
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful01>http :8000/toys/ Accept:text/html
+HTTP/1.0 200 OK
+Content-Length: 919
+Content-Type: application/json
+Date: Thu, 30 May 2019 00:27:14 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+X-Frame-Options: SAMEORIGIN
+
+[
+    {
+        "description": "6 figures from Clash Royale",
+        "id": 3,
+        "name": "Clash Royale play set",
+        "release_date": "2017-10-09T12:10:00.776594Z",
+        "toy_category": "Playset",
+        "was_included_in_home": false
+    },
+    {
+        "description": "detailed test plan and coverage",
+        "id": 6,
+        "name": "Formal QA process",
+        "release_date": "2019-05-29T01:01:00.776594Z",
+        "toy_category": "Noise Figure",
+        "was_included_in_home": false
+    },
+    {
+        "description": "Barbie loves Hawaii",
+        "id": 2,
+        "name": "Hawaiian Barbie",
+        "release_date": "2019-05-14T17:42:13.029376Z",
+        "toy_category": "Dolls",
+        "was_included_in_home": true
+    },
+    {
+        "description": "Snoopy speaks five languages",
+        "id": 1,
+        "name": "Snoopy talking action figure",
+        "release_date": "2019-05-14T17:42:13.029376Z",
+        "toy_category": "Action figures",
+        "was_included_in_home": false
+    },
+    {
+        "description": "The Dragon's Trap puzzle",
+        "id": 5,
+        "name": "Wonderboy puzzle",
+        "release_date": "2017-10-03T01:01:00.776594Z",
+        "toy_category": "Puzzles & Games",
+        "was_included_in_home": false
+    }
+]
+
+##
+http OPTIONS :8000/toys/

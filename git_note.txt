@@ -563,8 +563,13 @@ drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:46 .git/
 -rw-r--r-- 1 jsun 1049089 1733 Jan  7 13:45 b_file_op6.py
 -rw-r--r-- 1 jsun 1049089 2704 Jan  7 13:45 b_file_op7.py
 
+#####6.
+#SQLAlchemy
+#RabbitMQ
+#Redis
 
-#####
+
+#####7.
 __________________________________________________________________________________
 jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
 $ mkdir test3

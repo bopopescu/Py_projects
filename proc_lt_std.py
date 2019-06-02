@@ -818,9 +818,9 @@ def addBina(a,b):
         i -= 1
     sum_str = sum_str if carry == 0 else str(carry) + sum_str
     return sum_str
-def addBina(a,b):
+def addBina(a, b):
     sum_str = ""
-    i, carry  = -1,0
+    i, carry  = -1, 0
     while -i <= len(a) or -i <= len(b):
         if -i <= len(a) and -i <= len(b):
             sum_int = carry + int(a[i]) + int(b[i])
@@ -834,3 +834,31 @@ def addBina(a,b):
     sum_str = sum_str if carry == 0 else str(carry) + sum_str
     return sum_str
 #
+#224
+def calculate(s):
+    rst, sign = 0, 1
+    len_s = len(s)
+    i = 0
+    stack = []
+    while i < len(s):
+        if s[i].isdigit():
+            st = i
+            while st < len_s and s[st].isdigit():
+                st += 1
+            rst += sign * int(s[i:st])
+            i = st - 1
+        elif s[i] == '+':
+            sign = 1
+        elif s[i] == '-':
+            sign = -1
+        elif s[i] == "(":
+            stack.extend([rst,sign])
+            rst, sign = 0, 1
+        elif s[i] == ')':
+            rst *= stack.pop()
+            rst += stack.pop()
+        i += 1
+    return rst
+
+ss = '(1+(4+5+2)-3)+(6+8)'
+print(calculate(ss))
