@@ -1822,3 +1822,73 @@ nothing to commit, working tree clean
 jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
 $ git status -s
 
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ git add .
+warning: adding embedded git repository: practical-docker-with-python
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> practical-docker-with-python
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached practical-docker-with-python
+hint:
+hint: See "git help submodule" for more information.
+############################################################################################
+######6.
+#docker
+
+#1.sudo apt-get update
+sudo apt-get dist-upgrade
+
+
+cd /usr/bin
+rm python3
+ln -s python3.5 python3
+
+
+sudo apt-get remove python3-apt
+sudo apt-get install python3-apt
+#2. install necessary packages required to use a repository over https
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+
+#3. install Docker's official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+#4. Add Docker’s stable repository:
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+#5. Update the apt packaage index
+
+#6.Install Docker:
+sudo apt-get install docker-ce
+
+We can avoid having to type sudo by following these steps:
+
+WARNINGThe Docker group rights are still equivalent to the root user.
+1.	
+Create the docker group:
+
+sudo groupadd docker
+ 
+2.	
+Add your user to the docker group:
+
+sudo usermod -aG docker $USER
+ 
+3.	
+Log out and log back in. Run the command shown in Listing 2-5 to confirm the Docker has been installed correctly.
+#logout
+gnome-session-quit
+
+docker run --rm hello-world
+4.
+    
