@@ -33,8 +33,6 @@ print(maxh) #[0, 0, 0, 0, 0]
 arr = [0]*5
 print(arr) #[0, 0, 0, 0, 0]
 
-
-
 #5.
 #range(start, stop, step), is iterable, but not iterator
 for i in range(4,1,-1):
@@ -51,11 +49,11 @@ a[0][0] = 99
 a[4][4] = 88
 pprint(a)
 #Create 2-D array
-[[99, 0, 0, 0, 0],
- [0, 0, 0, 0, 0],
- [0, 0, 0, 0, 0],
- [0, 0, 0, 0, 0],
- [0, 0, 0, 0, 88]]
+# [[99, 0, 0, 0, 0],
+#  [0, 0, 0, 0, 0],
+#  [0, 0, 0, 0, 0],
+#  [0, 0, 0, 0, 0],
+#  [0, 0, 0, 0, 88]]
 
 #7.
 from pprint import pprint
@@ -63,10 +61,10 @@ row = 4
 col = 10
 dp = [[1 for __ in range(col)] for __ in range(row)]
 pprint(dp)
-[[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
- [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
- [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
- [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+# [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+#  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+#  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+#  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
 #8
 numbers = range(1_0) #<class 'range'>
 squares = (n**2 for n in numbers) #<class 'generator'>, generator is an iterator

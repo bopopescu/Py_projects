@@ -8,10 +8,28 @@ def print_iterator(it):
     for x in it:
         print(x, end=' ')
     print('')  # for new line
+#299
+# aa = "abcd"
+# print(set(aa))
+def getHint(secret, guess):
+    dic_s, dic_g = {}, {}
+    cnt_c, cnt_b = 0, 0
+    for i, val in enumerate(secret):
+        #val = int(val)
+        if val == guess[i]:
+            cnt_b +=1
+        else:
+            dic_s[val] = dic_s[val] + 1 if val in dic_s else 1
+            dic_g[guess[i]] = dic_g[guess[i]] + 1 if guess[i] in dic_g else 1
+    for key, val in dic_s.items():
+        #key, val = int(key), int(val)
+        if key in dic_g:
+            cnt_c += val if val <= dic_g[key] else dic_g[key]
+    return str(cnt_b) + "A" + str(cnt_c) + "B"
 
-#224
-def calculate(s):
-    pass
+
+print(getHint("1123",'0111'))
+
 
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
@@ -44,10 +62,46 @@ from collections import deque, Counter
 from pprint import pprint
 
 #1025
-
-lst = ['wifi','bt','ax', 'ac', 'bde']
+import copy
+lst = ['wifi','Bt','ax', 'Ac', 'bde']
 # add, remove, search, sort,
 s = "WifiBT11AC11AXrsdbz"
+print(lst)
+
+
+#+
+lst.append("ax_5G")
+# print(lst)
+lst.insert(1, "ax_7G")
+print(lst)
+#rst = copy.deepcopy(lst)
+rst = lst.index("Bt")
+print(rst)
+
+print(lst.pop(), lst, sep="::" )
+#859
+def buddyStrings(A,B):
+    cnt = -1
+    if len(A) != len(B):
+        return False
+    if A == B:
+        if len(A) == len(set(A)):
+            return False
+        return True
+    for i in range(len(A)):
+        if A[i] != B[i]:
+            if cnt == -1:
+                rst = i
+                cnt = 1
+            elif cnt == 1:
+                if A[i] == B[rst] and A[rst] == B[i]:
+                    cnt = 0
+                else:
+                    return False
+            else:
+                return False
+    return cnt == 0
+
 
 
 

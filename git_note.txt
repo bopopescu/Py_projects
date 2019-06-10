@@ -2121,3 +2121,303 @@ To run this image, use the docker run command followed by the image ID 7ae54947f
 
 docker run 7ae54947f6a4
 Hello World!
+
+# Give image a name
+docker tag image_id tag_name
+docker tag 7ae54947f6a4 sathya:hello-world
+
+#
+You can also do this as part of the build process itself:
+
+docker build -t sathya:hello-world .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> Using cache
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+Successfully tagged sathya:hello-world
+The last line tells you that the image was tagged successfully. 
+You can verify this by searching for docker images as follows:
+
+docker images sathya:hello-world
+REPOSITORY          TAG                 IMAGE IDCREATED             SIZE
+sathya              hello-world         7ae54947f6a4        24 minutes ago      112MB
+
+#
+#DOCKERFILE INSTRUCTIONS
+When looking at a Dockerfile, you’re mostly likely to 
+run into the following instructions:
+FROM
+
+ADD
+
+COPY
+
+RUN
+
+CMD
+
+ENTRYPOINT
+
+ENV
+
+VOLUME
+
+LABEL
+
+EXPOSE
+
+##
+Dockerfile Listing
+
+FROM ubuntu
+CMD echo Hello World!
+#Build the image
+docker build .
+
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+Now modify the Dockerfile to include the latest tag, as shown.
+
+Dockerfile Listing
+
+FROM ubuntu:latest
+CMD echo Hello World!
+#Build the image:
+
+docker build .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+##
+WORKDIR /path/to/directory
+WORKDIR can be set multiple times in a Dockerfile and, if a relative directory succeeds a previous WORKDIR instruction, it will be relative to the previously set working directory. The following example demonstrates this.
+
+Dockerfile Listing
+
+FROM ubuntu:latest
+WORKDIR /usr
+CMD pwd
+
+#
+docker build -t sathyabhat:workdir .
+Sending build context to Docker daemon  2.048kB
+Step 1/3 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/3 : WORKDIR /usr
+ ---> Using cache
+ ---> 8b0b5742b476
+Step 3/3 : CMD pwd
+ ---> Using cache
+ ---> 4a827ca4a571
+Successfully built 4a827ca4a571
+Successfully tagged sathyabhat:workdir
+docker run sathyabhat:workdir
+/usr
+
+############
+For example, if you want to move the requirements.txt file from the current working 
+directory to the /usr/share/app directory, the instruction would be as follows:
+
+ADD requirements.txt /usr/share/app
+COPY  requirements.txt /usr/share/app
+
+##
+1.	
+#Start by creating an nginx container:
+# image name: nginx
+# container name: nginx-test
+
+docker run -d --name nginx-test  nginx
+
+2. open a terminal within the container nginx-test
+docker exec -it nginx-test bash
+
+^d to quit container bash
+
+3.	
+Create a copy of nginx’s default.conf to a new config:
+
+cd /etc/nginx/conf.d
+cp default.conf nginx-test.conf
+ 
+4.	
+We won’t be modifying the contents of nginx-test.conf since it’s immaterial. 
+Now we’ll stop the container. From the Docker host terminal, type:
+
+docker stop nginx-test
+ 
+5.	
+Start the container again:
+
+docker start nginx-test
+ 
+6.	
+Open a terminal within the container:
+
+docker exec -it nginx-test bash
+ 
+7.	
+Now, see if the changes are still around:
+
+cd /etc/nginx/conf.d
+ls
+default.conf  nginx-test.conf
+ 
+8.	
+Since the container was only stopped, the data persists. Let’s stop, 
+remove the container, and then bring up a new one and observe what happens.
+
+docker stop nginx-test
+docker rm nginx-test
+ 
+9.	
+Start a new container:
+
+docker run -d --name nginx-test  nginx
+ 
+10.	
+Now that a new container is up and running, let’s connect to the container’s terminal:
+
+docker exec -it nginx-test bash
+ 
+11.	
+Examine contents of the conf.d directory of nginx:
+
+cd /etc/nginx/conf.d
+ls
+default.conf
+
+##
+To create a tmpfs mount, you can use the --mount or --tmpfs flag when running a container, as shown here:
+
+docker run -it --name tmpfs-test --mount type=tmpfs, target=/tmpfs-mount ubuntu bash
+docker run -it --name tmpfs-test --tmpfs /tmpfs-mount ubuntu bash
+
+##
+We’ll try to mount our Docker host’s home directory to a directory called host-home within the container. To do this, type the following command:
+
+docker run -it --name mount-test --mount type=bind,source="$HOME",target=/host-home ubuntu bash
+docker run -it --name mount-test -v $HOME:/host-home ubuntu bash
+Inspecting the created container tells us the different characteristics about the mount.
+
+docker inspect mount-test | jq .[0].Mounts
+[
+  {
+    "Type": "bind",
+    "Source": "/Users/sathyabhat",
+    "Destination": "/host-home",
+    "Mode": "",
+    "RW": true,
+    "Propagation": "rprivate"
+  }
+]
+
+## Creat Volume
+docker volume create --name=nginx-volume
+This creates a named volume called nginx-volume.
+
+##inspect
+docker volume inspect nginx-volume
+This would bring up a result as shown here:
+
+docker volume inspect nginx-volume
+[
+    {
+        "CreatedAt": "2018-04-17T13:51:02Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/nginx-volume/_data",
+        "Name": "nginx-volume",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+
+##
+##Using Volumes When Starting a Container
+The syntax for using a volume when starting a container is nearly the same as using a bind host. 
+Let’s run the following command:
+
+docker run -it --name volume-test --mount target=/data-volume ubuntu bash
+docker run -it --name volume-test -v:/data-volume
+
+docker inspect volume-test | jq .[0].Mounts
+[
+  {
+    "Type": "volume",
+    "Name": "5fe950de3ac2b428873cb0af6281f3fb3817af933fbad32070b1a3101be4927f",
+    "Source": "/var/lib/docker/volumes/5fe950de3ac2b428873cb0af6281f3fb3817af933fbad32070b1a3101be4927f/_data",
+    "Destination": "/data-volume",
+    "Driver": "local",
+    "Mode": "z",
+    "RW": true,
+    "Propagation": ""
+  }
+]
+
+###Create a volume, and provide volume name to Docker when running a container
+docker volume create volume-test
+
+
+#
+docker volume inspect volume-test
+[
+    {
+        "CreatedAt": "2018-04-15T12:58:32Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/volume-test/_data",
+        "Name": "volume-test",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+#
+We can now refer to this volume when creating/running a container. 
+Note the extra source= flag with the --mount flag and the parameter after -v flag. 
+These indicate the volume name to which the container has to be attached.
+
+docker run -it --name volume-test --mount source=volume-test,target=/data-volume ubuntu bash
+docker run -it --name volume-test -v:volume-test:/data-volume ubuntu bash
+
+# Created volume exists in Docker file-system only, if a container is removed, the created volume is still there 
+and can be used by other containers.
+
+##
+version: '3'
+services:
+    database:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: dontusethisinprod
+    webserver:
+        image: nginx:alpine
+        ports:
+            - 8080:80
+        depends_on:
+            - cache
+            - database
+    cache:
+        image: redis
+
+##
+
+
+
+
+
+
+
+

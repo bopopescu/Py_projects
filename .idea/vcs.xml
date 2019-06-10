@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/beginningdjango" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/practical-docker-with-python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/py_auto/Hands-On-Enterprise-Automation-with-Python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/py_auto/db_py/nsot" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/py_auto/infoblox/infoblox-client" vcs="Git" />
