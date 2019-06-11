@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/git_note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer.au3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer_xp.au3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/QA_Automation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/QA_Station_Scripts/Run_AR93xx_Tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/QA_Station_Scripts/Run_QCA_6174_Tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/QA_Station_Scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/Release_notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/Run_IQmeasure_Tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/Run_PKG_Installation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/Run_QA.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_scripts/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log_test_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test_std.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py_dataStruc/b_list_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_dataStruc/b_list_log.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,30 +24,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
+            <state relative-caret-position="573">
               <caret line="366" selection-start-line="366" selection-end-line="366" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log_test_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="1298">
+              <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/practical-docker-with-python/docker-volume-bind-mount/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -79,9 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/log_except/excpt0.py" />
-        <option value="$PROJECT_DIR$/log_except/excpt2.py" />
-        <option value="$PROJECT_DIR$/mul_process/basic_test.py" />
         <option value="$PROJECT_DIR$/mul_process/test_concurr_log.py" />
         <option value="$PROJECT_DIR$/mul_process/test1.py" />
         <option value="$PROJECT_DIR$/mul_process/subpro_test1.py" />
@@ -129,15 +129,18 @@
         <option value="$PROJECT_DIR$/mul_process/celery_test1.py" />
         <option value="$PROJECT_DIR$/mul_process/celery_test2.py" />
         <option value="$PROJECT_DIR$/py_dataStruc/b_list_log.py" />
+        <option value="$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer.au3" />
         <option value="$PROJECT_DIR$/log_test_std.py" />
+        <option value="$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer_xp.au3" />
+        <option value="$PROJECT_DIR$/Automation_scripts/Run_QA.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="y" value="-7" />
-    <option name="width" value="428" />
-    <option name="height" value="558" />
+    <option name="x" value="-14" />
+    <option name="y" value="-14" />
+    <option name="width" value="856" />
+    <option name="height" value="1116" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,7 +171,7 @@
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
               <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -176,15 +179,6 @@
               <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
               <item name="01" type="462c0819:PsiDirectoryNode" />
               <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="toys" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -275,7 +269,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mul_process" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -368,7 +362,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thread_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="log_test_summ" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -376,11 +370,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mul_process/Thread_process" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mul_process/Thread_process/thread_3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_test_summ.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -432,19 +426,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.thread_3" />
+      <item itemvalue="Python.hello-world" />
+      <item itemvalue="Python.log_test_std" />
+      <item itemvalue="Python.log_test_summ" />
       <item itemvalue="Python.thread_4" />
       <item itemvalue="Python.thread_5" />
-      <item itemvalue="Python.log_test_std" />
-      <item itemvalue="Python.hello-world" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.log_test_std" />
+        <item itemvalue="Python.log_test_summ" />
         <item itemvalue="Python.hello-world" />
         <item itemvalue="Python.thread_5" />
         <item itemvalue="Python.thread_4" />
-        <item itemvalue="Python.thread_3" />
       </list>
     </recent_temporary>
   </component>
@@ -462,15 +456,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1453" height="873" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.33685693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.05567301" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1936721" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2715054" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -510,72 +503,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/log_test_std.py</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/log_test_std.py</url>
-          <line>16</line>
+          <line>17</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/log_test_std.py</url>
-          <line>17</line>
+          <line>18</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mul_process/Mul_process_thread/mul_process_old_log14.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mul_process/Mul_process_thread/mul_process_queue_log15.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mul_process/Mul_process_thread/mul_process_thread_log16.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mul_process/Mul_process_thread/mul_process_pool_log17.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mul_process/mul_process_queue_log16.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mul_process/File_mul_process/que_multiprocessing_3.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mul_process/File_mul_process/file_multiprocessing_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mul_process/Thread_process/thread_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mul_process/Thread_process/thread_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -687,16 +631,6 @@
           <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="e#1#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="823" column="39" lean-forward="true" selection-start-line="823" selection-start-column="39" selection-end-line="823" selection-end-column="39" />
-          <folding>
-            <element signature="e#20116#20685#0" />
           </folding>
         </state>
       </provider>
@@ -863,20 +797,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/practical-docker-with-python/docker-volume-bind-mount/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py_dataStruc/log_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="823" column="39" lean-forward="true" selection-start-line="823" selection-start-column="39" selection-end-line="823" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_summ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer.au3" />
+    <entry file="file://$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer_xp.au3" />
+    <entry file="file://$PROJECT_DIR$/Automation_scripts/Run_PKG_Installation.py" />
+    <entry file="file://$PROJECT_DIR$/Automation_scripts/QA_Automation.py" />
+    <entry file="file://$PROJECT_DIR$/Automation_scripts/Run_QA.py" />
+    <entry file="file://$PROJECT_DIR$/Automation_scripts/QA_Station_Scripts/Run_AR93xx_Tests.py" />
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
+        <state relative-caret-position="573">
           <caret line="366" selection-start-line="366" selection-end-line="366" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practical-docker-with-python/docker-volume-bind-mount/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/log_test_std.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="1298">
+          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
