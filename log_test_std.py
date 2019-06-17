@@ -63,6 +63,11 @@ def run_flow1(run_dir, flow_to_test, result_dir):
 st = "qa test on package 4.40.0.23"
 
 
+
+
+
+
+
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
     for flow_name in flow_to_test:
@@ -193,4 +198,43 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc ):
         shutil.copy2(src, run_dir)
         flow_to_test.append(flow_name)
 
+##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+class User(models.Model):
+ name = models.CharField(max_length=255)
+ surname = models.CharField(max_length=255)
+class Invoice(models.Model):
+ user = models.ForeignKey(User)
+ number = models.CharField(max_length=25)
+
+class testUser(models.Model):
+    testName = models.CharField(max_length=255)
+    testuser = models.ForeignKey()
+
+#list of json object,
+# json object, enclosed with {}
+# array of json 2 objects
+family = [{
+    "name" : "Jason",
+    "age" : "24",
+    "gender" : "male"
+},
+{
+    "name" : "Kyle",
+    "age" : "21",
+    "gender" : "male"
+}];
+
+#nest json objects
+testtest={
+    "jason" : {
+        "name" : "Jason Lengstorf",
+        "age" : "24",
+        "gender" : "male"
+    },
+    "kyle" : {
+        "name" : "Kyle Lengstorf",
+        "age" : "21",
+        "gender" : "male"
+    }
+}
 
