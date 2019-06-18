@@ -97,64 +97,8 @@ def run_flow(run_dir, flow_to_test, result_dir):
         time.sleep(1) #TreeNode
 from collections import deque, Counter
 from pprint import pprint
-
-#1025
-import copy
-lst = ['wifi','Bt','ax', 'Ac', 'bde']
-# add, remove, search, sort,
-s = "WifiBT11AC11AXrsdbz"
-print(lst)
-
-
-#+
-lst.append("ax_5G")
-# print(lst)
-lst.insert(1, "ax_7G")
-print(lst)
-#rst = copy.deepcopy(lst)
-rst = lst.index("Bt")
-print(rst)
-
-print(lst.pop(), lst, sep="::" )
-#859
-def buddyStrings(A,B):
-    cnt = -1
-    if len(A) != len(B):
-        return False
-    if A == B:
-        if len(A) == len(set(A)):
-            return False
-        return True
-    for i in range(len(A)):
-        if A[i] != B[i]:
-            if cnt == -1:
-                rst = i
-                cnt = 1
-            elif cnt == 1:
-                if A[i] == B[rst] and A[rst] == B[i]:
-                    cnt = 0
-                else:
-                    return False
-            else:
-                return False
-    return cnt == 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#815
+def numBus(routes S, T):
 
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
@@ -238,3 +182,103 @@ testtest={
     }
 }
 
+from rest_framework import serializers
+from main.models import Cat, Dog
+
+class DogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dog
+        fields = (‘owner ‘ , ‘ name ‘ , ‘ birthday ‘ )
+        read_only_fields = ( ‘ owner ‘ ,)
+class CatSerializer(serializers.ModelSerializer):
+ class Meta:
+    model = Cat
+    fields = (‘owner‘, ‘name‘, ‘birthday‘)
+    read_only_fields = (‘owner‘,)
+## viewset
+from rest_framework import viewsets, permissions
+from main.models import Cat, Dog
+from .permissions import IsOwnerOrReadOnly
+from .serializers import CatSerializer, DogSerializer
+# Create your views here.
+class BaseViewSet ( viewsets . ModelViewSet ):
+    permission_classes = [permissions.IsAuthenticated, IsOwnerOrReadOnly]
+def get_queryset(self):
+    qs = self.queryset.filter(owner=self.request.user)
+    return qs
+def perform_create(self, serializer):
+    serializer.save(owner = self.request.user)
+class DogViewSet(BaseViewSet):
+    serializer_class = DogSerializer
+    queryset = Dog.objects.all ()
+class CatViewSet(BaseViewSet):
+    serializer_class = CatSerializer
+    queryset = Cat.objects.all ()
+
+class BaseViewSet(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated, IsOwnerOrReadOnly]
+    def get_queryset(self):
+        qs = self.queryset.filter()
+
+####
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .permissions import IsOwnerOrReadOnly
+from .models import Dog
+
+
+class DogFeedView(APIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+    permission_classes = (IsOwnerOrReadOnly,)
+
+    def get(self, request, pk=None):
+        dog = get_object_or_404(Dog, pk=pk)
+        dog.feed()
+        return Response({“msg“: “Dog
+        fed“, status = status.HTTP_200_OK})
+###
+        from rest_framework import routers
+        from .views import DogViewSet, CatViewSet, DogFeedView
+        router = routers.DefaultRouter(trailing_slash=False)
+        router.register(‘dogs‘, DogViewSet)
+        router.register(‘cats‘, CatViewSet)
+        urlpatterns = router.urls
+        urlpatterns + = [
+            url(r‘dogs / (?P < pk >[\d]+) / feed /$‘, DogFeedView.as_view(), name = dogfeed)
+        ]
+## renderer
+        …
+        (… other definition code)
+        from rest_framework import renderers
+        from rest_framework_xml.renderers import XMLRenderer
+
+    class DogFeedView(APIView):
+        renderer_classes = (renderers.TemplateHTMLRenderer, renderers.JSONRenderer, XMLRenderer)
+        (other definition code …)
+
+    …
+##
+    class ImageRenderer(renderers.BaseRenderer):
+        media_type = 'image/png'
+        format = 'image'
+
+        def render(self, data, media_type=None, renderer_context=None):
+            return data
+
+            # view class
+
+    class ShowImage(APIView):
+        renderer_classes = (ImageRenderer,)
+
+        def get(self, request, format=None):
+            print('format', format)
+            if format == 'image':
+                image_file = open('path_to_image', 'rb')
+                response = HttpResponse(image_file, content_type='image/png')
+                response['Content-Disposition'] = 'attachment; filename={}'.format('image_filename')
+
+    # urls.py
+    urlpatterns = format_suffix_patterns([
+        url(r'image/?$', views.ShowImage.as_view())
+    ])
