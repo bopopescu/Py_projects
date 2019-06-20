@@ -5,6 +5,7 @@ network protocol
 file system management
 sw lifecycle
 TCP/IP, UDP, DHCP, ARP, ICMP,
+6/19/19: python: itertool, re, generator; 
 ############################################################################################
 ######@@1. git . __________________________________________#
 git init

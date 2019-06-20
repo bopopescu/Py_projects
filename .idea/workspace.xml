@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/jsonfile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/re_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/rex/re_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/summ.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/summ.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/test1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/test_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/test_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/test_log1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/test_log1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/test_log2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/test_log2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/example_log/text_parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/text_parse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/run_mul_scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/Mul_process/run_mul_scripts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/temp/log3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/zip_op/write_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_test4.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_test_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test_std.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proc_lt_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/proc_lt_std.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,10 +16,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/log_test.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220" />
+            <state relative-caret-position="530">
+              <caret line="995" column="2" selection-start-line="995" selection-start-column="2" selection-end-line="995" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/log_test4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log_test1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -50,8 +69,15 @@
       <find>copy</find>
       <find>John</find>
       <find>&gt;&gt;&gt;</find>
-      <find>&gt;&gt;&gt;</find>
       <find>...</find>
+      <find>dict_a</find>
+      <find>filter</find>
+      <find>collections</find>
+      <find>time.sleep</find>
+      <find>‘</find>
+      <find>“</find>
+      <find>bus</find>
+      <find>done</find>
     </findStrings>
     <replaceStrings>
       <replace>csvReader</replace>
@@ -59,6 +85,8 @@
       <replace>test_v</replace>
       <replace>wifi</replace>
       <replace>QA</replace>
+      <replace>list_of_dict</replace>
+      <replace>'</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -67,8 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mul_process/subpro_test1.py" />
-        <option value="$PROJECT_DIR$/mul_process/subpro_test2.py" />
         <option value="$PROJECT_DIR$/mul_process/mul_process_log1.py" />
         <option value="$PROJECT_DIR$/mul_process/mul_process_log2.py" />
         <option value="$PROJECT_DIR$/mul_process/test2.py" />
@@ -98,7 +124,6 @@
         <option value="$PROJECT_DIR$/mul_process/Thread_process/thread_4.py" />
         <option value="$PROJECT_DIR$/mul_process/Thread_process/thread_5.py" />
         <option value="$PROJECT_DIR$/mul_process/b_thread1_log.py" />
-        <option value="$PROJECT_DIR$/proc_lt_std.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/settings.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/apps.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py" />
@@ -116,16 +141,19 @@
         <option value="$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer_xp.au3" />
         <option value="$PROJECT_DIR$/Automation_scripts/Run_QA.py" />
         <option value="$PROJECT_DIR$/py_dataStruc/py_decorator.py" />
-        <option value="$PROJECT_DIR$/log_test_std.py" />
         <option value="$PROJECT_DIR$/log_test_summ.py" />
+        <option value="$PROJECT_DIR$/log_test_std.py" />
+        <option value="$PROJECT_DIR$/log_test1.py" />
+        <option value="$PROJECT_DIR$/proc_lt_std.py" />
+        <option value="$PROJECT_DIR$/log_test4.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="214" />
-    <option name="height" value="280" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="428" />
+    <option name="height" value="560" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -133,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,19 +177,12 @@
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Py_op" type="462c0819:PsiDirectoryNode" />
-              <item name="py_dataStruc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="web_log" type="462c0819:PsiDirectoryNode" />
+              <item name="Py_QA" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.py_decorator">
+  <component name="RunManager" selected="Python.log_test4">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -218,7 +240,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hello-world" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="log_test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -226,11 +248,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/practical-docker-with-python/docker hello world" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practical-docker-with-python/docker hello world/hello-world.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="log_test4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Py_projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_test4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -260,7 +303,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="log_test_summ" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="proc_lt_std" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -272,7 +315,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_test_summ.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proc_lt_std.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -302,41 +345,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thread_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Py_projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mul_process/Thread_process" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mul_process/Thread_process/thread_5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.hello-world" />
       <item itemvalue="Python.log_test_std" />
-      <item itemvalue="Python.log_test_summ" />
-      <item itemvalue="Python.thread_5" />
       <item itemvalue="Python.py_decorator" />
+      <item itemvalue="Python.proc_lt_std" />
+      <item itemvalue="Python.log_test4" />
+      <item itemvalue="Python.log_test1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.py_decorator" />
+        <item itemvalue="Python.log_test4" />
+        <item itemvalue="Python.log_test1" />
         <item itemvalue="Python.log_test_std" />
-        <item itemvalue="Python.log_test_summ" />
-        <item itemvalue="Python.hello-world" />
-        <item itemvalue="Python.thread_5" />
+        <item itemvalue="Python.proc_lt_std" />
+        <item itemvalue="Python.py_decorator" />
       </list>
     </recent_temporary>
   </component>
@@ -355,13 +377,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1453" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26638478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2815815" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16397849" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -418,61 +441,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Py_op/File_op/file_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/Logging/log_all.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/File_op/log_logging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/test_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/test_log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/triples.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/write_log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unit_test/unitest_log.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkins_scripts/common/QA_Auto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4756">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#401#1196#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/Logging/logging_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/Logging/logging_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -523,12 +491,8 @@
     <entry file="file://$PROJECT_DIR$/Py_op/logoutput/log1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/temp/log3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/zip_op/write_log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/temp/log3.txt" />
+    <entry file="file://$PROJECT_DIR$/Py_op/zip_op/write_log.txt" />
     <entry file="file://$PROJECT_DIR$/Py_op/rex/re_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2237" />
@@ -578,9 +542,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/jsonfile.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/example_log/jsonfile.json" />
     <entry file="file://$PROJECT_DIR$/Py_op/example_log/b_split_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -617,31 +579,114 @@
     <entry file="file://$PROJECT_DIR$/Py_op/example_log/subprocess_log.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/summ.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/log_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/test1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1941" />
+        <state relative-caret-position="-2384" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/test_log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16097" />
+        <state relative-caret-position="-4884" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/test_log1.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/test_log2.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3418" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/text_parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-492" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/syntax_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/summ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7070" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_dic_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/log_test.py">
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/py_decorator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220" />
+        <state relative-caret-position="-492" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_summ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_QA/start_test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="24" lean-forward="true" selection-end-line="134" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="995" column="2" selection-start-line="995" selection-start-column="2" selection-end-line="995" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

@@ -1,6 +1,48 @@
+import time
+import sys
+import os
+
+# os.system("pause")
 ###################################################################################################
+####
+# zip, map, and filter all return an iterator
+
+
+#
+dic1 = {'wifi': 1, 'bt': 2}
+dic2 = {'abgn': 3, 'ax': 4}
+
+merg = zip(dic1, dic2)
+print(list(merg)) #[('wifi', 'abgn'), ('bt', 'ax')]
+
+#
+list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
+list2 = ['one', 'two', 'three', 'six']
+
+# zip returns an iterator
+test = zip(list1, list2)  # zip the values # test is an iterator
+try:
+    while True:
+        item_a, item_b = next(test)
+        print(item_a, item_b)
+except:
+    print("done")
+# time.sleep(1000)
+# ('Alpha', 'one'), ('Beta', 'two'), ('Gamma', 'three'), ('Sigma', 'six')
+test = zip(list1, list2)
+testList = list(test)
+
+#
+a, b = zip( *testList )
+print('The first list was ', list(a));
+print('The second list was ', list(b));
+
+
+
+####
 x = lambda a : a + 10
 print(x(5))
+
 
 t = lambda a, b : a+ b
 print(t(100,1))
@@ -29,6 +71,7 @@ def print_iterator(it):
         print(x, end=' ')
     print('')  # for new line
 
+# map returns an map object, which is an iterator
 map_iterator = map(to_upper_case, 'abc')
 print(type(map_iterator))
 print_iterator(map_iterator)
@@ -47,42 +90,73 @@ tuple_numbers = (5, 6, 7, 8)
 map_iterator = map(lambda x, y: x * y, list_numbers, tuple_numbers)
 print_iterator(map_iterator)
 # filter returns an iterator
-dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
+list_of_dict = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
 
-map(lambda x: x['name'], dict_a)  # Output: ['python', 'java']
+map(lambda x: x['name'], list_of_dict)  # Output: ['python', 'java']
 
-map(lambda x: x['points'] * 10, dict_a)  # Output: [100, 80]
+map(lambda x: x['points'] * 10, list_of_dict)  # Output: [100, 80]
 
-map(lambda x: x['name'] == "python", dict_a)  # Output: [True, False]
+map(lambda x: x['name'] == "python", list_of_dict)  # Output: [True, False]
 a = [1, 2, 3, 4, 5, 6]
 b=filter(lambda x : x % 2 == 0, a) # Output: [2, 4, 6]
 
-dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
-b=filter(lambda x : x['name'] == 'python', dict_a) # Output: [{'name': 'python', 'points': 10}]
+list_of_dict = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
+b = filter(lambda x : x['name'] == 'python', list_of_dict)  # Output: [{'name': 'python', 'points': 10}]
 
 #
 from collections import Counter
 # Counter is a sub-class of dict, has all dict's interfaces
-#elements() returns an iterator
+# elements() returns an iterator
 # most_common() returns a list of tuple of key and value
-a = Counter({'a':2, 'b':1,"c":3})
-print(a.elements())
-a['a'] =0
-print(list(a.elements()))
-del a['a']
-print(a.most_common())
-#print("Counter is of".format(type(a)), a.elements())
-aa = a.elements()
+
+collect_b = Counter({"cnt": "br", "cnt1": "ac"})
+b_ele = collect_b.elements()
+#
+print("start b_ele")
 try:
     while True:
-        print(next(aa), end=", ")
+        print(next(b_ele))
 except:
-    print("\nExit")
+    print()
 
-bb = a.most_common()
-print(type(bb), bb)
-# <class 'list'> [('c', 3), ('a', 2), ('b', 1)]
-#____
+b_most_common = collect_b.most_common(1)
+print("b_most_common type is ", type(b_most_common))
+print(b_most_common) #[('cnt', 'br')
+
+
+a = Counter({'a': 2, 'b': 1, "c": 3, 'd': 3})
+a_elements = a.elements()
+print("Counter a type is ", a_elements)
+
+try:
+    while True:
+        print(next(a_elements), end=", ")
+        # time.sleep(1)
+except:
+    print() # a, a, b, c, c, c, d, d, d,
+
+a_most_common = a.most_common(2) # most_common() return a list
+print("a_most_common is ", a_most_common) # a_most_common is  [('c', 3), ('d', 3)]
+
+a['a'] = 0
+print("list of a.elements() is ", list(a.elements()))
+print("a['a'] is ", a['a'])  # a['a'] is  0
+# time.sleep(1000)
+
+del a['a']
+print("Counter is of".format(type(a)), list(a.elements()))
+
+# time.sleep(1000)
+#
+from collections import Counter
+str_dict = Counter("this contains multiple redundancy")
+
+print("dict of str_dict is ", str_dict.most_common())
+[('n', 4), ('t', 3), ('i', 3), (' ', 3), ('s', 2), ('c', 2), ('a', 2), ('u', 2), ('l', 2), ('e', 2), ('d', 2), ('h', 1), ('o', 1), ('m', 1), ('p', 1), ('r', 1), ('y', 1)]
+#
+print("dict of str_dict is ", str_dict.most_common(7))
+
+# time.sleep(1000)
 
 import collections
 
@@ -121,19 +195,35 @@ print(type(list_c))
 
 for j in list_c:
     print("({0}, {1})".format(j[0], j[1]), end = ", ")
+print()
+#### deque
+from collections import deque
+# deque take a list as argument
+list = ["wifi","bt","ax", "ac",'ac', 'ac']
+deq = deque(list)
+# add to the tail
+deq.append("abgn")
+# add to head
+deq.appendleft("brcm")
+print(type(deq), deq, sep=", ")
+# remove from the end
+print("deq.pop() ", deq.pop()) # deq.pop()  abgn
+print(type(deq), deq, sep=", ")
+# remove from the beginning
+deq.popleft()
+print(type(deq), deq, sep=", ") # <class 'collections.deque'>, deque(['wifi', 'bt', 'ax', 'ac', 'ac', 'ac'])
+#
+# deq.clear()
+# count()
+print(deq.count('ac')) # 3
 
-list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
-list2 = ['one', 'two', 'three', 'six']
-
-test = zip(list1, list2)  # zip the values # test is an iterator
-# ('Alpha', 'one'), ('Beta', 'two'), ('Gamma', 'three'), ('Sigma', 'six')
-testList = list(test)
-
-a, b = zip( *testList )
-print('The first list was ', list(a));
-print('The second list was ', list(b));
-
-
+#access deque
+for i in range(4):
+    print(deq[i], end=", ")
+print() # wifi, bt, ax, ac,
+# deq[0] beginning item, deq[-1] ending item
+print("deq[-1] ", deq[-1]) # ac
+time.sleep(1000)
 
 
 
@@ -293,7 +383,7 @@ def rmtest(head, val):
     return head
 #543
 #TreeNode
-def diameterof Bt(root):
+def diameterofBt(root):
     rst=[0]
     max_diam(root, rst)
     return rst[0]
@@ -518,6 +608,7 @@ J = "aA"
 S = "aAAbbbb"
 J1 = "z"
 S1 = "ZZ"
+import time
 def numtone(J, S):
     print(type(s in J for s in S))
     print(type(s for s in S))
@@ -617,33 +708,33 @@ def commonCHars1(A):
         except:
             print("end of iterator it_a")
             break
-commonCHars1(b)
+# commonCHars1(b)
 ###
 
 
 ###
 #617
-def mgebt(t1,t2):
-    root = listNode(0)
-    if not t1 and not t2:
-        return None
-    if t1:
-        root.val += t1.val
-    if t2:
-        root.val += t2.val
-    if t1 and t2:
-        root.left  = mgebt(t1.left, t2.left)
-        root.right = mgebt(t1.right, t2.right)
-    elif t1:
-        root.left  = mgebt(t1.left, None)
-        root.right = mgebt(t1.right, None)
-    else:
-        root.left  = mgebt(None, t2.left)
-        root.right = mgebt(None, t2.right)
-    return root
+# def mgebt(t1,t2):
+#     root = listNode(0)
+#     if not t1 and not t2:
+#         return None
+#     if t1:
+#         root.val += t1.val
+#     if t2:
+#         root.val += t2.val
+#     if t1 and t2:
+#         root.left  = mgebt(t1.left, t2.left)
+#         root.right = mgebt(t1.right, t2.right)
+#     elif t1:
+#         root.left  = mgebt(t1.left, None)
+#         root.right = mgebt(t1.right, None)
+#     else:
+#         root.left  = mgebt(None, t2.left)
+#         root.right = mgebt(None, t2.right)
+#     return root
 #
 
-print(abc(a,b))
+# print(abc(a,b))
 class a():
     dd = 100
     print("dd is {}".format(dd))
@@ -706,7 +797,7 @@ def helper(N, numDict):
     total = helper(N-1, numDict) + helper(N-2, numDict)
     numDict[N] = total
     return total
-print(fib(N))
+# print(fib(N))
 #
 def fib(N):
     dp = [0, 1]
@@ -862,3 +953,44 @@ def calculate(s):
 
 ss = '(1+(4+5+2)-3)+(6+8)'
 print(calculate(ss))
+
+##6/19/19
+#815
+from collections import deque
+def num_bus(routes, S, T):
+    visited = set()
+    stop_bus = {}
+    deq = deque()
+
+    for bus, stop in enumerate(routes):
+        for i in stop:
+            if i not in stop_bus:
+                stop_bus[i] = set((bus,))
+            else:
+                stop_bus[i].add(bus)
+
+    if S not in stop_bus or T not in stop_bus:
+        return -1
+
+    cnt = 0
+    deq.append(S)
+    while deq:
+        deq_size = len(deq)
+        for i in range(deq_size):
+            stop = deq.popleft()
+            if stop != T:
+                visited.add(stop)
+                for bus in stop_bus[stop]:
+                    for j in routes[bus]:
+                        if j not in visited:
+                            deq.append(j)
+            else:
+                return cnt
+        cnt += 1
+    return -1
+
+routes = [[1,2,7], [3,6,7]]
+S , T = 1, 6
+print(num_bus(routes, S, T))
+
+##

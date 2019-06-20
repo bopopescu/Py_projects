@@ -61,7 +61,7 @@ def run_flow1(run_dir, flow_to_test, result_dir):
 
 
 st = "qa test on package 4.40.0.23"
-
+print(st)
 
 
 
@@ -97,8 +97,7 @@ def run_flow(run_dir, flow_to_test, result_dir):
         time.sleep(1) #TreeNode
 from collections import deque, Counter
 from pprint import pprint
-#815
-def numBus(routes S, T):
+
 
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)
@@ -143,16 +142,17 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc ):
         flow_to_test.append(flow_name)
 
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-class User(models.Model):
- name = models.CharField(max_length=255)
- surname = models.CharField(max_length=255)
-class Invoice(models.Model):
- user = models.ForeignKey(User)
- number = models.CharField(max_length=25)
-
-class testUser(models.Model):
-    testName = models.CharField(max_length=255)
-    testuser = models.ForeignKey()
+# from rest_framework import models
+# class User(models.Model):
+#  name = models.CharField(max_length=255)
+#  surname = models.CharField(max_length=255)
+# class Invoice(models.Model):
+#  user = models.ForeignKey(User)
+#  number = models.CharField(max_length=25)
+#
+# class testUser(models.Model):
+#     testName = models.CharField(max_length=255)
+#     testuser = models.ForeignKey()
 
 #list of json object,
 # json object, enclosed with {}
@@ -188,13 +188,13 @@ from main.models import Cat, Dog
 class DogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dog
-        fields = (‘owner ‘ , ‘ name ‘ , ‘ birthday ‘ )
-        read_only_fields = ( ‘ owner ‘ ,)
+        fields = ('owner ' , ' name ' , ' birthday ' )
+        read_only_fields = ( ' owner ' ,)
 class CatSerializer(serializers.ModelSerializer):
  class Meta:
     model = Cat
-    fields = (‘owner‘, ‘name‘, ‘birthday‘)
-    read_only_fields = (‘owner‘,)
+    fields = ('owner', 'name', 'birthday')
+    read_only_fields = ('owner',)
 ## viewset
 from rest_framework import viewsets, permissions
 from main.models import Cat, Dog
@@ -235,29 +235,29 @@ class DogFeedView(APIView):
     def get(self, request, pk=None):
         dog = get_object_or_404(Dog, pk=pk)
         dog.feed()
-        return Response({“msg“: “Dog
-        fed“, status = status.HTTP_200_OK})
+        return Response({'msg': 'Dog fed', status : status.HTTP_200_OK})
+
 ###
         from rest_framework import routers
         from .views import DogViewSet, CatViewSet, DogFeedView
         router = routers.DefaultRouter(trailing_slash=False)
-        router.register(‘dogs‘, DogViewSet)
-        router.register(‘cats‘, CatViewSet)
+        router.register('dogs', DogViewSet)
+        router.register('cats', CatViewSet)
         urlpatterns = router.urls
-        urlpatterns + = [
-            url(r‘dogs / (?P < pk >[\d]+) / feed /$‘, DogFeedView.as_view(), name = dogfeed)
+        urlpatterns += [
+            url(r'dogs / (?P < pk >[\d]+) / feed /$', DogFeedView.as_view(), name = dogfeed)
         ]
 ## renderer
-        …
-        (… other definition code)
+        # …
+        # (… other definition code)
         from rest_framework import renderers
         from rest_framework_xml.renderers import XMLRenderer
 
     class DogFeedView(APIView):
         renderer_classes = (renderers.TemplateHTMLRenderer, renderers.JSONRenderer, XMLRenderer)
-        (other definition code …)
+        # (other definition code …)
 
-    …
+    # …
 ##
     class ImageRenderer(renderers.BaseRenderer):
         media_type = 'image/png'
