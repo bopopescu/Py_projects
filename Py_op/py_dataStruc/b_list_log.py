@@ -328,3 +328,12 @@ ls = ["wifi","bt","tk"]
 print(ls[::-1])
 #['tk', 'bt', 'wifi']
 ##
+
+a = list((1,))
+print(type(a), a) # [1]
+
+b = ['wifi', 'bt']
+b = [1] + b + [2]
+print(b) #[1, 'wifi', 'bt', 2
+
+####

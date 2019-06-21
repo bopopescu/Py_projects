@@ -13,7 +13,8 @@
 # chromeTest = RunChromeTestWindows()
 # chromeTest.test()
 
-a = list((1,))
-print(type(a), a)
+
+
+
 
 
