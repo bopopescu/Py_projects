@@ -268,6 +268,56 @@ urlpatterns = [
 # curl -F "pic=@pic.png" \
 #      -X PUT http://127.0.0.1:8000/api/v1/profiles/1/pic/
 
+## file upload 1.
+# models.py
+from django.db import models
+
+class MyFile(models.Model):
+    file = models.FileField(blank=False, null=False)
+    description = models.CharField(max_length=255)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+# serializers.py
+from rest_framework import serializers
+from .models import MyFile
+
+class MyFileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MyFile
+        fields = ('file', 'description', 'uploaded_at')
+
+# views.py
+from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.response import Response
+from  rest_framework   import status
+from .serializers import MyFileSerializer
+
+class MyFileView(APIView):
+    parser_classes = (MultiPartParser, FormParser)
+    def post(self, request, *args, **kwargs):
+        file_serializer = MyFileSerializer(data=request.data)
+        if file_serializer.is_valid():
+            file_serializer.save()
+            return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+#urls.py
+from django.conf.urls import url
+from .views import MyFileView
+
+urlpatterns = [
+    url(r'^upload/$',MyFileView.as_view(), name='file-upload'),
+]
+
+#
+json_response={
+    "file": "/media/dude_I2FPPum.jpg",
+    "description": "Big Lebowski",
+    "uploaded_at": "2019-04-26T12:30:09.463345Z"
+}
+
 
 
 

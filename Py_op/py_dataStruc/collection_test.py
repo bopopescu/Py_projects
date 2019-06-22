@@ -7,8 +7,6 @@ import os
 ####
 # zip, map, and filter all return an iterator
 
-
-#
 dic1 = {'wifi': 1, 'bt': 2}
 dic2 = {'abgn': 3, 'ax': 4}
 
@@ -34,24 +32,20 @@ testList = list(test)
 
 #
 a, b = zip( *testList )
-print('The first list was ', list(a));
-print('The second list was ', list(b));
-
-
+print('The first list was ', list(a))
+print('The second list was ', list(b))
 
 ####
 x = lambda a : a + 10
 print(x(5))
 
-
 t = lambda a, b : a+ b
-print(t(100,1))
+print(t(100, 1))
 
 def myfunc(n):
   return lambda a : a * n
 
 mydoubler = myfunc(2)
-
 print(mydoubler(11))
 
 #map returns an iterator

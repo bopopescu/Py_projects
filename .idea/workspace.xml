@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/proc_lt_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/proc_lt_std.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_files/sample_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_files/sample_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +19,23 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="231" selection-start-line="231" selection-end-line="231" />
+            <state relative-caret-position="-934">
+              <caret line="54" column="17" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Django_files/sample_log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="285" column="22" selection-start-line="285" selection-start-column="16" selection-end-line="285" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -140,17 +151,17 @@
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/func_log.py" />
         <option value="$PROJECT_DIR$/log_test1.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" />
-        <option value="$PROJECT_DIR$/Django_files/sample_log.py" />
         <option value="$PROJECT_DIR$/proc_lt_std.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" />
+        <option value="$PROJECT_DIR$/Django_files/sample_log.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-14" />
-    <option name="y" value="-14" />
-    <option name="width" value="1478" />
-    <option name="height" value="674" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-11" />
+    <option name="y" value="3" />
+    <option name="width" value="1942" />
+    <option name="height" value="1128" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,13 +180,12 @@
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Py_op" type="462c0819:PsiDirectoryNode" />
+              <item name="Django_files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="Py_op" type="462c0819:PsiDirectoryNode" />
-              <item name="py_dataStruc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -374,10 +384,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1453" height="873" extended-state="6" />
+    <frame x="-11" y="3" width="1942" height="1128" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15997182" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15997182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -601,16 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_files/sample_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="264" column="51" selection-start-line="264" selection-start-column="51" selection-end-line="264" selection-end-column="51" />
-          <folding>
-            <element signature="e#45#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log_test1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -686,11 +686,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="231" selection-start-line="231" selection-end-line="231" />
+        <state relative-caret-position="-934">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="17" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/sample_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="285" column="22" selection-start-line="285" selection-start-column="16" selection-end-line="285" selection-end-column="22" />
         </state>
       </provider>
     </entry>
