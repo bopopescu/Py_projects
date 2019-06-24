@@ -337,3 +337,46 @@ b = [1] + b + [2]
 print(b) #[1, 'wifi', 'bt', 2
 
 ####
+arr = []
+if not arr:  # True
+    print("arr is empty")
+if arr == []: # True
+    print("arr == []")
+if len(arr) == 0: # True
+    print("len(arr) == 0")
+if arr == None: # False
+    print("arr == None")
+
+matrix = [[]]
+if not matrix: # False
+    print("empty row")
+else: # num of row in matrix len(matrix) is  1
+    print("num of row in matrix len(matrix) is ", len(matrix))
+if not matrix[0]: # True
+    print("empty column") # len(matrix[0]) : num of columns
+
+arr2 = [[1]*3 for _ in range(5)]
+print(" num of row: {}\n num of column: {}".format(len(arr2), len(arr2[0])))
+# num of row    len(arr2:     5
+# num of column len(arr2[0]): 3
+
+##
+matrix = []
+print(len(matrix)) # 0
+matrix.append([])
+print(len(matrix)) # 1
+matrix.append([])
+
+print(len(matrix), len(matrix[0])) # 2, 0
+matrix[0].append(2)
+matrix[1].append(3)
+
+##
+matrix = [[]]
+print("len of matrix ", len(matrix)) # 1
+matrix.append([])
+print("len of matrix ", len(matrix))  #2
+matrix.append([])
+print("len of matrix ", len(matrix))  # 3
+
+##

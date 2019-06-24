@@ -51,45 +51,47 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
         src = os.path.join(setupfile_loc, setup_file)
         shutil.copy2(src, run_dir)
 print("start")
-###########################################################################################
+
+##
+mm = [[] for _ in range(5)]
+
+print(len(mm), len(mm[0]
+
+
+###############
 #*****
-#815
 from collections import deque
-def num_bus(routes, S, T):
-    visited = set()
-    stop_bus = {}
-    deq = deque()
 
-    for bus, stop in enumerate(routes):
-        for i in stop:
-            if i not in stop_bus:
-                stop_bus[i] = set((bus,))
-            else:
-                stop_bus[i].add(bus)
 
-    if S not in stop_bus or T not in stop_bus:
-        return -1
+# This function returns the minimum cost
+def bfs(googleMap, employeeLocation):
+    if not googleMap or not googleMap[0] or not employeeLocation:
+        return 0
 
-    cnt = 0
-    deq.append(S)
-    while deq:
-        deq_size = len(deq)
-        for i in range(deq_size):
-            stop = deq.popleft()
-            if stop != T:
-                visited.add(stop)
-                for bus in stop_bus[stop]:
-                    for j in routes[bus]:
-                        if j not in visited:
-                            deq.append(j)
-            else:
-                return cnt
-        cnt += 1
-    return -1
+    minCost = 0
+    pathToBuilding = []
+    rows, cols = len(googleMap), len(googleMap[0])
+    # Perform a BFS here
+    startX, startY = employeeLocation
+    queue = deque([(startX, startY, 0, [])])
+    visited = set([(employeeLocation)])
 
-routes = [[1,2,7], [3,6,7]]
-S , T = 1, 6
-print(num_bus(routes, S, T))
+    while queue:
+        x, y, currCost, path = queue.popleft()
+
+        if googleMap[x][y] == 'B':  # Destination Reached
+            minCost = currCost
+            pathToBuilding = path
+            break
+
+        for nextX, nextY, dir in [(x, y + 1, 'R'), (x + 1, y, 'D'), (x, y - 1, 'L'), (x - 1, y, 'U')]:
+            if 0 <= nextX < rows and 0 <= nextY < cols \
+                    and googleMap[nextX][nextY] != '#' \
+                    and (nextX, nextY) not in visited:
+                visited.add((nextX, nextY))
+                queue.append((nextX, nextY, currCost + 1, path + [dir]))
+
+    return (minCost, pathToBuilding)
 
 #*****
 # run test flows
