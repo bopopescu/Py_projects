@@ -380,3 +380,7 @@ matrix.append([])
 print("len of matrix ", len(matrix))  # 3
 
 ##
+mm = [[] for _ in range(5)]
+
+print(len(mm), len(mm[0]))  # 5 0
+#

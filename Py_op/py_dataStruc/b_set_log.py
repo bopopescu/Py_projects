@@ -1,3 +1,12 @@
+# empty tuple
+wifi = ()
+wifi_ac = tuple()
+
+# a tuple contains one element
+test1 = ((),)
+test2 = (2,)
+
+testt = (["wifi"]) # type of list, not tuple
 ## set is unique and ordered
 t_set = {1,2,3} #{1, 2, 3}
 #print(t_set)

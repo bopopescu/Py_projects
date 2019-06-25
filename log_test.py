@@ -52,46 +52,9 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
         shutil.copy2(src, run_dir)
 print("start")
 
-##
-mm = [[] for _ in range(5)]
-
-print(len(mm), len(mm[0]
-
-
 ###############
+
 #*****
-from collections import deque
-
-
-# This function returns the minimum cost
-def bfs(googleMap, employeeLocation):
-    if not googleMap or not googleMap[0] or not employeeLocation:
-        return 0
-
-    minCost = 0
-    pathToBuilding = []
-    rows, cols = len(googleMap), len(googleMap[0])
-    # Perform a BFS here
-    startX, startY = employeeLocation
-    queue = deque([(startX, startY, 0, [])])
-    visited = set([(employeeLocation)])
-
-    while queue:
-        x, y, currCost, path = queue.popleft()
-
-        if googleMap[x][y] == 'B':  # Destination Reached
-            minCost = currCost
-            pathToBuilding = path
-            break
-
-        for nextX, nextY, dir in [(x, y + 1, 'R'), (x + 1, y, 'D'), (x, y - 1, 'L'), (x - 1, y, 'U')]:
-            if 0 <= nextX < rows and 0 <= nextY < cols \
-                    and googleMap[nextX][nextY] != '#' \
-                    and (nextX, nextY) not in visited:
-                visited.add((nextX, nextY))
-                queue.append((nextX, nextY, currCost + 1, path + [dir]))
-
-    return (minCost, pathToBuilding)
 
 #*****
 # run test flows

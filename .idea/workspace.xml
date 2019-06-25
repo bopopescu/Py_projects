@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django_files/sample_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_files/sample_log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_test1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_test4.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_test_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test_std.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proc_lt_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/proc_lt_std.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log_test_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+            <state relative-caret-position="440">
+              <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -29,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+            <state relative-caret-position="1254">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Django_files/routers_log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="381" column="2" selection-start-line="381" selection-start-column="2" selection-end-line="381" selection-end-column="2" />
+            <state relative-caret-position="419">
+              <caret line="38" selection-start-line="38" selection-start-column="2" selection-end-line="72" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -97,8 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mul_process/mul_process_log5.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_log6.py" />
         <option value="$PROJECT_DIR$/mul_process/mul_process_log7.py" />
         <option value="$PROJECT_DIR$/mul_process/mul_process_log8.py" />
         <option value="$PROJECT_DIR$/mul_process/mul_process_lock_log8.py" />
@@ -140,21 +137,22 @@
         <option value="$PROJECT_DIR$/log_test_summ.py" />
         <option value="$PROJECT_DIR$/log_test4.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/func_log.py" />
-        <option value="$PROJECT_DIR$/proc_lt_std.py" />
-        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" />
         <option value="$PROJECT_DIR$/Django_files/sample_log.py" />
         <option value="$PROJECT_DIR$/Django_files/snippet_log.py" />
         <option value="$PROJECT_DIR$/log_test1.py" />
         <option value="$PROJECT_DIR$/log_test_std.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" />
+        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py" />
+        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" />
         <option value="$PROJECT_DIR$/log_test.py" />
+        <option value="$PROJECT_DIR$/proc_lt_std.py" />
+        <option value="$PROJECT_DIR$/Django_files/routers_log.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2896" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="width" value="2892" />
     <option name="height" value="1736" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -163,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,6 +222,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,15 +416,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1453" height="873" extended-state="7" />
+    <frame x="-7" y="-7" width="1453" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21353066" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21071176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20430107" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20430107" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -483,9 +481,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Py_op/logoutput/log1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/temp/log3.txt" />
     <entry file="file://$PROJECT_DIR$/Py_op/zip_op/write_log.txt" />
     <entry file="file://$PROJECT_DIR$/Py_op/rex/re_1.py">
@@ -619,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_dic_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2648" />
@@ -668,26 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_files/snippet_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
-          <folding>
-            <element signature="e#926#964#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="54" column="17" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/log_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -714,42 +682,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log_test1.py">
+    <entry file="file://$PROJECT_DIR$/log_test1.py" />
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        <state relative-caret-position="495">
+          <caret line="385" column="1" selection-start-line="385" selection-start-column="1" selection-end-line="385" selection-end-column="1" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15742" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log_test_std.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+        <state relative-caret-position="440">
+          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="381" column="2" selection-start-line="381" selection-start-column="2" selection-end-line="381" selection-end-column="2" />
+        <state relative-caret-position="165">
+          <caret line="228" lean-forward="true" selection-start-line="228" selection-start-column="2" selection-end-line="236" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="805" selection-start-line="805" selection-end-line="805" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/snippet_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+          <folding>
+            <element signature="e#926#964#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        <state relative-caret-position="1254">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/routers_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="38" selection-start-line="38" selection-start-column="2" selection-end-line="72" selection-end-column="103" />
         </state>
       </provider>
     </entry>

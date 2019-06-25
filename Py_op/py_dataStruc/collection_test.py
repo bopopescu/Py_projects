@@ -190,6 +190,7 @@ print(type(list_c))
 for j in list_c:
     print("({0}, {1})".format(j[0], j[1]), end = ", ")
 print()
+
 #### deque
 from collections import deque
 # deque take a list as argument
@@ -219,7 +220,21 @@ print() # wifi, bt, ax, ac,
 print("deq[-1] ", deq[-1]) # ac
 time.sleep(1000)
 
+# d = deque('12345')
+# d = deque(maxlen=30)
+# d = deque([1,2,3,4,5])
+# d.extendleft([0])
+# d.extend([6,7,8])
 
+# class collections.deque([iterable[, maxlen]])
+#
+# Returns a new deque object initialized left-to-right (using append())
+# with data from iterable. If iterable is not specified, the new deque is empty.
+#
+# In your example , buff = collections.deque([], 100),
+#
+# creates a new empty deque object buff, specified by the first argument, with maxlen 100.
+# It means the deque object is bounded to a maximum length of 100.
 
 
 
