@@ -13,3 +13,4 @@ class Article(models.Model):
     description = models.TextField()
     body = models.TextField()
     author = models.ForeignKey('Author', related_name='articles', on_delete=models.PROTECT)
+

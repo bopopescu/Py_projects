@@ -4,15 +4,21 @@ from django.shortcuts import render
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
 from .models import Article
+from .serializers import ArticleSerializer
 
 
 class ArticleView(APIView):
     # [26/Jun/2019 11:25:45] "GET /api/articles/ HTTP/1.1" 200 5202
     def get(self, request):
         articles = Article.objects.all()
-        return Response({"articles": articles})
+        # without serializers
+        # return Response({"articles": articles})
+        # Add serializers
+        # the many param informs the serializer that it will be serializing more than a single article.
+        serializer = ArticleSerializer(articles, many=True)
+        return Response({"articles": serializer.data})
+
     #
     # the list of articles is trying to be serialized/converted from an object into JSON.
     # If no class is created to serialize the Article objects, there will be error.
@@ -30,3 +36,12 @@ class ArticleView(APIView):
 # {
 #     "articles": []
 # }
+
+    def post(self, request):
+        article = request.data.get('article')
+
+        # Create an article from the above data
+        serializer = ArticleSerializer(data=article)
+        if serializer.is_valid(raise_exception=True):
+            article_saved = serializer.save()
+        return Response({"success": "Article '{}' created successfully".format(article_saved.title)})
