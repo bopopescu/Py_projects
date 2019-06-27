@@ -1,0 +1,85 @@
+#1. C:\Users\jsun\Documents\Py_projects>python -m venv .\django_test_proj\01
+
+#2. Activate virtual env
+C:\Users\jsun\Documents\Py_projects\django_test_proj\01>Scripts\activate
+
+#3 (01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01>pip list
+Package    Version
+---------- -------
+pip        19.1.1
+setuptools 40.6.2
+
+#4. (01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01>pip install django
+#5. (01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01>pip install djangorestframework
+#6. (01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01>pip list
+Package             Version
+------------------- -------
+Django              2.2.2
+djangorestframework 3.9.4
+pip                 19.1.1
+pytz                2019.1
+setuptools          40.6.2
+sqlparse            0.3.0
+
+#7. (01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01>python Scripts\django-admin.exe startproject restful01
+# create a folder : restful01 and
+#       sub-folder: restful01\restful01 with following files: __init__.py, settings.py, urls.py, wsgi.py
+# and manage.py
+#
+#8.(01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01\restful01>python manage.py startapp article
+
+#9. Before creating a super user, need to get server up and running first
+
+(01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01\restful01>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying sessions.0001_initial... OK
+
+(01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01\restful01>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 25, 2019 - 18:03:28
+Django version 2.2.2, using settings 'restful01.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+# Create a super user : http://localhost:8000/admin/
+(01) C:\Users\jsun\Documents\Py_projects\django_test_proj\01\restful01>python manage.py createsuperuser
+Username (leave blank to use 'jsun'): admin
+Email address: sunusd@yahoo.com
+Password:
+Password (again):
+The password is too similar to the username.
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+#10. Register models in admin: http://localhost:8000/admin/
+#register our models in order for them to appear on admin page.
+#open the admin.py file inside the articles folder and register the models as shown below
+
+#11.create our endpoints. We will start with an endpoint where we can view all articles
+# modify views.py
+#12. we need to provide a URL from where a user will be able to access this endpoint.
+#For that, create a urls.py file inside the articles folder: \restful01\article\urls.py
+
+#13. we need to include these URLs inside the main URLs file i.e the URLs , under restful01\restful01\urls.py

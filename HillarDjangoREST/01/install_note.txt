@@ -1,7 +1,8 @@
 #1. Create venv @ \HillarDjangoREST\01, not need to create separate folder, . is important
+# folder \HillarDjangoREST\01 is created by running "python -m venv .\HillarDjangoREST\01"
 C:\Users\jsun\Documents\Py_projects>python -m venv .\HillarDjangoREST\01
 
-#2. Before installing any third party package
+#2. Before installing any third party package, first Activate virtual evn (01)
 (01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip list
 Package    Version
 ---------- -------

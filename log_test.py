@@ -53,6 +53,33 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
 print("start")
 
 ###############
+#4364
+def canIWin(self, maxChoosableInteger, desiredTotal):
+    return self.helper(maxChoosableInteger, desiredTotal, 0, [])
+
+def helper(self, maxChoosableInteger, desiredToatl, sum, visited):
+    if (len(visited) % 2 == 0 or len(visited) == 1) and sum >= desiredToatl:
+        return True
+    if sum >= desiredToatl:
+        return False
+    for i in range(1, maxChoosableInteger + 1):
+        if i in visited:
+            continue
+        if not self.helper(maxChoosableInteger, desiredToatl, sum + i, visited + [i]):
+            return False
+        visited.pop()
+    return True
+
+
+
+
+
+
+
+
+
+
+
 
 #*****
 

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Py_projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Py_projects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_test_summ.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test_summ.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proc_lt_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/proc_lt_std.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +32,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log_test_summ.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="191" selection-start-line="191" selection-end-line="191" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="406" column="29" selection-start-line="406" selection-start-column="29" selection-end-line="406" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_test_proj/01/note.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="82" column="87" selection-start-line="82" selection-start-column="87" selection-end-line="82" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="453">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -40,11 +73,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Django_files/routers_log.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="38" selection-start-line="38" selection-start-column="2" selection-end-line="72" selection-end-column="103" />
+            <state relative-caret-position="279">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,16 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mul_process/mul_process_log7.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_log8.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_lock_log8.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_log9.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_log10.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_old_log11.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_old_log12.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_old_log13.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_old_log14.py" />
-        <option value="$PROJECT_DIR$/mul_process/mul_process_old_log15.py" />
         <option value="$PROJECT_DIR$/mul_process/mul_process_queue_log16.py" />
         <option value="$PROJECT_DIR$/mul_process/File_mul_process/file_multiprocessing_1.py" />
         <option value="$PROJECT_DIR$/mul_process/File_mul_process/file_multiprocessing_2.py" />
@@ -134,26 +160,37 @@
         <option value="$PROJECT_DIR$/Automation_scripts/Automation_Setup_installer_xp.au3" />
         <option value="$PROJECT_DIR$/Automation_scripts/Run_QA.py" />
         <option value="$PROJECT_DIR$/py_dataStruc/py_decorator.py" />
-        <option value="$PROJECT_DIR$/log_test_summ.py" />
         <option value="$PROJECT_DIR$/log_test4.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/func_log.py" />
         <option value="$PROJECT_DIR$/Django_files/sample_log.py" />
         <option value="$PROJECT_DIR$/Django_files/snippet_log.py" />
         <option value="$PROJECT_DIR$/log_test1.py" />
         <option value="$PROJECT_DIR$/log_test_std.py" />
-        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" />
-        <option value="$PROJECT_DIR$/log_test.py" />
-        <option value="$PROJECT_DIR$/proc_lt_std.py" />
         <option value="$PROJECT_DIR$/Django_files/routers_log.py" />
+        <option value="$PROJECT_DIR$/log_test_summ.py" />
+        <option value="$PROJECT_DIR$/Django_files/view_log.py" />
+        <option value="$PROJECT_DIR$/Django_files/serializer_log.py" />
+        <option value="$PROJECT_DIR$/proc_lt_std.py" />
+        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/admin.py" />
+        <option value="$PROJECT_DIR$/django_test_proj/01/note.txt" />
+        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/restful01/settings.py" />
+        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/models.py" />
+        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/urls.py" />
+        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/restful01/urls.py" />
+        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/views.py" />
+        <option value="$PROJECT_DIR$/Django_files/request_log.py" />
+        <option value="$PROJECT_DIR$/log_test.py" />
+        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="width" value="2892" />
-    <option name="height" value="1736" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="32" />
+    <option name="y" value="236" />
+    <option name="width" value="1364" />
+    <option name="height" value="914" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -172,6 +209,24 @@
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="Django_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="django_test_proj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="django_test_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="django_test_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
+              <item name="restful01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -210,6 +265,31 @@
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="MediumClone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="MediumClone" type="462c0819:PsiDirectoryNode" />
+              <item name="medium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="MediumClone" type="462c0819:PsiDirectoryNode" />
+              <item name="medium" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="MediumClone" type="462c0819:PsiDirectoryNode" />
+              <item name="medium" type="462c0819:PsiDirectoryNode" />
+              <item name="medium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="Py_op" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -227,23 +307,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Py_op/py_dataStruc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/django_test_proj/01/Scripts" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jsun\Documents\Py_projects\django_test_proj\01" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\py_dataStruc" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\rex" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\Mul_process" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jsun\Documents\Py_projects\mul_process" />
       <recent name="C:\Users\jsun\Documents\Py_projects\file_op" />
       <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\Thread_process" />
       <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\File_mul_process" />
       <recent name="C:\Users\jsun\Documents\Py_projects\log_except" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\py_dataStruc" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\rex" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\Mul_process" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\Py_op" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\Mul_process" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -301,27 +381,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="log_test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Py_projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log_test1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="log_test4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -364,6 +423,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="request_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Py_projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\jsun\My Documents\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Django_files" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Django_files/request_log.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="sample_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Py_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -388,17 +468,17 @@
     <list>
       <item itemvalue="Python.log_test_std" />
       <item itemvalue="Python.log_test4" />
-      <item itemvalue="Python.log_test1" />
       <item itemvalue="Python.sample_log" />
       <item itemvalue="Python.log_test" />
+      <item itemvalue="Python.request_log" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.log_test" />
+        <item itemvalue="Python.request_log" />
         <item itemvalue="Python.log_test_std" />
         <item itemvalue="Python.log_test4" />
         <item itemvalue="Python.sample_log" />
-        <item itemvalue="Python.log_test1" />
       </list>
     </recent_temporary>
   </component>
@@ -424,7 +504,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20430107" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23790322" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -439,13 +519,13 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25229034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21071176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22446236" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988495" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13844086" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39784947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -481,64 +561,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Py_op/temp/log3.txt" />
-    <entry file="file://$PROJECT_DIR$/Py_op/zip_op/write_log.txt" />
-    <entry file="file://$PROJECT_DIR$/Py_op/rex/re_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2237" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/Mul_process/run_mul_scripts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/AutoQA_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/ax_Log_all.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/ax_newtxt.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/ax_result.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/b_email_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/b_function_log.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/b_glob_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/jsonfile.json" />
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/b_split_log.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/example_log/log_read_time.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/example_log/QAtest1.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -585,16 +607,6 @@
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/py_decorator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-492" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log_test_summ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_QA/start_test1.py">
@@ -649,13 +661,6 @@
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/log_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -683,23 +688,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log_test1.py" />
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="385" column="1" selection-start-line="385" selection-start-column="1" selection-end-line="385" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log_test_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -717,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="805" selection-start-line="805" selection-end-line="805" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Django_files/snippet_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -734,12 +715,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log_test.py">
+    <entry file="file://$PROJECT_DIR$/log_test_std.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="440">
+          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -748,6 +729,154 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="38" selection-start-line="38" selection-start-column="2" selection-end-line="72" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/view_log.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/serializer_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_summ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="822" selection-start-line="822" selection-end-line="822" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MediumClone/medium/medium/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-594" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MediumClone/medium/article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="86" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MediumClone/medium/article/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/note.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="82" column="87" selection-start-line="82" selection-start-column="87" selection-end-line="82" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/restful01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/restful01/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#763#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/request_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="406" column="29" selection-start-line="406" selection-start-column="29" selection-end-line="406" selection-end-column="29" />
         </state>
       </provider>
     </entry>

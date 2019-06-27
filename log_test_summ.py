@@ -189,21 +189,4 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc ):
         shutil.copy2(src, run_dir)
         flow_to_test.append(flow_name)
 
-#1023, 6/14/19
-def camelMatch(queries, pattern):
-    rst = []
-    for word in queries:
-        if len(word) < len(pattern):
-            rst.append(False)
-            continue
-        index = 0
-        for letter in word:
-            if index == len(pattern):
-                break
-            if letter == pattern[index]:
-                index += 1
-        if index == len(pattern):
-            rst.append(True)
-        else:
-            rst.append(False)
-    return rst
+

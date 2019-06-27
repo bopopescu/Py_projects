@@ -803,3 +803,20 @@ def bfs(googleMap, employeeLocation):
 
     return (minCost, pathToBuilding)
 ###
+###1057
+def assignBikes(self, workers, bikes):
+    n, m = len(workers), len(bikes)
+    d = []
+    for i in range(n):
+        for j in range(m):
+            d.append((abs(workers[i][0] - bikes[j][0]) + abs(workers[i][1] - bikes[j][1]), i, j))
+    d.sort(key=lambda x: (x[0], x[1], x[2]))
+    ans = [-1] * n
+    visited = set()
+
+    for p in d:
+        if ans[p[1]] == -1 and p[2] not in visited:
+            ans[p[1]] = p[2]
+            visited.add(p[2])
+    return ans
+###
