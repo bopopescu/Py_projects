@@ -54,21 +54,26 @@ print("start")
 
 ###############
 #4364
-def canIWin(self, maxChoosableInteger, desiredTotal):
-    return self.helper(maxChoosableInteger, desiredTotal, 0, [])
+def canIWin(  maxChoosableInteger, desiredTotal):
+    return helper(maxChoosableInteger, desiredTotal, 0, 0, [])
 
-def helper(self, maxChoosableInteger, desiredToatl, sum, visited):
-    if (len(visited) % 2 == 0 or len(visited) == 1) and sum >= desiredToatl:
+def helper(  maxChoosableInteger, desiredTotal, sum, cnt, visited):
+    if cnt % 2 == 1 and sum >= desiredTotal:
         return True
-    if sum >= desiredToatl:
+    if sum >= desiredTotal:
         return False
+
     for i in range(1, maxChoosableInteger + 1):
         if i in visited:
             continue
-        if not self.helper(maxChoosableInteger, desiredToatl, sum + i, visited + [i]):
+        visited.append(i)
+        if helper(maxChoosableInteger, desiredTotal, sum + i, cnt + 1, visited):
+            visited.pop()
+        else:
             return False
-        visited.pop()
     return True
+
+print("rst is ", canIWin(10, 11,))
 
 
 

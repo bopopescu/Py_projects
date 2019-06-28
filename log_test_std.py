@@ -98,6 +98,9 @@ def run_flow(run_dir, flow_to_test, result_dir):
 from collections import deque, Counter
 from pprint import pprint
 
+arr = [1,2,3]
+arr + [4]
+print(arr)
 
 def run_flow(run_dir, flow_to_test, result_dir):
     os.chdir(run_dir)

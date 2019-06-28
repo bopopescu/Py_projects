@@ -152,3 +152,34 @@ Update your ArticleSerializer to look like this.
 
 # 18
 Given that you had created an author from the admin dashboard, you can now use postman
+  {"article":{
+        "title": "We need article here for post to work",
+        "description": "This article describes TEST procedures.",
+        "body": "1. test preparation",
+        "author_id": 3
+    }
+  }
+
+#19 update
+1. For this, we will update our articles endpoint to allow users to update an article by sending a PUT request
+to the article. First, add a new path in the articles urlpatterns from which the update will be sent to.
+path('articles/<int:pk>', ArticleView.as_view())
+
+2. Add an update method to serializers.py
+
+3. we have to define the put method in our ArticleView , this method should accept a pk URL parameter
+which we will use to query the Article we want to update. Here is how the put method should look like.
+
+4.
+Using Postman or any other tool, you can now be able to update an article by sending a put request to the
+URL http://127.0.0.1:8000/articles/<article id> with the data you want to update.
+
+localhost:8000/api/articles/2
+ {"article":{
+        "title": "Article ID is 2",
+        "description": "Postman has to change the whole thing.",
+        "body": "No shortcut",
+        "author_id": 3
+    }
+  }
+## 19
