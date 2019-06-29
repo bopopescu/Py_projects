@@ -2,6 +2,9 @@
 from rest_framework import serializers
 from .models import Toy
 
+# ModelSerializer allows to build a serializer automatically from a model
+# ToySerializer(instance).data
+# returns dict of the instance
 class ToySerializer(serializers.ModelSerializer):
     class Meta:
         model = Toy

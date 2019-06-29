@@ -1,19 +1,11 @@
 
 from django.shortcuts import render
 from rest_framework import status
-from toys.models import Toy
-from toys.serializers import ToySerializer
+from .models import Toy
+from .serializers import ToySerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-# from django.http import HttpResponse
-# from django.views.decorators.csrf import csrf_exempt
-# from rest_framework.renderers import JSONRenderer
-# from rest_framework.parsers import JSONParser
-
-# from .models import Toy
-# from .serializers import ToySerializer
-# from rest_framework import status
 
 @api_view(['GET', 'POST'])
 def toy_list(request):
@@ -37,80 +29,37 @@ def toy_detail(request, pk):
         toy = Toy.objects.get(pk=pk)
     except Toy.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
-        if request.method == 'GET':
-            toy_serializer = ToySerializer(toy)
-            return Response(toy_serializer.data)
-        elif request.method == 'PUT':
-            toy_serializer = ToySerializer(toy, data=request.data)
-            if toy_serializer.is_valid():
-                toy_serializer.save()
-                return Response(toy_serializer.data)
-            return Response(toy_serializer.errors,
-                status=status.HTTP_400_BAD_REQUEST)
-        elif request.method == 'DELETE':
-            toy.delete()
-            return Response(status=status.HTTP_204_NO_CONTENT)
-
-
-
-## Original view
-"""
-from django.shortcuts import render
-
-# Create your views here.
-# from django.shortcuts import render
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
-from rest_framework import status
-from .models import Toy
-from .serializers import ToySerializer
-
-
-class JSONResponse(HttpResponse):
-    def __init__(self, data, **kwargs):
-        content = JSONRenderer().render(data)
-        kwargs['content_type'] = 'application/json'
-        super(JSONResponse, self).__init__(content, **kwargs)
-
-
-@csrf_exempt
-def toy_list(request):
-    if request.method == 'GET':
-        toys = Toy.objects.all()
-        toys_serializer = ToySerializer(toys, many=True)
-        return JSONResponse(toys_serializer.data)
-    elif request.method == 'POST':
-        toy_data = JSONParser().parse(request)
-        toy_serializer = ToySerializer(data=toy_data)
-        if toy_serializer.is_valid():
-            toy_serializer.save()
-            return JSONResponse(toy_serializer.data, \
-                status=status.HTTP_201_CREATED)
-        return JSONResponse(toy_serializer.errors, \
-            status=status.HTTP_400_BAD_REQUEST)
-
-# example of request = GET localhost:8000/toys/
-# GET localhost:8000/toys/      will call toy_list(request)
-@csrf_exempt
-def toy_detail(request, pk):
-    try:
-        toy = Toy.objects.get(pk=pk)
-    except Toy.DoesNotExist:
-        return HttpResponse(status=status.HTTP_404_NOT_FOUND)
     if request.method == 'GET':
         toy_serializer = ToySerializer(toy)
-        return JSONResponse(toy_serializer.data)
+        return Response(toy_serializer.data)
     elif request.method == 'PUT':
-        toy_data = JSONParser().parse(request)
-        toy_serializer = ToySerializer(toy, data=toy_data)
+        toy_serializer = ToySerializer(toy, data=request.data)
         if toy_serializer.is_valid():
             toy_serializer.save()
-            return JSONResponse(toy_serializer.data)
-        return JSONResponse(toy_serializer.errors, \
-            status=status.HTTP_400_BAD_REQUEST)
+            return Response(toy_serializer.data)
+        return Response(toy_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     elif request.method == 'DELETE':
         toy.delete()
-        return HttpResponse(status=status.HTTP_204_NO_CONTENT)
-"""
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+# a = Toy.objects.filter(pk=2).values()
+#
+# In [14]: type(a)
+# Out[14]: django.db.models.query.QuerySet
+#
+# In [15]: a[0]
+# Out[15]:
+# {'id': 2,
+#  'created': datetime.datetime(2019, 5, 15, 0, 45, 50, 828926, tzinfo=<UTC>),
+#  'name': 'Hawaiian Barbie',
+#  'description': 'Barbie loves Hawaii',
+#  'toy_category': 'Dolls',
+#  'release_date': datetime.datetime(2019, 5, 14, 17, 42, 13, 29376, tzinfo=<UTC>),
+#  'was_included_in_home': True}
+
+# In [23]: Toy.objects.all().values('name')
+# Out[23]: <QuerySet [{'name': 'Clash Royale play set'}, {'name': 'Formal Test Methodology'},
+#                     {'name': 'Hawaiian Barbie'}, {'name': 'Snoopy talking action figure'},
+#                     {'name': 'System Test fundamental'}, {'name': 'Wonderboy puzzle'}]>

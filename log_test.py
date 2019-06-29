@@ -55,7 +55,13 @@ print("start")
 ###############
 #4364
 def canIWin(  maxChoosableInteger, desiredTotal):
-    return helper(maxChoosableInteger, desiredTotal, 0, 0, [])
+    visited = []
+    for i in range(1, maxChoosableInteger + 1):
+        visited.append(i)
+        if helper(maxChoosableInteger, desiredTotal, i, 1, visited):
+            return True
+        visited.pop()
+    return False
 
 def helper(  maxChoosableInteger, desiredTotal, sum, cnt, visited):
     if cnt % 2 == 1 and sum >= desiredTotal:

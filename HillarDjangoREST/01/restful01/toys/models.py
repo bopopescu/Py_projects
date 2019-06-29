@@ -26,3 +26,32 @@ class Toy(models.Model):
 # >>> toy1.save()
 # >>> toy2 = Toy(name='Hawaiian Barbie', description='Barbie loves Hawaii', release_date=toy_release_date, toy_category='Dolls', was_included_in_home=True)
 # >>> toy2.save()
+
+# In [1]: from datetime import datetime
+#
+# In [2]: from django.utils import timezone
+#
+# In [3]: from django.utils.six import BytesIO
+#
+# In [4]: from rest_framework.renderers import JSONRenderer
+#
+# In [5]: from rest_framework.parsers import JSONParser
+#
+# In [6]: from toys.models import Toy
+#
+# In [7]: from toys.serializers import ToySerializer
+#
+# In [8]: rd = timezone.make_aware(datetime.now(), timezone.get_current_timezone())
+#
+# In [9]: t = Toy(name="System Test fundamental",description="wifi",release_date=rd, toy_category="Text",was_included_in_home=False)
+#
+# In [10]: t.save()
+
+# {
+#     "id": 7,
+#     "name": "System Test fundamental",
+#     "description": "wifi",
+#     "release_date": "2019-06-28T15:50:22.706195Z",
+#     "toy_category": "Text",
+#     "was_included_in_home": false
+# },
