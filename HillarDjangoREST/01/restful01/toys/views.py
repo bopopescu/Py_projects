@@ -43,23 +43,3 @@ def toy_detail(request, pk):
         toy.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
-# a = Toy.objects.filter(pk=2).values()
-#
-# In [14]: type(a)
-# Out[14]: django.db.models.query.QuerySet
-#
-# In [15]: a[0]
-# Out[15]:
-# {'id': 2,
-#  'created': datetime.datetime(2019, 5, 15, 0, 45, 50, 828926, tzinfo=<UTC>),
-#  'name': 'Hawaiian Barbie',
-#  'description': 'Barbie loves Hawaii',
-#  'toy_category': 'Dolls',
-#  'release_date': datetime.datetime(2019, 5, 14, 17, 42, 13, 29376, tzinfo=<UTC>),
-#  'was_included_in_home': True}
-
-# In [23]: Toy.objects.all().values('name')
-# Out[23]: <QuerySet [{'name': 'Clash Royale play set'}, {'name': 'Formal Test Methodology'},
-#                     {'name': 'Hawaiian Barbie'}, {'name': 'Snoopy talking action figure'},
-#                     {'name': 'System Test fundamental'}, {'name': 'Wonderboy puzzle'}]>
