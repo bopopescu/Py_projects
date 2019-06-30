@@ -1,21 +1,16 @@
-# Django model, or a queryset , are not Jason serializable. They need to be converted to Python data structure,
-# which could be serialized into Json. We can serialize queryset into python list, and model instances into
-# python dictionary.
-# On the other hand, incoming data as request.data comes as key-value pairs, which can't be saved in database directly.
-# We have to transform them into Django's data structure like models and queryset.
-#
-# json string->(json-parser)=> python data structure(dict, or list) ->(De-serializer)=>Django data structure(model, or queryset)
-# -> saved to database
-# Serialize(Django data type) ->> python data types
-
-# serializer also do data validation.
+# define ModelSerializer
 
 from rest_framework import serializers
+from .models import Subscriber
 
-# define serializers this way leads to some code duplication:
-# the fields are defined on both model and serializer class
-class SubscriberSerializer(serializers.Serializer):
-    name = serializers.CharField(required=True, max_length=20)
-    age = serializers.IntegerField(required=False, min_value=10, default=30)
-    email = serializers.EmailField()
+class SubscriberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subscriber
+        fields = "__all__"
+
+    # Our new SubscriberSerializer infers the fields from the model Subscriber, we passed on to it. We can however
+    # choose which fields should be used while serializing/deserializing. In this implementation, we use "__all__"
+    # and use all fields. In many cases, we want to selectively use some fields, like not include password field.
+
+    # this should work with APIView, without any changes on the views.py, except serializers.py is more concise.
 

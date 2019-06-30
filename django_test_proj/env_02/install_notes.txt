@@ -43,5 +43,11 @@ sqlparse     0.3.0
 
 # 9.views from Django, is function based.
 # 10. serializer and class based APIview or function-based APIview
+cons: we have to define similar fields on both serializer and model class
 # 11. ModelSerializer and Generic Views
+Model + Serializer = ModelSerializer
+
+ListCreateAPIView, RetrieveUpdateDestroyAPIView,
+ListAPIView, CreateAPIView, RetrieveAPIView,UpdateAPIView, DestroyAPIView
+
 
