@@ -4,9 +4,8 @@
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/serializers_APIview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views_APIView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_test_proj/env_02/restful01/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/env_02/restful01/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls_APIView_genericView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views_genericView2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/log_test_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2200">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="66">
+              <caret line="105" column="21" lean-forward="true" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -31,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log_test_summ.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
+            <state relative-caret-position="3960">
               <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -43,17 +42,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="50" column="73" selection-start-line="50" selection-start-column="73" selection-end-line="50" selection-end-column="73" />
+            <state relative-caret-position="265">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            <state relative-caret-position="88">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding>
+                <element signature="e#16#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,18 +155,18 @@
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/restful01/urls.py" />
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/restful01/settings.py" />
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/models.py" />
-        <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls.py" />
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/serializers.py" />
-        <option value="$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt" />
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py" />
+        <option value="$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt" />
+        <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-2" />
     <option name="y" value="596" />
     <option name="width" value="1446" />
-    <option name="height" value="569" />
+    <option name="height" value="570" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -174,7 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,30 +192,64 @@
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="django_test_proj" type="462c0819:PsiDirectoryNode" />
-              <item name="env_02" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="django_test_proj" type="462c0819:PsiDirectoryNode" />
-              <item name="env_02" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
               <item name="restful01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="django_test_proj" type="462c0819:PsiDirectoryNode" />
-              <item name="env_02" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
               <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="django_test_proj" type="462c0819:PsiDirectoryNode" />
-              <item name="env_02" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
               <item name="restful01" type="462c0819:PsiDirectoryNode" />
               <item name="restful01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
+              <item name="restful01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
+              <item name="restful01" type="462c0819:PsiDirectoryNode" />
+              <item name="restful01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
+              <item name="restful01" type="462c0819:PsiDirectoryNode" />
+              <item name="toys" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -250,27 +285,28 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Django_files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\file_op" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\Thread_process" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\File_mul_process" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\log_except" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jsun\Documents\Py_projects\Django_files" />
       <recent name="C:\Users\jsun\Documents\Py_projects\django_test_proj\01" />
       <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\py_dataStruc" />
       <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\rex" />
       <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\Mul_process" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jsun\Documents\Py_projects\django_test_proj\env_02\restful01\api" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\file_op" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\Thread_process" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\File_mul_process" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -413,11 +449,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.log_test" />
-      <item itemvalue="Python.jsonResponse_log" />
       <item itemvalue="Python.cmmd_lg" />
-      <item itemvalue="Python.sys_log_test" />
       <item itemvalue="Python.jsonParser_log" />
+      <item itemvalue="Python.jsonResponse_log" />
+      <item itemvalue="Python.log_test" />
+      <item itemvalue="Python.sys_log_test" />
     </list>
     <recent_temporary>
       <list>
@@ -443,10 +479,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="596" width="1446" height="569" extended-state="0" />
+    <frame x="-7" y="-7" width="1453" height="873" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2599432" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20930232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -508,47 +544,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Django_files/routers_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="38" selection-start-line="38" selection-start-column="2" selection-end-line="72" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_files/view_log.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_files/serializer_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="822" selection-start-line="822" selection-end-line="822" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MediumClone/medium/medium/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-594" />
@@ -587,20 +582,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/restful01/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/restful01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_test_proj/01/note.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -723,30 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/restful01/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#633#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="1" lean-forward="true" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,16 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/restful01/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -810,26 +761,6 @@
           <caret line="20" lean-forward="true" selection-end-line="37" />
           <folding>
             <element signature="e#31#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls_noModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="1" lean-forward="true" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -860,20 +791,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views_APIView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="-154">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
           <folding>
             <element signature="e#31#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log_test_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2200">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -888,9 +809,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/restful01/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views_genericView2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls_APIView_genericView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="85" lean-forward="true" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls_router_notworking.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls_noModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" lean-forward="true" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/log_test_summ.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
+        <state relative-caret-position="3960">
           <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -898,17 +869,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt">
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="50" column="73" selection-start-line="50" selection-start-column="73" selection-end-line="50" selection-end-column="73" />
+        <state relative-caret-position="88">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding>
+            <element signature="e#16#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py">
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        <state relative-caret-position="264">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/article/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_test_proj/01/restful01/restful01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="105" column="21" lean-forward="true" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
