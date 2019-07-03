@@ -1,6 +1,6 @@
 
 ## Original view
-# (JSON stirng) ->JSONParser ->  Python data type( dict, list);->serializer(python datatype)->python Object instance, -> saved in database directly
+# (JSON stirng) ->JSONParser ->  Python data type( dict, list);->de-serializer(python datatype)->python Object instance, -> saved in database directly
 # Retrieve(database)-> Python Object instance -> serializer-> Python data type -> JSONRenderer(python datatype) -> JSON string -> API to send
 from django.shortcuts import render
 

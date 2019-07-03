@@ -6,6 +6,9 @@ from .serializers import ToySerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+# function-based views: toys_list and toys_detail
+# This decorator is a wrapper that converts a function-based view into a subclass of the
+# rest_framework.views.APIView class. This class is the base class for all the views in the Django REST framework.
 
 @api_view(['GET', 'POST'])
 def toy_list(request):

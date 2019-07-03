@@ -1,0 +1,27 @@
+http://iqfactsrv01/Package%20List/index.html
+http://iqfactsrv01/Package%20List/index.html
+http://iqfactsrv01/
+
+IQfact+ Information System - Package
+ 
+Marvell_8997
+    
+25
+   
+07/02/2019
+ to 
+07/02/2019
+ 
+1 of 2
+IQfact+ Package List showAll
+Last updated: 2019-07-02 14:07:57
+Chipset	Solution Name	Package Parent Name	Type	Time Stamp	VS Version	Package Location
+
+1. Release/package info.
+version, location, features supported, target curstomers.
+2 Test - related.
+Test scripts all included in a .zip file with version attached.
+Test summary
+Issues found with Jira 
+Test Environment
+3. 

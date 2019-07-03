@@ -365,3 +365,19 @@ X-Frame-Options: SAMEORIGIN
 
 ##
 http OPTIONS :8000/toys/
+
+We have to compose and send an HTTP request with the GET HTTP verb and http://localhost:8000/toys/{id} request URL
+to retrieve the toy whose ID matches the specified numeric value in {id}. For example, if we use the request
+URL http://localhost:8000/toys/25, the server will retrieve the toy whose ID matches 25. As a result of the request,
+the server will retrieve a toy with the specified ID from the database and create the appropriate toy object in Python.
+If a toy is found, the server will serialize the toy object into JSON, return a 200 OK status code, and return a JSON
+body with the serialized toy object. If no toy matches the specified ID, the server will return only a
+404 Not Found status:
+
+Django automatically adds an auto-increment integer primary key column named id when it creates the database
+table related to the model. It is very important to notice that the model maps the underlying id column in
+an attribute named pk for the model
+
+Django REST framework uses a two-phase process for serialization. The serializers are mediators between
+the model instances and Python primitives. Parser and renderers handle as mediators between Python primitives and
+HTTP requests and responses
