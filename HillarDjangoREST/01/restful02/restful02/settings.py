@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # django REST Framework
     'rest_framework',
+    # Django Filters
+    'django_filters',
+    # Drones Application
     'drones.apps.DronesConfig',
 
 ]
@@ -69,6 +73,27 @@ TEMPLATES = [
         },
     },
 ]
+
+# Add Pagination, and filtering
+REST_FRAMEWORK = {
+    # Add pagination
+    'DEFAULT_PAGINATION_CLASS':
+    # 'rest_framework.pagination.LimitOffsetPagination',
+    'drones.custompagination.LimitOffsetPaginationWithUpperBound',# customize pagination with custompatination,py
+    'PAGE_SIZE': 4, # limit of # of resources returned upon retrieval
+
+    # Add filtering backend
+    'DEFAULT_FILTER_BACKENDS': (
+        # this class provides field filtering
+        'django_filters.rest_framework.DjangoFilterBackend',
+        # This class allows client to control how the results are ordered with single-query-parameter
+        'rest_framework.filters.OrderingFilter',
+        # This class provides single-query-parameter-based searching
+        'rest_framework.filters.SearchFilter',
+    ),
+
+
+ }
 
 WSGI_APPLICATION = 'restful02.wsgi.application'
 

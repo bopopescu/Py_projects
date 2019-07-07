@@ -16,6 +16,9 @@ json_string = json.dumps(python_data)
 print(json_string)
 
 ###
+django.http.request.HttpRequest
+request.method
+
 
 
 

@@ -29,6 +29,11 @@ pip install --upgrade httpie
 #9. install postman
 #10 install Stoplight
 
+#11 testing
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip install pytest
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip install pytest-django
+#12.
+
 
 
 #url
@@ -381,3 +386,115 @@ an attribute named pk for the model
 Django REST framework uses a two-phase process for serialization. The serializers are mediators between
 the model instances and Python primitives. Parser and renderers handle as mediators between Python primitives and
 HTTP requests and responses
+
+http POST :8000/drone-categories/ name="Quadcopter"
+http POST :8000/pilots/ name="Penelope Pitstop" gender="F" races_count=0
+curl -iX POST -H "Content-Type: application/json" -d   '{"name":"Bill Rudulf", "gender":"F", "races_count": 0}' localhost:8000/pilots/
+
+http GET :8000/drones/
+curl -iX GET localhost:8000/drones/
+
+http GET ":8000/drones/?offset=0"
+http GET ":8000/drones/?limit=4&offset=0"
+
+http GET ":8000/drones/?limit=4&offset=4"
+
+#14.  Install , configure filter backend classes
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful02>pip install django-filter
+
+#
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful02>http ":8000/drone-categories/?name=Quadcopter"
+HTTP/1.0 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 306
+Content-Type: application/json
+Date: Sun, 07 Jul 2019 08:09:36 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "drones": [
+                "http://localhost:8000/drones/9",
+                "http://localhost:8000/drones/5",
+                "http://localhost:8000/drones/7",
+                "http://localhost:8000/drones/3",
+                "http://localhost:8000/drones/11"
+            ],
+            "name": "Quadcopter",
+            "pk": 4,
+            "url": "http://localhost:8000/drone-categories/4"
+        }
+    ]
+}
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful02>curl -iX GET "localhost:8000/drone-categories/?name=Quadcopter"
+HTTP/1.0 200 OK
+Date: Sun, 07 Jul 2019 08:10:17 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+Vary: Accept, Cookie
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 306
+
+{"count":1,"next":null,"previous":null,"results":[{"url":"http://localhost:8000/drone-categories/4","pk":4,"name":"Quadcopter","drones":["http://localhost:8000/drones/9","http://localhost:8000/drones/5","http://localhost:8000/drones/7","http://localhost:8000/drones/3","http://localhost:8000/drones/11"]}]}
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful02>
+http ":8000/drones/?drone_category=1&has_it_competed=False&ordering=-name"
+
+HTTP/1.0 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 919
+Content-Type: application/json
+Date: Sun, 07 Jul 2019 08:20:13 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "count": 4,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "drone_category": "Octocopter",
+            "has_it_competed": false,
+            "inserted_timestamp": "2019-07-07T06:48:03.040470Z",
+            "manufacturing_date": "2017-08-18T02:02:00.716312Z",
+            "name": "Ripslinger",
+            "url": "http://localhost:8000/drones/10"
+        },
+        {
+            "drone_category": "Octocopter",
+            "has_it_competed": false,
+            "inserted_timestamp": "2019-07-07T06:48:00.130489Z",
+            "manufacturing_date": "2017-06-18T02:02:00.716312Z",
+            "name": "RV-3",
+            "url": "http://localhost:8000/drones/8"
+        },
+        {
+            "drone_category": "Octocopter",
+            "has_it_competed": false,
+            "inserted_timestamp": "2019-07-07T06:47:54.379074Z",
+            "manufacturing_date": "2017-02-18T02:02:00.716312Z",
+            "name": "Eclipse",
+            "url": "http://localhost:8000/drones/4"
+        },
+        {
+            "drone_category": "Octocopter",
+            "has_it_competed": false,
+            "inserted_timestamp": "2019-07-07T06:47:57.253841Z",
+            "manufacturing_date": "2017-04-18T02:02:00.716312Z",
+            "name": "Dassault Falcon 7X",
+            "url": "http://localhost:8000/drones/6"
+        }
+    ]
+}
