@@ -7,29 +7,29 @@ from .models import Competition
 from . import views
 
 ## Add authentication
-# from django.contrib.auth.models import User
-#
-#
-# class UserDroneSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = Drone
-#         fields = (
-#             'url',
-#             'name')
-#
-#
-# class UserSerializer(serializers.HyperlinkedModelSerializer):
-#     drones = UserDroneSerializer(
-#         many=True,
-#         read_only=True)
-#
-#     class Meta:
-#         model = User
-#         fields = (
-#             'url',
-#             'pk',
-#             'username',
-#             'drone')
+from django.contrib.auth.models import User
+
+
+class UserDroneSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Drone
+        fields = (
+            'url',
+            'name')
+
+
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    drones = UserDroneSerializer(
+        many=True,
+        read_only=True)
+
+    class Meta:
+        model = User
+        fields = (
+            'url',
+            'pk',
+            'username',
+            'drone')
 # Done adding user
 
 class DroneCategorySerializer(serializers.HyperlinkedModelSerializer):
@@ -54,7 +54,7 @@ class DroneSerializer(serializers.HyperlinkedModelSerializer):
 
     # Display the owner's username (read-only)
     # Added for authentication
-    # owner = serializers.ReadOnlyField(source='owner.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
         model = Drone
@@ -62,7 +62,7 @@ class DroneSerializer(serializers.HyperlinkedModelSerializer):
             'url',
             'name',
             'drone_category',
-            # 'owner', ### added owner
+            'owner', ### added owner
             'manufacturing_date',
             'has_it_competed',
             'inserted_timestamp')

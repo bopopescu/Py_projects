@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django_files/request_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_files/request_log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/views.py" afterDir="false" />
@@ -19,52 +16,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="446" column="28" selection-start-line="446" selection-start-column="28" selection-end-line="446" selection-end-column="28" />
+            <state relative-caret-position="642">
+              <caret line="891" column="2" selection-start-line="891" selection-start-column="2" selection-end-line="891" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/restful02/settings.py">
+        <entry file="file://$PROJECT_DIR$/log_test_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-770">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-330">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="66">
+              <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
               <folding>
-                <element signature="e#1#33#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/models.py">
+        <entry file="file://$PROJECT_DIR$/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1188">
-              <caret column="48" selection-start-column="48" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="132" selection-start-line="132" selection-start-column="2" selection-end-line="140" selection-end-column="7" />
+            <state relative-caret-position="-1162">
               <folding>
-                <element signature="e#1#36#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,6 +81,11 @@
       <find>inst</find>
       <find>JSONParser</find>
       <find>drones</find>
+      <find>name</find>
+      <find>file_</find>
+      <find>restful</find>
+      <find>restful03</find>
+      <find>http</find>
     </findStrings>
     <replaceStrings>
       <replace>csvReader</replace>
@@ -112,6 +95,9 @@
       <replace>QA</replace>
       <replace>list_of_dict</replace>
       <replace>'</replace>
+      <replace>file_name</replace>
+      <replace>restful04</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -120,16 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/log_test4.py" />
-        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/func_log.py" />
-        <option value="$PROJECT_DIR$/Django_files/sample_log.py" />
-        <option value="$PROJECT_DIR$/Django_files/snippet_log.py" />
-        <option value="$PROJECT_DIR$/log_test1.py" />
-        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_set_log.py" />
-        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" />
-        <option value="$PROJECT_DIR$/Django_files/routers_log.py" />
-        <option value="$PROJECT_DIR$/log_test_summ.py" />
-        <option value="$PROJECT_DIR$/Django_files/view_log.py" />
         <option value="$PROJECT_DIR$/Django_files/serializer_log.py" />
         <option value="$PROJECT_DIR$/proc_lt_std.py" />
         <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/admin.py" />
@@ -165,20 +141,30 @@
         <option value="$PROJECT_DIR$/Django_files/request_log.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/pytest.ini" />
         <option value="$PROJECT_DIR$/Django_files/pytest_log.py" />
-        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/serializers.py" />
-        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/models.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/custompagination.py" />
-        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/restful02/settings.py" />
-        <option value="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/views.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/restful02/settings.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/models.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/models.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/serializers.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/serializers.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/custompermission.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful03/restful03/urls.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful03/restful03/settings.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/views.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful04/restful04/settings.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful04/drones/v2/views.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful04/drones/v2/urls.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful04/restful04/urls.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="571" />
-    <option name="width" value="1447" />
-    <option name="height" value="599" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="144" />
+    <option name="y" value="456" />
+    <option name="width" value="2404" />
+    <option name="height" value="1456" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -188,6 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,14 +210,22 @@
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
               <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful02" type="462c0819:PsiDirectoryNode" />
+              <item name="restful01" type="462c0819:PsiDirectoryNode" />
+              <item name="restful01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
               <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful02" type="462c0819:PsiDirectoryNode" />
+              <item name="restful04" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
+              <item name="01" type="462c0819:PsiDirectoryNode" />
+              <item name="restful04" type="462c0819:PsiDirectoryNode" />
               <item name="drones" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -238,139 +233,8 @@
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
               <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
               <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful02" type="462c0819:PsiDirectoryNode" />
-              <item name="drones" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful02" type="462c0819:PsiDirectoryNode" />
-              <item name="restful02" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter06" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_06_01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter06" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_06_01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter06" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_06_01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="drones" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter06" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_06_01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter07" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter07" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_07_03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter08" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter08" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_08_01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter08" type="462c0819:PsiDirectoryNode" />
-              <item name="hillar_django_restful_08_01" type="462c0819:PsiDirectoryNode" />
-              <item name="restful01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="HillarDjangoREST" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="DjangoRESTfulWebServices_Code" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter10" type="462c0819:PsiDirectoryNode" />
+              <item name="restful04" type="462c0819:PsiDirectoryNode" />
+              <item name="restful04" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -416,28 +280,27 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HillarDjangoREST/01/restful04/drones" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jsun\Documents\Py_projects\django_test_proj\env_02\restful01\api" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\file_op" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\Thread_process" />
-      <recent name="C:\Users\jsun\Documents\Py_projects\mul_process\File_mul_process" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jsun\Documents\Py_projects\Django_files" />
       <recent name="C:\Users\jsun\Documents\Py_projects\django_test_proj\01" />
       <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\py_dataStruc" />
       <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\rex" />
       <recent name="C:\Users\jsun\Documents\Py_projects\Py_op\Mul_process" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful04\drones" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful04\restful04" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03\drones" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03\restful03" />
+      <recent name="C:\Users\jsun\Documents\Py_projects\django_test_proj\env_02\restful01\api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -610,10 +473,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="571" width="1447" height="599" extended-state="0" />
+    <frame x="-7" y="-7" width="1453" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2909865" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28893587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -671,172 +534,15 @@
           <line>18</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_03/restful01/drones/views.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="e#16#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-          <folding>
-            <element signature="e#1#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/serializers_noModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/serializers_APIview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/LearnPythonProgrammingSecondEdition_Code/Chapter01/ch1/factorial.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/LearnPythonProgrammingSecondEdition_Code/Chapter01/ch1/bike.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoDesignPatternsandBestPracticesSecondEdition_Code/src/posts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/view_orig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#311#346#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter02/hillar_django_restful_02_01/restful01/toys/serializers.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter01/hillar_django_restful_01/restful01/toys/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding>
-            <element signature="e#1#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#26#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls_router_notworking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#20#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views_APIView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#31#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_01/restful01/toys/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_03/restful01/toys/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_01/restful01/toys/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#153#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter10/hillar_django_restful_10_02/restful01/toys/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#153#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter08/hillar_django_restful_08_01/restful01/drones/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter05/hillar_django_restful_05_01/restful01/restful01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1914" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter06/hillar_django_restful_06_01/restful01/drones/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -864,26 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log_test_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter06/hillar_django_restful_06_01/restful01/drones/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="35" lean-forward="true" selection-end-line="38" />
-          <folding>
-            <element signature="e#153#185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -894,13 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="21" column="18" lean-forward="true" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter06/hillar_django_restful_06_01/restful01/drones/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -970,33 +649,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1430">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding>
-            <element signature="e#1#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/restful02/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="446" column="28" selection-start-line="446" selection-start-column="28" selection-end-line="446" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
+        <state relative-caret-position="110">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding>
             <element signature="e#1#33#0" expanded="true" />
@@ -1004,20 +659,221 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/models.py">
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1188">
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
+        <state relative-caret-position="423">
+          <caret line="150" column="36" lean-forward="true" selection-start-line="150" selection-start-column="36" selection-end-line="150" selection-end-column="36" />
+          <folding>
+            <element signature="e#1#36#0" expanded="true" />
+            <marker date="1562542289036" expanded="true" signature="2809:4034" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/views.py">
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter06/hillar_django_restful_06_01/restful01/drones/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="132" selection-start-line="132" selection-start-column="2" selection-end-line="140" selection-end-column="7" />
+        <state relative-caret-position="357">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#153#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter06/hillar_django_restful_06_01/restful01/drones/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="e#153#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_01/restful01/drones/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_01/restful01/drones/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-831" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_03/restful01/drones/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1628">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="e#153#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_03/restful01/drones/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter08/hillar_django_restful_08_01/restful01/drones/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/restful02/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/custompagination.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/custompermission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/restful03/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1162">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter08/hillar_django_restful_08_01/restful01/drones/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/restful03/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="111" column="31" lean-forward="true" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful03/drones/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3146">
+          <caret line="150" column="4" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
           <folding>
             <element signature="e#1#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful04/restful04/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful04/drones/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4430" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful04/drones/v2/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful04/drones/v2/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful04/restful04/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="891" column="2" selection-start-line="891" selection-start-column="2" selection-end-line="891" selection-end-column="2" />
         </state>
       </provider>
     </entry>

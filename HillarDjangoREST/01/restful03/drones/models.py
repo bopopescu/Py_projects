@@ -23,10 +23,10 @@ class Drone(models.Model):
     inserted_timestamp = models.DateTimeField(auto_now_add=True)
 
     ## Added user/owner
-    # owner = models.ForeignKey(
-    #     'auth.User',
-    #     related_name='drones',
-    #     on_delete=models.CASCADE)
+    owner = models.ForeignKey(
+        'auth.User',
+        related_name='drones',
+        on_delete=models.CASCADE)
     ## done add user
 
     class Meta:

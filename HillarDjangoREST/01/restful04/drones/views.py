@@ -7,6 +7,15 @@ from .models import DroneCategory
 from .models import Drone
 from .models import Pilot
 from .models import Competition
+
+# Added policies for permission
+from rest_framework import permissions
+from . import custompermission
+
+# Add Token - based authentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
+
 from .serializers import DroneCategorySerializer
 from .serializers import DroneSerializer
 from .serializers import PilotSerializer
@@ -15,6 +24,9 @@ from .serializers import PilotCompetitionSerializer
 # Add filtering, searching and ordering
 from rest_framework import filters
 from django_filters import AllValuesFilter, DateTimeFilter, NumberFilter, FilterSet
+
+## Added throttling for requests.
+from rest_framework.throttling import ScopedRateThrottle
 
 class DroneCategoryList(generics.ListCreateAPIView):
     queryset = DroneCategory.objects.all()
@@ -44,6 +56,10 @@ class DroneCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class DroneList(generics.ListCreateAPIView):
+    # Added Throttling
+    throttle_scope = 'drones'
+    throttle_classes = (ScopedRateThrottle,)
+
     queryset = Drone.objects.all()
     serializer_class = DroneSerializer
     name = 'drone-list'
@@ -66,13 +82,35 @@ class DroneList(generics.ListCreateAPIView):
 #     serializer_class = DroneSerializer
 #     name = 'drone-list'
 
+    # Added Permission Policy for basic auth.
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        custompermission.IsCurrentUserOwnerOrReadOnly,
+    )
+
+    # Added permission for basic authentication
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 class DroneDetail(generics.RetrieveUpdateDestroyAPIView):
+    # Added Throttling
+    throttle_scope = 'drones'
+    throttle_classes = (ScopedRateThrottle,)
+
     queryset = Drone.objects.all()
     serializer_class = DroneSerializer
     name = 'drone-detail'
 
+    # Added permission for basic authentication
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        custompermission.IsCurrentUserOwnerOrReadOnly,
+    )
+
 class PilotList(generics.ListCreateAPIView):
+    throttle_scope = 'pilots'
+    throttle_classes = (ScopedRateThrottle,)
+
     queryset = Pilot.objects.all()
     serializer_class = PilotSerializer
     name = 'pilot-list'
@@ -88,6 +126,17 @@ class PilotList(generics.ListCreateAPIView):
         'name',
         'races_count'
         )
+    # Add token-based authen.
+    authentication_classes = (
+        TokenAuthentication,
+    )
+    permission_classes = (
+        IsAuthenticated,
+    )
+
+
+
+
 # No Filtering
 # class PilotList(generics.ListCreateAPIView):
 #     queryset = Pilot.objects.all()
@@ -96,9 +145,20 @@ class PilotList(generics.ListCreateAPIView):
 
 
 class PilotDetail(generics.RetrieveUpdateDestroyAPIView):
+    throttle_scope = 'pilots'
+    throttle_classes = (ScopedRateThrottle,)
+
     queryset = Pilot.objects.all()
     serializer_class = PilotSerializer
     name = 'pilot-detail'
+
+    # Add token authen.
+    authentication_classes = (
+        TokenAuthentication,
+    )
+    permission_classes = (
+        IsAuthenticated,
+    )
 
 # Add customized filter for competition
 # class CompetitionFilter(filters.FilterSet):

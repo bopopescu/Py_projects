@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django_filters',
     # Drones Application
     'drones.apps.DronesConfig',
+    # Token authentication
+    'rest_framework.authtoken'
 
 ]
 
@@ -56,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'restful02.urls'
+ROOT_URLCONF = 'restful03.urls'
 
 TEMPLATES = [
     {
@@ -75,6 +77,8 @@ TEMPLATES = [
 ]
 
 # Add Pagination, and filtering
+# Add authentication
+# Add Throttling
 REST_FRAMEWORK = {
     # Add pagination
     'DEFAULT_PAGINATION_CLASS':
@@ -93,17 +97,30 @@ REST_FRAMEWORK = {
     ),
 
     ## Add authentication settings key to rest_framework dictionary
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     # authentication against username and password
-    #     'rest_framework.authentication.BasicAuthentication',
-    #     # Session framework for authentication
-    #     'rest_framework.authentication.SessionAuthentication',
-    #  ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # authentication against username and password
+        'rest_framework.authentication.BasicAuthentication',
+        # Session framework for authentication
+        'rest_framework.authentication.SessionAuthentication',
+     ),
+
+    ## Add Trottling to limit amount of requests
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '3/hour',
+        'user': '10/hour',
+        'drones': '20/hour',
+        'pilots': '15/hour',
+    }
+
 
 
  }
 
-WSGI_APPLICATION = 'restful02.wsgi.application'
+WSGI_APPLICATION = 'restful03.wsgi.application'
 
 
 # Database

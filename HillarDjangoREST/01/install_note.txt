@@ -1,3 +1,6 @@
+Username (leave blank to use 'jsun'): jsun
+Email address: sunusd@yahoo.com
+Password: Django2!
 #1. Create venv @ \HillarDjangoREST\01, not need to create separate folder, . is important
 # folder \HillarDjangoREST\01 is created by running "python -m venv .\HillarDjangoREST\01"
 C:\Users\jsun\Documents\Py_projects>python -m venv .\HillarDjangoREST\01
@@ -498,3 +501,430 @@ X-Frame-Options: SAMEORIGIN
         }
     ]
 }
+
+## Searching
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful02>http ":8000/drones/?search=G"
+HTTP/1.0 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 706
+Content-Type: application/json
+Date: Sun, 07 Jul 2019 22:47:29 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "count": 3,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "drone_category": "Heavy Duty",
+            "has_it_competed": true,
+            "inserted_timestamp": "2019-07-07T04:20:31.819838Z",
+            "manufacturing_date": "2019-05-04T12:59:00Z",
+            "name": "Golden Armor",
+            "url": "http://localhost:8000/drones/2"
+        },
+        {
+            "drone_category": "Quadcopter",
+            "has_it_competed": false,
+            "inserted_timestamp": "2019-07-07T06:47:55.789031Z",
+            "manufacturing_date": "2017-03-20T02:02:00.716312Z",
+            "name": "Gossamer Albatross",
+            "url": "http://localhost:8000/drones/5"
+        },
+        {
+            "drone_category": "Quadcopter",
+            "has_it_competed": false,
+            "inserted_timestamp": "2019-07-07T06:47:58.691312Z",
+            "manufacturing_date": "2017-05-20T02:02:00.716312Z",
+            "name": "Gulfstream I",
+            "url": "http://localhost:8000/drones/7"
+        }
+    ]
+}
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful02>curl -iX GET "localhost:8000/drones/?search=G"
+HTTP/1.0 200 OK
+Date: Sun, 07 Jul 2019 22:48:56 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+Vary: Accept, Cookie
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 706
+
+{"count":3,"next":null,"previous":null,"results":[{"url":"http://localhost:8000/drones/2","name":"Golden Armor","drone_category":"Heavy Duty","manufacturing_date":"2019-05-04T12:59:00Z","has_it_competed":true,"inserted_timestamp":"2019-07-07T04:20:31.819838Z"},{"url":"http://localhost:8000/drones/5","name":"Gossamer Albatross","drone_category":"Quadcopter","manufacturing_date":"2017-03-20T02:02:00.716312Z","has_it_competed":false,"inserted_timestamp":"2019-07-07T06:47:55.789031Z"},{"url":"http://localhost:8000/drones/7","name":"Gulfstream I","drone_category":"Quadcopter","manufacturing_date":"2017-05-20T02:02:00.716312Z","has_it_competed":false,"inserted_timestamp":"2019-07-07T06:47:58.691312Z"}]}
+
+##Add Authentication
+
+We want each drone to have an owner. Only an authenticated user will be able to create a drone and
+it will automatically become the owner of this new drone.
+
+Any authenticated user that isn't the owner of a specific drone resource will have read-only access to this drone.
+In addition, unauthenticated requests will also have read-only access to drones.
+
+We will combine authentication with specific permissions.
+Permissions use the authentication information included in the request.user and request.auth attributes
+to determine whether the request should be granted or denied access.
+Permissions allow us to control which types of users will be granted or denied access to the different features,
+methods, resources, or resource collections of our RESTful Web Service.
+
+### Add user/owner of drone
+class Drone(models.Model):
+    name = models.CharField(max_length=250, unique=True)
+    drone_category = models.ForeignKey(
+        DroneCategory,
+        related_name='drones',
+        on_delete=models.CASCADE)
+    manufacturing_date = models.DateTimeField()
+    has_it_competed = models.BooleanField(default=False)
+    inserted_timestamp = models.DateTimeField(auto_now_add=True)
+    owner = models.ForeignKey(
+        'auth.User',
+        related_name='drones',
+        on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+The highlighted lines declare a new owner field for the Drone model. The new field uses the
+django.db.models.ForeignKey class to provide a many-to-one relationship to the django.contrib.auth.User model.
+
+This User model persists the users for the Django authentication system. Now, we are using this authentication
+system for our RESTful Web Service. The 'drones' value specified for the related_name argument creates a
+backward relation from the User to the Drone model. Remember that this value indicates the name to use for
+the relation from the related User object back to a Drone object. This way, we will be able to access all the drones
+owned by a specific user.
+
+Whenever we delete a User, we want all drones owned by this user to be deleted too, and therefore,
+we specified the models.CASCADE value for the on_delete argument.
+
+# Create superuser
+python manage.py createsuperuser
+# Create a user / create user
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>python manage.py shell
+Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 22:20:52) [MSC v.1916 32 bit (Intel)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.5.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from django.contrib.auth.models import User
+
+In [2]: user = User.objects.create_user('user01', 'user01@example.com', 'user01password')
+
+In [3]: user.save()
+
+### failed due to no authentication credential
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http POST :8000/drones/ name="Python Drone" drone_category="Quadcopter" manufacturing_date="2017-07-16T02:03:00.716312Z" has_it_competed=false
+HTTP/1.0 401 Unauthorized
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 58
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 04:23:28 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+WWW-Authenticate: Basic realm="api"
+X-Frame-Options: SAMEORIGIN
+
+{
+    "detail": "Authentication credentials were not provided."
+}
+
+
+#### we need to provide authentication credentials by using HTTP authentication.
+http -a "djangosuper":"passwordforsuper" POST :8000/drones/ name="Python Drone" drone_category="Quadcopter" manufacturing_date="2017-07-16T02:03:00.716312Z" has_it_competed=false
+
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http -a "jsun":"Django2!" POST :8000/drones/ name="Python Drone" drone_category="Quadcopter" manufacturing_date="2017-07-16T02:03:00.716312Z" has_it_competed=false
+HTTP/1.0 201 Created
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 233
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 04:27:30 GMT
+Location: http://localhost:8000/drones/1
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "drone_category": "Quadcopter",
+    "has_it_competed": false,
+    "inserted_timestamp": "2019-07-08T04:27:30.510528Z",
+    "manufacturing_date": "2017-07-16T02:03:00.716312Z",
+    "name": "Python Drone",
+    "owner": "jsun",
+    "url": "http://localhost:8000/drones/1"
+}
+
+
+### Non-owner user only has read-only
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http -a "user01":"user01password" PATCH :8000/drones/1 has_it_competed=true
+HTTP/1.0 403 Forbidden
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 63
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 04:34:39 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "detail": "You do not have permission to perform this action."
+}
+
+### Non-owner can read
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http -a "user01":"user01password" GET :8000/drones/1
+HTTP/1.0 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 233
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 04:39:42 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "drone_category": "Quadcopter",
+    "has_it_competed": false,
+    "inserted_timestamp": "2019-07-08T04:27:30.510528Z",
+    "manufacturing_date": "2017-07-16T02:03:00.716312Z",
+    "name": "Python Drone",
+    "owner": "jsun",
+    "url": "http://localhost:8000/drones/1"
+}
+
+### Token-based authentication
+
+from rest_framework.authtoken.models import Token
+from django.contrib.auth.models import User
+
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>python manage.py shell
+Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 22:20:52) [MSC v.1916 32 bit (Intel)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.5.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from rest_framework.authtoken.models import Token
+   ...: from django.contrib.auth.models import User
+
+In [2]: user = User.objects.get(username="user01")
+   ...: token = Token.objects.create(user=user)
+   ...: print(token.key)
+6cf441304a876e856bc841f1544e3e21feb1efbd
+
+##
+
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http :8000/pilots/
+HTTP/1.0 401 Unauthorized
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 58
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 18:56:32 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+WWW-Authenticate: Token
+X-Frame-Options: SAMEORIGIN
+
+{
+    "detail": "Authentication credentials were not provided."
+}
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>curl -iX GET localhost:8000/pilots/
+HTTP/1.0 401 Unauthorized
+Date: Mon, 08 Jul 2019 18:57:59 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+WWW-Authenticate: Token
+Vary: Accept
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 58
+
+{"detail":"Authentication credentials were not provided."}
+
+##
+http :8000/pilots/ "Authorization: Token PASTE-TOKEN-HERE"
+http :8000/pilots/ "Authorization: Token 6cf441304a876e856bc841f1544e3e21feb1efbd"
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http :8000/pilots/ "Authorization: Token 6cf441304a876e856bc841f1544e3e21feb1efbd"
+HTTP/1.0 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 52
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 20:08:31 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "count": 0,
+    "next": null,
+    "previous": null,
+    "results": []
+}
+##
+curl -iX GET http://localhost:8000/pilots/ -H "Authorization: Token 6cf441304a876e856bc841f1544e3e21feb1efbd"
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>curl -iX GET http://localhost:8000/pilots/ -H "Authorization: Token 6cf441304a876e856bc841f1544e3e21feb1efbd"
+HTTP/1.0 200 OK
+Date: Mon, 08 Jul 2019 20:10:00 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+Vary: Accept
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 52
+
+{"count":0,"next":null,"previous":null,"results":[]}
+
+## Throttling to limit amount of requests
+Throttles control the rate of requests that users can make to our RESTful Web Service.
+The Django REST framework makes it easy to configure throttling rules.
+We will use throttling rules to configure the following limitations to the usage of our RESTful Web Service:
+
+A maximum of 3 requests per hour for unauthenticated users
+A maximum of 10 requests per hour for authenticated users
+A maximum of 20 requests per hour for the drones related views
+A maximum of 15 requests per hour for the pilots related views
+
+##  Anonymous user
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http :8000/competitions/
+HTTP/1.0 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 52
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 22:22:24 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "count": 0,
+    "next": null,
+    "previous": null,
+    "results": []
+}
+
+
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http :8000/competitions/
+HTTP/1.0 429 Too Many Requests
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 71
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 22:22:30 GMT
+Retry-After: 3587
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "detail": "Request was throttled. Expected available in 3587 seconds."
+}
+## Authenticated users
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http -a "user01":"user01password" :8000/competitions/
+HTTP/1.0 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 52
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 22:27:25 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "count": 0,
+    "next": null,
+    "previous": null,
+    "results": []
+}
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>curl --user "user01":"user01password" -iX GET localhost:8000/competitions/
+HTTP/1.0 200 OK
+Date: Mon, 08 Jul 2019 22:34:53 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+Vary: Accept
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 52
+
+{"count":0,"next":null,"previous":null,"results":[]}
+
+########################## restful04
+# Version control
+
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful04>http -a "jsun":"Django2!" :8000/v1/
+HTTP/1.0 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Length: 209
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 23:48:09 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "competitions": "http://localhost:8000/v1/competitions/",
+    "drone-categories": "http://localhost:8000/v1/drone-categories/",
+    "drones": "http://localhost:8000/v1/drones/",
+    "pilots": "http://localhost:8000/v1/pilots/"
+}
+
+
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful04>http -a "jsun":"Django2!" :8000/v2/
+HTTP/1.0 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Length: 217
+Content-Type: application/json
+Date: Mon, 08 Jul 2019 23:48:25 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "competitions": "http://localhost:8000/v2/competitions/",
+    "pilots": "http://localhost:8000/v2/pilots/",
+    "vehicle-categories": "http://localhost:8000/v2/vehicle-categories/",
+    "vehicles": "http://localhost:8000/v2/vehicles/"
+}
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
