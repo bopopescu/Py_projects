@@ -696,7 +696,7 @@ X-Frame-Options: SAMEORIGIN
 }
 
 ### Token-based authentication
-
+## create Token
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 
@@ -743,10 +743,11 @@ X-Frame-Options: SAMEORIGIN
 Content-Length: 58
 
 {"detail":"Authentication credentials were not provided."}
-
+http POST :8000/pilots/ name="Penelope Pitstop" gender="F" races_count=0
 ##
 http :8000/pilots/ "Authorization: Token PASTE-TOKEN-HERE"
 http :8000/pilots/ "Authorization: Token 6cf441304a876e856bc841f1544e3e21feb1efbd"
+#http POST :8000/pilots/ "Authorization: Token 48c0ca940e2aabbd57030794b6748a5a3717786d" name="Penelope Pitstop" gender="F" races_count=0
 (01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful03>http :8000/pilots/ "Authorization: Token 6cf441304a876e856bc841f1544e3e21feb1efbd"
 HTTP/1.0 200 OK
 Allow: GET, POST, HEAD, OPTIONS
@@ -889,8 +890,110 @@ X-Frame-Options: SAMEORIGIN
     "vehicles": "http://localhost:8000/v2/vehicles/"
 }
 
-//
+############################### rest05 pyTest######################
+pip install pytest
+pip install pytest-django
 
+In [1]: from rest_framework.authtoken.models import Token
+   ...: from django.contrib.auth.models import User
+
+In [2]: user = User.objects.get(username="user01")
+
+In [3]: token = Token.objects.create(user=user)
+
+In [4]: print(token.key)
+9fd172d6532f96dbe4ce73c3c21808d4bb4fcdc2
+
+##
+In [5]: user = User.objects.get(username="user02")
+
+In [6]: token = Token.objects.create(user=user)
+
+In [7]: print(token.key)
+48c0ca940e2aabbd57030794b6748a5a3717786d
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful05_pytest>http POST :8000/pilots/ "Authorization: Token 48c0ca940e2aabbd57030794b6748a5a3717786d" name="Penelope Pitstop" gender="F" races_count=0
+HTTP/1.0 201 Created
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 194
+Content-Type: application/json
+Date: Tue, 09 Jul 2019 20:56:22 GMT
+Location: http://localhost:8000/pilots/1
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+
+{
+    "competitions": [],
+    "gender": "F",
+    "gender_description": "Female",
+    "inserted_timestamp": "2019-07-09T20:56:22.547627Z",
+    "name": "Penelope Pitstop",
+    "races_count": 0,
+    "url": "http://localhost:8000/pilots/1"
+}
+
+## Check test.py
+pytest -v
+The pytest command and the Django REST framework will perform the following actions:
+
+Create a clean test database name test_drones.
+Run all the migrations required for the database.
+Discover the tests that have to be executed based on the settings specified in the pytest.ini file.
+Run all the methods whose name starts with the test_ prefix in the DroneCategoryTests class and display the results.
+We declared this class in the tests.py file and it matches the pattern specified for the python_files setting
+in the pytest.ini file.
+Drop the test database named test_drones.
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful05_pytest>pytest -v
+================================================================= test session starts =================================================================
+platform win32 -- Python 3.7.2, pytest-5.0.1, py-1.8.0, pluggy-0.12.0 -- c:\users\jsun\documents\py_projects\hillardjangorest\01\scripts\python.exe
+cachedir: .pytest_cache
+Django settings: restful05_pytest.settings (from ini file)
+rootdir: C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful05_pytest, inifile: pytest.ini
+plugins: django-3.5.1
+collected 6 items
+
+drones/tests.py::DroneCategoryTests::test_filter_drone_category_by_name PASSED                                                                   [ 16%]
+drones/tests.py::DroneCategoryTests::test_get_drone_categories_collection PASSED                                                                 [ 33%]
+drones/tests.py::DroneCategoryTests::test_get_drone_category PASSED                                                                              [ 50%]
+drones/tests.py::DroneCategoryTests::test_post_and_get_drone_category PASSED                                                                     [ 66%]
+drones/tests.py::DroneCategoryTests::test_post_existing_drone_category_name PASSED                                                               [ 83%]
+drones/tests.py::DroneCategoryTests::test_update_drone_category PASSED
+
+##
+(01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful05_pytest>pytest -vs
+================================================================= test session starts =================================================================
+platform win32 -- Python 3.7.2, pytest-5.0.1, py-1.8.0, pluggy-0.12.0 -- c:\users\jsun\documents\py_projects\hillardjangorest\01\scripts\python.exe
+cachedir: .pytest_cache
+Django settings: restful05_pytest.settings (from ini file)
+rootdir: C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01\restful05_pytest, inifile: pytest.ini
+plugins: django-3.5.1
+collected 6 items
+
+drones/tests.py::DroneCategoryTests::test_filter_drone_category_by_name Creating test database for alias 'default'...
+url is  /drone-categories/
+url is  /drone-categories/
+/drone-categories/?name=Hexacopter
+<Response status_code=200, "application/json">
+PASSED
+drones/tests.py::DroneCategoryTests::test_get_drone_categories_collection url is  /drone-categories/
+PASSED
+drones/tests.py::DroneCategoryTests::test_get_drone_category url is  /drone-categories/
+PASSED
+drones/tests.py::DroneCategoryTests::test_post_and_get_drone_category url is  /drone-categories/
+PK 1
+PASSED
+drones/tests.py::DroneCategoryTests::test_post_existing_drone_category_name url is  /drone-categories/
+url is  /drone-categories/
+<Response status_code=400, "application/json">
+PASSED
+drones/tests.py::DroneCategoryTests::test_update_drone_category url is  /drone-categories/
+PASSEDDestroying test database for alias 'default'...
+
+##
 
 
 
