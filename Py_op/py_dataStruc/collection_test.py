@@ -10,6 +10,8 @@ import os
 dic1 = {'wifi': 1, 'bt': 2}
 dic2 = {'abgn': 3, 'ax': 4}
 
+merg1 = zip(dic1, dic2,dic2,dic2)
+# [('wifi', 'abgn', 'abgn', 'abgn'), ('bt', 'ax', 'ax', 'ax')]
 merg = zip(dic1, dic2)
 print(list(merg)) #[('wifi', 'abgn'), ('bt', 'ax')]
 

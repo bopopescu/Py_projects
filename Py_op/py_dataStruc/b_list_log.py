@@ -6,7 +6,12 @@ nums.reverse()
 nums[targetIndex + 1:] = reversed(nums[targetIndex +1:])
 max, min
 len(nums)
-
+p = [10,8,0,5,3]
+sp = [2,4,1,1,3]
+p_s = list(zip(p,sp))
+print(p_s)
+p_s = sorted(p_s, key = lambda s: (s[0], s[1]), reverse=True)
+print(p_s)
 for __ in range(4):
     print(1)
     print()

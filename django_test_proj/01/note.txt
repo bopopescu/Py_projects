@@ -1,3 +1,5 @@
+06/25/2019
+
 #1. C:\Users\jsun\Documents\Py_projects>python -m venv .\django_test_proj\01
 
 #2. Activate virtual env

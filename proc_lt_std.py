@@ -820,3 +820,174 @@ def assignBikes(self, workers, bikes):
             visited.add(p[2])
     return ans
 ###
+
+#135 , 7/10/19
+ratings = [1,2,2]
+def candy(ratings):
+    len_kid = len(ratings)
+    arr_candy = [1]*len_kid
+    i = 1
+    while i < len_kid:
+        if ratings[i] > ratings[i-1]:
+            arr_candy[i] = arr_candy[i-1] + 1
+        i += 1
+    i = len_kid - 1
+    while i > 0:
+        if ratings[i-1] > ratings[i]:
+            arr_candy[i-1] = max(arr_candy[i-1], arr_candy[i]+1)
+        i -= 1
+
+    return sum(arr_candy)
+
+
+print(candy(ratings))
+
+##7/11
+#723
+def candyCrush(board):
+    m, n = len(board), len(board[0])
+    arr_zero = []
+    while True:
+        for i in range(m):
+            for j in range(n):
+                left, right = j, j
+                up, down = i, i
+                while left >= 0 and j - left < 3 and board[i][left] == board[i][j]:
+                    left -= 1
+                while right < n and right - j < 3 and board[i][right] == board[i][j]:
+                    right += 1
+                while up >= 0 and i - up < 3 and board[up][j] == board[i][j]:
+                    up -= 1
+                while down < m and down - i < 3 and board[down][j] == board[i][j]:
+                    down += 1
+                if down - up > 3 or right - left > 3:
+                    arr_zero.append((i,j))
+
+        if arr_zero:
+            for i, j in arr_zero.pop():
+                board[i][j]= 0
+            for j in range(n):
+                bottom = m-1
+                while bottom >= 0 :
+                    if board[bottom][j] == 0:
+                        temp_bottom = bottom
+                        while temp_bottom >= 0:
+                            if board[temp_bottom][j] !=0 :
+                                board[bottom][j] = board[temp_bottom][j]
+                                board[temp_bottom][j] = 0
+                                break
+                            temp_bottom -= 1
+                        if temp_bottom < 0:
+                            break
+                    bottom -= 1
+        return board
+
+### 7/12/19
+#1011
+
+def helper(weights, D, index, d_load, min_load):
+    if D == 0:
+        # print(d_load)
+        min_load[0] = min(min_load[0], max(d_load))
+        # print(min_load[0])
+        return
+    if index == len(weights):
+        return
+    if D == 1:
+        d_load.append(sum(weights[index:]))
+        helper(weights, D - 1, len(weights), d_load, min_load)
+        d_load.pop()
+        return
+
+    for i in range(index, len(weights) - D + 1):
+        addto = sum(weights[index: i + 1])
+        # print(addto)
+        #print(addto, D)
+        d_load.append(addto)
+        print(len(d_load))
+        helper(weights, D - 1, i + 1, d_load, min_load)
+        d_load.pop()
+        print(len(d_load))
+
+def shipwithindays(weights, D):
+    min_load = [float("inf")]
+    d_load = []
+    index = 0
+    helper(weights, D, index, d_load, min_load)
+    return min_load[0]
+
+arr = [1,2,3,1,1]
+
+print(min(arr))
+print("rst is {}".format(shipwithindays(arr, 4)))
+
+###
+#7/16
+#1094
+# bool, matrix, int
+trips = [[3,7,9],[3,2,7],[8,3,9]]
+capacity= 11
+def carPooling(trips, capacity):
+    routes = []
+    for i, v in enumerate(trips):
+        routes.extend([(v[1], v[0]), (v[2], -v[0])])
+    routes = sorted(routes)
+
+    seats_taken = 0
+    for i, v in enumerate(routes):
+        seats_taken += v[1]
+        if seats_taken > capacity:
+            return False
+    return True
+
+print(carPooling(trips, capacity))
+##
+#913
+# def cmg(graph): # m1, c2, d0
+
+##7/23
+#1003
+S=["aabcbc", 'abcabcababcc','abccba', 'cababbc']
+ss = [True, True, False, False]
+def isValid(S):
+    len_before = len(S)
+    len_after = len(S)
+    while True:
+        if S:
+            S = S.replace("abc","")
+            len_after = len(S)
+            if len_after == 0:
+                return True
+            if len_after == len_before:
+                return False
+            len_before = len_after
+        else:
+            break
+    return True
+
+sss = []
+for s in S:
+    sss.append(isValid(s))
+print(sss)
+
+##
+def isValid(S):
+    stk = []
+    for i in S:
+        if i == 'c':
+            if len(stk) > 1:
+                ele_b = stk.pop()
+                ele_a = stk.pop()
+
+                if ele_b != 'b' or ele_a != 'a':
+                    return False
+            else:
+                return False
+        else:
+            stk.append(i)
+    return len(stk) == 0
+
+## 7/24
+#721: cherry pickup
+# 3D dp
+

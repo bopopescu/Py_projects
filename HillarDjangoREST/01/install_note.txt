@@ -1,6 +1,7 @@
 Username (leave blank to use 'jsun'): jsun
 Email address: sunusd@yahoo.com
 Password: Django2!
+
 #1. Create venv @ \HillarDjangoREST\01, not need to create separate folder, . is important
 # folder \HillarDjangoREST\01 is created by running "python -m venv .\HillarDjangoREST\01"
 C:\Users\jsun\Documents\Py_projects>python -m venv .\HillarDjangoREST\01
@@ -20,7 +21,7 @@ You should consider upgrading via the 'python -m pip install --upgrade pip' comm
 #4 Install Django REST framework
 (01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip install djangorestframework==3.6.4
 
-#5 Create a Ddjango project
+#5 Create a Django project
 python Scripts\django-admin.exe startproject restful01
 
 #6 create a new Django app
@@ -36,8 +37,6 @@ pip install --upgrade httpie
 (01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip install pytest
 (01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\01>pip install pytest-django
 #12.
-
-
 
 #url
 http://localhost:8000/toys/

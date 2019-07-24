@@ -51,46 +51,10 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
         src = os.path.join(setupfile_loc, setup_file)
         shutil.copy2(src, run_dir)
 print("start")
-
-###############
-#4364
-def canIWin(  maxChoosableInteger, desiredTotal):
-    visited = []
-    for i in range(1, maxChoosableInteger + 1):
-        visited.append(i)
-        if helper(maxChoosableInteger, desiredTotal, i, 1, visited):
-            return True
-        visited.pop()
-    return False
-
-def helper(  maxChoosableInteger, desiredTotal, sum, cnt, visited):
-    if cnt % 2 == 1 and sum >= desiredTotal:
-        return True
-    if sum >= desiredTotal:
-        return False
-
-    for i in range(1, maxChoosableInteger + 1):
-        if i in visited:
-            continue
-        visited.append(i)
-        if helper(maxChoosableInteger, desiredTotal, sum + i, cnt + 1, visited):
-            visited.pop()
-        else:
-            return False
-    return True
-
-print("rst is ", canIWin(10, 11,))
-
-
-
-
-
-
-
-
-
-
-
+### 741
+grid  = [[0,1,-1], [1,0, -1], [1,1,1]]
+rst = 5
+def chpickup(grid):
 
 #*****
 
