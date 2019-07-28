@@ -16,21 +16,21 @@ from .serializers import ToySerializer
 
 
 class JSONResponse(HttpResponse):
-    def __init__(self, data, **kwargs):
-        content = JSONRenderer().render(data)
+    def __init__(self, data, **kwargs): # data is in python dict data type
+        content = JSONRenderer().render(data)  # JSON string
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
 
 
 @csrf_exempt
 def toy_list(request):
-    if request.method == 'GET':
-        toys = Toy.objects.all()
-        toys_serializer = ToySerializer(toys, many=True)
-        return JSONResponse(toys_serializer.data)
-    elif request.method == 'POST':
-        toy_data = JSONParser().parse(request)
-        toy_serializer = ToySerializer(data=toy_data)
+    if request.method == 'GET': # use serializer
+        toys = Toy.objects.all() # Model instance / python object
+        toys_serializer = ToySerializer(toys, many=True) # python dictionary data type
+        return JSONResponse(toys_serializer.data)  # http response
+    elif request.method == 'POST': # use de-serializer
+        toy_data = JSONParser().parse(request)  # Python dict data type
+        toy_serializer = ToySerializer(data=toy_data)  # Python object, model instance
         if toy_serializer.is_valid():
             toy_serializer.save()
             return JSONResponse(toy_serializer.data, \

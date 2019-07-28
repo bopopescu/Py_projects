@@ -27,12 +27,15 @@ class DroneCategoryTests(APITestCase):
         """
         Ensure we can create a new DroneCategory and then retrieve it
         """
+        print(" \n_____________________ test_post_and_get_drone_category _____________________")
         new_drone_category_name = 'Hexacopter'
         response = self.post_drone_category(new_drone_category_name)
+        print("post response is {}".format(response))
         print("\nPK {0}\n".format(DroneCategory.objects.get().pk))
         assert response.status_code == status.HTTP_201_CREATED
         assert DroneCategory.objects.count() == 1
         assert DroneCategory.objects.get().name == new_drone_category_name
+
 
     def test_post_existing_drone_category_name(self):
         """

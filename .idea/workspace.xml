@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/view_orig.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/view_orig.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Py_QA/QA_summary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Py_QA/QA_summary.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_test_proj/01/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/01/note.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proc_lt_std.py" beforeDir="false" afterPath="$PROJECT_DIR$/proc_lt_std.py" afterDir="false" />
     </list>
@@ -24,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="353">
+              <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -34,71 +31,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Py_QA/BRCM4378_Customize_1_DUTs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="248" column="30" selection-start-line="248" selection-start-column="30" selection-end-line="248" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-                <element signature="e#2810#4754#0" />
-                <element signature="e#4789#5866#0" />
-                <element signature="e#5907#8481#0" />
-                <element signature="e#8520#20070#0" />
-                <element signature="e#20107#21311#0" />
-                <element signature="e#21343#31791#0" />
-                <element signature="e#31838#36301#0" />
-                <element signature="e#36373#40398#0" />
-                <element signature="e#40431#40856#0" />
-                <element signature="e#40874#42470#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+            <state relative-caret-position="732">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#1937#2661#0" />
+                <element signature="e#2865#3809#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="957" column="80" selection-start-line="957" selection-end-line="957" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/apps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="970">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -106,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="992" selection-start-line="992" selection-end-line="992" />
+            <state relative-caret-position="230">
+              <caret line="993" column="13" selection-start-line="993" selection-start-column="13" selection-end-line="993" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -123,10 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>filter</find>
-      <find>collections</find>
-      <find>time.sleep</find>
-      <find>‘</find>
       <find>“</find>
       <find>bus</find>
       <find>done</find>
@@ -151,8 +88,12 @@
       <find>TEST_FLOW_UPDATED</find>
       <find>QA_FILE_MULTI_DUT</find>
       <find>SRC_FOLDER</find>
-      <find>DroneCategoryList</find>
       <find>LOG_PATH_DUT_X</find>
+      <find>DroneCategoryList</find>
+      <find>post_drone_category</find>
+      <find>DroneCategory</find>
+      <find>QA_RELATED_PATH</find>
+      <find>IQRAMP_REPORT_BUILDER</find>
     </findStrings>
     <replaceStrings>
       <replace>csvReader</replace>
@@ -175,12 +116,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/urls.py" />
-        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/serializers.py" />
-        <option value="$PROJECT_DIR$/django_test_proj/01/note.txt" />
-        <option value="$PROJECT_DIR$/django_test_proj/01/restful01/restful01/settings.py" />
         <option value="$PROJECT_DIR$/django_test_proj/01/restful01/article/views.py" />
-        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/models.py" />
         <option value="$PROJECT_DIR$/Django_files/jsonResponse_log.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/serializers.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/restful01/sys_log_test.py" />
@@ -193,7 +129,6 @@
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/views.py" />
         <option value="$PROJECT_DIR$/django_test_proj/env_02/install_notes.txt" />
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful01/api/urls.py" />
-        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/view_orig.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/views.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/apps.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/urls.py" />
@@ -222,18 +157,24 @@
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" />
-        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/tests.py" />
         <option value="$PROJECT_DIR$/Py_QA/BRCM4378_Customize_1_DUTs.py" />
-        <option value="$PROJECT_DIR$/log_test.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/views.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/tests.py" />
         <option value="$PROJECT_DIR$/proc_lt_std.py" />
+        <option value="$PROJECT_DIR$/log_test.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/models.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py" />
+        <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/view_orig.py" />
+        <option value="$PROJECT_DIR$/Django_files/orm_ops.py" />
+        <option value="$PROJECT_DIR$/Django_files/py_propertySetter.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6" />
-    <option name="y" value="14" />
-    <option name="width" value="1458" />
-    <option name="height" value="1148" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="473" />
+    <option name="y" value="261" />
+    <option name="width" value="1243" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -243,12 +184,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="Django_files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -284,7 +231,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -478,15 +424,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1453" height="873" extended-state="6" />
+    <frame x="473" y="261" width="1243" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26286116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18174274" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1733871" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.28951487" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.11155914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39693192" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -549,69 +495,15 @@
           <line>840</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/serializers.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/migrations/0002_auto_20190706_2130.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/custompagination.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <element signature="e#1#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful02/drones/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="150" column="36" lean-forward="true" selection-start-line="150" selection-start-column="36" selection-end-line="150" selection-end-column="36" />
-          <folding>
-            <element signature="e#1#36#0" expanded="true" />
-            <marker date="1562542289036" expanded="true" signature="2809:4034" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter06/hillar_django_restful_06_01/restful01/drones/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="e#153#185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter06/hillar_django_restful_06_01/restful01/drones/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding>
-            <element signature="e#153#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_01/restful01/drones/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/rest_Code/DjangoRESTfulWebServices_Code/Chapter07/hillar_django_restful_07_01/restful01/drones/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-831" />
@@ -836,78 +728,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="970">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="957" column="80" selection-start-line="957" selection-end-line="957" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="353">
+          <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_QA/BRCM4378_Customize_1_DUTs.py">
+    <entry file="file://$PROJECT_DIR$/log_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="248" column="30" selection-start-line="248" selection-start-column="30" selection-end-line="248" selection-end-column="30" />
+        <state relative-caret-position="732">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#2810#4754#0" />
-            <element signature="e#4789#5866#0" />
-            <element signature="e#5907#8481#0" />
-            <element signature="e#8520#20070#0" />
-            <element signature="e#20107#21311#0" />
-            <element signature="e#21343#31791#0" />
-            <element signature="e#31838#36301#0" />
-            <element signature="e#36373#40398#0" />
-            <element signature="e#40431#40856#0" />
-            <element signature="e#40874#42470#0" />
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1937#2661#0" />
+            <element signature="e#2865#3809#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log_test.py">
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        <state relative-caret-position="398">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/install_note.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="957" column="80" selection-start-line="957" selection-end-line="957" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/drones/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_QA/BRCM4378_Customize_1_DUTs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="799" column="39" selection-start-line="799" selection-start-column="18" selection-end-line="799" selection-end-column="39" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#2951#4895#0" />
+            <element signature="e#4930#6007#0" />
+            <element signature="e#6048#8622#0" />
+            <element signature="e#8661#20211#0" />
+            <element signature="e#20248#21452#0" />
+            <element signature="e#23211#24599#0" />
+            <element signature="e#26676#26785#0" />
+            <element signature="e#27138#27492#0" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="52" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="52" />
+          <folding>
+            <element signature="e#28#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/view_orig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+          <folding>
+            <element signature="e#311#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/pytest.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HillarDjangoREST/01/restful01/toys/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/py_propertySetter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_files/orm_ops.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/proc_lt_std.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="992" selection-start-line="992" selection-end-line="992" />
+        <state relative-caret-position="230">
+          <caret line="993" column="13" selection-start-line="993" selection-start-column="13" selection-end-line="993" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -92,6 +92,12 @@ When you’re developing some service it’s good to separate Frontend from Backend.
 So you could use Rest Framework for Backend, but for Frontend use React or Angular. 
 They’re better for Frontend part.
 
+# Test mobile app with endpoint
+Configure the device, with either integrate test.lib to device
+, like controlling/communicating the device FW through USB/ethenet
+
+# Testing device network/wireless performance
+
 
 
 
