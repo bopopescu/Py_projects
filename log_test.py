@@ -100,28 +100,38 @@ def cirarr(nums):
             continue
         # visit.add(i)
         # cycle = set()
-        if nums[i] > 0 and i + nums[i] > len_nums - 1:
+        if i + nums[i] > 0 and i + nums[i] > len_nums - 1:
             cycle_set = set([i])
             j = ( i + nums[i]) % len_nums
             while j <= i:
+                if nums[j] < 0 :
+                    break
                 visit.add(j)
                 if j in cycle_set:
                     return True
                 cycle_set.add(j)
-                j = (j + nums[j]) % len_nums
+                k = (j + nums[j]) % len_nums
+                if j == k:
+                    break
+                j = k
 
     for i in range(len_nums):
         if i in visit:
             continue
-        if nums[i] < 0 and i - nums[i] < 0:
+        if nums[i] + i < 0 and i - nums[i] < 0:
             cycle_neg = set([i])
-            j = ( i - nums[i] + len_nums) % len_nums
+            j = ( i + len_nums) % len_nums
             while j >= i:
+                if nums[j] > 0  :
+                    break
                 visit.add(j)
                 if j in cycle_neg:
                     return True
                 cycle_neg.add(j)
-                j = (i - nums[i] + len_nums) % len_nums
+                k = (j + nums[j] ) % len_nums
+                if j == k:
+                    break
+                j = k
 
     return False
 

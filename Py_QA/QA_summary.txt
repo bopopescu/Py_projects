@@ -98,7 +98,7 @@ Configure the device, with either integrate test.lib to device
 
 # Testing device network/wireless performance
 
-
+140/ 83/20
 
 
 
