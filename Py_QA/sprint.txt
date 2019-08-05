@@ -1,0 +1,264 @@
+####################################################################
+Minimize chat window
+
+Open email pane
+Resize font
+Chime active
+Close chat window
+Close chat window
+Sprint: Hello! I'm Sprint's virtual assistant. I can help you with a variety of topics, or get you to a live agent for additional assistance.
+
+How may I help you today?
+You: live agent
+Sprint: OK! To get you to the right agent, please select a topic.
+- Billing questions
+Sprint: Got it.
+Sprint: Let me transfer you to a specialist for more help.
+Sprint has transferred your chat to a specialist for more help.
+Sprint: Hold tight, and we'll be with you shortly.
+Agent Steffy K enters chat
+Steffy K: Greetings.
+You: Hi,
+Steffy K: I'll be glad to help you.
+You: My wife is travelling in Poland with phone 415-812-8212
+You: I was wondering the charge for texting and data between US and Poland
+Steffy K: I appreciate you have initiated the chat and brought your concern to my attention.
+Steffy K: I will be happy to review your account
+Steffy K: and assist you with it.
+Steffy K: Please give me a moment to review your account.
+Steffy K: Thanks so much for your kind patience and allowing me enough time to get this checked.
+You: sure
+Steffy K: You have free global roaming service + premium international service which allows you calls at $0.20/min , texts for free and data $0.30/MB. There is nothing extra you need to do.
+Steffy K: Just tell her two important things to do when she arrives there:
+You: She is already there
+Steffy K: Oh I see.
+Steffy K: Then tell her to do:
+Steffy K: 1) Under settings enable roaming service
+Steffy K: and 2 ) have a good time there , the weather is awesome currently there.
+You: How does she know she is using the premium feature or not
+Steffy K: It is activated already... which means like regular cellular service what she uses in the states, can use there
+Steffy K: Nothing special to do.
+You: so she will not get charged for texting, but will be charged for serfing the internet
+Steffy K: You got it absolutely right.
+You: Okay, thanks
+Steffy K: Thumbs UP!
+Steffy K: You're welcome.
+Steffy K: A note has been added to your account to capture the details of our conversation for other individuals to reference when they access your account.
+Steffy K: Is there anything else do you wish to bring to my attention? I will be happy to assist you.
+Steffy K: OR If you do not have any further question for me, please close the chat window. You will receive our chat transcript on your email address.
+You: one more
+You: to enable global roaming on her phone
+You: I see there is an option "Cellular Data Optionns", is it the one to be enabled?
+Steffy K: Nope, do you see "roaming" ?
+You: Under "Cellular Data Options", they have one more options is called Data Roaming
+You: Currently it is set off
+Steffy K: That's the one. Turn it on please.
+You: If it is set off, will she be able to do texting?
+You: Since we don't want to use data
+Steffy K: It must be turned on to use the benefit of global roaming + premium international service.
+You: But she was able to send me texts already
+Steffy K: If it remains off, she may get charged for regular charges.
+You: Okay, thanks.
+Steffy K: Alright, I just found out< do not urn turn on the roaming please if you only wish to use the texting
+Steffy K: *turn
+Steffy K: You're welcome.
+You: hold on one sec
+You: So she can use free texting just need to make sure the roaming option is off
+Steffy K: You got it absolutely right.
+You: Thank you so much!!!!!
+Steffy K: You are MOSTT welcome.
+Steffy K: Thumbs UP!
+You: Have a nice day !
+Steffy K: Thanks, you too :)
+Steffy K: If you do not have any further question for me, please close the chat window. You will receive our chat transcript on your email address.
+Steffy K: Thank you for choosing Sprint - we appreciate your business!
+
+Send MessageSteffy K Thank you for choosing Sprint - we appreciate your business!
+***********************************
+Jerwin M.: Here's the steps : Settings > Cellular data options > Data Roaming
+***********************************
+
+
+
+Minimize chat window
+
+Open email pane
+Resize font
+Chime active
+Close chat window
+Close chat window
+Sprint: Hello, and thanks for chatting with Sprint!
+
+Let’s get started. How can I help you today?
+You: live agent
+Sprint: OK! To get you to the right agent, please select a topic.
+- Billing questions
+Sprint: Got it.
+Sprint: Let me transfer you to a specialist for more help.
+Sprint has transferred your chat to a specialist for more help.
+Agent Jerwin M. enters chat
+Jerwin M.: Thanks for your time and I appreciate your patience waiting.
+You: Hi
+You: My wife is in poland and her number is 415-812-8212
+Jerwin M.: Hi there!
+Jerwin M.: How may I help you with today?
+You: We exchanged text messages, and she probably checked emails too, wondering if you can check her usage since 6/11 to see if there is extra charges
+Jerwin M.: Sure that's not a problem.
+Jerwin M.: I know it's important for you to check your wife's usage.
+Jerwin M.: Nothing to worry, I can definitely assist you the best possible way that I could. Let me go ahead and access your account.
+Jerwin M.: Thanks for waiting.
+You: sure
+Jerwin M.: I did checked the account and found out Sprint Global is free inculeded on your wife's line.0
+Jerwin M.: She can use data and unlimited text while she's outside the US fo rfree
+Jerwin M.: Voice calls are only $0.25/minute to select countries.
+You: But I heard that the premium data plan is not free, how do does she know if she is using the basic or premium one when she serfs internet
+Jerwin M.: With this feature you won't missed any sweet messages from each other..
+Jerwin M.: Premium data is not added on her line. Still , it's not a problem since she has unlimited data up-to-2G.
+Jerwin M.: It's up to her if she wants to add high speed data and I double check that she's currently using the basic one.
+You: I see so she has 2G free data when she is in Poland
+You: with current plan
+Jerwin M.: Exactly! If there's wifi available in her location in Poland, you may suggest her to connect the phone instead of using the mobile data.
+Jerwin M.: That will let her use fast internet service.
+You: that's clear. Thanks. One more question, does she need to make setting changes on her phone to enable the sprint global roaming?
+Jerwin M.: Good question.
+Jerwin M.: You may just tell her to turn on data roaming on her iphone.
+Jerwin M.: And that's it!
+You: I am pretty sure she didnot do that and we exchanged text messages. That's why I was wondering the text messages she sent me probably are not free
+Jerwin M.: Here's the steps : Settings > Cellular data options > Data Roaming
+Jerwin M.: Basically service for text/data/calls will not work without her turning on the roaming.
+Jerwin M.: Meaning to say its already enabled. No worries.
+You: That's wonderful! Thanks so much. I will double - check with her for enabling the roaming.
+You: Have a great day !!!!
+
+Send MessageYou Have a great day !!!!
+
+
+Minimize chat window
+
+Open email pane
+Resize font
+Chime active
+Close chat window
+Close chat window
+Sprint: Hello! I'm Sprint's virtual assistant. I can help you with a variety of topics, or get you to a live agent for additional assistance.
+
+How may I help you today?
+You: live agent
+Sprint: OK! To get you to the right agent, please select a topic.
+- Billing questions
+Sprint: Got it.
+Sprint: Let me transfer you to a specialist for more help.
+Sprint has transferred your chat to a specialist for more help.
+Agent Kyla R. enters chat
+Kyla R.: Hi
+You: Hi
+Kyla R.: While I access your account information, can you please provide more details about why you’re chatting with us today?
+You: My wife has been in Poland since 6/12. I'd like to see her phone usage while she is abroad
+Kyla R.: I have read your chat reason and sure thing, I am here to further assist you
+Kyla R.: May I know which line please?
+You: 415-812-8212
+Kyla R.: Thanks and you mean, you want to view the call logs?
+You: for calls, messages and data
+Kyla R.: I see and here is the thing, we can see the call logs in your online account, I can provide the unbilled text logs and in the data, I can only provide the whole data usage as how much GB was consumed.
+You: I am more concerned if there is extra charge since 6/12, does you transcript provide that information
+Kyla R.: Oh! I see and to make sure we are on the same page, you want to make sure that there is no overage charges?
+You: Yes, since she is still using the same phone in Poland: I want to know if there has been any extra charges so far
+Kyla R.: Great!
+Kyla R.: I can confirm here that there is no extra charges on the line 8212, yes there are data roaming used internationally and since this is free, there is no charge for it
+You: Do you have a transcript that can provide the information so that I can take a look at?
+Kyla R.: Yes, however this will still be available once the bill will generate and no worries since I am here in your end, I will notate the account about it and I can provide you the confirmation number to assure that there is no extra charges for the international services
+Kyla R.: 733907536185906145 please have this as the confirmation number
+
+Send MessageKyla R. 733907536185906145 please have this as the confirmation number
+
+6/17
+
+6/20
+ou: when and which phone number in US was called
+Patrick T.: 06/13/2019 10:49:48 - 48507853703 - Poland - 1 Minute Outgoing
+Patrick T.: 06/13/2019 13:58:59 - 5033349478 - PORTLAND,OR - 1 minute outgoing
+Patrick T.: I can remove this $0.50 charge for you if taht is fien with you?
+Patrick T.: fine*
+Patrick T.: In your years of time and business with us this $0.50 credit will be my honor to give you for your satisfaction on us thank you.
+You: That would be nice. Thanks
+Patrick T.: Sure let me make a $1 credit thank you.
+
+
+####################################################################
+7/18/2019
+
+Sprint: Hello! I'm Sprint's virtual assistant. I can help you with a variety of topics, or get you to a live agent for additional assistance.
+
+How may I help you today?
+You: agent
+Sprint: OK! To get you to the right agent, please select a topic.
+- Billing questions
+Sprint: Got it.
+Sprint: Let me transfer you to a specialist for more help.
+Sprint has transferred your chat to a specialist for more help.
+Agent Stella P. enters chat
+You: Hi,
+Stella P.: I am live Sprint rep.
+Stella P.: Hello.
+Stella P.: How may I help you today?
+You: Can you please check if there is any extra charge on 415-812-8212 since 6/25/2019
+Stella P.: Let me check that for you.
+Stella P.: Please give me a moment to access your account information.
+Stella P.: Thank you for waiting.
+Stella P.: I have checked your bill and there is 2 charges in your account on current bill of line #8212.
+Stella P.: There was 1 roaming Minutes -Poland charge of $0.25 and other Netherlands charge of $0.25.
+You: Can you show me the time when those phone calls were made
+Stella P.: Sure.
+Stella P.: One moment please.
+Stella P.: It was on 13th June 
+
+01:58 PM - Poland 
+10:49 AM - Netherlands.
+You: Thank you.
+Stella P.: You are welcome.
+You: That's all I need to know
+Stella P.: There is one more information for you about your leased phone.
+Stella P.: Line #8212 lease term us complete and you have the option to own the leased phone with 6 monthly installments or pay outright.
+Stella P.: Line #8212 lease term us complete and you have the option to own the leased phone with 6 monthly installments or pay outright.
+Stella P.: I would recommend to own your current leased phone to avoid paying month to month charges.
+Stella P.: Owning the phone will also lower the bill by $22.92 + taxes.
+You: how much does it cost to buy it now
+Stella P.: To own the phone today you will need to pay $25.05 (outstanding lease) + $137.43 (purchase option amount) + taxes = $162.48 + taxes.
+Stella P.: You can also pay purchase option amount in 6 monthly installments to own the phone.
+Stella P.: May I share the steps of 6 monthly installments?
+You: sure
+Stella P.: Thank you.
+Stella P.: Sign in to Sprint.com
+
+
+On the "My Sprint Dashboard" locate the device
+
+Then click on the three dots on the upper right corner to access a menu
+
+Click "View Agreement" link
+
+Under the "OWN IT" section you can choose either "Full Price" or "6 Monthly Installments" by selecting the "Buy Now" button under the selection.
+
+As you want to chose "6 MONTHLY PAYMENTS"
+
+Please review the Installment Agreement and select Cancel or AGREE
+
+Once you click on AGREE, you will see a "SUCCESS" screen
+
+Thus, the device will be enrolled successfully under 6 monthly Installment payoff amount.
+Stella P.: Is there anything else I can help sweet customer like you?
+Stella P.: :)
+You: Does my current monthly payment goes to the payment for what I own for the device?
+Stella P.: Yes, it goes towards owning the phone.
+You: Thanks
+Stella P.: After 6 months ends you will own the phone and no need to pay anything after that.
+Stella P.: I would like to thank you instead for providing me an opportunity to help you out and being so calm, polite and understanding throughout this chat.
+Stella P.: Is there anything else I can help to make Sprint experience amazing?
+You: No, many thanks
+Stella P.: I am happy I was able to assist you today, have a great day! You can end the Chat session by clicking the close (End) button in this window.
+Stella P.: Bye for now and take care. :)
+
+Stella P. Bye for now and take care. :)
+####################################################################
+
+
