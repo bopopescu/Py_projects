@@ -8,80 +8,11 @@ Doxyfile includes the documentation configuration for the project
 
 ENVIRONMENT:
 
-... Desktop applicaton.
-. automation : pytest, call many test scripts, 
-. automation, how to do code coverage test.
-.. Start testharness, add new functions or library, build and run exe.
-test features:
-dll: DUT, tester-control, technology, IQlite
-write test plans and test matrix and perfomr end to end IQfact connectivity test. , RF measurement
-implement test coverage in c++ functions to perfomr end to end IQfact connectivity test
-detailed functional test to verfy instrument control and measurement logic. 
 
-test cases
-test functions(implement functional test in C++ to verify instrument API, measurement logic.
-log analysis tools
-test lib for test suite
 
---DUT control:
-new DUT APIs, new calibration data structure/procedures, new memory management, 
---IQfact+ test module dev:
-new analysis class,
-new logging, new iqmeasue feature
-Support for FW/driver
---DUT FW/driver debug
-crash, RF measurements
---
---reduce test time, characterize DUT behavior/perfomance, fine tune / optimize parameters.
 
-Synchronous Parallel Test  to test simultaneously test multiple device.
  
-//Auto:
-...Connect DB
-...Check if new pkg is ready to test. if multiple new pkgs, check out the most recently one
-(check time stamp), set the test_flag to 1--> under test
-... download and install the pkg
-... run_console, xpcHost , build first, then run it. 
-.. 1. for new feature/functionality test
-   .. create new functions to test test
-   .. Add test cases to increase coverage
-   .. Need to verify our test functions and features.
-   2 Build test platform( testHarness) to generate XPChost.app to test.
-   << Fuji-> IQfuji_NUP_4.9.16_RC1.pkg  ++ IQXPC_4.9.17_RC1.zip
-    << IQXPC: include file for sanity or full test , file can be dll. find out
-    
-    >><< Deliver PKG && IQXPCHost.app
-        .. Provide a test-case generator (GUI tool) , to do the test.
-    >><< Provide API, library and exmaple code, customer integrate in their own test
-          platform.
-        .. Provide API so customer can build their own test cases using our soln.(sanity 
-      version)
 
-.
-. provide default example code or example flow (GUI to creat test cases), save in txt file, 
-run with txt file as an option.
-. testHarness with reading txt file of test flow.
-
-1. configuration files to set up 
-2. package, pkg, zip, setup.exe
-3. install the package.
-4. add functionality to XPC code, build XPC to an app, run the XPC
-5. Verify package
-1) use Xcode-> IQXPCHost
-. configuration parameters, DUT,Test scenario, Tester type, Tester IP
-, # of loops, config. file names, pathloss,
-? how to test, what to test
-? functions/functionality vs dlls and static library.
-
-2) test options:
-. exe + configuration parameters.
-** own C++ test framework. (MAC or Win)
-** Include all test functions and test cases in C++ test framework
-** Build and run test.
-** ? How to use XPCHost to test?
-** customer 1: provide test API and functions
-** exe + test flow generator.
-**
 
 ./bin/IQXPCServices contains all compiled XPC Service binaries
 ./doc contains doxygen documentation
@@ -128,27 +59,7 @@ TheCommand_to_launch_harness="/Users/gdlocal/Documents/ATMPreload/IQXPCHost.app/
 // 1. Define application:
 connectivity, throughput, security/Data Encryption/Decryption.
 
-// 2. web - interface 
-front end,
-provide UI: 
-. define/modify test cases, load test cases
-. Run pre-defined test cases
-. Monitor test status
-. save/load log files, csv/json results
-. search/sort/filter functionality for test cases/ logs
 
-back end, 
-Django, pytest, Rest Api, 
-
-.manual/automate REST API test.
-How automate,-> pytest.
-. show a couple examples of APIs.
-. test get, post, put, delete
-1. test cases statistics: date, errors, pass/fail, release_versions.
-/test_case_name/
-/test_case_name/release_ver
-2. raw data stream, output as  json format
-3. 
 
 ./bin/IQXPCServices contains all compiled XPC Service binaries
 ./doc contains doxygen documentation
@@ -172,7 +83,7 @@ is required.
 "	Write formal QA procedures and drive standardization of test strategies within organization.
 "	Hire and mentor new team members and interns.
 
-SQA                                   
+                                  
 "	Lead QA testing on daily build and formal release of Litepoint IQfact application.
 "	Maintain and update python automation scripts for IQfact daily build test.
 "	Optimize and add new libraries in Python for IQfact test suite to improve test efficiency and performance.
@@ -180,17 +91,14 @@ SQA
 "	Develop python scripts for performance and load test in a virtual device environment
 "	Manage bug tracking through Jira, and coordinate with multi-functional teams to resolve issues.
 
- QA                   
+                   
 "	Create test plans and matrix and perform end-to-end IQfact connectivity test.
 "	Write API test modules to perform functional testing (Python).
 "	Implement detailed unit tests to verify instrument control/measurement modules.
 "	Develop Python automation framework for IQfact daily build functional/regression test and GUI test.
 "	Develop log-parsing tool to provide test summary and bug report for daily build automation test. (Python)
 
-System Test Engineer (Consultant)            Qualcomm, San Diego, CA                      Nov. 2008 - Feb. 2009
-"	Conduct system performance, protocol and functional tests on mobile devices under Windows Mobile platform.
-"	Create Perl-based automation scripts and perform regression tests using Agilent 8960 through GPIB interface.
-"	Perform software integration tests on both Win Mobile and Qualcomm's brew platform, including debugging software build, troubleshooting software crashes, and verifying bug fixes.
+
 
 ./bin/IQXPCServices contains all compiled XPC Service binaries
 ./doc contains doxygen documentation

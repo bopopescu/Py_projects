@@ -993,3 +993,39 @@ def isValid(S):
 
 #457, 7/25/19
 
+### 1006 8/9/19
+def clumsy(N):
+    op_index = 0
+    op_size = 4
+    result = N
+    index = N - 1
+    while index >= 1:
+        if op_index == 0:
+            result *= index
+        elif op_index == 1:
+            result //= index
+        elif op_index == 2:
+            result += index
+        else:
+            temp_rst = index
+            index -= 1
+            op_index = (op_index + 1) % op_size
+            while index >=1 and op_index < 2:
+                if op_index == 0:
+                    temp_rst *= index
+                else:
+                    temp_rst //= index
+                index -= 1
+                op_index = (op_index + 1) % op_size
+            result -= temp_rst
+            continue
+
+
+
+        index -= 1
+        op_index = (op_index + 1 ) % op_size
+
+    return result
+
+for i in [4, 10]:
+    print("{}, {}".format(i, clumsy(i)))

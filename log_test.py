@@ -56,6 +56,44 @@ print("start")
 
 ex = [[2, -1, 1, 2, 2], [-1,2], [-2, 1, -1, -2, -2]]
 rst = [True, False, False]
+coins = [186,419,83,408]
+# 322
+coins = sorted(coins, reverse = True)
+print(coins)
+
+
+def coCh( coins , amount):
+
+    cnt = [0]
+
+    def helper(coins, amount, level, cnt):
+        if amount == 0:
+            return True
+        if amount < 0:
+            return False
+
+        for i in range(level, len(coins)):
+            cnt[0] += 1
+            if helper(coins, amount - coins[i], i, cnt):
+                return True
+            cnt[0] -= 1
+        return False
+
+    if helper(coins, amount, 0, cnt):
+        return cnt[0]
+    else:
+        return -1
+
+def cf(coins, amount):
+    dp = [-1] * (amount+1)
+    dp[0] = 0
+    for i in range(1, amount+1):
+        for j in coins:
+            if i - j >= 0 and dp[i-j] != -1:
+                dp[i] = dp[i-j] + 1 if dp[i]  == -1 else min(dp[i], dp[i-j]+1)
+    return dp[amount]
+
+print(cf(coins, 6249))
 
 #*****
 # run test flows
