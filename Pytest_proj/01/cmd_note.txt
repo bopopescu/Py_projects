@@ -1,3 +1,11 @@
+
+Pytest syntax for writing tests-
+1. File names should start with “test_”, or end with "_test".
+2. If tests are defined as methods on a class, the class name should start with “Test".
+    The class should not have an __init__ method.
+3. Test method names or function names should start with “test_”.
+Methods with names that don’t match this pattern won’t be executed as tests.
+
 python -m pytest -v
 
 2) Run tests by substring matching
@@ -10,6 +18,28 @@ pytest -m set1
 pytest -n 4 -v
 
 4) @pytest.fixture
+Fixtures can be used to share test data between tests, execute setup and teardown methods before
+and after test executions respectively.
+
+function defined in fixture will run once before each test function.
+
+import pytest
+@pytest.fixture
+def get_sum_test_data():
+        return [(3,5,8), (-2,-2,-4), (-1,5,4), (3,-5,-2), (0,5,5)]
+def test_sum(get_sum_test_data):
+        for data in get_sum_test_data:
+                num1 = data[0]
+                num2 = data[1]
+                expected = data[2]
+                assert sum(num1, num2) == expected
+
+** Scope of fixture- Scope controls how often a fixture gets called. The default is function.
+Here are the options for scope:
+function: Run once per test
+class: Run once per class of tests
+module: Run once per module
+session: Run once per session
 
 5) define @pytest.fixture in  conftest.py so multiple test_.py
 can use it
@@ -17,6 +47,23 @@ can use it
 6) Parameterized tests
 @pytest.mark.parametrize("input1, input2, output",[(5,5,10),(3,5,12)])
 
+
+@pytest.fixture(scope='session')
+def get_sum_test_data():
+        return [(3,5,8), (-2,-2,-4), (-1,5,4), (3,-5,-2), (0,5,5)]
+@pytest.fixture(autouse=True)
+def setup_and_teardown():
+        print '\nFetching data from db'
+        yield
+        print '\nSaving test run data in db'
+def test_sum(get_sum_test_data):
+        for data in get_sum_test_data:
+                num1 = data[0]
+                num2 = data[1]
+                expected = data[2]
+                assert sum(num1, num2) == expected
+
+7) Test case markings
 7) Xfail / Skip tests
 
 execute tests with recording either pass or fail status
@@ -25,7 +72,28 @@ execute tests with recording either pass or fail status
 completely skip test
 @pytest.mark.skip
 
+****
+The builtin pytest.mark.parametrize decorator enables parametrization of arguments for a test function.
+We have passed following parameters to it-
+argnames — a comma-separated string denoting one or more argument names, or a list/tuple of argument strings.
+Here, we have passed num1, num2 and expected as 1st input , 2nd input and expected sum respectively.
+argvalues — The list of argvalues determines how often a test is invoked with different argument values.
+If only one argname was specified argvalues is a list of values. If N argnames were specified,
+argvalues must be a list of N-tuples, where each tuple-element specifies a value for its respective argname.
+Here, we have passed a tuple of (3,5,8) inside a list where 3 is num1,5 isnum2 and 8is expected sum.
 
+@pytest.mark.parametrize('num1, num2, expected',[(3,5,8), (-2,-2,-4), (-1,5,4), (3,-5,-2), (0,5,5)])
+def test_sum(num1, num2, expected):
+        assert sum(num1, num2) == expected
+
+In above code, we have passed the values of 2nd argument(which are actual test data) directly there.
+We can also make a function call to get those values.
+import pytest
+def get_sum_test_data():
+        return [(3,5,8), (-2,-2,-4), (-1,5,4), (3,-5,-2), (0,5,5)]
+@pytest.mark.parametrize('num1, num2, expected',get_sum_test_data())
+def test_sum(num1, num2, expected):
+        assert sum(num1, num2) == expected
 _____________________________________________________
 Summary
 In this pytest tutorial, we covered
@@ -57,3 +125,24 @@ Create test results in XML format which covers executed test details using py.te
 A sample pytest framework to test an API
 ___________________________________________________________
 
+# keyword expressions
+# Run all tests with some string ‘validate’ in the name
+pytest -k “validate”
+# Exclude tests with ‘db’ in name but include 'validate'
+pytest -k “validate and not db”
+#Run all test files inside a folder demo_tests
+pytest demo_tests/
+# Run a single method test_method of a test class TestClassDemo
+pytest demo_tests/test_example.py::TestClassDemo::test_method
+# Run a single test class named TestClassDemo
+pytest demo_tests/test_example.py::TestClassDemo
+# Run a single test function named test_sum
+pytest demo_tests/test_example.py::test_sum
+# Run tests in verbose mode:
+pytest -v demo_tests/
+# Run tests including print statements:
+pytest -s demo_tests/
+# Only run tests that failed during the last run
+pytest — lf
+
+____________________________________________________________
