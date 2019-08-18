@@ -1,0 +1,18 @@
+python -m pytest -v
+
+2) Run tests by substring matching
+pytest -k method2 -v
+
+2) Run tests by markers @pytest.mark
+pytest -m set1
+
+3) parallel test
+pytest -n 4 -v
+
+4) @pytest.fixture
+
+5) define @pytest.fixture in  conftest.py so multiple test_.py
+can use it
+
+6) Parameterized tests
+

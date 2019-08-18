@@ -98,6 +98,9 @@ Configure the device, with either integrate test.lib to device
 
 # Testing device network/wireless performance
 
+find and resolve all software problems: bugs, defects, design flaws, bad code check-ins, 
+test failures, environment instabilities, deployment hiccups, and even automation crashes.
+
 140/ 83/20
 
 

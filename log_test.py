@@ -84,16 +84,7 @@ def coCh( coins , amount):
     else:
         return -1
 
-def cf(coins, amount):
-    dp = [-1] * (amount+1)
-    dp[0] = 0
-    for i in range(1, amount+1):
-        for j in coins:
-            if i - j >= 0 and dp[i-j] != -1:
-                dp[i] = dp[i-j] + 1 if dp[i]  == -1 else min(dp[i], dp[i-j]+1)
-    return dp[amount]
-
-print(cf(coins, 6249))
+# assert 1+1 == 3, "True"
 
 #*****
 # run test flows
