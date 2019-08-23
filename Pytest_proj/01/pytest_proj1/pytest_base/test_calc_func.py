@@ -54,3 +54,4 @@ def test_maximum(a, b, expected):
 def test_minimum(a, b, expected):
     assert minimum(a, b) == expected
 
+print("imported")

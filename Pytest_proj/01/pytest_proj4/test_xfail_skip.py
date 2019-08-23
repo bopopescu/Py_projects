@@ -20,3 +20,9 @@ def testadd_5():
 
 def testadd_6():
 	assert 3+2 == 6,"failed"
+
+import os
+print(os.getcwd())
+print("import pytest_proj4.test_xfail_skip.py")
+
+

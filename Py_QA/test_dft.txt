@@ -1,3 +1,90 @@
+
+
+### ===============  General set up ===========================================
+define!$WTS_ControlAgent_Support!1!
+define!$WTS_TrafficAgent_Support!0!
+
+
+### ===============   DUT info  ===============================================
+# DUT can be - STAUT or APUT, Device Under Test
+define!$DUT!STAUT!
+
+# DUT Control Agent, all left part of each line are reserved strings, they could 
+# not be changed. For APUT, if APUT do accept CAPI command, put its address here
+# if not, make it same as TestbedAPConfigServer setting
+
+if!$DUT!=!APUT!
+wfa_control_agent_dut!ipaddr=192.168.250.211,port=7000!
+
+# Wireless IP of DUT
+dut_wireless_ip!192.165.110.2!
+
+# Name of the APUT or STAUT
+define!$DUT_Name!Atheros11nAP!
+
+# Port number at which APUT is connected to in power switch, ignore it for STAUT
+define!$APUTPowerSwitchPort!4!
+
+# APUT login information, hostname is system prompt, ignore it for STAUT
+define!$APUT_uname!root!
+define!$APUT_pword!5up!
+define!$APUT_hostname!~!
+
+# APUT 2.4GHz MAC Address, ignore it for STAUT
+define!$DutMacAddress_24G!00:90:4C:09:00:BD!
+
+# APUT 5 GHz MAC Address, ignore it for STAUT
+define!$DutMacAddress_5G!00:90:4c:13:00:BD!
+endif
+
+if!$DUT!=!STAUT!
+# DUT parameters specific to STAUT
+wfa_control_agent_dut!ipaddr=192.168.250.93,port=9000!
+
+# Wireless IP of DUT
+dut_wireless_ip!192.165.100.93!
+## 8/23
+>>> Test Methodology / Flow :
+.. Agile, CI/CD on Jenkins.
+. code check in, Jenkins --> auto.unit test --> pass
+. Build package
+. release_RC test: mainly for full functionality test, takes about upto 1 hr
+*** maybe include code_coverage test.
+. Formal release test: add regression test.
+*** test for stability, CPU usage, Memory Usage( memory bloat or leak),
+ Throughput (measure load of system, data I/O bandwidth, 
+      , # con-current users, transaction time units) 
+
+*** Performance test: response Time
+
+>>> Testing:
+... data link / phy layer --> connectivity
+... (wireless) Network layer performance
+
+>>> desktop app vs web-interface app.
+In transition to web application.
+. customer - owned internal web application.
+. lp helps to deploy.
+. web-based : internal use for now
+. Goal: lp brings it to cloud and service as a platform.
+
+
+
+>>> Usage of database
+**** System:
+** front-end react on Nodejs, 
+** front-end-test, Selenium or manual
+
+** back-end Django
+* API - test
+
+** data-base: postPresql or mySql
+
+>>> details in testing
+... Unit testing, func_test( API + args), end to end
+
+
+## 8/16
 // 1. web - interface 
 ...front end,
 provide UI: 

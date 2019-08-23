@@ -1,3 +1,5 @@
+pip freeze > requirements.txt
+
 Username (leave blank to use 'jsun'): jsun
 Email address: sunusd@yahoo.com
 Password: Django2!
