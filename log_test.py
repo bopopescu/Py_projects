@@ -36,8 +36,11 @@ def install_pkg(package_loc, package_p_drive, package_name):
             os.remove(file_to_delete)
         else:
             shutil.rmtree(file_to_delete)
+# _________________________________________
 
+ 
 
+#__________________________________________
 # copy test flows to bin
 
 def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
@@ -53,39 +56,16 @@ def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
 print("start")
 
 #*****
-
-ex = [[2, -1, 1, 2, 2], [-1,2], [-2, 1, -1, -2, -2]]
-rst = [True, False, False]
-coins = [186,419,83,408]
-# 322
-coins = sorted(coins, reverse = True)
-print(coins)
+# 1170 , 8/29
+def combi(n, k):
 
 
-def coCh( coins , amount):
 
-    cnt = [0]
 
-    def helper(coins, amount, level, cnt):
-        if amount == 0:
-            return True
-        if amount < 0:
-            return False
+#assert 1+1 == 3, "True"
+# __________________________________________
 
-        for i in range(level, len(coins)):
-            cnt[0] += 1
-            if helper(coins, amount - coins[i], i, cnt):
-                return True
-            cnt[0] -= 1
-        return False
-
-    if helper(coins, amount, 0, cnt):
-        return cnt[0]
-    else:
-        return -1
-
-# assert 1+1 == 3, "True"
-
+#___________________________________________
 #*****
 # run test flows
 def run_flow(run_dir, flow_to_test, result_dir):

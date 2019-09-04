@@ -1029,3 +1029,7 @@ def clumsy(N):
 
 for i in [4, 10]:
     print("{}, {}".format(i, clumsy(i)))
+
+# 39 , 8/26/19
+
+#77, 8/29
