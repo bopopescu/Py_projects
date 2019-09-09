@@ -99,9 +99,10 @@ b=filter(lambda x : x % 2 == 0, a) # Output: [2, 4, 6]
 list_of_dict = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
 b = filter(lambda x : x['name'] == 'python', list_of_dict)  # Output: [{'name': 'python', 'points': 10}]
 
-#
+#  __ Counter ___
 from collections import Counter
-# Counter is a sub-class of dict, has all dict's interfaces
+# Counter is a sub-class of dict, has all dict's interfaces, val is freq of key
+# Take a list as input
 # elements() returns an iterator
 # most_common() returns a list of tuple of key and value
 
@@ -116,8 +117,8 @@ except:
     print()
 
 b_most_common = collect_b.most_common(1)
-print("b_most_common type is ", type(b_most_common))
-print(b_most_common) #[('cnt', 'br')
+print("b_most_common type is ", type(b_most_common)) # <class 'list'>
+print(b_most_common) # [('cnt', 'br')]
 
 
 a = Counter({'a': 2, 'b': 1, "c": 3, 'd': 3})
@@ -135,7 +136,7 @@ a_most_common = a.most_common(2) # most_common() return a list
 print("a_most_common is ", a_most_common) # a_most_common is  [('c', 3), ('d', 3)]
 
 a['a'] = 0
-print("list of a.elements() is ", list(a.elements()))
+print("list of a.elements() is ", list(a.elements())) #  ['b', 'c', 'c', 'c', 'd', 'd', 'd']
 print("a['a'] is ", a['a'])  # a['a'] is  0
 # time.sleep(1000)
 
@@ -143,7 +144,7 @@ del a['a']
 print("Counter is of".format(type(a)), list(a.elements()))
 
 # time.sleep(1000)
-#
+# Counter intialized with strings
 from collections import Counter
 str_dict = Counter("this contains multiple redundancy")
 
@@ -151,7 +152,11 @@ print("dict of str_dict is ", str_dict.most_common())
 [('n', 4), ('t', 3), ('i', 3), (' ', 3), ('s', 2), ('c', 2), ('a', 2), ('u', 2), ('l', 2), ('e', 2), ('d', 2), ('h', 1), ('o', 1), ('m', 1), ('p', 1), ('r', 1), ('y', 1)]
 #
 print("dict of str_dict is ", str_dict.most_common(7))
+# [('n', 4), ('t', 3), ('i', 3), (' ', 3), ('s', 2), ('c', 2), ('a', 2)]
 
+print("elements of str_dict is {}".format(list(str_dict.elements())))
+# ['t', 't', 't', 'h', 'i', 'i', 'i', 's', 's', ' ', ' ', ' ', 'c', 'c', 'o', 'n', 'n', 'n', 'n', 'a', 'a', 'm', 'u', 'u',
+#  'l', 'l', 'p', 'e', 'e', 'r', 'd', 'd', 'y']
 # time.sleep(1000)
 
 import collections

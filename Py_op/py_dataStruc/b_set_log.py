@@ -26,18 +26,24 @@ old_set.update([11,12],{20,21}) #{1, 2, 3, 7, 8, 9, 10, 11, 12, 20, 21}
 print(old_set)
 
 # Get the ASCII number of a character
+char = 'a'
 number = ord(char)
 
 # Get the character given by an ASCII number
 char = chr(number)
 
 "-"
-discard(x)
+x = 10
+old_set.discard(x)
+print("after removing 10, old_set is {}".format(old_set))
 # discard: removes element  from the set. The .discard(x) operation returns None.
 
-remove(x)
+x = 9
+old_set.remove(x)
+print("after removing 9, old_set is {}".format(old_set))
 # remove: removes element  from the set. If element  does not exist, it raises a KeyError
 
-pop()
+old_set.pop()
+print("after popping, old_set is {}".format(old_set))
 #This operation removes and return an arbitrary element from the set.
 #If there are no elements to remove, it raises a KeyError.
