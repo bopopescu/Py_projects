@@ -11,4 +11,10 @@ home_page_tests = unittest.TestLoader().loadTestsFromTestCase(HomePageTest)
 smoke_tests = unittest.TestSuite([home_page_tests, search_tests])
 
 # run the suite
-unittest.TextTestRunner(verbosity=2).run(smoke_tests)
+# unittest.TextTestRunner(verbosity=2).run(smoke_tests)
+text_runner = unittest.TextTestRunner(verbosity=2)
+text_runner.run(smoke_tests)
+
+
+# 
+

@@ -24,7 +24,8 @@ smoke_tests = unittest.TestSuite([search_tests, home_page_tests ])
 # )
 
 # setting report name,  and combine reports to single file
-runner = HtmlTestRunner.HTMLTestRunner(combine_reports=True, output="test_results_dir", report_name="MyReport", add_timestamp=True)
+runner = HtmlTestRunner.HTMLTestRunner(combine_reports=True, output="test_results_dir", \
+    report_name="MyReport", add_timestamp=True)
 
 # run the suite using HTMLTestRunner
 runner.run(smoke_tests)
