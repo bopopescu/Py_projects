@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/func_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/func_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Slen/01/unittest_1/log_test10_testsuite_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Slen/01/unittest_1/log_test10_testsuite_unit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Slen/01/unittest_1/log_test11_htmlReport_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Slen/01/unittest_1/log_test11_htmlReport_unit.py" afterDir="false" />
-    </list>
+    <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,11 +173,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1414" />
-    <option name="y" value="282" />
-    <option name="width" value="2314" />
-    <option name="height" value="1484" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="707" />
+    <option name="y" value="141" />
+    <option name="width" value="1157" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -426,14 +422,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1453" height="873" extended-state="6" />
+    <frame x="-7" y="-7" width="1453" height="873" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2699084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1626344" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49964765" visible="true" weight="0.2580645" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" weight="0.2580645" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31451613" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
