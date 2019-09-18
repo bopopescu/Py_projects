@@ -8,7 +8,7 @@ class ShoppingCartTest(unittest.TestCase):
 
     def test_length(self):
         print("WHT")
-        print("wht again")
+        print("wht cart done again")
         self.assertEqual(1, len(self.cart))
 
     def test_item(self):
