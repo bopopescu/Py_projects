@@ -8,6 +8,7 @@ class ShoppingCartTest(unittest.TestCase):
 
     def test_length(self):
         print("WHT")
+        print("wht again")
         self.assertEqual(1, len(self.cart))
 
     def test_item(self):
@@ -25,4 +26,10 @@ class ShoppingCartTest(unittest.TestCase):
 
 # nosetests log_r_13_test.py --verbosity=2 --with-xunit
 
-# 
+# nosetests log_r_13_test.py - -verbosity = 2 - -with-coverage
+
+# coverage test
+# pip install coverage
+# coverage run test.py arg1 arg2
+# coverage report - m
+# coverage html

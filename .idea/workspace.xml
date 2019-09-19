@@ -2,87 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip-19.2.2.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip-19.2.2.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip-19.2.2.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip-19.2.2.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip-19.2.2.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip-19.2.2.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip-19.2.2.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip/_internal/pep425tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pytest_proj/01/Lib/site-packages/pip/_internal/pep425tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Pytest_proj/01/Scripts/pip.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Scripts/pip3.7.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Pytest_proj/01/Scripts/pip3.7.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Pytest_proj/01/Scripts/pip3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe10.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe1_b.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe5_runner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe7.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe7_legacy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe7_pyunit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe8.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe8_clear.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe8_obscure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 1/01/recipe9.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe11.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe12.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe12_nose.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe12_pyunit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe13.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe13_plugin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe14.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe14_plugin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe15.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe15_all.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/recipe15_checkin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 2/02/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe16.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe17.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe18.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe19.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe19b.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe20.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe20b.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe20c.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe21.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe21_report.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe23.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 3/03/recipe25.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/cart.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe26.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe26_plugin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe26_runner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe27.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe27_bad.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe27_bad_scenario.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe27_scenario1.doctest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe27_scenario2.doctest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe28.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe28_cart_with_no_items.doctest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe29.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe29_cart_that_we_intend_to_keep_empty.doctest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe29_cart_we_will_load_with_identical_items.doctest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe29_cart_we_will_load_with_two_different_items.doctest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe30.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe30_cart.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe31.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe31_cart.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe32/recipe32.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe32/steps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe33/recipe33.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe33/steps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pytest_proj/PythonTesting/Chapter 4/04/recipe34.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/cmd_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Pytest_proj/01/cmd_note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/unit_proj3/log_r_13_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pytest_proj/01/unit_proj3/log_r_13_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/unit_proj4/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/unit_proj4/recipe16.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/unit_proj5/recipe30.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/unit_proj5/recipe30_cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/unit_proj5/recipe31.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pytest_proj/01/unit_proj5/recipe31_cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/git_note.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/brcm_4378.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
+            <state relative-caret-position="-6">
               <caret line="486" column="44" selection-start-line="486" selection-start-column="44" selection-end-line="486" selection-end-column="44" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -116,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="53">
               <caret line="56" column="17" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -268,10 +197,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="353" />
-    <option name="y" value="70" />
-    <option name="width" value="579" />
-    <option name="height" value="371" />
+    <option name="x" value="212" />
+    <option name="y" value="28" />
+    <option name="width" value="2608" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -516,10 +445,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
+    <frame x="-7" y="-7" width="1453" height="873" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08956797" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13385826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -817,22 +746,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/brcm_4378.py">
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="486" column="44" selection-start-line="486" selection-start-column="44" selection-end-line="486" selection-end-column="44" />
+        <state relative-caret-position="53">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="17" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
+    <entry file="file://$PROJECT_DIR$/brcm_4378.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="17" />
+        <state relative-caret-position="-6">
+          <caret line="486" column="44" selection-start-line="486" selection-start-column="44" selection-end-line="486" selection-end-column="44" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

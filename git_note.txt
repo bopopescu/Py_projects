@@ -310,6 +310,17 @@ pip install xlrd  #excel
 C:\Users\jsun\Documents\django\bookmarks_test\bookmarks>python -m venv bookmarks_env
 pip list
 
+
+# install mySQL
+pip install mysql-connector
+pip install pymysql
+
+# 
+pip install mock
+pip install pinocchio
+pip install mockito
+pip install lettuce
+
 ##Setup virtualenv
 wuding@wuding-VirtualBox:~/Documents$ mkdir env
 wuding@wuding-VirtualBox:~/Documents$ cd env/

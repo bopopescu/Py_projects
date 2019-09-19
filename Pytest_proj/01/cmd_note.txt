@@ -146,3 +146,10 @@ pytest -s demo_tests/
 pytest — lf
 
 ____________________________________________________________
+
+Coverage Test
+# 
+pip install coverage
+coverage run test.py arg1 arg2
+coverage report -m
+coverage html
