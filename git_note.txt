@@ -333,6 +333,93 @@ activate       activate.ps1      easy_install      pip3    python3        wheel
 activate.csh   activate_this.py  easy_install-3.6  pip3.6  python3.6
 activate.fish  activate.xsh      pip               python  python-config
 (gmapenv) wuding@wuding-VirtualBox:~/Documents/env/gmapenv$ 
+
+## pytest command
+pytest test_name.py
+pytest -v
+# Running one test item
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v tasks\test_four.py::test_asdict
+========================================================================================== test session starts ===========================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 1 item
+
+tasks/test_four.py::test_asdict PASSED
+
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v tasks\test_four.py::test_asdict  tasks\test_four.py::test_replace
+========================================================================================== test session starts ===========================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 2 items
+
+tasks/test_four.py::test_asdict PASSED                                                                                                                                                              [ 50%]
+tasks/test_four.py::test_replace PASSED
+
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest --collect-only
+========================================= test session starts =========================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 7 items
+<Module one_test.py>
+  <Function test_passing>
+<Module test_one.py>
+  <Function test_passing>
+<Module test_two.py>
+  <Function test_failing>
+<Module tasks/test_four.py>
+  <Function test_asdict>
+  <Function test_replace>
+<Module tasks/test_three.py>
+  <Function test_defaults>
+  <Function test_member_access>
+
+##
+pytest  -k "asdict or defaults" --collect-only
+
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v -m run_these_please
+========================================================================================== test session starts ===========================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 7 items / 6 deselected / 1 selected
+
+tasks/test_four.py::test_asdict PASSED
+
+## skip the rest if fail
+pytest -x
+
+## turn off stack - trace
+pytest -v --tb=no
+pytest --maxfail=1 --tb=no
+
+## output print statement
+pytest --capture=no
+pytest -s
+
+## Run last failed test
+pytest --lf
+
+## run the first failed and the rest.
+pytest --ff
+
+## pip local install
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\code\tasks_proj>pip install .
+Processing c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\code\tasks_proj
+Requirement already satisfied: click in c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\lib\site-packages (from tasks==0.1.0) (7.0)
+Requirement already satisfied: tinydb in c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\lib\site-packages (from tasks==0.1.0) (3.14.1)
+Requirement already satisfied: six in c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\lib\site-packages (from tasks==0.1.0) (1.12.0)
+Installing collected packages: tasks
+  Running setup.py install for tasks ... done
+Successfully installed tasks-0.1.0
+## Run a selective tests using -k expression
+pytest -v -k "_raises and not delete"
+
+
 ############################################################################################
 ######@@4. networking . __________________________________________#
 10.*.*.*, 172.16–31.*.*, 192.168.*.*
