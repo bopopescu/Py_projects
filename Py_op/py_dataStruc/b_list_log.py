@@ -6,12 +6,32 @@ nums.reverse()
 nums[targetIndex + 1:] = reversed(nums[targetIndex +1:])
 max, min
 len(nums)
-p = [10,8,0,5,3]
-sp = [2,4,1,1,3]
+
+##
+p = [10,3,0,5,3]
+sp = [2,10,1,1,3]
 p_s = list(zip(p,sp))
 print(p_s)
-p_s = sorted(p_s, key = lambda s: (s[0], s[1]), reverse=True)
-print(p_s)
+# [(10, 2), (3, 10), (0, 1), (5, 1), (3, 3)]
+
+ps = sorted(p_s, key = lambda x: (x[0], x[1]))
+# [(0, 1), (3, 3), (3, 10), (5, 1), (10, 2)]
+print(ps)
+
+pss = sorted(p_s, key = lambda x: (x[0], x[1]),reverse= True)
+print(pss)
+# [(10, 2), (5, 1), (3, 10), (3, 3), (0, 1)]
+
+psss = sorted(p_s, key = lambda x: x[0])
+print(psss)
+# [(0, 1), (3, 10), (3, 3), (5, 1), (10, 2)]
+
+pssss = sorted(p_s, key = lambda x: x[1])
+print(pssss)
+# [(0, 1), (5, 1), (10, 2), (3, 3), (3, 10)]
+
+
+##
 for __ in range(4):
     print(1)
     print()

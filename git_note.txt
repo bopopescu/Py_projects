@@ -406,7 +406,7 @@ pytest --lf
 
 ## run the first failed and the rest.
 pytest --ff
-
+C:\Program Files\MongoDB\Server\4.2\data\
 ## pip local install
 (env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\code\tasks_proj>pip install .
 Processing c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\code\tasks_proj
@@ -418,6 +418,57 @@ Installing collected packages: tasks
 Successfully installed tasks-0.1.0
 ## Run a selective tests using -k expression
 pytest -v -k "_raises and not delete"
+
+
+##
+pytest -v test_add.py -k valid_id
+## Run to show fixture process
+pytest --setup-show test_add.py -k valid_
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_3\tasks_proj\tests\func>pytest -v --setup-show test_add.py -k valid_id
+================================================================================ test session starts ================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_3\tasks_proj\tests, inifile: pytest.ini
+collected 3 items / 2 deselected / 1 selected
+
+test_add.py::test_add_returns_valid_id
+SETUP    S tmp_path_factory
+        SETUP    F tmp_path (fixtures used: tmp_path_factory)
+        SETUP    F tmpdir (fixtures used: tmp_path)
+        SETUP    F tasks_db (fixtures used: tmpdir)
+        func/test_add.py::test_add_returns_valid_id (fixtures used: tasks_db, tmp_path, tmp_path_factory, tmpdir)PASSED
+        TEARDOWN F tasks_db
+        TEARDOWN F tmpdir
+        TEARDOWN F tmp_path
+TEARDOWN S tmp_path_factory
+
+####
+INSTALL FROM A LOCAL DIRECTORY
+You can keep a local stash of plugins (and other Python packages) in a local or shared directory in .tar.gz or .whl format and use that instead of PyPI for installing plugins:
+
+mkdir?? ??some_plugins?
+cp pytest_cov-2.4.0-py2.py3-none-any.whl some_plugins/
+pip install --no-index --find-links=./some_plugins/ pytest-cov
+The --no-index tells pip to not connect to PyPI. The --find-links=./some_plugins/ tells pip to look in the directory called some_plugins. 
+
+#### Note that with the local directory install method, you can install multiple versions and specify which version you want by adding == and the version number:
+pip install --no-index --find-links=./some_plugins/ pytest-cov==2.4.0
+
+### Install From A Git Repository
+pip install git+https://github.com/pytest-dev/pytest-cov@v2.4.0
+# specify a branch
+pip install git+https://github.com/pytest-dev/pytest-cov@master
+
+### Create your own plugin
+###In this section, we’ll develop a small modification to pytest behavior, package it as a plugin, test it, and look into how to distribute it.
+
+###Plugins can include hook functions that alter pytest’s behavior.
+
+
+
+
+
 
 
 ############################################################################################

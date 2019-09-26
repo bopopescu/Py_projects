@@ -57,9 +57,7 @@ print("start")
 
 #*****
 # 1170 , 8/29
-def combi(n, k):
-
-
+# 9/25
 
 
 #assert 1+1 == 3, "True"
@@ -68,89 +66,11 @@ def combi(n, k):
 #___________________________________________
 #*****
 # run test flows
-def run_flow(run_dir, flow_to_test, result_dir):
-    os.chdir(run_dir)
-    for flow_name in flow_to_test:
-        # Reset DUT
-        os.system(
-            "plink.exe -ssh -pw brcm1234 root@192.168.100.31 cd /root/Desktop/4378_FW/4378_18_10_336_REF; ./load_drv.sh;")
-        time.sleep(40)
-        # Remove old folders: Log and Result_LP before new test
-        if os.path.isdir("Log"):
-            shutil.rmtree("Log")
-        if os.path.isdir("Result_LP"):
-            shutil.rmtree("Result_LP")
-        while True:
-            if os.path.isdir("Log") or os.path.isdir("Result_LP"):
-                time.wait(1)
-            else:
-                break
-        run_cmd = ["IQfactRun_Console.exe", '-run', flow_name, "-repeat", "1", "-exit"]
-        p = subprocess.Popen(run_cmd)
-        if p.wait() != 0:
-            print("RUN time error")
-        test_time = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
-        test_time = "_".join(test_time.split())
-        log_dir = os.path.join(result_dir, os.path.splitext(flow_name)[0], test_time)
-
-        shutil.copytree("Log", os.path.join(log_dir, "Log"))
-        shutil.copytree("Result_LP", os.path.join(log_dir, "Result_LP"))
-        time.sleep(1)
+#
+#
 
 
-def main():
-    """
-    *********************************************************************
-    run_dir = os.getcwd()
-    run_dir = r"C:\LitePoint\IQfact_plus\IQfact+_BRCM_4378_MPS_4.0.0.46\bin"
 
-    **************************Set Up Scripts********************************
-    """
-    package_p_drive = r"\\lphqfiler1\Software\LitePoint\Silicon_Solutions\IQAutoBuild\projects\IQfact+_BRCM_4378_MPS"
-    package_name = "IQfact+_BRCM_4378_MPS_4.0.0.50.zip"  # change as needed
-
-    package_loc = r"C:\4378_setup\package_zip"  # package needs to be copied to package_loc
-    flowfile_loc = r"C:\4378_setup\Flow"
-    setupfile_loc = r"C:\4378_setup\Setup"
-    run_dir = os.path.join(r"C:\LitePoint\IQfact_plus", os.path.splitext(package_name)[0], "bin")
-
-    # Flags
-    install_pkg_flg = 1
-    add_flow = 1  # Copy test flows
-
-    # **************************End Set up ***********************************
-
-    # Install Package
-    if install_pkg_flg == 1:
-        install_pkg(package_loc, package_p_drive, package_name)
-
-    # copy flow files to bin folder
-    flow_to_test = []
-    if add_flow == 1:
-        copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc)
-
-    # Create directory to save test results
-    path_list = run_dir.split("\\")[3]
-    path_list = path_list.split("_")[2:]
-    path_list = "_".join(path_list)
-    result_dir = "_".join([path_list, "Test_Results"])  # 4378_MPS_4.0.0.46_Test_Results
-    if not os.path.isdir(result_dir):
-        os.mkdir(result_dir)
-
-    # Run Test Flows
-    run_flow(run_dir, flow_to_test, result_dir)
-
-    print("*" * 20)
-    print("TEST DONE")
-    print("*" * 20)
-
-
-# ****************************************************************************************************
-
-
-if __name__ == "__main__":
-    pass
-    # main()
 
 
 

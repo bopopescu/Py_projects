@@ -1,4 +1,4 @@
-##
+##1. date & cal
 litepoint@litepoint-e6440:~$ date
 Sun Jun 16 12:29:04 PDT 2019
 litepoint@litepoint-e6440:~$ cal
@@ -10,9 +10,18 @@ Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22  
 23 24 25 26 27 28 29  
 30
-##### 1. file system disk space usage
+
+## change system time
+# date 
+sudo date 092316592019.00
+# Sep 23 16:59:08 PDT 2019
+
+
+##2. df: filesystem mounted on hard drive or memory
 # -h means human-readable,
 # -l : dislplay local filesystems , not remote 
+# -T : show file-type
+# df -t ext4
 litepoint@litepoint-e6440:~$ df -h
 
 Filesystem      Size  Used Avail Use% Mounted on
@@ -53,14 +62,28 @@ tmpfs           3.9G     0  3.9G   0% /sys/fs/cgroup
 /dev/loop14      94M   94M     0 100% /snap/telegram-desktop/791
 tmpfs           789M  1.4M  787M   1% /run/user/1000
 
-##### 2. free : memory usage
+##3. free : memory usage, obtained from /proc/meminfo
 litepoint@litepoint-e6440:~$ free -h
               total        used        free      shared  buff/cache   available
 Mem:           7.7G        778M        6.1G        174M        830M        6.5G
 Swap:          2.0G          0B        2.0G
+
+ -b for bytes, -k for kilobytes, -m for megabytes, -g for gigabytes,
+ --tera for terabytes.
+
+free -s 3 # fresh every 3 seconds
+free -s 3 -c 5 # fresh every 3 seconds for 5 times
+
+free -t # display total for each column
+#
+shared: mostly used by virtual file-system-> tmpfs,
+buffers: I/O buffers.
+cache: page cache(file data), and slab( kernel data objects)  
+#
+swap: memory content, which is temporily moved to hard-disk.
 ## ending a terminal session exit or CTRL-D
 
-## Filenames
+##4. Filenames
 # filename starts with a ., called hidden files
 # filenames and commands in linux are case sensitive
 
@@ -77,40 +100,28 @@ cdrom  home  lib             media       proc  run               srv   tmp      
 Desktop    Downloads  examples.desktop  new_rst1.txt  Pictures  snap       thinclient_drives
 Documents  env        Music             new_rst.txt   Public    Templates  Videos
 
-## command are often followed by one or more options (that modify their behavior) and by one or
-## more arguments
+# command are often followed by one or more options (that modify their behavior) and by one or
+# more arguments
 command -options arguments
 
-## options can be specified as either single - with a letter, or double dashes -- with a word
+# options can be specified as either single - with a letter, or double dashes -- with a word
 
-##
+#
 litepoint@litepoint-e6440:~$ ls Desktop/
 Docker_files              practical_docker  shell_cmd.txt  shell_st.txt
 docker_subreddit_fetcher  re.txt            Shell_script   test
-litepoint@litepoint-e6440:~$ ls -d Desktop/
-Desktop/
-litepoint@litepoint-e6440:~$ ls -dl Desktop/
-drwxr-xr-x 7 litepoint litepoint 4096 Jun 16 12:58 Desktop/
+$ ls -l | grep ^d # only show directory
+ls -l | grep ^[^d] # only show non-directory
 
-##
-litepoint@litepoint-e6440:~$ ls Desktop/
-Docker_files              practical_docker  shell_cmd.txt  shell_st.txt
-docker_subreddit_fetcher  re.txt            Shell_script   test
-litepoint@litepoint-e6440:~$ ls -d Desktop/
-Desktop/
-litepoint@litepoint-e6440:~$ ls -dl Desktop/
-drwxr-xr-x 7 litepoint litepoint 4096 Jun 16 12:58 Desktop/
-
-
-##file to check type of files
+# "file" to check type of files
 litepoint@litepoint-e6440:~/Desktop$ file shell_cmd.txt 
 shell_cmd.txt: ASCII text
 litepoint@litepoint-e6440:~/Desktop$ file Docker_files/
 Docker_files/: directory
 
-## view file with less
+# view file with "less"
 
-##
+## 5. file directory
 /bin         # binaries/programs that must be present for the system to boot or run
 /sbin	     # system binaries, that perform viral system tasks.
 /boot # Linux kernel, initial RAM disk image, boot loader
@@ -137,10 +148,10 @@ Docker_files/: directory
 /var/log     # contain log files, records of system activities
 /var/log/messages, /var/log/syslog
 
-## symbolic link, cpp is the link name, which points to the real file /etc/alternatives/cpp*
+# symbolic link, cpp is the link name, which points to the real file /etc/alternatives/cpp*
 lrwxrwxrwx  1 root root    21 Feb 26 07:37 cpp -> /etc/alternatives/cpp*
 
-##
+#
 litepoint@litepoint-e6440:/lib$ ls -lF 
 total 204
 drwxr-xr-x  2 root root  4096 Feb  9 16:13 apparmor/
@@ -165,7 +176,7 @@ drwxr-xr-x  4 root root  4096 Jun  2 00:28 udev/
 drwxr-xr-x  2 root root  4096 Jun  2 00:25 ufw/
 drwxr-xr-x  3 root root 12288 Jun 15 06:49 x86_64-linux-gnu/
 
-## shell wildcard
+##6. shell wildcard
 *    matches any chars
 ?    match any single char
 [chars]  match any single char that is a meber of the set
@@ -178,9 +189,9 @@ drwxr-xr-x  3 root root 12288 Jun 15 06:49 x86_64-linux-gnu/
 [:lower:] any lower case
 [:upper:] any upper case
 
-##
+#
 *	all files
-g*	any files starting with g
+^g*	any files starting with g
 b*.txt	any files beginning with b and ending with .txt
 Data???	Any file beginning with Data followed by exactly 3 chars
 [abc]*	Any file beginning with a or b or c 
@@ -189,7 +200,7 @@ BACKUP.[0-9][0-9][0-9]	any file beginning with BACKUP. followed by exactly 3 num
 [![:digit:]]	Any file not starting with a numeral
 *[[:lower:]123]	Any file ending with a lowercase letter or 1,2, or 3,
 
-##
+##7. copy
 copy -a	copy files and directories with all the attibutes.
 copy -u		copy files only if they don't exist or are new version of existing one.
 
@@ -203,12 +214,13 @@ cp dir1/* dir2,  copy all files from dir1 to dir2
 
 ## cp -v    	shows the files copied process
 
-## files are made up two parts: the data part holding the content, and the name part 
+##8. hard link vs symbolic link
+ files are made up two parts: the data part holding the content, and the name part 
 # holding the file name
 
 # inode: associated with name part
 
-## Creating Hard Links
+# Creating Hard Links
 ln re_cp.txt re_cp_hard.txt
 ln re.txt re_hard.txt
 
@@ -230,7 +242,7 @@ total 8
 13109145 drwxr-xr-x 3 litepoint litepoint 4096 Jun 16 16:00 tmp1
 13108403 drwxr-xr-x 3 litepoint litepoint 4096 Jun 16 16:16 tmp2
 
-## symbolic links are creaated to overcome two disadantages of hard links
+# symbolic links are creaated to overcome two disadantages of hard links
 1) Hard links can't span physical devices
 2) Hard links can't reference directory, only files can be hard-linked.
 
@@ -273,9 +285,9 @@ litepoint@litepoint-e6440:~/Desktop/tmp/tmp1/script_examples$
 
 
 #################### command lines ###########################################
-# a command can be
+##9. a command can be
 1) an executable 
-2) build in function, such as cd, pwd
+2) built-in function, such as cd, pwd
 3) a shell function, like a shell script
 4) An alias
 
@@ -285,7 +297,8 @@ pwd is a shell builtin
 which: display path of executable
 litepoint@litepoint-e6440:~/Desktop/tmp/tmp1/script_examples$ which pwd
 /bin/pwd
-#Using alias
+
+##10. Using alias
 # alias cmd_name='string of shell command'
 litepoint@litepoint-e6440:~/Desktop/Shell_script$ alias foo='pwd;ls -l; cd ~; pwd'
 litepoint@litepoint-e6440:~/Desktop/Shell_script$ foo
@@ -306,32 +319,32 @@ drwxr-xr-x 2 litepoint litepoint   4096 Jun 15 23:42 script_examples
 /home/litepoint
 litepoint@litepoint-e6440:~$
 
-## To remove alias
+# To remove alias
 litepoint@litepoint-e6440:~$ unalias foo
 
-## output re-direction
+##10. output re-direction
 litepoint@litepoint-e6440:~/Desktop$ ls -l > ls_logout.txt
-##
+#
 > ls-output.txt #create a new, empty file or overwrite an existing one to empty file
-## output to append >>
+# output to append >>
 litepoint@litepoint-e6440:~/Desktop$ ls -l ~ >> ls_logout.txt
-## Re-directing stderror 2>
+# Re-directing stderror 2>
 litepoint@litepoint-e6440:~/Desktop$ ls /usr/tmp 2> ls_error.txt
 litepoint@litepoint-e6440:~/Desktop$ cat ls_error.txt 
 ls: cannot access '/usr/tmp': No such file or directory
 
-##Redirecting both stdout and stderr to the same file &>
+#Redirecting both stdout and stderr to the same file &>
 ls: cannot access '/usr/tmp': No such file or directory
 litepoint@litepoint-e6440:~/Desktop$ ls /usr/tmp &> ls_out_err.txt 
 litepoint@litepoint-e6440:~/Desktop$ ls -l &>> ls_out_err.txt
 
-## special file /dev/null
-## to suppress unwanted stderr
+# special file /dev/null
+# to suppress unwanted stderr
 litepoint@litepoint-e6440:~/Desktop$ ls -l /usb/usd 2> /dev/null
-##
+#
 
-## pipelines
-## pipe operator |
+##11. pipelines
+# pipe operator |
 # The standard output of one command can be piped into the standard input of another
 litepoint@litepoint-e6440:~/Desktop$ ls -l | less
 ## filter
@@ -353,15 +366,29 @@ Docker_files Shell_script
 ##arimetic expansion
 $((expression))
 litepoint@litepoint-e6440:~/Desktop$ echo $((2*2+9))
-13
 
-##
+##12. echo
+ssqa@ssqa:~/Documents/test_log$ echo "test time"
+test time
+ssqa@ssqa:~/Documents/test_log$ echo test time
+test time
+ssqa@ssqa:~/Documents/test_log$ echo -e "test \n time"
+test
+ time
+#
+echo * # simialr to "ls"
+# -n : ignore trailing new lines.
+ssqa@ssqa:~/Documents/test_log$ echo -n this is a test
+this is a testssqa@ssqa:~/Documents/test_log$
+#
+$ echo "test page" > testPage
+#
 litepoint@litepoint-e6440:~/Desktop$ echo Front-{A,B,C}-Back
 Front-A-Back Front-B-Back Front-C-Back
 litepoint@litepoint-e6440:~/Desktop$ echo Number_{1..5}
 Number_1 Number_2 Number_3 Number_4 Number_5
 
-## variable expansion
+##13. variable expansion
 litepoint@litepoint-e6440:~/Desktop$ echo $USER
 litepoint
 ##
@@ -379,7 +406,7 @@ text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER
 litepoint@litepoint-e6440:~/Desktop$ echo "text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER"
 text ~/*.txt {a,b} foo 4 litepoint
 
-##
+#
 # -e enable echo for escaping 
 litepoint@litepoint-e6440:~/Desktop$ echo "Time is up \a"
 Time is up \a
@@ -392,13 +419,13 @@ Time is up 	 j
 litepoint@litepoint-e6440:~/Desktop$ echo   "Time is up \t j"
 Time is up \t j
 
-## Permission: chmod
+##14. Permission: chmod
 u+x, Add execute permission for the owner
 u-x, remove execute permission for the owner
 +x,  add execute permission for the owner, group, and world
 go=rw, set the group, others to have read and write permission
 
-###
+##15.
 su: Run a shell with substitute user and group IDs
 # start a shell for the superuser
 su -l or su -
@@ -408,8 +435,8 @@ sudo: Execute a command As another User
 
 # chown: change file owner and group
 
-# Process
-: Process is how Linux organizes the different programs waiting for their turn at the CPU
+##16. Process
+: Process is how Linux organizes different programs waiting for their turn at the CPU
 
 ps: Report a snapshot of current processes
 top: Display tasks
@@ -425,7 +452,7 @@ a series of shell scripts, called init scripts, which start all the system servi
 services are implemented as daemon programs, that sit in the background and do their thing without
 having any user interface.
 
-#ps
+##17. ps (Process Status)
 By default, ps doesn't show much, only the processes associated with current terminal session.
 
 # ps x 
@@ -453,14 +480,36 @@ STAT: state
 R: Running, the process is running or ready to run
 S: Sleeping, The process is NOT running, waiting for an event, such as keystroke or network packet
 D: Uninterruptible sleep, waiting for I/O
-T: Stopped.
+T: Stopped by job control signals
+t: stopped by debugger during the tracing.
+x: dead, should never be seen
 Z: defunct or zombie process. This is a child process, that has terminated, but has not been
 cleaned up by its parent.
 <: a high - priority process.
 N: a low priority process
+L: has pages locked into memory (for real-time and custom IO)
+s: a session leader
+l: multi-threaded 
++: in the foreground process group.
+
+# ps
+ps # print bash and last executed command
+ps -A, ps -e, # print all running precesses
+# detailed view
+-f #(full format)
+-F #(extra full format)
+
+# ps -eF same as ps aux
+
+
+
 
 # ps aux
 litepoint@litepoint-e6440:~/Desktop$ ps aux
+
+a: shows all running processes
+u: shows user or owner column 
+x: show processes that not been executed.
 
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root         1  0.0  0.1 225844  9672 ?        Ss   Jun16   0:09 /sbin/init splash
@@ -474,12 +523,49 @@ root        10  0.0  0.0      0     0 ?        I    Jun16   0:15 [rcu_sched]
 root        11  0.0  0.0      0     0 ?        I    Jun16   0:00 [rcu_bh]
 root        12  0.0  0.0      0     0 ?        S    Jun16   0:00 [migration/0]
 
-# VSZ: virtual memory size
-RSS: Resident set size, RAM in kilobytes used by the process
+VSZ: Virual memory used in bytes.
+RSS: Resident set size, RAM in kilobytes used by the process, which can't be swapped.
+TTY: Terminal from which the process is started. ? means this process is not
+started from a terminal
+STAT: process state
+START: date/time when the process starts
+TIME: Total CPU time used by this process
+
+
 
 # ps only provides a snapshot of the processes at the moment the ps command is executed.
-# top: displays a continuously updating of the system processes in ordere of process activities.
+##18.  top: displays a continuously updating of the system processes in ordere of process activities.
 
+##18. top (Real time process monitor)
+By default, the top command output is refreshed every 3 seconds. 
+In order to change this interval, hit the d key while the top command is running.
+# Display specific user
+# top -u "username"
+
+# view the absolute path of the running processes, hit the c key
+#
+Kill a Running Process with Top Command
+A very powerful feature of the top command is that you can kill running processes through it.
+\This is especially helpful when a process becomes unresponsive and you want to get rid of it. 
+Hit the k key while the top command is running. A prompt will ask you about the PID you want to kill.
+ Enter the required process ID by viewing it from the list and then hit enter. 
+ The process and the corresponding application will close almost immediately
+
+ #
+Change Priority of a Process-Renice
+Renice means changing the priority of a process. Hit the r key while the top command is 
+running and then enter the PID of a process whose priority you want to change.
+ #
+ quit the top command manually through q or ctrl+c. 
+ In case you want the top command to only run till a specific number of output refreshes, 
+ you can use the following command:
+
+$ top -n [no-of-refreshes]
+ #
+
+ Save top Command Results to a Text File
+#
+Forest view : "V"
 
 litepoint@litepoint-e6440:~/Desktop$ top
 top - 21:36:09 up 6 days,  9:45,  1 user,  load average: 0.14, 0.14, 0.08
@@ -507,7 +593,7 @@ xlogo
 # Interrupting process: CTRL-C, terminate a program, many but not all command line programs
 can be interrupted by ^C.
 
-# Putting a process in background, &
+##19. Putting a process in background, &
 litepoint@litepoint-e6440:~/Desktop$ xlogo &
 [2] 13964
 # we started job number 1, [1], with PID 13964
@@ -518,7 +604,7 @@ litepoint@litepoint-e6440:~/Desktop$ ps
 13964 pts/0    00:00:00 xlogo
 13970 pts/0    00:00:00 ps
 
-## jobs: job control , list the jobs that have been launched from our terminal.
+##20. jobs: job control , list the jobs that have been launched from our terminal.
 litepoint@litepoint-e6440:~/Desktop$ jobs
 [1]+  Stopped                 ssh root@192.168.0.18
 [2]-  Running                 xlogo &
