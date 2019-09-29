@@ -58,7 +58,34 @@ print("start")
 #*****
 # 1170 , 8/29
 # 9/25
+string = '   xoxo love xoxo    '
+# print("string is {}, len is {}".format(string, len(string)))
+# string is    xoxo love xoxo    , len is 21
 
+str1 = string.strip()
+#removed 3 leading spaces and 4 trailing spaces
+# print("str1 is {}, len is {}".format(str1, len(str1)))
+# str1 is xoxo love xoxo, len is 14
+
+str2= string.strip('xoxo')
+# # Nothing is removed
+print("str2 is {}, len is {}".format(str2, len(str2)))
+# # str2 is    xoxo love xoxo    , len is 21
+
+str3= string.strip(' xoxo')
+# #
+print("str3 is {}, len is {}".format(str3, len(str3)))
+# # str3 is love, len is 4
+
+
+
+#
+# # Argument doesn't contain space
+# # No characters are removed.
+# print(string.strip('sti'))
+#
+# string = 'android is awesome'
+# print(string.strip('an'))
 
 #assert 1+1 == 3, "True"
 # __________________________________________

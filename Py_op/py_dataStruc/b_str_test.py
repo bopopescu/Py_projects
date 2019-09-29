@@ -7,14 +7,20 @@ print(raw)  # this\t\n and that
 # string operation
 multi = """It was the best of times.
 It was the worst of times."""
+
+
+#
 st = "Hope You Find It"
-stt = st.lower()
-print(st)
+stt = st.lower() # convert the whole string to lower case
+print(stt) #hope you find it
+sttt = stt.upper() # convert the whole string to upper case
+print(sttt) #HOPE YOU FIND IT
+#
 
 myString = '1234567890'
 print(myString[::-1]) #0987654321
 
-#s.lower(), s.upper() -- returns the lowercase or uppercase version of the string
+#s.lower(), s.upper() -- returns the lowercase or uppercase version of the whole string
 #s.isalpha()/s.isdigit()/s.isspace()... -- tests if all the string chars are in the various character classes
 #s.startswith('other'), s.endswith('other') -- tests if the string starts or ends with the given other string
 
@@ -26,6 +32,7 @@ print(myString[::-1]) #0987654321
 # if "old" is not found, no replacement happens
 
 #s.strip() -- returns a string with whitespace at the start and end removed.
+
 #s.split('delim') -- returns a list of substrings separated by the delimiter.
  ##   it's just text. 'aaa,bbb,ccc'.split(',') -> ['aaa', 'bbb', 'ccc'].
  #   As a convenient special case s.split() (with no arguments) splits on all whitespace chars.
