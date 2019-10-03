@@ -70,3 +70,37 @@ print(type(t_enum)) #<class 'list'>
 print(t_enum) #[(0, 'a'), (1, 'u'), (2, 't'), (3, 'o'), (4, 'm'), (5, 'a'), (6, 't'), (7, 'i'), (8, 'o'), (9, 'n'), (10, ' '), (11
 
 print(":".join("abc")) #a:b:c
+
+str.isalnum()	String consists of only alphanumeric characters (no symbols)
+str.isalpha()	String consists of only alphabetic characters (no symbols)
+str.islower()	String’s alphabetic characters are all lower case
+str.isnumeric()	String consists of only numeric characters
+str.isspace()	String consists of only whitespace characters
+str.istitle()	String is in title case
+str.isupper()	String’s alphabetic characters are all upper case
+
+# str.strip([set of chars])
+string = '   xoxo love xoxo    '
+# print("string is {}, len is {}".format(string, len(string)))
+# string is    xoxo love xoxo    , len is 21
+
+str1 = string.strip()
+#removed 3 leading spaces and 4 trailing spaces
+# print("str1 is {}, len is {}".format(str1, len(str1)))
+# str1 is xoxo love xoxo, len is 14
+
+str2= string.strip('xoxo')
+# # Nothing is removed
+print("str2 is {}, len is {}".format(str2, len(str2)))
+# # str2 is    xoxo love xoxo    , len is 21
+
+str3= string.strip(' xoxo')
+# #
+print("str3 is {}, len is {}".format(str3, len(str3)))
+# # str3 is love, len is 4
+
+data = "wiiwnter"
+print(data.strip("iw")) #nter
+
+data1 ="appointment"
+print(data1.strip("pa"))  #ointment

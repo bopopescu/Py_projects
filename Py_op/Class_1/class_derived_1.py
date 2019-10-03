@@ -1,12 +1,14 @@
 class ComicCharacter:
-    def __init__(self,nick_name):
+    def __init__(self, nick_name):
         self.nick_name = nick_name
 
     def nick_name(self):
         return self.nick_name
-    def draw_speech_ballon(self,message,destination):
+
+    def draw_speech_ballon(self, message,  destination):
         pass
-    def draw_thought_ballon(self,message):
+
+    def draw_thought_ballon(self, message):
         pass
 """  
 class GameCharacter:
@@ -26,23 +28,26 @@ class GameCharacter:
         pass
 """
 
+
 class AngryCat(ComicCharacter):
-    def __init__(self,nick_name,age):
+    def __init__(self,  nick_name, age):
         super().__init__(nick_name)
         self.age = age
         self.__height = 300
+
     def height(self):
         print("height is ", self.__height)
-    def set_height(self,height_tmp = 500):
+
+    def set_height(self, height_tmp=500):
         self.__height = height_tmp
-    def draw_speech_ballon(self,message,destination):
+
+    def draw_speech_ballon(self, message, destination):
         if destination is None:
-            composed_message = self.nick_name + ' -> "'
             if self.age > 5:
                 meow = 'Meow'
             else:
                 meow = 'Meeeeeew Meeeooow'
-            composed_message = '{} -> "{} {}"'.format(self.nick_name,meow,message)
+            composed_message = '{} -> "{} {}"'.format(self.nick_name, meow, message)
         else:
             composed_message = '{} ==={}---> {}'.format(
                 destination.nick_name,
@@ -71,11 +76,13 @@ class AngryDog(ComicCharacter):
 """
 declare classes that override methods
 """
+
+
 if __name__ == "__main__":
-    angry_cat_1 = AngryCat("Garfield",10)
+    angry_cat_1 = AngryCat("Garfield", 10)
     print("angry_cat_1 name is {}".format(angry_cat_1.nick_name))
     print("angry_cat_1 age is ", angry_cat_1.age)
-    print (angry_cat_1.__dict__)
+    print(angry_cat_1.__dict__)
 
     #can change
     angry_cat_1.__height = 200

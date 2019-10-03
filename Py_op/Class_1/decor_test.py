@@ -1,20 +1,21 @@
-def smart_divide(func):
-   def inner(a,b):
-      print("I am going to divide",a,"and",b)
-      if b == 0:
-         print("Whoops! cannot divide")
-         return
+def smart_divide(calling_func):
+    def inner(a, b):
+        print("inner(a, b) call {} divide {}".format(a,b))
+        if b == 0:
+            print("Whoops! cannot divide")
+            return
+        return calling_func(a, b)
+    return inner
 
-      return func(a,b)
-   return inner
 
 @smart_divide
-def divide(a,b):
+def divide(a, b):
     return a/b
+
 
 if __name__ == "__main__":
     print(divide(10, 2))
-    print(divide(10,0))
+    print(divide(10, 0))
 
     """
     I am going to divide 10 and 2

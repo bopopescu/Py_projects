@@ -1,10 +1,11 @@
 class Celsius:
-    def __init__(self, temperature = 0):
+    def __init__(self, temperature=0):
         self._temperature = temperature
 
     def to_fahrenheit(self):
         return (self.temperature * 1.8) + 32
 
+    # turn function into an attribute
     @property
     def temperature(self):
         print("Getting value")
@@ -17,10 +18,18 @@ class Celsius:
         print("Setting value")
         self._temperature = value
 
+
 if __name__ == "__main__":
 
-    # Not working
     test = Celsius(35)
-    #test.temperature()
-    #test.temperature(45)
-    #test.temperature()
+    # test.temperature() # incorrect
+    print("temp is {}".format(test.temperature))
+    # temp is 35
+
+    # change temp through setter
+    test.temperature = 100
+    print("temp is changed to {}".format(test.temperature))
+    # temp is changed to 100
+
+
+

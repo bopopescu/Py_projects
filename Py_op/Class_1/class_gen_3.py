@@ -1,9 +1,10 @@
-class MaxSizeList():
+class MaxSizeList:
+
     def __init__(self, max):
         self.max_size = max
-        self.innerlist =[]
+        self.innerlist = []
 
-    def push(self,obj):
+    def push(self, obj):
         self.innerlist.append(obj)
         if len(self.innerlist) > self.max_size:
             self.innerlist.pop(0)
