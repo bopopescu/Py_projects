@@ -11,3 +11,13 @@ class A:
     
     def __str__(self):
         return self.message
+
+
+if __name__ == "__main__":
+
+    a = A()
+    print(a)  # Class Message
+
+    print(a.cfoo())
+
+    print(A.cfoo())

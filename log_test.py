@@ -70,6 +70,19 @@ print("start")
 #assert 1+1 == 3, "True"
 # __________________________________________
 
+from collections import namedtuple
+
+task = namedtuple("task", ["start", "end", "summary"])
+mytask = task(10, 12, "brcm-4378")
+a = mytask._asdict()
+
+print(type(a))
+
+# for k , v in a.items():
+#     print(k, v, end="\n")
+
+print(mytask.start)
+
 #___________________________________________
 #*****
 # run test flows

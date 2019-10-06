@@ -1,10 +1,13 @@
 from time import time, sleep
 
+
 def f():
     sleep(.3)
 
+
 def g():
     sleep(.8)
+
 
 # No decorator
 def measure_diff(func_obj):
@@ -17,19 +20,26 @@ def measure_diff(func_obj):
 def ff(sleep_time = 0.1):
     sleep(sleep_time)
 
+
 def measure_diff_ff(func_obj, *args, **kwargs):
     t = time()
     func_obj(*args, **kwargs)
     print("{0} took {1}".format(func_obj.__name__, time() - t))
+
+
 ################################
 def fff(sleep_time = 0.1):
     sleep(sleep_time)
+
+
 def measure_decorator(func_object):
     def wrapper(*args, **kwargs):
         t = time()
         func_object(*args, **kwargs)
         print("{0} through decorator took {1}".format(func_object.__name__, time() - t))
     return wrapper
+
+
 if __name__ == "__main__":
     measure_diff(f)
     measure_diff(g)

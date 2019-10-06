@@ -7,8 +7,8 @@ class MyClass:
 obj = MyClass()
 s_obj = MyClass()
 
-print (dir(MyClass))
-print (dir(obj))
+print(dir(MyClass))
+print(dir(obj))
 obj.x = 100
 print(obj.x)
 #print(s_obj.x)#AttributeError: 'MyClass' object has no attribute 'x'

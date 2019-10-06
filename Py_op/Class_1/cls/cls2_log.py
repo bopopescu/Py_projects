@@ -16,11 +16,13 @@ class Contact:
         self.email = email
         self.all_contacts.append(self)
 
+#________________________________________________________
 class Supplier(Contact):
     def order(self, order):
         print("Send ""{} order to {}".format(order, self.name))
 
 class Friend(Contact):
+
     def __init__(self,name, email, phone):
         super().__init__(name,email)
         self.phone = phone
@@ -31,6 +33,7 @@ class Friend(Contact):
         self.email = email
         self.phone = phone
         """
+
 class LongNameDict(dict):
     def longest_key(self):
         longest = None
@@ -40,10 +43,10 @@ class LongNameDict(dict):
         return longest
 
 def main():
-    c = Contact("tester,M16", "m16@litepoint.com")
+    c = Contact("tester, M16", "m16@litepoint.com")
     s = Supplier("tester,MW16", "MW@litepoint.com")
-    ss = Supplier("fuji, 2800","MW@litepoint.com")
-    f = Friend("Foxcon, 2200", "M8@litepoint.com","408-334-8800")
+    ss = Supplier("fuji, 2800","2800@litepoint.com")
+    # f = Friend("Foxcon, 2200", "M8@litepoint.com","408-334-8800")
 
     name_list = [item.name for item in Contact.all_contacts.search('tester')]
     print(name_list)
@@ -60,3 +63,19 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# ['tester, M16', 'tester,MW16']
+# Send SMA cables order to tester, MW16
+# [ < __main__.Contact object at 0x007C0BF0 > , < __main__.Supplier object at 0x007C0C50 > , < __main__.Supplier object at 0x007C0C70 > , < __main__.Friend object at 0x007C0C90 > , < __main__.Friend object at 0x007C0C90 > ]
+# <__main__.Supplier object at 0x007C0C50 >
+
+# ac & n & abg
+
+
+#     ['tester,M16', 'tester,MW16']
+# Send SMA cables order to tester, MW16
+# [ < __main__.Contact object at 0x03470BF0 > , < __main__.Supplier object at 0x03470C50 > , < __main__.Supplier object at 0x03470C70 > , < __main__.Friend object at 0x03470C90 > , < __main__.Friend object at 0x03470C90 > ]
+# <__main__.Supplier object at 0x03470C50 >
+
+# ac & n & abg

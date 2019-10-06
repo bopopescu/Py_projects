@@ -38,8 +38,12 @@ s.call_me()
 # Calling method on Right Subclass
 # Calling method on Left Subclass
 # Calling method on Subclass
+
+
 print(s.num_sub_calls, s.num_left_calls, s.num_right_calls,
 s.num_base_calls)
+
+
 # 1 1 1 1
 # Calling method on Base Class
 # Calling method on Left Subclass

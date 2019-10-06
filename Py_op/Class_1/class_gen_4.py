@@ -5,6 +5,7 @@ class Simplest():
 simp = Simplest()
 # print(type(simp)) # <class '__main__.Simplest'>
 
+# _____________________________________________________
 class Person:
     species = "Human"
 
@@ -21,6 +22,7 @@ man.name = "Jack"
 man.surname = "Joan"
 # print(man.name, man.surname) # Jack Joan
 
+# _____________________________________________________
 class Point:
     x = 10
     y = 7
@@ -39,10 +41,12 @@ p.z = 3
 # print(p.z) #3
 # print(Point.z) #AttributeError: type object 'Point' has no attribute 'z'
 
+# _____________________________________________________
 class Square:
     side = 8
     def area(self):
         return self.side ** 2
+
 sq = Square()
 # print(sq.area()) # 64
 # print(Square.area(sq)) # 64
@@ -50,6 +54,7 @@ sq = Square()
 sq.side = 20
 # print(sq.area()) # 400
 
+# _____________________________________________________
 class Price:
     def final_price(self, vat, discount=0):
         return self.net_price * (100 + vat) /100 - discount
@@ -59,6 +64,7 @@ p1.net_price = 100
 # print(Price.final_price(p1, 20, 10))  # 110.0
 # print(p1.final_price(20, 10))   # 110.0
 
+# _____________________________________________________
 ## Initializer
 class Rectangle:
     def __init__(self, side_a, side_b):
@@ -71,6 +77,7 @@ r1 = Rectangle(10, 4)
 # print(r1.side_a, r1.side_b) # 10, 4
 # print(r1.area()) # 40
 
+# _____________________________________________________
 class Engine:
     def start(self):
         pass
@@ -82,12 +89,13 @@ class ElectricEngine(Engine):
 
 class V8Engine(Engine):
     pass
-
+# _____________________________________________________
 class Car():
     engine_cls = Engine
 
     def __init__(self):
         self.engine = self.engine_cls()
+
     def start(self):
         print(
             "Starting engine {0} for car {1} ...."
@@ -99,6 +107,7 @@ class Car():
     def stop(self):
         self.engine.stop()
 
+# _____________________________________________________
 class RaceCar(Car):
     engine_cls = V8Engine
 class CityCar(Car):
@@ -115,15 +124,19 @@ cars = [car, racecar, citycar, f1car]
 # for car in cars:
 #     car.start()
 
+# _____________________________________________________
 class Book:
     def __init__(self, title, publisher, pages):
         self.title = title
         self.publisher = publisher
         self.pages = pages
+
+
 class Ebook(Book):
     def __init__(self, title, publisher, pages, format_):
         Book.__init__(self, title, publisher, pages)
         self.format_ = format_
+
 
 ebook = Ebook("Python", "Packet", 500, "PDF")
 # print(ebook.title, ebook.publisher, ebook.pages, ebook.format_)  #Python Packet 500 PDF

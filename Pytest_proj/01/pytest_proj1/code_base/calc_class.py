@@ -1,7 +1,7 @@
 from .calc_func import *
 import os, pytest
 
-class Calculator(object):
+class Calculator:
     def __init__(self):
         self._last_answer = 0.0
 

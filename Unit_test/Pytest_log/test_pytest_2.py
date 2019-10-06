@@ -13,12 +13,14 @@ import pytest
 
 # py.test pytest_1.py
 # py.test -v -s pytest_1.py
+# py.test will be out-dated, use python -m pytest -v -s
+
 
 @pytest.yield_fixture()
 def setUp():
-    print("Once before every test_log")
+    print("\nOnce before every test_log")
     yield
-    print("Once After every test_log")
+    print("\nOnce After every test_log")
 
 def test_logA(setUp):
     print("Running test_logA")

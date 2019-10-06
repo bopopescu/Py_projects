@@ -6,7 +6,7 @@ import pytest
 
 @pytest.fixture()
 def setUp():
-    print("Once before every test_log")
+    print("\nOnce before every test_log")
 
 def test_logA(setUp):
     print("Running test_logA")

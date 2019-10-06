@@ -1,4 +1,4 @@
-from selenimu.webdriver.common.by import by
+from selenium.webdriver.common.by import By
 
 class LoginPage():
     username_field = (By.CSS_SELECTOR, "#username")
