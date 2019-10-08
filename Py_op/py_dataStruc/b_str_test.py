@@ -1,3 +1,24 @@
+# char vs int
+# str vs int
+
+a = 'ab'
+print(chr(1)) # not working
+print(type(chr(1)), chr(98)) # not working
+
+print(ord('a')) # 97
+print(chr(97))  # a
+
+
+ab = 100
+c = str(100)
+print(type(c), " and ", c) # <class 'str'>  and  100
+
+cc = int(c)
+print("type of cc is {} and cc is {}".format(type(cc), cc))
+# type of cc is <class 'int'> and cc is 100
+
+#_________________________________________
+
 pi = 3.14
 # text = 'The value of pi is ' + pi      ## NO, does not work
 text = 'The value of pi is ' + str(pi)  ## yes
@@ -7,7 +28,6 @@ print(raw)  # this\t\n and that
 # string operation
 multi = """It was the best of times.
 It was the worst of times."""
-
 
 #
 st = "Hope You Find It"
@@ -20,20 +40,26 @@ print(sttt) #HOPE YOU FIND IT
 myString = '1234567890'
 print(myString[::-1]) #0987654321
 
-#s.lower(), s.upper() -- returns the lowercase or uppercase version of the whole string
+s.lower()
+s.upper() 
+# -- returns the lowercase or uppercase version of the whole string
 #s.isalpha()/s.isdigit()/s.isspace()... -- tests if all the string chars are in the various character classes
 #s.startswith('other'), s.endswith('other') -- tests if the string starts or ends with the given other string
 
-#s.find('other') -- searches given string,
+s.find('other')
+#  -- searches given string,
 #returns the first index where it begins or -1 if not found
 # s.find(substring, start_pos, end_pos) , search substr in range[start_pos, end_pos), excluding end_pos
 
-#s.replace('old', 'new') -- returns a string where all occurrences of 'old' have been replaced by 'new'
+s.replace('old', 'new')
+#  -- returns a string where all occurrences of 'old' have been replaced by 'new'
 # if "old" is not found, no replacement happens
 
-#s.strip() -- returns a string with whitespace at the start and end removed.
+s.strip()
+#  -- returns a string with whitespace at the start and end removed.
 
-#s.split('delim') -- returns a list of substrings separated by the delimiter.
+s.split('delim')
+#  -- returns a list of substrings separated by the delimiter.
  ##   it's just text. 'aaa,bbb,ccc'.split(',') -> ['aaa', 'bbb', 'ccc'].
  #   As a convenient special case s.split() (with no arguments) splits on all whitespace chars.
 
