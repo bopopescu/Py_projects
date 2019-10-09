@@ -14,9 +14,6 @@ toy1.save()
 # print(type(toy1))
 # <class 'toys.models.Toy' >
 
-toy2 = Toy(name='Hawaiian Barbie', description='Barbie loves Hawaii', release_date=toy_release_date, toy_category='Dolls', was_included_in_home=True)
-toy2.save()
-
 print(toy1.pk)
 print(toy1.name)
 print(toy1.created)
@@ -25,12 +22,12 @@ print(toy2.pk)
 print(toy2.name)
 print(toy2.created)
 print(toy2.was_included_in_home)
-#
 # >>> print(toy1.pk)
 # 1
 # >>> print(toy1.name)
 # Snoopy talking action figure
 # the generated dictionary, a rest_framework.utils.serializer_helpers.ReturnDict instance
+
 serializer_for_toy1 = ToySerializer(toy1)
 print(type(serializer_for_toy1))
 # <class 'toys.serializers.ToySerializer' >
@@ -43,24 +40,10 @@ print(type(serializer_for_toy1.data))
 # {'id': 13, 'name': 'Management of fancy test', 'description': 'Tests overall',
 #     'release_date': '2019-10-07T17:12:30.365450Z', 'toy_category': 'Action figures', 'was_included_in_home': True}
 
-print(serializer_for_toy1.data)
-serializer_for_toy2 = ToySerializer(toy2)
-print(serializer_for_toy2.data)
-
-#rest_framework.utils.serializer_helpers.ReturnDict instance
-# {
-#         'pk': 1,
-#         'name': 'Snoopy talking action figure',
-#         'description': 'Snoopy speaks five languages',
-#         'release_date': '2017-10-09T12:11:37.090335Z',
-#         'toy_category': 'Action figures',
-#         'was_included_in_home': False
-# }
 
 json_renderer = JSONRenderer()
 # Render a dict to JSON
 toy1_rendered_into_json = json_renderer.render(serializer_for_toy1.data)
-toy2_rendered_into_json = json_renderer.render(serializer_for_toy2.data)
 
 print(type(toy1_rendered_into_json))
 # <class 'bytes' >
@@ -68,10 +51,6 @@ print(type(toy1_rendered_into_json))
 print(toy1_rendered_into_json)
 # b'{"id":13,"name":"Management of fancy test","description":"Tests overall", 
 # "release_date":"2019-10-07T17:12:30.365450Z","toy_category":"Action figures","was_included_in_home":true}'
-print(toy2_rendered_into_json)
-# b'{"pk":1,"name":"Snoopy talking action figure","description":"Snoopy speaks five languages","release_date":"2017-10-09T12:11:37.090335Z","toy_category":"Action figures","was_included_in_home":false}'
-# >> print(toy2_rendered_into_json)
-# b'{"pk":2,"name":"Hawaiian Barbie","description":"Barbie loves Hawaii","release_date":"2017-10-09T12:11:37.090335Z","toy_category":"Dolls","was_included_in_home":true}'
 
 #___________________________________________________________________________________________________
 # json to model instance
@@ -115,7 +94,6 @@ In[77]: if new_toy_serializer.is_valid():
     ...: print(type(new_toy_serializer.data))
     ...:
 <class 'rest_framework.utils.serializer_helpers.ReturnDict' >
-
 
 
 if new_toy_serializer.is_valid():

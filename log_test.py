@@ -77,7 +77,14 @@ if -10000000 > float('-inf'):
 # use args, and kwargs
 # str, built-in
 
-
+import os
+cur_dir = os.path.abspath(__file__)
+print(cur_dir)
+bb= os.path.dirname(cur_dir)
+print(os.path.dirname(cur_dir))
+cc = os.path.dirname(bb)
+print(cc)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 
