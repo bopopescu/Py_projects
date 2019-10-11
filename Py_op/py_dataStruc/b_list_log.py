@@ -430,3 +430,33 @@ print("t ", t)
 ##
 arr = [1,2,3,4,5,6,7,8]
 print(arr[:-4]) #[1, 2, 3, 4]
+
+In[11]: tuple("Test")
+Out[11]: ('T', 'e', 's', 't')
+
+In[12]: list("Station")
+Out[12]: ['S', 't', 'a', 't', 'i', 'o', 'n']
+
+In[13]: tuple(50)
+---------------------------------------------------------------------------
+TypeError                                 Traceback(most recent call last)
+<ipython-input-13-a3e64f0fb23c > in < module >
+--- -> 1 tuple(50)
+
+TypeError: 'int' object is not iterable
+
+In[14]: tuple(50,)
+---------------------------------------------------------------------------
+TypeError                                 Traceback(most recent call last)
+<ipython-input-14-cd94c614be7d > in < module >
+--- -> 1 tuple(50,)
+
+TypeError: 'int' object is not iterable
+
+In[15]: list(50)
+---------------------------------------------------------------------------
+TypeError                                 Traceback(most recent call last)
+<ipython-input-15-8e20b6aa43ab > in < module >
+--- -> 1 list(50)
+
+TypeError: 'int' object is not iterable

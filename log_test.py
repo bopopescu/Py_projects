@@ -38,7 +38,8 @@ def install_pkg(package_loc, package_p_drive, package_name):
             shutil.rmtree(file_to_delete)
 # _________________________________________
 
- 
+s = "foooo"
+print(s.count("oo"))
 
 #__________________________________________
 # copy test flows to bin

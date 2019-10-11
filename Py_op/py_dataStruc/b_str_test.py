@@ -1,71 +1,190 @@
-# char vs int
+# chr vs ord
 # str vs int
 
 a = 'ab'
-print(chr(1)) # not working
-print(type(chr(1)), chr(98)) # not working
+print(chr(1)) # not working, 1 is not a valid int for a char.
+print(type(chr(1)) # not working
 
 print(ord('a')) # 97
 print(chr(97))  # a
 
-
+# str works on primitive
 ab = 100
-c = str(100)
+c = str(100) # str(int), turns an int to a string
 print(type(c), " and ", c) # <class 'str'>  and  100
 
-cc = int(c)
+# int(string) ==> int of base 10
+# int(binary_string, base) == > int of base 10
+c = "100"
+cc = int(c)  
 print("type of cc is {} and cc is {}".format(type(cc), cc))
 # type of cc is <class 'int'> and cc is 100
 
+binaryString="101"
+int(binaryString, 2) # 5
+int(binaryString, 8) # 65
+#
+    In[1]: float_num=128.8
+
+    In[2]: int(float_num)
+    Out[2]: 128
+
+    In[3]: int("128.8")
+    - --------------------------------------------------------------------------
+    ValueError                                Traceback(most recent call last)
+    < ipython-input-3-b36fcc5f3bf6 > in < module >
+    --- -> 1 int("128.8")
+
+    ValueError: invalid literal for int() with base 10: '128.8'
+    #_________________________________________________________
+    In[7]: str(128.8)
+    Out[7]: '128.8'
+
+    In[8]: float_str=str(128.8)
+
+    In[9]: float(float_str)
+    Out[9]: 128.8
+
+    In[4]: float(128)
+    Out[4]: 128.0
+
+    In[5]: 5/2
+    Out[5]: 2.5
+
+    In[6]: 5//2
+    Out[6]: 2
 #_________________________________________
-
-pi = 3.14
-# text = 'The value of pi is ' + pi      ## NO, does not work
-text = 'The value of pi is ' + str(pi)  ## yes
-
 raw = r'this\t\n and that'
 print(raw)  # this\t\n and that
 # string operation
 multi = """It was the best of times.
 It was the worst of times."""
 
-#
+#____________________________________________________________________________
 st = "Hope You Find It"
 stt = st.lower() # convert the whole string to lower case
 print(stt) #hope you find it
 sttt = stt.upper() # convert the whole string to upper case
 print(sttt) #HOPE YOU FIND IT
 #
-
+# reverse a string
 myString = '1234567890'
 print(myString[::-1]) #0987654321
 
+# s is a string, 
+s.lower(),s.upper(), s.islower(), s.isupper(): ignore non-alphabetic chars
 s.lower()
 s.upper() 
 # -- returns the lowercase or uppercase version of the whole string
 #s.isalpha()/s.isdigit()/s.isspace()... -- tests if all the string chars are in the various character classes
 #s.startswith('other'), s.endswith('other') -- tests if the string starts or ends with the given other string
 
-s.find('other')
-#  -- searches given string,
-#returns the first index where it begins or -1 if not found
-# s.find(substring, start_pos, end_pos) , search substr in range[start_pos, end_pos), excluding end_pos
+s.islower()
+s.isupper()
+#_____________________________________________________________________________
 
-s.replace('old', 'new')
-#  -- returns a string where all occurrences of 'old' have been replaced by 'new'
-# if "old" is not found, no replacement happens
+s.count(substr, start, end)
+# Does not count overlapping substrings.
+    In[10]: cnt_count='foooo'
 
-s.strip()
-#  -- returns a string with whitespace at the start and end removed.
+    In[11]: cnt_count.count('oo')
+    Out[11]: 2
+
+    In[12]: cnt_count.count('o', 1)
+    Out[12]: 4
+
+    In[13]: cnt_count.count('o')
+    Out[13]: 4
+    In[14]: cnt_count.count('a')
+    Out[14]: 0
+# ____________________________________________________________________
+
+ 
+
+
+#____________________________________________________________________
+s.find(substr, start, end)
+    # search substr in range[start_pos, end_pos), excluding end_pos
+    # returns the first index where it begins or -1 if not found
+s.rfind(substr, start, end)
+
+    In[16]: ss='foo goo foo goo'
+
+    In[17]: ss.find(foo)
+    Out[17]: -1
+
+    In[18]: ss.find('foo')
+    Out[18]: 0
+
+    In[19]: ss.rfind('foo')
+    Out[19]: 8
+
+    In[20]: ss.rfind('foo', 5)
+    Out[20]: 8
+
+#____________________________________________________________________
+s.isalnum()
+
+s.isalpha()
+
+s.isdigit()
+
+s.isspace()
+#____________________________________________________________________
+s.lstrip(chars)
+# Trims leading chars
+    In[22]: "   foo goo   ".lstrip()
+    Out[22]: 'foo goo   '
+
+    In[24]: "foogaoo hpp jkk ".lstrip("foa")
+    Out[24]: 'gaoo hpp jkk '
+
+    In[25]: "foogaoo hpp jkk ".lstrip("afgo")
+    Out[25]: ' hpp jkk '
+
+    In[26]: "foogaoo hpp jkk ".lstrip("afgo ")
+    Out[26]: 'hpp jkk '
+
+    In[28]: 'http://www.realpython.com'.lstrip('/:pth').lstrip('/:pth')
+    Out[28]: 'www.realpython.com'
+#____________________________________________________________________
+s.rstrip(chars)
+# trims trailing chars
+    In[29]: "   foo goo   ".rstrip(" o")
+    Out[29]: '   foo g'
+#____________________________________________________________________
+s.strip(chars)
+
+#____________________________________________________________________
+    s.replace('old', 'new')
+    #  -- returns a string where all occurrences of 'old' have been replaced by 'new'
+    # if "old" is not found, no replacement happens
+
+
+    #  -- returns a string with whitespace at the start and end removed.
+#____________________________________________________________________
+
 
 s.split('delim')
 #  -- returns a list of substrings separated by the delimiter.
  ##   it's just text. 'aaa,bbb,ccc'.split(',') -> ['aaa', 'bbb', 'ccc'].
  #   As a convenient special case s.split() (with no arguments) splits on all whitespace chars.
+ # return a list of one element if no delim found in the string
 
 word = "\nthis is first page\nthis is 2nd page\nthis is third page\n"
 word.split("\n") #['', 'this is first page', 'this is 2nd page', 'this is third page', '']
 word.splitlines()#['', 'this is first page', 'this is 2nd page', 'this is third page']
+
+ss = "aba"
+s = ss.split('a')
+print(s, len(s))
+# ['', 'b', ''] 3
+
+ss = "aba"
+s = ss.split('g')
+print(s, len(s))
+
+#_______________________________________________________________
 
 s.join(list)
 #joins a list of strings with s
