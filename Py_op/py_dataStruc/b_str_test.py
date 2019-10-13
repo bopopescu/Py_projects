@@ -130,6 +130,14 @@ s.isalpha()
 s.isdigit()
 
 s.isspace()
+
+def isfloat(value):
+    try:
+        float(value)
+        return True
+    except ValueError:
+        return False
+ print (isfloat('112.5'))
 #____________________________________________________________________
 s.lstrip(chars)
 # Trims leading chars
@@ -156,42 +164,75 @@ s.rstrip(chars)
 s.strip(chars)
 
 #____________________________________________________________________
-    s.replace('old', 'new')
-    #  -- returns a string where all occurrences of 'old' have been replaced by 'new'
-    # if "old" is not found, no replacement happens
-
-
-    #  -- returns a string with whitespace at the start and end removed.
-#____________________________________________________________________
-
-
-s.split('delim')
+s.split(sep=None, maxsplit=-1) # return a list
 #  -- returns a list of substrings separated by the delimiter.
  ##   it's just text. 'aaa,bbb,ccc'.split(',') -> ['aaa', 'bbb', 'ccc'].
  #   As a convenient special case s.split() (with no arguments) splits on all whitespace chars.
- # return a list of one element if no delim found in the string
+ #  return a list of one element if no delim found in the string
 
 word = "\nthis is first page\nthis is 2nd page\nthis is third page\n"
 word.split("\n") #['', 'this is first page', 'this is 2nd page', 'this is third page', '']
 word.splitlines()#['', 'this is first page', 'this is 2nd page', 'this is third page']
+
+word1 = "    1  2  3  "
+word1.split()  # ['1', '2', '3']
+word2=" \n   1 \n 2  3 \n"
+word2.split()  # ['1', '2', '3']
+word2.split('\n')  # [' ', '   1 ', ' 2  3 ', '']
+
+word3="this, is,a,book, "
+word3.split(',')
+['this', ' is', 'a', 'book', ' ']
+
+word4="this, is,a,book,"
+word4.split(',')
+['this', ' is', 'a', 'book', '']
+
+word4.split(',', maxsplit=2)
+['this', ' is', 'a,book,']
+
+word4.split(',', maxsplit=3)
+['this', ' is', 'a', 'book,']
+
+word4.split('8')
+['this, is,a,book,']
 
 ss = "aba"
 s = ss.split('a')
 print(s, len(s))
 # ['', 'b', ''] 3
 
-ss = "aba"
-s = ss.split('g')
-print(s, len(s))
+#_______________________________________________________________
+s.partition(< sep > )
+
+Divides a string based on a separator.
+
+s.partition( < sep > ) splits s at the first occurrence of string < sep > . The return value is a three-part tuple consisting of:
+
+The portion of s preceding < sep >
+< sep > itself
+The portion of s following < sep >
+
+'foo.bar'.partition('.')
+('foo', '.', 'bar')
+
+'foo.bar'.partition('..')
+('foo.bar', '', '')
 
 #_______________________________________________________________
+s.join( < iterable > )
+iterable must ba an iterable of strings
+Concatenates strings from an iterable, returns a string
 
-s.join(list)
 #joins a list of strings with s
 # '---'.join(['aaa', 'bbb', 'ccc']) -> aaa---bbb---ccc
 s = ','
-pp = s.join(["catch","a","cold"])
+pp=s.join(["catch", "a", "cold"])  # 'catch,a,cold'
 
+'---'.join(['foo', 23, 'bar'])
+--- -> 1 '---'.join(['foo', 23, 'bar'])
+TypeError: sequence item 1: expected str instance, int found
+#_______________________________________________________________
 s[1:4] #is 'ell' #-- chars starting at index 1 and extending up to but not including index 4
 s[1:] #is 'ello' #-- omitting either index defaults to the start or end of the string
 s[:] #is 'Hello' -- omitting both always gives us a copy of the whole thing
@@ -249,3 +290,14 @@ print(data.strip("iw")) #nter
 
 data1 ="appointment"
 print(data1.strip("pa"))  #ointment
+
+
+
+    #____________________________________________________________________
+    s.replace('old', 'new')
+    #  -- returns a string where all occurrences of 'old' have been replaced by 'new'
+    # if "old" is not found, no replacement happens
+
+
+    #  -- returns a string with whitespace at the start and end removed.
+    #____________________________________________________________________

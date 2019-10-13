@@ -38,8 +38,6 @@ def install_pkg(package_loc, package_p_drive, package_name):
             shutil.rmtree(file_to_delete)
 # _________________________________________
 
-s = "foooo"
-print(s.count("oo"))
 
 #__________________________________________
 # copy test flows to bin
@@ -60,13 +58,8 @@ print("start")
 # 1170 , 8/29
 # 9/25
 
-ss = "aba"
-s = ss.split('g')
-print(s,len(s))
 
-print(float('inf'), float('-inf'))
-if -10000000 > float('-inf'):
-    print(True)
+
 
 
 

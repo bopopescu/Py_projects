@@ -1,0 +1,33 @@
+ 2018-02-10 18:33:52,526 - DEBUG- Start of program
+ 2018-02-10 18:33:52,526 - DEBUG- Start of factorial(3)
+ 2018-02-10 18:33:52,526 - DEBUG- i is 1, total is 1
+ 2018-02-10 18:33:52,526 - DEBUG- i is 2, total is 2
+ 2018-02-10 18:33:52,527 - DEBUG- i is 3, total is 6
+ 2018-02-10 18:33:52,527 - DEBUG- End of factorial(3)
+ 2018-02-10 18:33:52,527 - DEBUG- End of program
+ 2018-02-10 18:33:52,527 - INFO- The logging module is working.
+ 2018-02-10 18:33:52,527 - WARNING- An error message is about to be logged.
+ 2018-02-10 18:33:52,527 - ERROR- An error has occurred.
+ 2018-02-10 18:33:52,527 - CRITICAL- The program is unable to recover!
+ 2018-02-26 14:56:35,784 - DEBUG- Start of program
+ 2018-02-26 14:56:35,784 - DEBUG- Start of factorial(3)
+ 2018-02-26 14:56:35,784 - DEBUG- i is 1, total is 1
+ 2018-02-26 14:56:35,784 - DEBUG- i is 2, total is 2
+ 2018-02-26 14:56:35,784 - DEBUG- i is 3, total is 6
+ 2018-02-26 14:56:35,784 - DEBUG- End of factorial(3)
+ 2018-02-26 14:56:35,784 - DEBUG- End of program
+ 2018-02-26 14:56:35,784 - INFO- The logging module is working.
+ 2018-02-26 14:56:35,784 - WARNING- An error message is about to be logged.
+ 2018-02-26 14:56:35,784 - ERROR- An error has occurred.
+ 2018-02-26 14:56:35,784 - CRITICAL- The program is unable to recover!
+ 2018-02-26 14:57:00,270 - DEBUG- Start of program
+ 2018-02-26 14:57:00,270 - DEBUG- Start of factorial(3)
+ 2018-02-26 14:57:00,270 - DEBUG- i is 1, total is 1
+ 2018-02-26 14:57:00,270 - DEBUG- i is 2, total is 2
+ 2018-02-26 14:57:00,270 - DEBUG- i is 3, total is 6
+ 2018-02-26 14:57:00,270 - DEBUG- End of factorial(3)
+ 2018-02-26 14:57:00,270 - DEBUG- End of program
+ 2018-02-26 14:57:00,270 - INFO- The logging module is working.
+ 2018-02-26 14:57:00,270 - WARNING- An error message is about to be logged.
+ 2018-02-26 14:57:00,270 - ERROR- An error has occurred.
+ 2018-02-26 14:57:00,270 - CRITICAL- The program is unable to recover!

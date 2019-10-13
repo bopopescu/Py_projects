@@ -21,7 +21,7 @@ class ArticleView(APIView):
         # 2. convert JSON - ready python types to JSON string
         # the many param informs the serializer that it will be serializing more than a single article.
         serializer = ArticleSerializer(articles, many=True)
-        return Response({"articles": serializer.data})
+        return Response({"articles_100": serializer.data})
 
     #
     # the list of articles is trying to be serialized/converted from an object into JSON.

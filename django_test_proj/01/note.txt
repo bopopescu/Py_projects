@@ -71,10 +71,7 @@ Username (leave blank to use 'jsun'): admin
 Email address: sunusd@yahoo.com
 Password:
 Password (again):
-The password is too similar to the username.
-This password is too short. It must contain at least 8 characters.
-This password is too common.
-Bypass password validation and create user anyway? [y/N]: y
+
 Superuser created successfully.
 #10. Register models in admin: http://localhost:8000/admin/
 #register our models in order for them to appear on admin page.
@@ -186,3 +183,4 @@ localhost:8000/api/articles/2
     }
   }
 ## 19
+curl -X POST -i -H "Content-Type": "application/json" -d '{"title": "Run Post Test", "description": "First Trial", "body": "Running 2 tests", "author_id": 11}' localhost:8000/api/articles/ 
