@@ -11,4 +11,5 @@ class PostList(generics.ListAPIView):
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Post.objects.all()
+    # queryset = models.Post.objects.get(pk)
     serializer_class = serializers.PostSerializer

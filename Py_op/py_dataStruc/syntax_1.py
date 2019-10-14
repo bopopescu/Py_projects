@@ -1,3 +1,8 @@
+# module statistics
+from statistics import mean
+a = [1, 2]
+print(mean(a))
+
 # string function
 # partition, index, replace,
 title = "Recipe 5: Rewriting, and the Immutable String"

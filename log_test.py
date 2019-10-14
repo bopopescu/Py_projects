@@ -58,7 +58,9 @@ print("start")
 # 1170 , 8/29
 # 9/25
 
-
+from statistics import mean
+a = [1,2]
+print(mean(a))
 
 
 
