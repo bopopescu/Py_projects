@@ -1,0 +1,2782 @@
+#1/24/2019
+10.201.9.79
+relational database
+client/server architecture
+network protocol
+file system management
+sw lifecycle
+TCP/IP, UDP, DHCP, ARP, ICMP,
+6/19/19: python: itertool, re, generator; 
+9/28/2019
+
+############################################################################################
+######@@1. git . __________________________________________#
+#Setting Up Git
+ssqa@ssqa:~/Documents$ git config --global user.name ssqa
+ssqa@ssqa:~/Documents$ git config --global user.email sunusd@yahoo.com
+ssqa@ssqa:~/Documents$ git config --list
+
+git init
+git clone https://github.com/brb45/sampleproject 
+git add b_file_op1.py b_file_op2.py
+git add .
+
+git rm --cached b_file_op2.py
+git commit -m "b_file_1 draft1" b_file_op1.py
+git commit -am "Second Line" 3.txt   # -a , add and commit
+
+git log
+git status -s
+
+git branch
+git branch demoBranch
+git checkout demoBranch
+git log --oneline
+
+git clean
+git reset
+git revert
+
+git remote -v
+git remote remove origin
+git remote add origin https://github.com/brb45/repo2  
+
+git checkout master
+fork
+
+git pull
+git diff
+git add -A # add all new files to the repository
+git add -a -m "message" # commit  with new add files (git add -A)
+git push -u origin <branch>
+git push
+
+#strace –p <pid> 
+
+jsun@jsun-mbpw10 MINGW64 ~
+$ git version
+git version 2.16.1.windows.4
+git push -u origin master
+git pull origin master
+
+
+##
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects/93xx_QA_files (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects/93xx_QA_files (master)
+$ git reset HEAD~4
+Unstaged changes after reset:
+M       .idea/misc.xml
+M       .idea/vcs.xml
+M       .idea/workspace.xml
+M       file_op/b_file_op1.1.py
+M       git_note.txt
+D       log_test.py
+D       proc_data_1.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects/93xx_QA_files (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../.idea/misc.xml
+        modified:   ../.idea/vcs.xml
+        modified:   ../.idea/workspace.xml
+        modified:   ../file_op/b_file_op1.1.py
+        modified:   ../git_note.txt
+        deleted:    ../log_test.py
+        deleted:    ../proc_data_1.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ./
+        ../Post Processing/
+        ../log_test_std.py
+        ../proc_lt_std.py
+        ../rest_ex1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+##
+
+To remove folder/directory only from git repository and not from the local try 3 simple commands.
+Steps to remove directory
+
+git rm -r --cached FolderName
+git commit -m "Removed folder from repository"
+git push origin master
+##
+$ git clone https://github.com/DjangoPatternsBook/superbook2.git
+Next, install pipenv system-wide or locally, but outside a virtualenv, 
+as recommended in pipenv installation documents. Alternatively, follow these commands:
+
+
+############################################################################################
+######@@2. Linux . __________________________________________#
+Linux:
+nmap:10.0.2.15
+awk, sed,
+ps aux
+/usr/share?/usr/local  #software installed path
+
+service name start/restart
+
+#compare two files 
+cmp
+
+ifconfig eth0 192.168.1.12 netmask 255.255.255.0 broadcast 192.168.1.255
+
+netstat -a   #network info ,
+netsta  -s
+
+nslookup     # DNS info
+dig          # query DNS server, replacing nslookup
+
+free # memory usage
+
+mysqldump -u root -ptecmint rsyslog > rsyslog.sql  # database backup
+
+crontab -e 
+0 3 * * * /root/backup.sh  # run backup.sh at specified time
+
+ip address
+
+apt --version
+apt 1.6.8 (amd64)
+
+ssh root@192.168.4.62 rm -fr /root/Documents/test_d
+scp -r test_d/ root@192.168.4.62:/root/Documents
+
+
+uname -a
+
+sudo apt-get install build-essential checkinstall
+sudo apt-get install build-essential
+sudo wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
+sudo tar xzf Python-3.7.2.tgz
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 2
+sudo apt install -y python3-pip
+
+litepoint@litepoint-Latitude-E6440:~$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+litepoint@litepoint-Latitude-E6440:~$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+litepoint@litepoint-Latitude-E6440:~$ sudo update-alternatives --config python3
+There are 2 choices for the alternative python3 (providing /usr/bin/python3).
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/python3.6   1         auto mode
+  1            /usr/bin/python3.6   1         manual mode
+  2            /usr/bin/python3.7   1         manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 2
+
+sudo apt install python3-venv
+
+python3 -m venv env
+$ source env/bin/activate
+
+# -p, make nested directories
+mkdir -p /just/one/dir
+mkdir -p -- a/foo b/bar a/baz
+
+# cp test1_dir test2_dir 
+# if test2_dir exists, test_dir and its content copied.
+# if test2_dir does not exist, only content of rest1_dir is copied.
+
+#search files/directory
+ find -name l*
+# grep 
+-i , ignore word cases
+-r , search recursively
+
+grep -w -c , combined with wc
+grep -w "pattern" -c file
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ grep -c "git init" git_note.txt
+4
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ grep -n "git init" git_note.txt
+3:git init
+297:$ git init
+353:$ git init
+457:$ git init
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ ls -l | grep git_note.txt
+-rw-r--r-- 1 jsun 1049089 51557 Apr 29 13:41 git_note.txt
+
+#
+$ ls -l | grep ^-
+-rw-r--r-- 1 jsun 1049089 51557 Apr 29 13:41 git_note.txt
+-rw-r--r-- 1 jsun 1049089  4073 Apr 25 17:18 log_test.py
+-rw-r--r-- 1 jsun 1049089   496 Mar 22 18:59 log_test1.py
+-rw-r--r-- 1 jsun 1049089  1355 Mar 22 16:59 log_test4.py
+-rw-r--r-- 1 jsun 1049089 20922 Apr 25 17:18 proc_data_1.py
+-rw-r--r-- 1 jsun 1049089  1287 Feb  5  2017 PYTHON_DEFAULT.md
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ ls -l | grep ^d
+drwxr-xr-x 1 jsun 1049089     0 Apr 25 17:40 Automation_scripts/
+drwxr-xr-x 1 jsun 1049089     0 Feb  7 16:55 cls/
+drwxr-xr-x 1 jsun 1049089     0 Mar 16 18:56 concur_log/
+drwxr-xr-x 1 jsun 1049089     0 Feb 26 17:02 example_log/
+drwxr-xr-x 1 jsun 1049089     0 Apr  4 21:51 file_op/
+drwxr-xr-x 1 jsun 1049089     0 Mar 14  2018 FlowGen/
+drwxr-xr-x 1 jsun 1049089     0 Feb 25 14:09 Jenkins_scripts/
+drwxr-xr-x 1 jsun 1049089     0 Mar 22 18:55 libs/
+drwxr-xr-x 1 jsun 1049089     0 Apr 25 18:04 log_parse/
+drwxr-xr-x 1 jsun 1049089     0 Feb 25 13:56 Log_parser/
+drwxr-xr-x 1 jsun 1049089     0 Mar  4 16:56 mul_process/
+drwxr-xr-x 1 jsun 1049089     0 Feb  6 14:37 py_auto/
+drwxr-xr-x 1 jsun 1049089     0 Mar  5 15:29 py_dataStruc/
+drwxr-xr-x 1 jsun 1049089     0 Feb  6 14:37 py_netwk/
+drwxr-xr-x 1 jsun 1049089     0 Feb  6 14:37 py_network_cpy/
+drwxr-xr-x 1 jsun 1049089     0 Feb  6 14:37 py_network_cpy_1/
+drwxr-xr-x 1 jsun 1049089     0 Feb  6 14:37 py_network_cpy_2/
+drwxr-xr-x 1 jsun 1049089     0 Apr 17 14:04 Py_QA/
+drwxr-xr-x 1 jsun 1049089     0 Apr  4 22:24 Pytest_log/
+drwxr-xr-x 1 jsun 1049089     0 Feb 17  2018 python script/
+drwxr-xr-x 1 jsun 1049089     0 Apr 19  2018 QA_cls_auto1/
+drwxr-xr-x 1 jsun 1049089     0 Feb  6 14:37 rex/
+drwxr-xr-x 1 jsun 1049089     0 Feb 25 13:57 share-master/
+drwxr-xr-x 1 jsun 1049089     0 Mar 23 20:32 Slen/
+drwxr-xr-x 1 jsun 1049089     0 Mar 12 16:30 venv/
+drwxr-xr-x 1 jsun 1049089     0 Mar 20 21:52 venv_3.7.2/
+drwxr-xr-x 1 jsun 1049089     0 Mar 22 11:17 web_log/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ ls -l | grep "Mar 2"
+drwxr-xr-x 1 jsun 1049089     0 Mar 22 18:55 libs/
+-rw-r--r-- 1 jsun 1049089   496 Mar 22 18:59 log_test1.py
+-rw-r--r-- 1 jsun 1049089  1355 Mar 22 16:59 log_test4.py
+drwxr-xr-x 1 jsun 1049089     0 Mar 23 20:32 Slen/
+drwxr-xr-x 1 jsun 1049089     0 Mar 20 21:52 venv_3.7.2/
+drwxr-xr-x 1 jsun 1049089     0 Mar 22 11:17 web_log/
+
+# check installed python versions
+apt list --installed | grep python
+
+#Create virtual environment
+sudo apt install -y python3-venv
+python3 -m venv sample_environment
+
+ssqa@ssqa:~/Documents/Docker_AWS$ python3 -m venv docker_3.6.8
+ssqa@ssqa:~/Documents/Docker_AWS$ source docker_3.6.8/bin/activate
+# deactivate
+(docker_3.6.8) ssqa@ssqa:~/Documents/Docker_AWS$ deactivate
+
+## display a directory
+tree -a dir1
+## display dirctory only
+tree -d #
+tree -f # display whole path
+tree -s # display size of files/folders
+
+############################################################################################
+######@@3. Python
+## ssh
+sudo apt-get install openssh-server
+Enable the ssh service by typing sudo systemctl enable ssh
+Start the ssh service by typing sudo systemctl start ssh
+Test it by login into the system using ssh user@server-name
+
+# Update python
+1. sudo apt-get install python3.7
+2. 
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
+
+# check python installed
+apt list --installed | grep python
+
+# upgrade python
+sudo apt-get upgrade python3
+# Remove python3.7
+sudo apt remove python3.6
+
+##
+#create venv
+cd project_directory
+python -m venv env
+source env/bin/activate  # on Linux or macOS
+env/bin/activate.bat     # on Windows  
+
+python -i  point.py
+python -m 
+python -c
+
+sudo apt install python-pip
+sudo apt-get install tcpdump graphviz imagemagick python-gnuplot python-cryptography python-pyx
+
+python -V
+python --version
+
+pip install --user --upgrade pip
+pip install xlrd  #excel
+
+C:\Users\jsun\Documents\django\bookmarks_test\bookmarks>python -m venv bookmarks_env
+pip list
+
+
+# install mySQL
+pip install mysql-connector
+pip install pymysql
+
+# 
+pip install mock
+pip install pinocchio
+pip install mockito
+pip install lettuce
+
+##Setup virtualenv
+wuding@wuding-VirtualBox:~/Documents$ mkdir env
+wuding@wuding-VirtualBox:~/Documents$ cd env/
+wuding@wuding-VirtualBox:~/Documents/env$ virtualenv gmapenv
+wuding@wuding-VirtualBox:~/Documents/env/gmapenv$ ls
+bin  include  lib
+wuding@wuding-VirtualBox:~/Documents/env/gmapenv$ . bin/activate
+(gmapenv) wuding@wuding-VirtualBox:~/Documents/env/gmapenv$ ls bin
+activate       activate.ps1      easy_install      pip3    python3        wheel
+activate.csh   activate_this.py  easy_install-3.6  pip3.6  python3.6
+activate.fish  activate.xsh      pip               python  python-config
+(gmapenv) wuding@wuding-VirtualBox:~/Documents/env/gmapenv$ 
+
+## pytest command
+pytest test_name.py
+pytest -v
+# Running one test item
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v tasks\test_four.py::test_asdict
+========================================================================================== test session starts ===========================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 1 item
+
+tasks/test_four.py::test_asdict PASSED
+
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v tasks\test_four.py::test_asdict  tasks\test_four.py::test_replace
+========================================================================================== test session starts ===========================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 2 items
+
+tasks/test_four.py::test_asdict PASSED                                                                                                                                                              [ 50%]
+tasks/test_four.py::test_replace PASSED
+
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest --collect-only
+========================================= test session starts =========================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 7 items
+<Module one_test.py>
+  <Function test_passing>
+<Module test_one.py>
+  <Function test_passing>
+<Module test_two.py>
+  <Function test_failing>
+<Module tasks/test_four.py>
+  <Function test_asdict>
+  <Function test_replace>
+<Module tasks/test_three.py>
+  <Function test_defaults>
+  <Function test_member_access>
+
+##
+pytest  -k "asdict or defaults" --collect-only
+
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v -m run_these_please
+========================================================================================== test session starts ===========================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1
+collected 7 items / 6 deselected / 1 selected
+
+tasks/test_four.py::test_asdict PASSED
+
+## skip the rest if fail
+pytest -x
+
+## turn off stack - trace
+pytest -v --tb=no
+pytest --maxfail=1 --tb=no
+
+## output print statement
+pytest --capture=no
+pytest -s
+
+## Run last failed test
+pytest --lf
+
+## run the first failed and the rest.
+pytest --ff
+C:\Program Files\MongoDB\Server\4.2\data\
+## pip local install
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\code\tasks_proj>pip install .
+Processing c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\code\tasks_proj
+Requirement already satisfied: click in c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\lib\site-packages (from tasks==0.1.0) (7.0)
+Requirement already satisfied: tinydb in c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\lib\site-packages (from tasks==0.1.0) (3.14.1)
+Requirement already satisfied: six in c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\lib\site-packages (from tasks==0.1.0) (1.12.0)
+Installing collected packages: tasks
+  Running setup.py install for tasks ... done
+Successfully installed tasks-0.1.0
+## Run a selective tests using -k expression
+pytest -v -k "_raises and not delete"
+
+
+##
+pytest -v test_add.py -k valid_id
+## Run to show fixture process
+pytest --setup-show test_add.py -k valid_
+##
+(env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_3\tasks_proj\tests\func>pytest -v --setup-show test_add.py -k valid_id
+================================================================================ test session starts ================================================================================
+platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0 -- c:\users\jsun\documents\py_projects\pytest_proj\pytest_02\env_3.7\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_3\tasks_proj\tests, inifile: pytest.ini
+collected 3 items / 2 deselected / 1 selected
+
+test_add.py::test_add_returns_valid_id
+SETUP    S tmp_path_factory
+        SETUP    F tmp_path (fixtures used: tmp_path_factory)
+        SETUP    F tmpdir (fixtures used: tmp_path)
+        SETUP    F tasks_db (fixtures used: tmpdir)
+        func/test_add.py::test_add_returns_valid_id (fixtures used: tasks_db, tmp_path, tmp_path_factory, tmpdir)PASSED
+        TEARDOWN F tasks_db
+        TEARDOWN F tmpdir
+        TEARDOWN F tmp_path
+TEARDOWN S tmp_path_factory
+
+####
+INSTALL FROM A LOCAL DIRECTORY
+You can keep a local stash of plugins (and other Python packages) in a local or shared directory in .tar.gz or .whl format and use that instead of PyPI for installing plugins:
+
+mkdir?? ??some_plugins?
+cp pytest_cov-2.4.0-py2.py3-none-any.whl some_plugins/
+pip install --no-index --find-links=./some_plugins/ pytest-cov
+The --no-index tells pip to not connect to PyPI. The --find-links=./some_plugins/ tells pip to look in the directory called some_plugins. 
+
+#### Note that with the local directory install method, you can install multiple versions and specify which version you want by adding == and the version number:
+pip install --no-index --find-links=./some_plugins/ pytest-cov==2.4.0
+
+### Install From A Git Repository
+pip install git+https://github.com/pytest-dev/pytest-cov@v2.4.0
+# specify a branch
+pip install git+https://github.com/pytest-dev/pytest-cov@master
+
+### Create your own plugin
+###In this section, we’ll develop a small modification to pytest behavior, package it as a plugin, test it, and look into how to distribute it.
+
+###Plugins can include hook functions that alter pytest’s behavior.
+
+
+############################################################################################
+######@@4. networking . __________________________________________#
+10.*.*.*, 172.16–31.*.*, 192.168.*.*
+ping , nmap , ip route, iptables, traceroute
+
+
+#
+File handling
+String handling
+Buffer handling
+Variable handling
+Database access
+Logging utilities
+System\Environment handling
+Application mapping functions
+System messaging or system API enhancements and wrappers
+############################################################################################
+######@@5. Py test . __________________________________________#
+#Python module
+subprocess.Popen
+from prettytable import PrettyTable
+import pytest
+
+
+jsun@jsun-mbpw10 MINGW64 ~
+$ git help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local bra
+nch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+jsun@jsun-mbpw10 MINGW64 ~
+$ git help -a
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+available git commands in 'C:\Program Files\Git\mingw64/libexec/git-core'
+
+  add                     gc                      receive-pack
+  add--interactive        get-tar-commit-id       reflog
+  am                      grep                    remote
+  annotate                gui                     remote-ext
+  apply                   gui--askpass            remote-fd
+  archimport              gui--askyesno           remote-ftp
+  archive                 gui.tcl                 remote-ftps
+  askpass                 hash-object             remote-http
+  bisect                  help                    remote-https
+  bisect--helper          http-backend            repack
+  blame                   http-fetch              replace
+  branch                  http-push               request-pull
+  bundle                  imap-send               rerere
+  cat-file                index-pack              reset
+  check-attr              init                    rev-list
+  check-ignore            init-db                 rev-parse
+  check-mailmap           instaweb                revert
+  check-ref-format        interpret-trailers      rm
+  checkout                log                     send-email
+  checkout-index          ls-files                send-pack
+  cherry                  ls-remote               sh-i18n--envsubst
+  cherry-pick             ls-tree                 shortlog
+  citool                  mailinfo                show
+  clean                   mailsplit               show-branch
+  clone                   merge                   show-index
+  column                  merge-base              show-ref
+  commit                  merge-file              stage
+  commit-tree             merge-index             stash
+  config                  merge-octopus           status
+  count-objects           merge-one-file          stripspace
+  credential              merge-ours              submodule
+  credential-manager      merge-recursive         submodule--helper
+  credential-store        merge-resolve           subtree
+  credential-wincred      merge-subtree           svn
+  cvsexportcommit         merge-tree              symbolic-ref
+  cvsimport               mergetool               tag
+  daemon                  mktag                   unpack-file
+  describe                mktree                  unpack-objects
+  diff                    mv                      update
+  diff-files              name-rev                update-git-for-windows
+  diff-index              notes                   update-index
+  diff-tree               p4                      update-ref
+  difftool                pack-objects            update-server-info
+  difftool--helper        pack-redundant          upload-archive
+  fast-export             pack-refs               upload-pack
+  fast-import             patch-id                var
+  fetch                   prune                   verify-commit
+  fetch-pack              prune-packed            verify-pack
+  filter-branch           pull                    verify-tag
+  fmt-merge-msg           push                    web--browse
+  for-each-ref            quiltimport             whatchanged
+  format-patch            read-tree               worktree
+  fsck                    rebase                  write-tree
+  fsck-objects            rebase--helper
+
+git commands available from elsewhere on your $PATH
+
+  flow
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+jsun@jsun-mbpw10 MINGW64 ~
+$ git help -g
+The common Git guides are:
+
+   attributes   Defining attributes per path
+   everyday     Everyday Git With 20 Commands Or So
+   glossary     A Git glossary
+   ignore       Specifies intentionally untracked files to ignore
+   modules      Defining submodule properties
+   revisions    Specifying revisions and ranges for Git
+   tutorial     A tutorial introduction to Git (for version 1.5.1 or newer)
+   workflows    An overview of recommended workflows with Git
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+jsun@jsun-mbpw10 MINGW64 ~
+$ git help init
+
+jsun@jsun-mbpw10 MINGW64 ~
+$ git help add
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents
+$ ls | grep py
+Py_QA/                          pysql/
+pyProjects/                     Python Operator Precedence.pdf
+
+ 
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents
+$ mkdir git_repo
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents
+$ ls | grep git
+git_repo/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents
+$ cd git_repo/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ mkdir test1
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cd test1/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1
+$ git init
+Initialized empty Git repository in C:/Users/jsun/Documents/git_repo/test1/.g
+it/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ ls -al
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 .git/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ mkdir temp1
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ ls -al
+total 14
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 11:53 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 11:53 .git/
+-rw-r--r-- 1 jsun 1049089 1686 Aug 29 18:25 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Aug 30 13:33 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Aug 29 13:15 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Aug 29 18:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Nov  7 22:09 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Aug 30 00:19 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Aug 30 17:01 b_file_op7.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 temp1/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ mkdir test2
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cp test1/*.py test2/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cd test2
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test2
+$ ls -al
+total 14
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:45 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:44 ../
+-rw-r--r-- 1 jsun 1049089 1686 Jan  7 13:45 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Jan  7 13:45 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Jan  7 13:45 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Jan  7 13:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Jan  7 13:45 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Jan  7 13:45 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Jan  7 13:45 b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test2
+$ pwd
+/c/Users/jsun/Documents/git_repo/test2
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test2
+$ git init
+Initialized empty Git repository in C:/Users/jsun/Documents/git_repo/test2/.g
+it/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test2 (master)
+$ ls -al
+total 14
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:44 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:46 .git/
+-rw-r--r-- 1 jsun 1049089 1686 Jan  7 13:45 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Jan  7 13:45 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Jan  7 13:45 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Jan  7 13:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Jan  7 13:45 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Jan  7 13:45 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Jan  7 13:45 b_file_op7.py
+
+#####6.
+#SQLAlchemy
+#RabbitMQ
+#Redis
+
+
+#####7.
+__________________________________________________________________________________
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ mkdir test3
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cd test3
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ ls -al
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:08 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:08 ../
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ git clone https://github.com/brb45/sampleproject
+Cloning into 'sampleproject'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (12/12), done.
+Receiving objectsremote: Total 348 (delta 3), reused 3 (delta 0), pack-reused
+Receiving objects: 100% (348/348), 82.45 KiB | 6.34 MiB/s, done.
+
+Resolving deltas: 100% (169/169), done.
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ ls -al
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:08 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 sampleproject/
+__________________________________________________________________________________
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ ls -al sampleproject/
+total 22
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 .git/
+-rw-r--r-- 1 jsun 1049089  145 Jan  7 14:09 .gitignore
+-rw-r--r-- 1 jsun 1049089  420 Jan  7 14:09 .travis.yml
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 data/
+-rw-r--r-- 1 jsun 1049089 1100 Jan  7 14:09 LICENSE.txt
+-rw-r--r-- 1 jsun 1049089  141 Jan  7 14:09 MANIFEST.in
+-rw-r--r-- 1 jsun 1049089 1742 Jan  7 14:09 README.md
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 sample/
+-rw-r--r-- 1 jsun 1049089  677 Jan  7 14:09 setup.cfg
+-rw-r--r-- 1 jsun 1049089 8501 Jan  7 14:09 setup.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 tests/
+-rw-r--r-- 1 jsun 1049089 1191 Jan  7 14:09 tox.ini
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ cd sampleproject/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3/sampleproject (master)
+$ ls
+data/  LICENSE.txt  MANIFEST.in  README.md  sample/  setup.cfg  setup.py  tests/  tox.ini
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3/sampleproject (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+##
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ mkdir test4
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cd test4
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4
+$ touch 1.txt 2.txt 3 txt 4.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4
+$ ls
+1.txt  2.txt  3  4.txt  txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4
+$ git status -s
+fatal: Not a git repository (or any of the parent directories): .git
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4
+$ git init
+Initialized empty Git repository in C:/Users/jsun/Documents/git_repo/test4/.git/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+?? 1.txt
+?? 2.txt
+?? 3
+?? 4.txt
+?? txt
+
+##
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ ls
+sampleproject/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test3
+$ cd ..
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cd test1
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op1.py
+        b_file_op2.py
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ cd ../test2
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op1.py
+        b_file_op2.py
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test2 (master)
+$ cd ..
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls
+note.txt  test1/  test2/  test3/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -r
+test3/  test2/  test1/  note.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -ral
+total 33
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:09 test3/
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:46 test2/
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:43 test1/
+-rw-r--r-- 1 jsun 1049089 59 Jan  7 14:18 note.txt
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:14 ../
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:17 ./
+
+ 
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -L
+note.txt  test1/  test2/  test3/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -LR
+.:
+note.txt  test1/  test2/  test3/
+
+./test1:
+b_file_op1.py  b_file_op2.py  b_file_op3.py  b_file_op4.py  b_file_op5.py  b_file_op6.py  b_file_op7.py  temp1/
+
+./test1/temp1:
+
+./test2:
+b_file_op1.py  b_file_op2.py  b_file_op3.py  b_file_op4.py  b_file_op5.py  b_file_op6.py  b_file_op7.py
+
+./test3:
+sampleproject/
+
+./test3/sampleproject:
+data/  LICENSE.txt  MANIFEST.in  README.md  sample/  setup.cfg  setup.py  tests/  tox.ini
+
+./test3/sampleproject/data:
+data_file
+
+./test3/sampleproject/sample:
+__init__.py  package_data.dat
+
+./test3/sampleproject/tests:
+__init__.py  test_simple.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -R
+.:
+note.txt  test1/  test2/  test3/
+
+./test1:
+b_file_op1.py  b_file_op2.py  b_file_op3.py  b_file_op4.py  b_file_op5.py  b_file_op6.py  b_file_op7.py  temp1/
+
+./test1/temp1:
+
+./test2:
+b_file_op1.py  b_file_op2.py  b_file_op3.py  b_file_op4.py  b_file_op5.py  b_file_op6.py  b_file_op7.py
+
+./test3:
+sampleproject/
+
+./test3/sampleproject:
+data/  LICENSE.txt  MANIFEST.in  README.md  sample/  setup.cfg  setup.py  tests/  tox.ini
+
+./test3/sampleproject/data:
+data_file
+
+./test3/sampleproject/sample:
+__init__.py  package_data.dat
+
+./test3/sampleproject/tests:
+__init__.py  test_simple.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ clear
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -r
+test3/  test2/  test1/  note.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -R
+.:
+note.txt  test1/  test2/  test3/
+
+./test1:
+b_file_op1.py  b_file_op2.py  b_file_op3.py  b_file_op4.py  b_file_op5.py  b_file_op6.py  b_file_op7.py  temp1/
+
+./test1/temp1:
+
+./test2:
+b_file_op1.py  b_file_op2.py  b_file_op3.py  b_file_op4.py  b_file_op5.py  b_file_op6.py  b_file_op7.py
+
+./test3:
+sampleproject/
+
+./test3/sampleproject:
+data/  LICENSE.txt  MANIFEST.in  README.md  sample/  setup.cfg  setup.py  tests/  tox.ini
+
+./test3/sampleproject/data:
+data_file
+
+./test3/sampleproject/sample:
+__init__.py  package_data.dat
+
+./test3/sampleproject/tests:
+__init__.py  test_simple.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -aRl
+.:
+total 33
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:17 ./
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:14 ../
+-rw-r--r-- 1 jsun 1049089 59 Jan  7 14:18 note.txt
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:43 test1/
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:46 test2/
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:09 test3/
+
+./test1:
+total 14
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:17 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:29 .git/
+-rw-r--r-- 1 jsun 1049089 1686 Aug 29 18:25 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Aug 30 13:33 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Aug 29 13:15 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Aug 29 18:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Nov  7 22:09 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Aug 30 00:19 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Aug 30 17:01 b_file_op7.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 temp1/
+
+./test1/.git:
+total 3
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:29 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 13:43 ../
+-rw-r--r-- 1 jsun 1049089 130 Jan  7 11:53 config
+-rw-r--r-- 1 jsun 1049089  73 Jan  7 11:53 description
+-rw-r--r-- 1 jsun 1049089  23 Jan  7 11:53 HEAD
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 11:53 hooks/
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 11:53 info/
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 11:53 objects/
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 11:53 refs/
+
+./test1/.git/hooks:
+total 27
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:29 ../
+-rwxr-xr-x 1 jsun 1049089  478 Jan  7 11:53 applypatch-msg.sample*
+-rwxr-xr-x 1 jsun 1049089  896 Jan  7 11:53 commit-msg.sample*
+-rwxr-xr-x 1 jsun 1049089 3327 Jan  7 11:53 fsmonitor-watchman.sample*
+-rwxr-xr-x 1 jsun 1049089  189 Jan  7 11:53 post-update.sample*
+-rwxr-xr-x 1 jsun 1049089  424 Jan  7 11:53 pre-applypatch.sample*
+-rwxr-xr-x 1 jsun 1049089 1642 Jan  7 11:53 pre-commit.sample*
+-rwxr-xr-x 1 jsun 1049089 1492 Jan  7 11:53 prepare-commit-msg.sample*
+-rwxr-xr-x 1 jsun 1049089 1348 Jan  7 11:53 pre-push.sample*
+-rwxr-xr-x 1 jsun 1049089 4898 Jan  7 11:53 pre-rebase.sample*
+-rwxr-xr-x 1 jsun 1049089  544 Jan  7 11:53 pre-receive.sample*
+-rwxr-xr-x 1 jsun 1049089 3610 Jan  7 11:53 update.sample*
+
+./test1/.git/info:
+total 1
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:29 ../
+-rw-r--r-- 1 jsun 1049089 240 Jan  7 11:53 exclude
+
+./test1/.git/objects:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:29 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 info/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 pack/
+
+./test1/.git/objects/info:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ../
+
+./test1/.git/objects/pack:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ../
+
+./test1/.git/refs:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:29 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 heads/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 tags/
+
+./test1/.git/refs/heads:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ../
+
+./test1/.git/refs/tags:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 11:53 ../
+
+./test1/temp1:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:43 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:43 ../
+
+./test2:
+total 14
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:17 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:30 .git/
+-rw-r--r-- 1 jsun 1049089 1686 Jan  7 13:45 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Jan  7 13:45 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Jan  7 13:45 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Jan  7 13:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Jan  7 13:45 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Jan  7 13:45 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Jan  7 13:45 b_file_op7.py
+
+./test2/.git:
+total 3
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:30 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 13:46 ../
+-rw-r--r-- 1 jsun 1049089 130 Jan  7 13:46 config
+-rw-r--r-- 1 jsun 1049089  73 Jan  7 13:46 description
+-rw-r--r-- 1 jsun 1049089  23 Jan  7 13:46 HEAD
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 13:46 hooks/
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 13:46 info/
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 13:46 objects/
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 13:46 refs/
+
+./test2/.git/hooks:
+total 27
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:30 ../
+-rwxr-xr-x 1 jsun 1049089  478 Jan  7 13:46 applypatch-msg.sample*
+-rwxr-xr-x 1 jsun 1049089  896 Jan  7 13:46 commit-msg.sample*
+-rwxr-xr-x 1 jsun 1049089 3327 Jan  7 13:46 fsmonitor-watchman.sample*
+-rwxr-xr-x 1 jsun 1049089  189 Jan  7 13:46 post-update.sample*
+-rwxr-xr-x 1 jsun 1049089  424 Jan  7 13:46 pre-applypatch.sample*
+-rwxr-xr-x 1 jsun 1049089 1642 Jan  7 13:46 pre-commit.sample*
+-rwxr-xr-x 1 jsun 1049089 1492 Jan  7 13:46 prepare-commit-msg.sample*
+-rwxr-xr-x 1 jsun 1049089 1348 Jan  7 13:46 pre-push.sample*
+-rwxr-xr-x 1 jsun 1049089 4898 Jan  7 13:46 pre-rebase.sample*
+-rwxr-xr-x 1 jsun 1049089  544 Jan  7 13:46 pre-receive.sample*
+-rwxr-xr-x 1 jsun 1049089 3610 Jan  7 13:46 update.sample*
+
+./test2/.git/info:
+total 1
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:30 ../
+-rw-r--r-- 1 jsun 1049089 240 Jan  7 13:46 exclude
+
+./test2/.git/objects:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:30 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 info/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 pack/
+
+./test2/.git/objects/info:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ../
+
+./test2/.git/objects/pack:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ../
+
+./test2/.git/refs:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:30 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 heads/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 tags/
+
+./test2/.git/refs/heads:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ../
+
+./test2/.git/refs/tags:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 13:46 ../
+
+./test3:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:17 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 sampleproject/
+
+./test3/sampleproject:
+total 22
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:29 .git/
+-rw-r--r-- 1 jsun 1049089  145 Jan  7 14:09 .gitignore
+-rw-r--r-- 1 jsun 1049089  420 Jan  7 14:09 .travis.yml
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 data/
+-rw-r--r-- 1 jsun 1049089 1100 Jan  7 14:09 LICENSE.txt
+-rw-r--r-- 1 jsun 1049089  141 Jan  7 14:09 MANIFEST.in
+-rw-r--r-- 1 jsun 1049089 1742 Jan  7 14:09 README.md
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 sample/
+-rw-r--r-- 1 jsun 1049089  677 Jan  7 14:09 setup.cfg
+-rw-r--r-- 1 jsun 1049089 8501 Jan  7 14:09 setup.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 tests/
+-rw-r--r-- 1 jsun 1049089 1191 Jan  7 14:09 tox.ini
+
+./test3/sampleproject/.git:
+total 6
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:29 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089  301 Jan  7 14:09 config
+-rw-r--r-- 1 jsun 1049089   73 Jan  7 14:09 description
+-rw-r--r-- 1 jsun 1049089   23 Jan  7 14:09 HEAD
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 hooks/
+-rw-r--r-- 1 jsun 1049089 1188 Jan  7 14:29 index
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 info/
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 logs/
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 objects/
+-rw-r--r-- 1 jsun 1049089  114 Jan  7 14:09 packed-refs
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 refs/
+
+./test3/sampleproject/.git/hooks:
+total 27
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:29 ../
+-rwxr-xr-x 1 jsun 1049089  478 Jan  7 14:09 applypatch-msg.sample*
+-rwxr-xr-x 1 jsun 1049089  896 Jan  7 14:09 commit-msg.sample*
+-rwxr-xr-x 1 jsun 1049089 3327 Jan  7 14:09 fsmonitor-watchman.sample*
+-rwxr-xr-x 1 jsun 1049089  189 Jan  7 14:09 post-update.sample*
+-rwxr-xr-x 1 jsun 1049089  424 Jan  7 14:09 pre-applypatch.sample*
+-rwxr-xr-x 1 jsun 1049089 1642 Jan  7 14:09 pre-commit.sample*
+-rwxr-xr-x 1 jsun 1049089 1492 Jan  7 14:09 prepare-commit-msg.sample*
+-rwxr-xr-x 1 jsun 1049089 1348 Jan  7 14:09 pre-push.sample*
+-rwxr-xr-x 1 jsun 1049089 4898 Jan  7 14:09 pre-rebase.sample*
+-rwxr-xr-x 1 jsun 1049089  544 Jan  7 14:09 pre-receive.sample*
+-rwxr-xr-x 1 jsun 1049089 3610 Jan  7 14:09 update.sample*
+
+./test3/sampleproject/.git/info:
+total 1
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:29 ../
+-rw-r--r-- 1 jsun 1049089 240 Jan  7 14:09 exclude
+
+./test3/sampleproject/.git/logs:
+total 1
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:29 ../
+-rw-r--r-- 1 jsun 1049089 175 Jan  7 14:09 HEAD
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 refs/
+
+./test3/sampleproject/.git/logs/refs:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 heads/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 remotes/
+
+./test3/sampleproject/.git/logs/refs/heads:
+total 1
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089 175 Jan  7 14:09 master
+
+./test3/sampleproject/.git/logs/refs/remotes:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 origin/
+
+./test3/sampleproject/.git/logs/refs/remotes/origin:
+total 1
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089 175 Jan  7 14:09 HEAD
+
+./test3/sampleproject/.git/objects:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:29 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 info/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 pack/
+
+./test3/sampleproject/.git/objects/info:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ../
+
+./test3/sampleproject/.git/objects/pack:
+total 96
+drwxr-xr-x 1 jsun 1049089     0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089     0 Jan  7 14:09 ../
+-r--r--r-- 1 jsun 1049089 10816 Jan  7 14:09 pack-318c38e772cd69856978ab501ebc4aa569f125a3.idx
+-r--r--r-- 1 jsun 1049089 84432 Jan  7 14:09 pack-318c38e772cd69856978ab501ebc4aa569f125a3.pack
+
+./test3/sampleproject/.git/refs:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:29 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 heads/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 remotes/
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 tags/
+
+./test3/sampleproject/.git/refs/heads:
+total 1
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089 41 Jan  7 14:09 master
+
+./test3/sampleproject/.git/refs/remotes:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ../
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 origin/
+
+./test3/sampleproject/.git/refs/remotes/origin:
+total 1
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089 32 Jan  7 14:09 HEAD
+
+./test3/sampleproject/.git/refs/tags:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ../
+
+./test3/sampleproject/data:
+total 1
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089 9 Jan  7 14:09 data_file
+
+./test3/sampleproject/sample:
+total 2
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089 116 Jan  7 14:09 __init__.py
+-rw-r--r-- 1 jsun 1049089   9 Jan  7 14:09 package_data.dat
+
+./test3/sampleproject/tests:
+total 2
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ./
+drwxr-xr-x 1 jsun 1049089   0 Jan  7 14:09 ../
+-rw-r--r-- 1 jsun 1049089 211 Jan  7 14:09 __init__.py
+-rw-r--r-- 1 jsun 1049089 253 Jan  7 14:09 test_simple.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ ls -Rl
+.:
+total 1
+-rw-r--r-- 1 jsun 1049089 59 Jan  7 14:18 note.txt
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:43 test1/
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 13:46 test2/
+drwxr-xr-x 1 jsun 1049089  0 Jan  7 14:09 test3/
+
+./test1:
+total 14
+-rw-r--r-- 1 jsun 1049089 1686 Aug 29 18:25 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Aug 30 13:33 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Aug 29 13:15 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Aug 29 18:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Nov  7 22:09 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Aug 30 00:19 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Aug 30 17:01 b_file_op7.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 temp1/
+
+./test1/temp1:
+total 0
+
+./test2:
+total 14
+-rw-r--r-- 1 jsun 1049089 1686 Jan  7 13:45 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Jan  7 13:45 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Jan  7 13:45 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Jan  7 13:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Jan  7 13:45 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Jan  7 13:45 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Jan  7 13:45 b_file_op7.py
+
+./test3:
+total 0
+drwxr-xr-x 1 jsun 1049089 0 Jan  7 14:09 sampleproject/
+
+./test3/sampleproject:
+total 20
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 data/
+-rw-r--r-- 1 jsun 1049089 1100 Jan  7 14:09 LICENSE.txt
+-rw-r--r-- 1 jsun 1049089  141 Jan  7 14:09 MANIFEST.in
+-rw-r--r-- 1 jsun 1049089 1742 Jan  7 14:09 README.md
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 sample/
+-rw-r--r-- 1 jsun 1049089  677 Jan  7 14:09 setup.cfg
+-rw-r--r-- 1 jsun 1049089 8501 Jan  7 14:09 setup.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:09 tests/
+-rw-r--r-- 1 jsun 1049089 1191 Jan  7 14:09 tox.ini
+
+./test3/sampleproject/data:
+total 1
+-rw-r--r-- 1 jsun 1049089 9 Jan  7 14:09 data_file
+
+./test3/sampleproject/sample:
+total 2
+-rw-r--r-- 1 jsun 1049089 116 Jan  7 14:09 __init__.py
+-rw-r--r-- 1 jsun 1049089   9 Jan  7 14:09 package_data.dat
+
+./test3/sampleproject/tests:
+total 2
+-rw-r--r-- 1 jsun 1049089 211 Jan  7 14:09 __init__.py
+-rw-r--r-- 1 jsun 1049089 253 Jan  7 14:09 test_simple.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+#--------------------------------------#
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cd test1
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op1.py
+        b_file_op2.py
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git add b_file_op1.py b_file_op2.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   b_file_op1.py
+        new file:   b_file_op2.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git rm --cached b_file_op1.py
+rm 'b_file_op1.py'
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   b_file_op2.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op1.py
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ ls -al
+total 14
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:17 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 15:46 .git/
+-rw-r--r-- 1 jsun 1049089 1686 Aug 29 18:25 b_file_op1.py
+-rw-r--r-- 1 jsun 1049089 1772 Aug 30 13:33 b_file_op2.py
+-rw-r--r-- 1 jsun 1049089 1089 Aug 29 13:15 b_file_op3.py
+-rw-r--r-- 1 jsun 1049089  669 Aug 29 18:45 b_file_op4.py
+-rw-r--r-- 1 jsun 1049089 1673 Nov  7 22:09 b_file_op5.py
+-rw-r--r-- 1 jsun 1049089 1733 Aug 30 00:19 b_file_op6.py
+-rw-r--r-- 1 jsun 1049089 2704 Aug 30 17:01 b_file_op7.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 temp1/
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git rm --cached b_file_op2.py
+rm 'b_file_op2.py'
+#-------------------------------------------------------------------#
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op1.py
+        b_file_op2.py
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git add b_file_op1.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   b_file_op1.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op2.py
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git commit -m "b_file_1 draft1" b_file_op1.py
+[master (root-commit) 90b359b] b_file_1 draft1
+ 1 file changed, 43 insertions(+)
+ create mode 100644 b_file_op1.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op2.py
+        b_file_op3.py
+        b_file_op4.py
+        b_file_op5.py
+        b_file_op6.py
+        b_file_op7.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ ls -al
+total 2
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 15:56 ./
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 14:17 ../
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 15:54 .git/
+-rw-r--r-- 1 jsun 1049089 1686 Aug 29 18:25 b_file_op1.py
+drwxr-xr-x 1 jsun 1049089    0 Jan  7 13:43 temp1/
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git lpg
+git: 'lpg' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git log
+commit 90b359b3c5b1b455113624000e3485f1543c8d94 (HEAD -> master)
+Author: brb45 <sunusd@yahoo.com>
+Date:   Mon Jan 7 15:54:16 2019 -0800
+
+    b_file_1 draft1
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op6.py
+        b_file_op7.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+?? b_file_op6.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git add b_file_op
+b_file_op6.py  b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git add b_file_op6.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   b_file_op6.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op7.py
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ clear
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+A  b_file_op6.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git commit -m "b_file_op6, first draft" b_file_op6.py
+[master 214878c] b_file_op6, first draft
+ 1 file changed, 60 insertions(+)
+ create mode 100644 b_file_op6.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ vi b_file_op6.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ clear
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+ M b_file_op6.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   b_file_op6.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op7.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git commit b_file_op6.py
+[master 6cd9c40] Second Draft
+ 1 file changed, 1 insertion(+)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ clear
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b_file_op7.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git log
+commit 6cd9c40bdc5cbc5f2774df158a96fa9d065a28f9 (HEAD -> master)
+Author: brb45 <sunusd@yahoo.com>
+Date:   Mon Jan 7 16:40:56 2019 -0800
+
+    Second Draft
+
+commit 214878c64810e4d27a58ac5d31040f9113d20a37
+Author: brb45 <sunusd@yahoo.com>
+Date:   Mon Jan 7 16:39:12 2019 -0800
+
+    b_file_op6, first draft
+
+commit 90b359b3c5b1b455113624000e3485f1543c8d94
+Author: brb45 <sunusd@yahoo.com>
+Date:   Mon Jan 7 15:54:16 2019 -0800
+
+    b_file_1 draft1
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ vi b_file_op6.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ clear
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+ M b_file_op6.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git add b_file_op6.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+M  b_file_op6.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git commit -m "Third commit" b_file_op6.py
+[master 9c3a826] Third commit
+ 1 file changed, 1 insertion(+)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+?? b_file_op5.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git add b_file_op5.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+A  b_file_op5.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ vi b_file_op5.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+AM b_file_op5.py
+?? b_file_op7.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git add b_file_op5.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test1 (master)
+$ git status -s
+A  b_file_op5.py
+?? b_file_op7.py
+
+##
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo
+$ cd test4
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ ls
+1.txt  2.txt  3  4.txt  txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ clear
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ ls
+1.txt  2.txt  3  4.txt  txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git add 1.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+A  1.txt
+?? 2.txt
+?? 3
+?? 4.txt
+?? txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git rm 1.txt
+error: the following file has changes staged in the index:
+    1.txt
+(use --cached to keep the file, or -f to force removal)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git rm --cached 1.txt
+rm '1.txt'
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+?? 1.txt
+?? 2.txt
+?? 3
+?? 4.txt
+?? txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git add 1.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git commit -m "First Draft" 1.txt
+[master (root-commit) 815daf7] First Draft
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git rm 1.txt
+rm '1.txt'
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+D  1.txt
+?? 2.txt
+?? 3
+?? 4.txt
+?? txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git rm --cached 1
+fatal: pathspec '1' did not match any files
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git rm --cached 1.txt
+fatal: pathspec '1.txt' did not match any files
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git add 1.txt
+fatal: pathspec '1.txt' did not match any files
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ ls
+2.txt  3  4.txt  txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git add 2.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git commit -m "First"
+[master 5134d16] First
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename 1.txt => 2.txt (100%)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+?? 3
+?? 4.txt
+?? txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ vi 2.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+ M 2.txt
+?? 3
+?? 4.txt
+?? txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git commit -m "second"
+On branch master
+Changes not staged for commit:
+        modified:   2.txt
+
+Untracked files:
+        3
+        4.txt
+        txt
+
+no changes added to commit
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+ M 2.txt
+?? 3
+?? 4.txt
+?? txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git commit -am "Second"
+warning: LF will be replaced by CRLF in 2.txt.
+The file will have its original line endings in your working directory.
+[master 2115bad] Second
+ 1 file changed, 2 insertions(+)
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test4 (master)
+$ git status -s
+?? 3
+?? 4.txt
+?? txt
+
+##
+
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ git status -s
+?? 3
+?? 4.txt
+?? txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ git add .
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ git status -s
+A  3
+A  4.txt
+A  txt
+
+$ git commit -m "All files committed"
+[master e033c2e] All files committed
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3
+ create mode 100644 4.txt
+ create mode 100644 txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ rm 3
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ rm txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ ls
+2.txt  4.txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ git status -s
+ D 3
+ D txt
+
+$ git commit -am "Second Line" 3.txt
+warning: LF will be replaced by CRLF in 2.txt.
+The file will have its original line endings in your working directory.
+[master dc00991] Second Line
+ 3 files changed, 2 insertions(+)
+ delete mode 100644 3
+ delete mode 100644 txt
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/git_repo/test5 (master)
+$ git status -s
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ git add .
+warning: adding embedded git repository: practical-docker-with-python
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> practical-docker-with-python
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached practical-docker-with-python
+hint:
+hint: See "git help submodule" for more information.
+############################################################################################
+######@@8.
+#docker
+
+# /usr/bin  for python version
+#1.sudo apt-get update
+sudo apt-get dist-upgrade
+
+
+cd /usr/bin
+rm python3
+ln -s python3.5 python3
+
+
+sudo apt-get remove python3-apt
+sudo apt-get install python3-apt
+#2. install necessary packages required to use a repository over https
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+
+#3. install Docker's official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+#4. Add Docker’s stable repository:
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+#5. Update the apt packaage index
+
+#6.Install Docker:
+sudo apt-get install docker-ce
+
+We can avoid having to type sudo by following these steps:
+
+WARNINGThe Docker group rights are still equivalent to the root user.
+1.	
+Create the docker group:
+
+sudo groupadd docker
+ 
+2.	
+Add your user to the docker group:
+
+sudo usermod -aG docker $USER
+ 
+3.	
+Log out and log back in. Run the command shown in Listing 2-5 to confirm the Docker has been installed correctly.
+#logout
+gnome-session-quit
+
+docker run --rm hello-world
+
+##
+docker info
+docker help
+docker help pull
+Docker Root Dir: /var/lib/doc
+
+# Check available Docker images. To do this, type the following command:
+docker image ls
+#Let’s look at the hello-world image now
+docker image inspect hello-world
+
+#To pull down the nginx image, type the following:
+docker pull nginx
+
+Using default tag: latest
+latest: Pulling from library/nginx
+e7bb522d92ff: Pull complete
+6edc05228666: Pull complete
+cd866a17e81f: Pull complete
+Digest: sha256:285b49d42c703fdf257d1e2422765c4ba9d3e37768d6ea83d7fe2043dad6e63d
+Status: Downloaded newer image for nginx:latest
+
+#Let’s try to pull the 1.12-alpine-perl version of nginx
+docker pull nginx:1.12-alpine-perl
+
+1.12-alpine-perl: Pulling from library/nginx
+550fe1bea624: Pull complete
+20a55c7b3b0e: Pull complete
+552be5624b14: Pull complete
+40fc04944e91: Pull complete
+Digest: sha256:b7970b06de2b70acca1784ab92fb06d60f4f714e901a55b6b5211c22a446dbd2
+Status: Downloaded newer image for nginx:1.12-alpine-perl
+
+# docker pull from docker Hub by default, if pull from a different registry
+docker pull docker-private.registry:1337/nginx
+#docker log in for registrt needs authentication
+docker login docker-private.registry:1337
+
+#To start a container and run the associated image, you have to type docker run.
+
+docker run -p 80:80 nginx
+
+#Let’s try making a curl request to see if the nginx webserver is running:
+
+curl http://localhost:80
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and working. Further configuration is required.</p>
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+
+#
+#We can confirm that the image publishes the port using the docker inspect command:
+
+sudo apt-get install -y jq
+
+docker image inspect nginx | jq .[].Config.ExposedPorts
+{
+  "80/tcp": {}
+}
+
+#
+#To list all the running containers, you can type 
+docker ps:
+
+CONTAINER ID   IMAGE   COMMAND                    CREATED STATUS         PORTS                  NAMES
+fac5e92fdfac   nginx   "nginx -g 'daemon of..."   5 seconds ago Up 3 seconds   0.0.0.0:80->80/tcp     elastic_hugle
+3ed1222964de   nginx   "nginx -g 'daemon of..."   16 minutes agoUp 16 minutes  0.0.0.0:8080->80/tcp   clever_thompson
+The point to note is the NAMES column. Docker automatically assigns a random name when a container is started. 
+
+#We can change the port on which the service is published on the Docker host by changing the first parameter after the -p flag:
+
+docker run -p 8080:80 nginx
+#Now, try running a curl request to port 8080:
+
+curl http://localhost:8080
+
+#o stop the container, you have to type docker stop:
+
+docker stop <container-id>
+
+# To list all the containers, you have to type docker stop:
+
+docker stop <container-id>
+
+# Even though the containers have been stopped and/or killed, these containers continue to exist in the local filesystem. 
+# You can remove the containers by typing the following:
+
+docker rm <container-id>
+docker rm fac5e92fdfac
+fac5e92fdfac
+
+##
+Similarly, you can list all the images present in the system by typing the following:
+
+docker image ls
+
+##
+#Let’s try to remove the nginx image:, image can only be removed after all containers of the image are 
+# removed first
+
+docker rmi 3f8a4339aadd
+
+##
+Install Telegram via Snap
+The recommended approach to install Telegram on Ubuntu 18.04 is by using the snap command. 
+The following linux command will install Telegram on your Ubuntu 18.04 system:
+$ sudo snap install telegram-desktop
+Furthermore, you may also wish to install the command line tool telegram-cli to 
+access Telegram's API from your terminal:
+$ sudo snap install telegram-cli
+
+##
+Install Telegram via Official package
+Alternatively, you can install the latest version of Telegram from the official 
+Telegram source package. Open up terminal and enter:
+$ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
+$ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+
+##
+Launch Telegram
+You can start the Telegram application from your terminal by executing:
+$ telegram-desktop
+
+#https://api.telegram.org/bot<token>/METHOD_NAME
+curl https://api.telegram.org/bot/getMe
+#without token 
+{
+  "ok": false,
+  "error_code": 404,
+  "description": "Not Found"
+}
+#eith token
+curl https://api.telegram.org/bot824573243:AAGDAhzVBhVV9H36PhoBnFueIEu2IQQAq1Aq1Y/getMe
+{
+  "ok": true,
+  "result": {
+    "id": 824573243,
+    "is_bot": true,
+    "first_name": "SubRedditFetcherBot",
+    "username": "SSubRedditFetcher_Bot"
+  }
+}
+
+###
+pip3 --version
+pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6)
+
+## create requirements.txt
+sudo sh -c 'sudo pip freeze > requirements.txt'
+
+
+### Docker file
+FROM ubuntu:latest
+LABEL author="sathyabhat"
+LABEL description="An example Dockerfile"
+RUN apt-get install python
+COPY hello-world.py
+CMD python hello-world.py
+
+docker build https://github.com/sathyabhat/sample-repo.git#mybranch
+Similarly, to build images based on your Git tags, the build command would look like this:
+docker build https://github.com/sathyabhat/sample-repo.git#mytag
+
+Working on a feature via a pull request? 
+Want to try out that pull request? Not a problem; 
+you can even set the context to a pull request as follows:
+
+docker build https://github.com/sathyabhat/sample-repo.git#pull/1337/head
+
+##
+Dockerfile Listing
+
+FROM ubuntu:latestCMD echo Hello World!
+#Now build this image:
+
+docker build .
+#You should see a response like this:
+
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+latest: Pulling from library/ubuntu
+22dc81ace0ea: Pull complete
+1a8b3c87dba3: Pull complete
+91390a1c435a: Pull complete
+07844b14977e: Pull complete
+b78396653dae: Pull complete
+Digest: sha256:e348fbbea0e0a0e73ab0370de151e7800684445c509d46195aef73e090a49bd6
+Status: Downloaded newer image for ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> Running in 26723ca45a12
+Removing intermediate container 26723ca45a12
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+#
+docker build .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> Using cache
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+#
+To run this image, use the docker run command followed by the image ID 7ae54947f6a4:
+
+docker run 7ae54947f6a4
+Hello World!
+
+# Give image a name
+docker tag image_id tag_name
+docker tag 7ae54947f6a4 sathya:hello-world
+
+#
+You can also do this as part of the build process itself:
+
+docker build -t sathya:hello-world .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> Using cache
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+Successfully tagged sathya:hello-world
+The last line tells you that the image was tagged successfully. 
+You can verify this by searching for docker images as follows:
+
+docker images sathya:hello-world
+REPOSITORY          TAG                 IMAGE IDCREATED             SIZE
+sathya              hello-world         7ae54947f6a4        24 minutes ago      112MB
+
+#
+#DOCKERFILE INSTRUCTIONS
+When looking at a Dockerfile, you’re mostly likely to 
+run into the following instructions:
+FROM
+
+ADD
+
+COPY
+
+RUN
+
+CMD
+
+ENTRYPOINT
+
+ENV
+
+VOLUME
+
+LABEL
+
+EXPOSE
+
+##
+Dockerfile Listing
+
+FROM ubuntu
+CMD echo Hello World!
+#Build the image
+docker build .
+
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+Now modify the Dockerfile to include the latest tag, as shown.
+
+Dockerfile Listing
+
+FROM ubuntu:latest
+CMD echo Hello World!
+#Build the image:
+
+docker build .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+##
+WORKDIR /path/to/directory
+WORKDIR can be set multiple times in a Dockerfile and, if a relative directory succeeds a previous WORKDIR instruction, it will be relative to the previously set working directory. The following example demonstrates this.
+
+Dockerfile Listing
+
+FROM ubuntu:latest
+WORKDIR /usr
+CMD pwd
+
+#
+docker build -t sathyabhat:workdir .
+Sending build context to Docker daemon  2.048kB
+Step 1/3 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/3 : WORKDIR /usr
+ ---> Using cache
+ ---> 8b0b5742b476
+Step 3/3 : CMD pwd
+ ---> Using cache
+ ---> 4a827ca4a571
+Successfully built 4a827ca4a571
+Successfully tagged sathyabhat:workdir
+docker run sathyabhat:workdir
+/usr
+
+############
+For example, if you want to move the requirements.txt file from the current working 
+directory to the /usr/share/app directory, the instruction would be as follows:
+
+ADD requirements.txt /usr/share/app
+COPY  requirements.txt /usr/share/app
+
+##
+1.	
+#Start by creating an nginx container:
+# image name: nginx
+# container name: nginx-test
+
+docker run -d --name nginx-test  nginx
+
+2. open a terminal within the container nginx-test
+docker exec -it nginx-test bash
+
+^d to quit container bash
+
+3.	
+Create a copy of nginx’s default.conf to a new config:
+
+cd /etc/nginx/conf.d
+cp default.conf nginx-test.conf
+ 
+4.	
+We won’t be modifying the contents of nginx-test.conf since it’s immaterial. 
+Now we’ll stop the container. From the Docker host terminal, type:
+
+docker stop nginx-test
+ 
+5.	
+Start the container again:
+
+docker start nginx-test
+ 
+6.	
+Open a terminal within the container:
+
+docker exec -it nginx-test bash
+ 
+7.	
+Now, see if the changes are still around:
+
+cd /etc/nginx/conf.d
+ls
+default.conf  nginx-test.conf
+ 
+8.	
+Since the container was only stopped, the data persists. Let’s stop, 
+remove the container, and then bring up a new one and observe what happens.
+
+docker stop nginx-test
+docker rm nginx-test
+ 
+9.	
+Start a new container:
+
+docker run -d --name nginx-test  nginx
+ 
+10.	
+Now that a new container is up and running, let’s connect to the container’s terminal:
+
+docker exec -it nginx-test bash
+ 
+11.	
+Examine contents of the conf.d directory of nginx:
+
+cd /etc/nginx/conf.d
+ls
+default.conf
+
+##
+To create a tmpfs mount, you can use the --mount or --tmpfs flag when running a container, as shown here:
+
+docker run -it --name tmpfs-test --mount type=tmpfs, target=/tmpfs-mount ubuntu bash
+docker run -it --name tmpfs-test --tmpfs /tmpfs-mount ubuntu bash
+
+##
+We’ll try to mount our Docker host’s home directory to a directory called host-home within the container. To do this, type the following command:
+
+docker run -it --name mount-test --mount type=bind,source="$HOME",target=/host-home ubuntu bash
+docker run -it --name mount-test -v $HOME:/host-home ubuntu bash
+Inspecting the created container tells us the different characteristics about the mount.
+
+docker inspect mount-test | jq .[0].Mounts
+[
+  {
+    "Type": "bind",
+    "Source": "/Users/sathyabhat",
+    "Destination": "/host-home",
+    "Mode": "",
+    "RW": true,
+    "Propagation": "rprivate"
+  }
+]
+
+## Creat Volume
+docker volume create --name=nginx-volume
+This creates a named volume called nginx-volume.
+
+##inspect
+docker volume inspect nginx-volume
+This would bring up a result as shown here:
+
+docker volume inspect nginx-volume
+[
+    {
+        "CreatedAt": "2018-04-17T13:51:02Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/nginx-volume/_data",
+        "Name": "nginx-volume",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+
+##
+##Using Volumes When Starting a Container
+The syntax for using a volume when starting a container is nearly the same as using a bind host. 
+Let’s run the following command:
+
+docker run -it --name volume-test --mount target=/data-volume ubuntu bash
+docker run -it --name volume-test -v:/data-volume
+
+docker inspect volume-test | jq .[0].Mounts
+[
+  {
+    "Type": "volume",
+    "Name": "5fe950de3ac2b428873cb0af6281f3fb3817af933fbad32070b1a3101be4927f",
+    "Source": "/var/lib/docker/volumes/5fe950de3ac2b428873cb0af6281f3fb3817af933fbad32070b1a3101be4927f/_data",
+    "Destination": "/data-volume",
+    "Driver": "local",
+    "Mode": "z",
+    "RW": true,
+    "Propagation": ""
+  }
+]
+
+###Create a volume, and provide volume name to Docker when running a container
+docker volume create volume-test
+
+
+#
+docker volume inspect volume-test
+[
+    {
+        "CreatedAt": "2018-04-15T12:58:32Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/volume-test/_data",
+        "Name": "volume-test",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+#
+We can now refer to this volume when creating/running a container. 
+Note the extra source= flag with the --mount flag and the parameter after -v flag. 
+These indicate the volume name to which the container has to be attached.
+
+docker run -it --name volume-test --mount source=volume-test,target=/data-volume ubuntu bash
+docker run -it --name volume-test -v:volume-test:/data-volume ubuntu bash
+
+# Created volume exists in Docker file-system only, if a container is removed, the created volume is still there 
+and can be used by other containers.
+
+##
+version: '3'
+services:
+    database:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: dontusethisinprod
+    webserver:
+        image: nginx:alpine
+        ports:
+            - 8080:80
+        depends_on:
+            - cache
+            - database
+    cache:
+        image: redis
+
+##
+
+
+#####
+######9.
+#Shell Script
+
+######@@10. REST
+REST representations are how a resource’s data is displayed to whoever 
+makes a request at a specific endpoint.
+Generally, these features are displayed in JSON format (may have other formats). 
+Basically, all the data in your models, after serialized, is represented 
+as JSON objects on return of the request
+
+
+#list of json object,
+The two primary parts that make up JSON are keys and values. Together they make a key/value pair.
+
+Key: A key is always a string enclosed in quotation marks.
+Value: A value can be a string, number, boolean expression, array, or object.
+Key/Value Pair: A key value pair follows a specific syntax, with the key followed
+ by a colon followed by the value. Key/value pairs are comma separated.
+# json object, enclosed with {}
+# array of json 2 objects
+family = [{
+    "name" : "Jason",
+    "age" : "24",
+    "gender" : "male"
+},
+{
+    "name" : "Kyle",
+    "age" : "21",
+    "gender" : "male"
+}];
+
+#nest json objects
+testtest={
+    "jason" : {
+        "name" : "Jason Lengstorf",
+        "age" : "24",
+        "gender" : "male"
+    },
+    "kyle" : {
+        "name" : "Kyle Lengstorf",
+        "age" : "21",
+        "gender" : "male"
+    }
+}
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+####@@ Docker AWS
+@@Dokcer
+Docker Compose: This allows you to orchestrate and run multi-container environments both locally and on Docker Swarm clusters
+Git: This is required to fork and clone the sample application from GitHub and create your own Git repositories for the various applications and environments you will create in this book
+GNU Make 3.82 or higher: This provides task automation, allowing you run simple commands (for example, make test) to execute a given task
+jq: A command-line utility for parsing JSON
+curl: A command-line HTTP client
+tree: A command-line client for displaying folder structures in the shell
+Python interpreter: This is required for Docker Compose and the AWS Command-Line Interface (CLI) tool that we will install in a later chapter
+pip: A Python package manager for installing Python applications such as the AWS CLI
+
+## Remove old Docker
+
+## Application
+## Install Dependency
+pip3 install -r requirements.txt --user
+
+##
+# retrive souce code of a webpage
+src> curl localhost:8000
+{"todos":"http://localhost:8000/todos"}
+
+## -o
+# save output to a file
+curl -o vue-v2.5.16.js https://cdn.jsdelivr.net/npm/vue/dist/vue.js
+# Uppercase -O will save the file with its original filename:
+curl -O https://cdn.jsdelivr.net/npm/vue/dist/vue.js
+
+##
+The -I option allows you to fetch only the HTTP headers, no content 
+of the specified resource:
+curl -I https://www.ubuntu.com
+
+## include header: -i and content
+curl -i https://www.ubuntu.com
+
+## -L follow redirect
+ curl -L google.com
+
+## -X
+curl -X GET http://example.com -I
+
+## -X GET. The -X signifies the method used for the request. 
+Common options are GET, POST, DELETE, PUT.
+
+## -H : submit the request header
+## -d : data
+
+curl -X POST -H "Content-Type: application/json" localhost:8000/todos \
+       -d '{"title": "Wash the car", "order": 2}'
+#Linux version
+curl -X POST -H "Content-Type: application/json" localhost:8000/api/articles/ -d '{"title": "Run Post Test", "description": "First Trial", "body": "Running 2 tests", "author_id": 11}'
+#windows version
+curl -X POST -H "Content-Type: application/json" localhost:8000/api/subscriber -d "{\"name\": \"4378 Station\", \"age\": 2, \"email\": \"4378@litepoint.com\"}"      
+## 
+curl -s localhost:8000/todos | jq
+
+## curl -X PATCH -H "Content-Type: application/json" localhost:8000/todos/1 \
+    -d '{"completed": true}'
+
+## curl -X POST -H "Content-Type: application/json" localhost:8000/todos \
+    -d '{"title": "Walk the dog", "completed": false, "order": 1}'
+[
+  {
+    "url": "http://localhost:8000/todos/1",
+    "title": "Wash the car",
+    "completed": true,
+    "order": 2
+  },
+  {
+    "url": "http://localhost:8000/todos/2",
+    "title": "Walk the dog",
+    "completed": false,
+    "order": 1
+  }
+]
+
+##
+$ python3 manage.py test --settings todobackend.settings_test
+
+ssqa@ssqa:~/Documents/Docker_AWS/proj_1/todobackend/src$ python3 manage.py test --settings todobackend.settings_test
+
+@@ Build applications with Docker
+
+
+
+
+
+
+
+

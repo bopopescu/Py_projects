@@ -1,0 +1,126 @@
+GET
+
+curl  http://localhost:8000/drone-categories/  | jq
+curl -i http://localhost:8000/drone-categories/
+
+#@@
+test_master@jsun-mbpw10:~$ http ":8000/drone-categories/"
+HTTP/1.0 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 427
+Content-Type: application/json
+Date: Tue, 15 Oct 2019 18:23:28 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "drones": [
+                "http://localhost:8000/drones/5",
+                "http://localhost:8000/drones/4",
+                "http://localhost:8000/drones/1"
+            ],
+            "name": "Octocopter",
+            "pk": 1,
+            "url": "http://localhost:8000/drone-categories/1"
+        },
+        {
+            "drones": [
+                "http://localhost:8000/drones/6",
+                "http://localhost:8000/drones/2",
+                "http://localhost:8000/drones/3"
+            ],
+            "name": "Quadcopter",
+            "pk": 2,
+            "url": "http://localhost:8000/drone-categories/2"
+        }
+    ]
+}
+#//
+test_master@jsun-mbpw10:~$ http ":8000/drone-categories/1"
+HTTP/1.0 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 187
+Content-Type: application/json
+Date: Tue, 15 Oct 2019 18:24:20 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "drones": [
+        "http://localhost:8000/drones/5",
+        "http://localhost:8000/drones/4",
+        "http://localhost:8000/drones/1"
+    ],
+    "name": "Octocopter",
+    "pk": 1,
+    "url": "http://localhost:8000/drone-categories/1"
+
+#//
+test_master@jsun-mbpw10:~$ http POST ":8000/drone-categories/" name='Hexocopter'
+HTTP/1.0 201 Created
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 89
+Content-Type: application/json
+Date: Tue, 15 Oct 2019 18:30:34 GMT
+Location: http://localhost:8000/drone-categories/3
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "drones": [],
+    "name": "Hexocopter",
+    "pk": 3,
+    "url": "http://localhost:8000/drone-categories/3"
+} 
+#// using curl, always include -H "Content-Type: application/json"
+
+curl -iX POST -H "Content-Type: application/json" -d '{"name":"Fortnite", "release_date": "2017-05-18T03:02:00.776594Z"}' "localhost:8000/games/"
+test_master@jsun-mbpw10:~$ curl -iX POST localhost:8000/drone-categories/ -H "Content-Type: application/json" -d '{"name": "Geocopter"}'
+HTTP/1.0 201 Created
+Date: Tue, 15 Oct 2019 18:38:55 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+Location: http://localhost:8000/drone-categories/5
+Vary: Accept, Cookie
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 88
+
+#// PUT: updates the existing one with a new instance.
+test_master@jsun-mbpw10:~$ curl -iX PUT -H "Content-Type: application/json" -d '{"name": "Xyenocopter"}' localhost:8000/drone-categories/6
+HTTP/1.0 200 OK
+Date: Tue, 15 Oct 2019 18:58:33 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/json
+Vary: Accept, Cookie
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 90
+
+#//
+test_master@jsun-mbpw10:~$ http PUT ":8000/drone-categories/6" name="Zobieocopter"
+HTTP/1.0 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 91
+Content-Type: application/json
+Date: Tue, 15 Oct 2019 19:01:16 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "drones": [],
+    "name": "Zobieocopter",
+    "pk": 6,
+    "url": "http://localhost:8000/drone-categories/6"
+}
+
+#//

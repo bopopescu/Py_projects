@@ -1,3 +1,0 @@
-%%include root_header.txt%%
-%%iterate_tech %%
-%%include root_tail.txt%%
