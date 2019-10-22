@@ -1,0 +1,202 @@
+(env_01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\pip install -r requirements.txt
+
+(env_01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\Restful_Python\env_01\c05\games_service>python manage.py makemigrations games
+Migrations for 'games':
+  games\migrations\0001_initial.py
+    - Create model Game
+
+sqlite3 db.sqlite3 ".tables"
+
+(env_01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\Restful_Python\env_01\c05\games_service>
+sqlite3 db.sqlite3 ".schema games_game"
+CREATE TABLE IF NOT EXISTS "games_game" 
+("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+"created_timestamp" datetime NOT NULL, 
+"name" varchar(200) NOT NULL, 
+"release_date" datetime NOT NULL, 
+"esrb_rating" varchar(150) NOT NULL, 
+"played_once" bool NOT NULL, 
+"played_times" integer NOT NULL);
+
+#@@ 
+superuser: postgres
+#** 1. 
+test_master@jsun-mbpw10:~$ psql -h localhost -p 5433 -U postgres
+Password for user postgres: wdF99
+psql (10.10 (Ubuntu 10.10-0ubuntu0.18.04.1), server 12.0)
+WARNING: psql major version 10, server major version 12.
+         Some psql features might not work.
+Type "help" for help.
+
+postgres=#
+
+#** 2. 
+postgres=# CREATE DATABASE django_gametest;
+CREATE DATABASE
+#** 3.
+
+****create role template ****
+CREATE ROLE your_user_name WITH LOGIN PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE "flask_notifications" TO your_user_name;
+ALTER USER your_user_name CREATEDB;
+\q 
+**** end _create role template ****
+postgres=# CREATE ROLE u01 WITH LOGIN PASSWORD 'u01';
+
+CREATE ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE "django_gametest" TO u01;
+GRANT
+postgres=# ALTER USER u01 CREATEDB;
+ALTER ROLE
+postgres=# \q
+test_master@jsun-mbpw10:~$
+
+#@@
+#______________________________________________________________________________
+#*********************
+$ psql -h localhost -p 5433 -U u01 -d django_gametest  --command="\d games_esrbrating"
+Password for user u01:
+                                      Table "public.games_esrbrating"
+   Column    |          Type          | Collation | Nullable |                   Default
+-------------+------------------------+-----------+----------+----------------------------------------------
+ id          | integer                |           | not null | nextval('games_esrbrating_id_seq'::regclass)
+ description | character varying(200) |           | not null |
+Indexes:
+    "games_esrbrating_pkey" PRIMARY KEY, btree (id)
+Referenced by:
+    TABLE "games_game" CONSTRAINT "games_game_esrb_rating_id_59e5b261_fk_games_esrbrating_id" 
+FOREIGN KEY (esrb_rating_id) REFERENCES games_esrbrating(id) DEFERRABLE INITIALLY DEFERRED
+#*********************
+
+$ psql -h localhost -p 5433 -U user01 -d django_gametest --command="SELECT * FROM games_esrbrating;"
+Password for user user01:
+ id | description
+----+-------------
+(0 rows)
+
+#*********************
+test_master@jsun-mbpw10:~$ http POST :8000/esrb-ratings/ description='T (Teen)'
+HTTP/1.1 201 Created
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 90
+Content-Type: application/json
+Date: Mon, 21 Oct 2019 21:59:50 GMT
+Location: http://localhost:8000/esrb-ratings/1/
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "description": "T (Teen)",
+    "games": [],
+    "id": 1,
+    "url": "http://localhost:8000/esrb-ratings/1/"
+}
+#*********************
+test_master@jsun-mbpw10:~$ http POST :8000/games/ name='Battlefield V' esrb_rating='AO (Adults Only)' release_date='2017-05-01T01:02:00.776594
+Z'
+HTTP/1.1 201 Created
+Allow: GET, POST, HEAD, OPTIONS
+Content-Length: 178
+Content-Type: application/json
+Date: Mon, 21 Oct 2019 22:08:31 GMT
+Location: http://localhost:8000/games/1/
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "esrb_rating": "AO (Adults Only)",
+    "name": "Battlefield V",
+    "played_once": false,
+    "played_times": 0,
+    "release_date": "2017-05-01T01:02:00.776594Z",
+    "url": "http://localhost:8000/games/1/"
+
+#*********************
+http POST :8000/esrb-ratings/ description="T (Teen)"
+http POST :8000/esrb-ratings/ description="AO (Adults Only)"
+http POST :8000/esrb-ratings/ description="EC (Early Childhood)"
+
+#windows, needs to use double quotes ""
+http POST :8000/games/ name="Battlefield V" esrb_rating="AO (Adults Only)" release_date="2017-05-01T01:02:00.776594Z"
+#Linux
+http POST ":8000/games/" name='Mutant Football League: Dynasty Edition' esrb_rating='AO (Adults Only)' release_date='2018-10-20T03:02:00.776594Z'
+http POST ":8000/games/" name='LEGO DC Super-Villains' esrb_rating='EC (Early Childhood)' release_date='2018-01-10T03:02:00.776594Z' 
+
+http POST ":8000/players/" name='Gaston Hillar' gender='M'
+http POST ":8000/players/" name='Enzo Scocco' gender='M'
+
+    http POST ":8000/player-scores/" score=17500 score_date='2019-01-01T03:02:00.776594Z' player='Gaston Hillar' game='Battlefield V'
+    http POST ":8000/player-scores/" score=3225 score_date='2019-01-01T01:02:00.776594Z' player='Gaston Hillar' game='Mutant Football League: Dynasty Edition'
+    http POST ":8000/player-scores/" score=43200 score_date='2019-01-01T03:02:00.776594Z' player='Enzo Scocco' game='Battlefield V'
+    http POST ":8000/player-scores/" score=17420 score_date='2019-01-01T05:02:00.776594Z' player='Enzo Scocco' game='Mutant Football League: Dynasty Edition'
+
+http POST ":8000/games/" name='Heavy Fire: Red Shadow' esrb_rating='T (Teen)' release_date='2018-06-21T03:02:00.776594Z'
+http POST ":8000/games/" name='ARK: Survival Evolved' esrb_rating='T (Teen)' release_date='2018-06-21T03:02:00.776594Z'
+http POST ":8000/games/" name='The Escapists 2' esrb_rating='T (Teen)' release_date='2018-06-21T03:02:00.776594Z'
+http POST ":8000/games/" name='Honor and Duty: D-Day' esrb_rating='T (Teen)' release_date='2018-06-21T03:02:00.776594Z'
+http POST ":8000/games/" name='Speed Brawl' esrb_rating='T (Teen)' release_date='2018-06-21T03:02:00.776594Z'
+http POST ":8000/games/" name='Unearthing Mars 2' esrb_rating='T (Teen)' release_date='2018-06-21T03:02:00.776594Z'
+http POST ":8000/games/" name='Super Street: The Game' esrb_rating='T (Teen)' release_date='2019-01-21T03:02:00.776594Z'
+http POST ":8000/games/" name='Valkyria Chronicles 4' esrb_rating='T (Teen)' release_date='2019-01-21T03:02:00.776594Z'
+http POST ":8000/games/" name='Tales of Vesperia: Definitive Edition' esrb_rating='T (Teen)' release_date='2019-01-21T03:02:00.776594Z'
+http POST ":8000/games/" name='Moonfall Ultimate' esrb_rating='T (Teen)' release_date='2019-01-21T03:02:00.776594Z'
+
+
+
+
+http :8000/games/?offset=0
+
+#______________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#C:\PostgreSQL\pg96\bin>psql -U postgres -c "CREATE ROLE \"jsun\""
+#  createdb django_gametest   # NOT working
+ 
+##
+(env_01) C:\Users\jsun\Documents\Py_projects\HillarDjangoREST\Restful_Python\env_01\c06\games_service>python manage.py makemigrations games
+Migrations for 'games':
+  games\migrations\0001_initial.py
+    - Create model EsrbRating
+    - Create model Game
+    - Create model Player
+    - Create model PlayerScore
+
+##
+    psql --username=your_games_user_name --dbname=django_games --
+    command="\dt"
+
+psql -p 5433 --username=user01 --dbname=django_gametest --command="\dt"
+
+psql -h localhost -p 5433 --username=user01 --dbname=django_gametest
+
+#Linux
+psql -h localhost -p 5433 --username=user01 --dbname=django_gametest --command="\dt"
+# access database, there is no need to start runserver
+test_master@jsun-mbpw10:~$ psql -h localhost -p 5433 -U user01 -d django_gametest
+
+
+

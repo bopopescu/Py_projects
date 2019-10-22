@@ -41,7 +41,7 @@ X-Frame-Options: SAMEORIGIN
         }
     ]
 }
-#//
+#// GET
 test_master@jsun-mbpw10:~$ http ":8000/drone-categories/1"
 HTTP/1.0 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
@@ -123,4 +123,43 @@ X-Frame-Options: SAMEORIGIN
     "url": "http://localhost:8000/drone-categories/6"
 }
 
+#//PATCH
+test_master@jsun-mbpw10:~$ curl -iX PATCH -H "Content-Type: application/json" -d '{"name": "CurlPatchOcopter"}' localhost:8000/drone-categories/6
+test_master@jsun-mbpw10:~$ http PATCH ":8000/drone-categories/6" name="ZPATCHEDocopter"
+HTTP/1.0 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 94
+Content-Type: application/json
+Date: Tue, 15 Oct 2019 20:23:06 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "drones": [],
+    "name": "ZPATCHEDocopter",
+    "pk": 6,
+    "url": "http://localhost:8000/drone-categories/6"
+}
+#// DELETE
+test_master@jsun-mbpw10:~$ http DELETE :8000/drone-categories/7
+HTTP/1.0 204 No Content
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 0
+Date: Tue, 15 Oct 2019 20:28:33 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
 #//
+test_master@jsun-mbpw10:~$ curl -iX DELETE localhost:8000/drone-categories/8
+HTTP/1.0 204 No Content
+Date: Tue, 15 Oct 2019 20:30:06 GMT
+Server: WSGIServer/0.2 CPython/3.7.2
+Vary: Accept, Cookie
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+X-Frame-Options: SAMEORIGIN
+Content-Length: 0
+
+//
+
