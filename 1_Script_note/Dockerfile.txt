@@ -1,3 +1,23 @@
+#@@ 9/30/19
+# 
+1.  container start up an isolated and secure runtime environment for the application
+2. Docker package is complete runtime environments for the application 
+complete with operating system dependencies, and third party packages.
+All the dependencies and requirements are self-contained within Docker image.
+3. Linux container: run on a Linux-based kernel with the Docker Engine installed.
+4. install local environment to support Docker
+Docker Engine
+Python, pip, Git, GNU Make, jq, tree, build essentials, 
+4.1. Install application
+4.2 Build and test application
+4.3 Package and Publish the application as Docker image
+4.4 Deploy application using various AWS container management platforms.
+
+5. Dependency
+1) OS 
+2) application
+3) test-related
+
 # Test stage
 FROM alpine AS test
 LABEL application=todobackend
@@ -27,6 +47,12 @@ CMD ["python3", "manage.py", "test", "--noinput", "--settings=todobackend.settin
 #_______________________________________________________________
 docker build --target test -t todobackend-test .
 todobackend>  docker run -it --rm todobackend-test
+docker run -it --rm -p  8000:8000 todo-release uwsgi --http=localhost:8000 --module=todobackend.wsgi --master
+
+docker-compose build test
+> docker-compose run test
+
+
 
 #######################################################################################
 # @@ Release stage
@@ -947,3 +973,19 @@ curl -X POST localhost:8000/api/ -H "Content-Type: application/json" -d '{"title
 curl -X PUT localhost:8000/api/1/ -H "Content-Type: application/json" -d '{"title": 4389, "content": "Station Setup"}'
 
 curl -X PATCH localhost:8000/api/2/ -H "Content-Type: application/json" -d '{"title": 4378}'
+
+
+
+ssqa@ssqa:~/Documents/Docker_AWS/proj_2.2/todobackend$ docker-compose down -v
+Removing todobackend_test_1                ... done
+Removing todobackend_release_1             ... done
+Removing todobackend_test_run_f2d9f6dbb051 ... done
+Removing todobackend_acceptance_1          ... done
+Removing todobackend_app_1                 ... done
+Removing todobackend_app_run_5bd1aedaaed8  ... done
+Removing todobackend_app_run_2b441a3d4338  ... done
+Removing todobackend_app_run_2f75c394d6d7  ... done
+Removing todobackend_migrate_1             ... done
+Removing todobackend_db_1                  ... done
+Removing network todobackend_default
+Removing volume todobackend_public

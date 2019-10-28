@@ -301,3 +301,34 @@ print(data1.strip("pa"))  #ointment
 
     #  -- returns a string with whitespace at the start and end removed.
     #____________________________________________________________________
+
+
+ss = 'abc'
+rst = ss.split()
+
+print(f"split of '{ss}', type {type(rst)}, {len(rst)}, {rst}  ")
+# split of 'a', type <class 'list'>, 2, ['', '']
+# rst = ss.split('aa')
+# split of 'a', type <class 'list'>, 1, ['a']
+# ss = 'aaaa'
+# split of 'aaaa', type <class 'list'>, 5, ['', '', '', '', '']
+# ss = 'aaaa'
+# rst = ss.split('aa')
+# split of 'aaaa', type <class 'list'>, 3, ['', '', '']
+
+# ss = ''
+# # rst = ss.split()
+# # split of '', type <class 'list'>, 0, []
+
+# ss = ' '
+# rst = ss.split(' ')
+# split of ' ', type <class 'list'>, 2, ['', '']
+
+# ss = ' a   b   c \n '
+# rst = ss.split()
+# split of ' a   b   c
+#  ', type <class 'list'>, 3, ['a', 'b', 'c']
+
+# ss = ' '
+# rst = ss.split()
+# split of ' ', type <class 'list'>, 0, []

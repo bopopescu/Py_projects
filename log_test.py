@@ -57,76 +57,18 @@ print("start")
 #*****
 # 1170 , 8/29
 # 9/25
+# 10_23
 
-from statistics import mean
-a = [1,2]
-print(f"mean(a) is {mean(a)}")
-
-
-def countAndSay(n: int) -> str:
-    rst = "1"
-    if n == 1:
-        return '1'
-
-    while n > 1:
-
-        i = 0
-        rst_new = ""
-        while i < len(rst):
-            cnt = 1
-            tmp = rst[i]
-            if i + 1 == len(rst) or rst[i + 1] != rst[i]:
-                i += 1
-            else:
-                while i + 1 < len(rst) and rst[i + 1] == rst[i]:
-                    i += 1
-                    cnt += 1
-
-            rst_new += str(cnt) + tmp
-        rst = rst_new
-        n -= 1
-
-    return rst
-
-print(f"countAndSay is {countAndSay(3)}")
-
-
-def countAndSay(self, n: int) -> str:
-    rst = "1"
-    if n == 1:
-        return '1'
-
-    while n > 1:
-
-        i = 0
-        rst_new = ""
-
-        while i < len(rst):
-            cnt = 1
-            j = i
-            while j + 1 < len(rst) and rst[j + 1] == rst[i]:
-                cnt += 1
-                j += 1
-
-            rst_new += str(cnt) + rst[i]
-            if j == i:
-                i += 1
-            else:
-                i = j
-        rst = rst_new
-        n -= 1
-    return rst
-for i in range(10):
-    if i == 0:
-        i = 9
-    print(i, end=", ")
-#_
-1.     1
-2.     11
-3.     21
-4.     1211
-5.     111221__________________________________________
 #*****
+ss = ['b','B']
+
+# d = sorted(ss, key=str.lower)
+
+ss += ('e','f')
+print(ss)
+
+
+
 # run test flows
 #
 #
@@ -142,6 +84,7 @@ cc = os.path.dirname(bb)
 print(cc)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+sss = [""]
+print("".join(sss))
 
 

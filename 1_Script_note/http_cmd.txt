@@ -161,5 +161,61 @@ Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 X-Frame-Options: SAMEORIGIN
 Content-Length: 0
 
-//
+//Linux environment
+curl -X POST -H "Content-Type: application/json" localhost:8000/todos \
+       -d '{"title": "Wash the car", "order": 2}'
 
+curl -s localhost:8000/todos | jq
+
+> curl -X PATCH -H "Content-Type: application/json" localhost:8000/todos/2 \
+       -d '{"completed": true}'
+
+
+
+ docker run -it --rm -p  8001:8001 todo-release uwsgi --http=localhost:8001 --module=todobackend.wsgi --master
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Oct 25 00:30:35 2019] ***
+compiled with version: 8.3.0 on 30 September 2019 23:05:48
+os: Linux-5.0.0-27-generic #28~18.04.1-Ubuntu SMP Thu Aug 22 03:00:32 UTC 2019
+nodename: d32d2638dc67
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on localhost:8001 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:42623 (port auto-assigned) fd 3
+Python version: 3.7.3 (default, May  3 2019, 11:24:39)  [GCC 8.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x555fe9d31500
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x555fe9d31500 pid: 1 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 6, cores: 1)
+spawned uWSGI http 1 (pid: 7)
+
+
+ssqa@ssqa:~$ ps -aux |  grep docker
+ssqa      1573  0.0  0.0  21532  1036 pts/2    S+   11:10   0:00 grep --color=auto docker
+root     18336  0.6  0.0 108752  5776 ?        Sl   Oct02 210:44 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/d81d2dc91edc83d20f74c3e99352a37725f576a22821e69dcaec44f272c4ace3 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     19028  0.0  0.0 552968  4060 ?        Sl   Oct24   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8001 -container-ip 172.17.0.2 -container-port 8001
+root     19075  0.0  0.0 108752  5440 ?        Sl   Oct24   0:03 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/d69bf1e948d288062e05331deaa87e8473c9f096b3c17a3ad63f85f68a1dd801 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     24062  0.5  0.7 1501928 63756 ?       Ssl  Sep26 219:29 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root     31988  0.0  0.0 626700  2224 ?        Sl   Oct02   0:01 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8000 -container-ip 172.21.0.3 -container-port 8000
+root     31996  0.6  0.0 108752  5796 ?        Sl   Oct02 207:02 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/6b69bba9c74528f034ceb1d0f7e8837cbfe7203ac10cdd6a3bead1da3108570f -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime
+
+
+ssqa@ssqa:~$ ps -aux | grep docker
+root      1016  0.1  1.0 1642204 87112 ?       Ssl  11:19   0:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+ssqa      3373  0.1  0.7 1007012 62204 pts/0   Sl+  11:25   0:00 docker run -it --rm -p 8001:8001 todo-release uwsgi --http=localhost:8001 --module=todobackend.wsgi --master
+root      3411  0.0  0.0 552968  3820 ?        Sl   11:25   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8001 -container-ip 172.17.0.2 -container-port 8001
+root      3420  0.0  0.0 108816  5532 ?        Sl   11:25   0:00 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/435fb26bc5f80d95976c9e3c50e06b92845efbbc7a14b00dbedda7aabb6e2eb0 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+ssqa      3604  0.0  0.0  21532  1036 pts/1    S+   11:28   0:00 grep --color=auto docker

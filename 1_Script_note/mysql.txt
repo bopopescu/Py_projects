@@ -1,0 +1,183 @@
+
+sudo mysql --defaults-file=/etc/mysql/debian.cnf
+# 1. inSTALL wget
+ssqa@ssqa:~$ sudo apt install wget
+[sudo] password for ssqa:
+Sorry, try again.
+[sudo] password for ssqa:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+wget is already the newest version (1.19.4-1ubuntu2.2).
+wget set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.
+
+#2. Add mysql apt repository
+wget "https://repo.mysql.com//mysql-apt-config_0.8.9-1_all.deb"
+wget http://repo.mysql.com/mysql-apt-config_0.8.10-1_all.deb
+
+# 3. stall the downloaded release package
+sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+
+#4. 
+ssqa@ssqa:~$ sudo apt update
+# 5. Install mysql 
+sudo apt install mysql-server
+
+#Verify packages. ii indicates that the package is installed
+dpkg -l | grep -i mysql
+
+# 6. Start mySQL
+sudo service mysql start (NOT working)
+
+# Start mySQL
+shell> sudo /etc/init.d/mysql start #working
+# Restart mySQL
+sudo /etc/init.d/mysql restart # for restarting mysql
+# Stop mySQL
+sudo /etc/init.d/mysql stop
+
+
+
+# log in mysql without using passwd
+sudo mysql --defaults-file=/etc/mysql/debian.cnf
+
+ssqa@ssqa:/var/log/mysql$ sudo cat /etc/mysql/debian.cnf
+# Automatically generated for Debian scripts. DO NOT TOUCH!
+[client]
+host     = localhost
+user     = debian-sys-maint
+password = nzexqzPlAj2cY7GC
+socket   = /var/run/mysqld/mysqld.sock
+[mysql_upgrade]
+host     = localhost
+user     = debian-sys-maint
+password = nzexqzPlAj2cY7GC
+socket   = /var/run/mysqld/mysqld.sock
+
+## 
+mysql -u debian-sys-maint -p
+#
+mysql> USE mysql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT User, Host, plugin FROM mysql.user;
++------------------+-----------+-----------------------+
+| User             | Host      | plugin                |
++------------------+-----------+-----------------------+
+| root             | localhost | auth_socket           |
+| mysql.session    | localhost | mysql_native_password |
+| mysql.sys        | localhost | mysql_native_password |
+| debian-sys-maint | localhost | mysql_native_password |
++------------------+-----------+-----------------------+
+4 rows in set (0.00 sec)
+
+# mySQL status
+sudo /etc/init.d/mysql status
+
+# Install mysql utilities
+wget "https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-utilities_1.6.5-1ubuntu16.10_all.deb"
+sudo dpkg -i mysql-utilities_1.6.5-1ubuntu16.10_all.deb
+sudo apt-get install -f
+
+# Connect mysql server
+mysql -h localhost -P 3306 -u <username> -p<password> #no space between -p and passwd
+mysql -h localhost -P 3306 -u debian-sys-maint -pnzexqzPlAj2cY7GC
+
+# Create Database
+mysql> CREATE DATABASE company;
+mysql> CREATE DATABASE `my.contacts`;
+
+# Swictch Database
+mysql> USE company
+mysql> USE `my.contacts`
+
+#To find which database you are connected to
+mysql> SELECT DATABASE();
+
+#To find all the databases you have access to
+mysql> SHOW DATABASES;
+
+#mysql> SHOW VARIABLES LIKE 'datadir';
+
+# table datatypes
+
+Numeric: TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT, and BIT.
+Floating numbers: DECIMAL, FLOAT, and DOUBLE.
+Strings: CHAR, VARCHAR, BINARY, VARBINARY, BLOB, TEXT, ENUM, and SET.
+The JSON datatype 
+
+# Create a table
+mysql> CREATE TABLE IF NOT EXISTS `company`.`customers` (
+    -> `id` int unsigned AUTO_INCREMENT PRIMARY KEY,
+    -> `first_name` varchar(20),
+    -> `last_name` varchar(20),
+    -> `country` varchar(20)
+    -> ) ENGINE=InnoDB;
+Query OK, 0 rows affected (0.34 sec)
+
+##
+mysql> CREATE TABLE IF NOT EXISTS `company.payments`(
+    -> `customer_name` varchar(20) PRIMARY KEY,
+    -> payment float
+    -> );
+Query OK, 0 rows affected (0.50 sec)
+
+#
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_company |
++-------------------+
+| company.payments  |
+| customers         |
++-------------------+
+2 rows in set (0.00 sec)
+
+##
+mysql> DESC customers;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| first_name | varchar(20)      | YES  |     | NULL    |                |
+| last_name  | varchar(20)      | YES  |     | NULL    |                |
+| country    | varchar(20)      | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+
+#
+mysql> SHOW CREATE TABLE customers\G
+*************************** 1. row ***************************
+       Table: customers
+Create Table: CREATE TABLE `customers` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `country` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+1 row in set (0.00 sec)
+#
+# clone table
+mysql> CREATE TABLE `new_customers` LIKE customers;
+Query OK, 0 rows affected (0.35 sec)
+
+##  Data Manipulation Language (DML)
+# Insert
+# if the row exists and IGNORE is used, new data row is ignored; if IGNORE is not used, the
+INSERT statement -> an error
+Uniquesness of a row is determined by primary key.
+USE  company
+INSERT IGNORE INTO `customers` (first_name, last_name, country) VALUES
+( 'Mike', 'Christensen', 'USA'),
+('Andy', 'Hollands', 'Australia'),
+('Ravi', 'Vedantam', 'India'),
+('Rajiv', 'Perera', 'Sri Lanka');
+
+## SHOW WARINGS;
+
+## UPDATE
+#The WHERE clause is mandatory. Failing to give it will UPDATE the whole table.
+# It will update each row with the new row, if no WHERE is given.
+UPDATE customers SET first_name='Rajiv', country='UK' WHERE id=4;

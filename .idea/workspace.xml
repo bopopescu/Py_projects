@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Py_projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Py_projects.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Script_note/Dockerfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Script_note/Dockerfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1_Script_note/http_cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Script_note/http_cmd.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/HillarDjangoREST/01/restful05_pytest/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/intv_app_note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+            <state relative-caret-position="245">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -30,7 +28,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="333" column="42" selection-start-line="333" selection-start-column="42" selection-end-line="333" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Untitled-1.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -156,18 +163,18 @@
         <option value="$PROJECT_DIR$/Py_op/Class_1/cls/cls_method.py" />
         <option value="$PROJECT_DIR$/Py_op/Class_1/cls/cls6_log.py" />
         <option value="$PROJECT_DIR$/Py_op/Class_1/cls/cls10_log.py" />
-        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py" />
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful03/api/admin.py" />
         <option value="$PROJECT_DIR$/Py_op/File_op/file_rd_wr.py" />
+        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py" />
         <option value="$PROJECT_DIR$/log_test.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="766" />
-    <option name="y" value="498" />
-    <option name="width" value="2638" />
-    <option name="height" value="1830" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-3" />
+    <option name="y" value="1" />
+    <option name="width" value="970" />
+    <option name="height" value="564" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -176,7 +183,10 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -370,15 +380,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="271" y="123" width="1319" height="915" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1170" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17406625" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1743941" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1626344" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989429" visible="true" weight="0.35496184" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989429" visible="true" weight="0.25072324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31356785" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -426,40 +436,10 @@
           <line>1</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/log_test.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/log_test.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/log_test.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/log_test.py</url>
-          <line>86</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/log_test.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Py_op/Class_1/cls/cls7_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/Class_1/cls/cls8_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-198" />
@@ -573,13 +553,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/example_log/Run_QA.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/File_op/b_file_IO.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -712,21 +685,37 @@
     <entry file="file://$PROJECT_DIR$/HillarDjangoREST/Restful_Python/env_01/c07/2_07_01/games_service/games/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Docker_AWS/D_AWS/Chapter01/todobackend/src/todobackend/settings_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Untitled-1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/File_op/file_rd_wr1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="333" column="42" selection-start-line="333" selection-start-column="42" selection-end-line="333" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/log_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+        <state relative-caret-position="245">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/File_op/file_rd_wr1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Untitled-1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
