@@ -33,10 +33,30 @@ test = zip(list1, list2)
 testList = list(test)
 
 #
-a, b = zip( *testList )
-print('The first list was ', list(a))
-print('The second list was ', list(b))
+list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
+list2 = ['one', 'two', 'three', 'six']
 
+iter_zip = zip(list1, list2)
+print(f"type(iter_zip) is {type(iter_zip)}")  # type(iter_zip) is <class 'zip'>
+a, b = zip(*iter_zip)
+print(f"type(a) is {type(a)}, and a is {a}\ntype(b) is {type(b)}")
+# type(a) is <class 'tuple'>, and a is ('Alpha', 'Beta', 'Gamma', 'Sigma')
+print(list(a))
+# ['Alpha', 'Beta', 'Gamma', 'Sigma']
+
+list1 = ['Alpha', 'Beta', 'Gamma', 'Sigma']
+# list is iterable, but not iterator
+# iter(list) turn a list to an iterator
+# print(next(list1))
+list1 = iter(list1)
+try:
+    while True:
+        item_a = next(list1)
+        print(item_a, end=", ")
+except:
+    print("\ndone")
+# Alpha, Beta, Gamma, Sigma,
+# done
 ####
 x = lambda a : a + 10
 print(x(5))
@@ -49,6 +69,19 @@ def myfunc(n):
 
 mydoubler = myfunc(2)
 print(mydoubler(11))
+
+#@@
+Input: ["23:59", "00:00"]
+
+def findMinDifference(self, timePoints):
+        """
+        :type timePoints: List[str]
+        :rtype: int
+        """
+        tp = sorted(map(int, p.split(':')) for p in timePoints)
+        tp += [[tp[0][0] + 24, tp[0][1]]]
+        return min((tp[x+1][0] - tp[x][0]) * 60 + tp[x+1][1] - tp[x][1]
+                   for x in range(len(tp) - 1))
 
 #map returns an iterator
 def multiply2(x):

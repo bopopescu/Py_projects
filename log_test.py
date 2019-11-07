@@ -60,15 +60,28 @@ print("start")
 # 10_23
 
 #*****
-ss = ['b','B']
+# ltr_str = "abcd"
+# ltr_list = ltr_str.split("")
+# print(ltr_list)
 
-# d = sorted(ss, key=str.lower)
+def pair_team(teams):
+    if len(teams) == 1:
+        return teams[0]
 
-ss += ('e','f')
-print(ss)
+    new_team = []
+    i, j = 0, len(teams) - 1
 
+    while i < j:
+        new_team.append('(' + teams[i] + ',' + teams[j] + ')')
+        i += 1
+        j -= 1
 
+    return pair_team(new_team)
 
+n=8
+teams = [str(i) for i in range(1, n + 1)]
+print(teams)
+print(pair_team(teams))
 # run test flows
 #
 #

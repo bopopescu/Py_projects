@@ -1,13 +1,30 @@
 
 #nums is a list
+import copy
 reverse() vs reversed()
 sort() vs sorted()
 nums.reverse()
-nums[targetIndex + 1:] = reversed(nums[targetIndex +1:])
-max, min
-len(nums)
 
-##
+max, min
+
+#@@ 1.  list passed to a function
+s = [1,2,3]
+def no_change_to_list(s):
+    s[0] = 100
+    return s
+
+no_change = no_change_to_list(s[0:2])
+print(f"no change is {no_change}")
+print(f's is not changed {s}')
+# no change is [100, 2]
+# s is not changed [1, 2, 3]
+
+#@@ 2.
+str = "  this is  a good book  "
+str_list_1 = str.split(" ") #   ['', '', 'this', 'is', '', 'a', 'good', 'book', '', '']
+str_list_2 = str.split()     #  ['this', 'is', 'a', 'good', 'book']
+
+#@@ 3.
 p = [10,3,0,5,3]
 sp = [2,10,1,1,3]
 p_s = list(zip(p,sp))
@@ -32,8 +49,34 @@ pssss = sorted(p_s, key = lambda x: x[1])
 print(pssss)
 # [(0, 1), (5, 1), (10, 2), (3, 3), (3, 10)]
 
+# sorted() doesn't change current list, but return a new sorted list
+a = [5, 1, 4, 3]
+sort_t = sorted(a)  # [1, 3, 4, 5]
+print(a)  # [5, 1, 4, 3]#sorted
+strs = ['aa', 'BB', 'zz', 'CC']
+strs_sort = sorted(strs)  # ['BB', 'CC', 'aa', 'zz']
+strs_rev = sorted(strs, reverse=True)  # ['zz', 'aa', 'CC', 'BB']
 
-##
+strs1 = ['ccc', 'aaaa', 'd', 'bb', 'AAAA']
+# ['d', 'bb', 'ccc', 'aaaa', 'AAAA'], for same len, order is random
+strs1_st = sorted(strs1, key=len)
+sorted(strs, key=str.lower)  # ['aa', 'BB', 'CC', 'zz']
+(sorted(strs, key=str.upper))
+
+#@@ 4.
+ss = ['b','B']
+sss='bB'
+# d = sorted(ss, key=str.lower)
+
+print(f"ss[0:0] is !{ss[0:0]}!") # ss[0:0] is ![]!
+print(f"ss[5:] is !{ss[5:]}!") # ss[5:] is ![]!
+print(f"ss[-5:-3] is !{ss[-5:-3]}!") # ss[-5:-3] is ![]!
+print(f"sss[0:0] is !{sss[0:0]}!") # ss[0:0] is !!
+print(f"sss[3:] is !{sss[3:]}!") # sss[3:] is !!
+# print(f"sss[3] is !{sss[3]}!") # IndexError: string index out of range
+
+#@@ 5.
+
 for __ in range(4):
     print(1)
     print()
@@ -44,32 +87,35 @@ if nums[left] <= target <= nums[mid]:
 if nums[mid] == target and (mid == 0 or nums[mid - 1] != target):
 nums[current - 1], nums[i] = nums[i], nums[current - 1]
 
-# 1.
+#@@ 6.
 a = [1,2]
 v = 3
 print(a + [v])#[1, 2, 3]
 print(a) #[1, 2]
-# 2.
+
+#@@ 7. empty array
 rs = []
 a = list()
 a.append(100)
-#3
+
+#@@ 8.
 maxh = [0 for __ in range(5)]
 print(maxh) #[0, 0, 0, 0, 0]
 #4.
 arr = [0]*5
 print(arr) #[0, 0, 0, 0, 0]
 
-#5.
+#@@ 9.
 #range(start, stop, step), is iterable, but not iterator
 for i in range(4,1,-1):
     print(i," ", end="") #4  3  2  , exclude end = 1
 print()
+
 for i in range(5, -1, -1): #won't work range(5,-1)
     print(i," ", end="") #5 4  3  2  1  0 exclude end = -1
-
 print()
-#6
+
+#@@ 10.
 from pprint import pprint
 a = [ [0]*5 for __ in range(5)]
 a[0][0] = 99
@@ -82,7 +128,6 @@ pprint(a)
 #  [0, 0, 0, 0, 0],
 #  [0, 0, 0, 0, 88]]
 
-#7.
 from pprint import pprint
 row = 4
 col = 10
@@ -92,7 +137,8 @@ pprint(dp)
 #  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 #  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 #  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
-#8
+
+#@@ 11. generator
 numbers = range(1_0) #<class 'range'>
 squares = (n**2 for n in numbers) #<class 'generator'>, generator is an iterator
 try:
@@ -107,11 +153,7 @@ new_list = list(n*n for n in range(5))
 print(type(squares))
 print(type(numbers))
 
-#
-#for i in range(length - 2, -1, -1):
-    #maxh[i] = h
-    #h = max(h, height[i])
-
+#@@ 12.
 rs = []
 rs = [[8]+ [4] for r in range(5)]
 #[[8, 4], [8, 4], [8, 4], [8, 4], [8, 4]]
@@ -129,15 +171,14 @@ ss = sum(squares)
 print(ss)
 #######################
 
-# The sort() method changes the underlying list and returns None, so use it like this:
-a.sort()
-#
+#@@ 13.
 a = (n*n for n in range(5))
 print(type(a)) #<class 'generator'>
 b = []
 b.extend(a)
 print(b) #[0, 1, 4, 9, 16]
 
+#@@ 14.
 case = ["wifi"]
 case1 = ['wifi']
 print(case==case1) #True
@@ -158,6 +199,7 @@ spam = ('hello', 'goodbye')
 eggs = ('hello', 'goodbye')
 print(spam is eggs) #False
 
+#@@ 15.
 my_tuple = ("hello")
 print(type(my_tuple)) #str
 
@@ -168,7 +210,8 @@ len(tuple)  # 3
 tuple[2]  # hi
 # tuple[2] = 'bye'  # NO, tuples cannot be changed
 tuple = (1, 2, 'bye')  # this works (1, 2, 'bye')
-####
+
+#@@ 16
 def all_indices(value, qlist):
     indices = []
     idx = -1
@@ -183,7 +226,7 @@ def all_indices(value, qlist):
 all_indices("testID", ["testID","testr","station","testID"])
 
 
-
+#@@ 17
 #Shallow copy
 ls = [[1,2,3],"wifi","bt","tk"]
 cp = ls.copy()
@@ -214,14 +257,21 @@ cp is  [[1, 2, 3], 'wifi', 'bt', 'tk']
 ls is  [[1, 2, 3], 100, 'bt', 'tk']
 2216888944136 ,  2216887379720
 
-#
-def find_element_in_list(element, list_element):
-    try:
-        index_element = list_element.index(element)
-        return index_element
-    except ValueError:
-        return None
 ##
+
+nums = [[1, 2], 1, 100]
+new_nums = nums.copy()
+new_new = copy.deepcopy(nums)
+
+nums[0][0] = 1000
+print("nums is {}".format(nums))
+print("new_nums is {}".format(new_nums))
+print("new_new is {}".format(new_new))
+nums is [[1000, 2], 1, 100]
+new_nums is [[1000, 2], 1, 100]
+new_new is [[1, 2], 1, 100]
+
+#@@ 18
 a = ["foo","bar","baz",'bar','any','much']
 indexes = [index for index in range(len(a)) if a[index] == 'bar']
 
@@ -233,19 +283,24 @@ if "ac" in test:
     print("a")
 else:
     print( None)
-##
 
-##12
+#@@ 19
 tu = ("wifi", "agn", "ac", "ax", "bt")
 print('{0} {2} {1} {2} {3} {2} {4} {2}'.format(*tu))  # wifi ac agn ac ax ac bt ac
+
+
+#@@ 20
 # list.extend(1)  #TypeError: 'int' object is not iterable
 test = ["wifi", "bt",'ac',"11ax","ad"]
 test[1:-1]       #['bt', 'ac', '11ax'], skip the first one and the last one
 print(test[1:])      #['bt', 'ac', '11ax', 'ad'] skip the first one
+
 print(test[1:4:2])   #['bt', '11ax']
 test[1:3] = ["ac","BT"] # ['wifi', 'ac', 'BT', '11ax', 'ad']
+
 test[:]                 # ['wifi', 'ac', 'BT', '11ax', 'ad']
 test[::-1]              #reverse list, ['ad', '11ax', 'BT', 'ac', 'wifi']
+
 test[-1]                #last element "ad"
 
 # a[start:]    # items start through the rest of the array
@@ -264,34 +319,12 @@ print(a[:2:-1]) #[4,3]
 print(a[1:2:-1]) #[]
 print(a[:-3:-1]) #[4,3]
 print(a[1::-1]) #[1,0]
-#
-import copy
-nums = [[1,2],1, 100]
-new_nums = nums.copy()
-new_new = copy.deepcopy(nums)
 
-nums[0][0] =1000
-print("nums is {}".format(nums))
-print("new_nums is {}".format(new_nums))
-print("new_new is {}".format(new_new))
-nums is [[1000, 2], 1, 100]
-new_nums is [[1000, 2], 1, 100]
-new_new is [[1, 2], 1, 100]
-
-Strings are immutable
-m_str = """This is a MPS test
-     that needs to be done """
-print(m_str)
-
-This is a MPS test
-     that needs to be done
-#
-
+#@@ 21 
 print(range(10)) #range(0, 10)
 
-##13
 print(list(range(2, 20, 3))) # Output: [2, 5, 8, 11, 14, 17]
-##14
+
 t_str = "automation test"
 for i, v in enumerate(t_str):
     print(i, v, end=", ")
@@ -306,28 +339,9 @@ print(t_enum)
 print(ord('a')-ord('A')) # 32
 print(chr(32)) # 1
 
-# 9
+#@@ 22
 left = list(filter(lambda x: x.end < start, intervals))
 right = list(filter(lambda x: x.start > end, intervals))
-
-# 11. index(element)
-test_list = ['WIFI', 'abgn', 'Ax',"bt"]
-if 'bt' in test_list: # find first
-    index_find = test_list.index('bt') # then return index
-    print(index_find) #3
-#
-# sorted() doesn't change current list, but return a new sorted list
-a = [5, 1, 4, 3]
-sort_t = sorted(a)  # [1, 3, 4, 5]
-print(a)  # [5, 1, 4, 3]#sorted
-strs = ['aa', 'BB', 'zz', 'CC']
-strs_sort = sorted(strs)  # ['BB', 'CC', 'aa', 'zz']
-strs_rev = sorted(strs, reverse=True)  # ['zz', 'aa', 'CC', 'BB']
-
-strs1 = ['ccc', 'aaaa', 'd', 'bb', 'AAAA']
-strs1_st = sorted(strs1, key=len)  ##['d', 'bb', 'ccc', 'aaaa', 'AAAA'], for same len, order is random
-sorted(strs, key=str.lower)  ##['aa', 'BB', 'CC', 'zz']
-(sorted(strs, key=str.upper))
 
 #ADD
 #list.append(elem) -- adds a single element to the end of the list.does not return the new list, just modifies the original.
@@ -350,12 +364,6 @@ sorted(strs, key=str.lower)  ##['aa', 'BB', 'CC', 'zz']
 ##list.pop(index) -- removes and returns the element at the given index.
 #list.pop() -- remove the last element, and return the element being removed
 
-#
-ls = ["wifi","bt","tk"]
-print(ls[::-1])
-#['tk', 'bt', 'wifi']
-##
-
 a = list((1,))
 print(type(a), a) # [1]
 
@@ -363,7 +371,7 @@ b = ['wifi', 'bt']
 b = [1] + b + [2]
 print(b) #[1, 'wifi', 'bt', 2
 
-####
+#@@ 23
 arr = []
 if not arr:  # True
     print("arr is empty")
@@ -374,20 +382,23 @@ if len(arr) == 0: # True
 if arr == None: # False
     print("arr == None")
 
-matrix = [[]]
+#@@ 24
+matrix = [[]] # matrix is NOT empty
 if not matrix: # False
     print("empty row")
 else: # num of row in matrix len(matrix) is  1
     print("num of row in matrix len(matrix) is ", len(matrix))
+
 if not matrix[0]: # True
-    print("empty column") # len(matrix[0]) : num of columns
+    print("empty column")  # empty column
+    # len(matrix[0]) : num of columns
 
 arr2 = [[1]*3 for _ in range(5)]
 print(" num of row: {}\n num of column: {}".format(len(arr2), len(arr2[0])))
 # num of row    len(arr2:     5
 # num of column len(arr2[0]): 3
 
-##
+#@@ 25
 matrix = []
 print(len(matrix)) # 0
 matrix.append([])
@@ -410,6 +421,8 @@ print("len of matrix ", len(matrix))  # 3
 mm = [[] for _ in range(5)]
 
 print(len(mm), len(mm[0]))  # 5 0
+
+#@@ 26
 #
 arr = [(100,'wifi',5),(34,'opt',88), (34,'opt', 45),(99, 'ac', 'ka')]
 print(arr)
@@ -433,6 +446,11 @@ print("t ", t)
 arr = [1,2,3,4,5,6,7,8]
 print(arr[:-4]) #[1, 2, 3, 4]
 
+#@@ 27
+ltr_str = "abcd"
+ltr_list = ltr_str.split("") # ValueError: empty separator
+
+# convert string to a list or a tuple
 In[11]: tuple("Test")
 Out[11]: ('T', 'e', 's', 't')
 

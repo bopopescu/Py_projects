@@ -1,0 +1,2 @@
+# cnt lines
+find . -name \*.py | xargs wc -l

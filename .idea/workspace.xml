@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Script_note/Dockerfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Script_note/Dockerfile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Script_note/http_cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Script_note/http_cmd.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Script_note/mysql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Script_note/mysql.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,20 +19,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="261">
+              <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="333" column="42" selection-start-line="333" selection-start-column="42" selection-end-line="333" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -43,8 +34,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Py_op/File_op/file_rd_wr1.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -133,7 +130,6 @@
         <option value="$PROJECT_DIR$/proc_lt_std.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/func_log.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py" />
-        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" />
         <option value="$PROJECT_DIR$/HillarDjangoREST/01/restful01/manage.py" />
         <option value="$PROJECT_DIR$/Py_op/Class_1/animal.py" />
         <option value="$PROJECT_DIR$/Py_op/Class_1/class1.py" />
@@ -166,15 +162,16 @@
         <option value="$PROJECT_DIR$/django_test_proj/env_02/restful03/api/admin.py" />
         <option value="$PROJECT_DIR$/Py_op/File_op/file_rd_wr.py" />
         <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py" />
+        <option value="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" />
         <option value="$PROJECT_DIR$/log_test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-3" />
-    <option name="y" value="1" />
-    <option name="width" value="970" />
-    <option name="height" value="564" />
+    <option name="x" value="640" />
+    <option name="y" value="228" />
+    <option name="width" value="1944" />
+    <option name="height" value="1732" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -185,7 +182,28 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="Py_op" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Py_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="Py_op" type="462c0819:PsiDirectoryNode" />
+              <item name="py_dataStruc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,16 +398,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1170" extended-state="6" />
+    <frame x="-7" y="-7" width="1453" height="873" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1743941" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28265524" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1626344" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989429" visible="true" weight="0.25072324" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.31356785" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989429" visible="true" weight="0.3077957" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.312566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -440,12 +458,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Py_op/Class_1/cls/cls8_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/Class_1/cls/cls11_log.py" />
     <entry file="file://$PROJECT_DIR$/Py_op/Class_1/class_derived_6.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-726" />
@@ -694,12 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Untitled-1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/File_op/file_rd_wr1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_str_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -707,12 +713,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/File_op/file_rd_wr1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="60" column="48" lean-forward="true" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/log_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="261">
+          <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Untitled-1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/collection_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
