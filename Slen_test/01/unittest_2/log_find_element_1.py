@@ -55,9 +55,18 @@ class HomePageTest(unittest.TestCase):
 
     def test_vip_promo(self):
         # get vip promo image
+        # vip_promo = self.driver.\
+        #     find_element_by_xpath(
+        #         "//img[@alt='Shop Private Sales - Members Only']")
+
         vip_promo = self.driver.\
             find_element_by_xpath(
-                "//img[@alt='Shop Private Sales - Members Only']")
+                "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/ul[1]/li[2]/a[1]/img[1]")
+    
+    # //html[@id = 'top']/body/div[@class = 'wrapper']//ul[@class = 'promos']//a[@href = 'http://demo-store.seleniumacademy.com/vip.html']
+    # /img[@alt = 'Shop Private Sales - Members Only']?
+    # /html/body/div/div[2]/div[2]/div/div/div[2]/ul/li[2]/a/img
+    # //ul[@class = 'promos']//li[2]//a[1]//img[1]
 
         # check vip promo logo is displayed on home page
         self.assertTrue(vip_promo.is_displayed())
@@ -70,8 +79,12 @@ class HomePageTest(unittest.TestCase):
         # check content of My Shopping Cart block
 		# on Home page
         # get the Shopping cart icon and click to # open the Shopping Cart section
+        # shopping_cart_icon = self.driver.\
+        #     find_element_by_css_selector("div.header-minicart span.icon")
+
         shopping_cart_icon = self.driver.\
-            find_element_by_css_selector("div.header-minicart span.icon")
+             find_element_by_css_selector(".skip-cart > span:nth-child(2)")
+        # .skip-cart > span:nth-child(2)
          
         shopping_cart_icon.click()
 

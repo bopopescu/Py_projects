@@ -64,24 +64,11 @@ print("start")
 # ltr_list = ltr_str.split("")
 # print(ltr_list)
 
-def pair_team(teams):
-    if len(teams) == 1:
-        return teams[0]
+import pytest
+@pytest.mark.parametrize('in1,in2, expected', [(3,5,8), (4,8,12)])
+def test_sum(in1,in2,  expected):
+    
 
-    new_team = []
-    i, j = 0, len(teams) - 1
-
-    while i < j:
-        new_team.append('(' + teams[i] + ',' + teams[j] + ')')
-        i += 1
-        j -= 1
-
-    return pair_team(new_team)
-
-n=8
-teams = [str(i) for i in range(1, n + 1)]
-print(teams)
-print(pair_team(teams))
 # run test flows
 #
 #

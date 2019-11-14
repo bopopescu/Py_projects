@@ -26,8 +26,9 @@ class ShoppingCartTest(unittest.TestCase):
 
 # nosetests log_r_13_test.py --verbosity=2 --with-xunit
 
-# nosetests log_r_13_test.py - -verbosity = 2 - -with-coverage
+# nosetests log_r_13_test.py  -s --verbosity = 2 --with-coverage
 
+# -s for print statements
 # coverage test
 # pip install coverage
 # coverage run test.py arg1 arg2

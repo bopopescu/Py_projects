@@ -12,11 +12,11 @@ import unittest
 
 class RomanNumeralConverterTest(unittest.TestCase):
     def setUp(self):
-        print("Creating a new RomanNumeralConverter...")
+        print("\nCreating a new RomanNumeralConverter...")
         self.cvt = RomanNumeralConverter()
 
     def tearDown(self):
-        print("Destroying the RomanNumeralConverter...")
+        print("\nDestroying the RomanNumeralConverter...")
         self.cvt = None
 
     def test_parsing_millenia(self):

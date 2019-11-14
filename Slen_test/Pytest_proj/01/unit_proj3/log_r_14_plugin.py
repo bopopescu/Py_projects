@@ -44,6 +44,6 @@ class CsvReport(Plugin):
         report.close()
 
 if __name__ == "__main__":
-    args = ["", "recipe14", "--with-csv-report", \
-                         "--csv-file=recipe14.csv"]
+    args = ["", "log_r_14", "--with-csv-report", \
+                         "--csv-file=log_r_14.csv"]
     nose.run(argv=args, plugins=[CsvReport()])

@@ -44,10 +44,10 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(1, len(products))
 
         def cat(self):
-            self.assertEqual(a, b, [,msg]) # a==b
-            self.assertNotEqual(a, b,  [, msg])
-            self.assertTrue(x, [,  msg]) # x == True
-            self.assertFalse(x, [, msg]) # x == False
+            self.assertEqual(a, b, [msg]) # a==b
+            self.assertNotEqual(a, b,  [ msg])
+            self.assertTrue(x, [msg]) # x == True
+            self.assertFalse(x, [ msg]) # x == False
             self.assertIsNot(a, b, [msg]) #  a is not b
             self.assertRaises(exc, fun, *args, **kwds) # 
             self.assertGreater(a, b) # a > b

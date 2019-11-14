@@ -4,6 +4,7 @@ class ShoppingCart(object):
 
     def add(self, item, price):
         self.items.append(Item(item, price))
+        
         return self
 
     def item(self, index):
@@ -13,6 +14,7 @@ class ShoppingCart(object):
         return self.items[index-1].price
 
     def total(self, sales_tax):
+        print(f"type(self) is {type(self)}")
         sum_price = sum([item.price for item in self.items])
         return sum_price*(1.0 + sales_tax/100.0)
 
@@ -23,6 +25,7 @@ class Item(object):
     def __init__(self, item, price):
         self.item = item
         self.price = price
+        # print("u an ass")
 
  
 

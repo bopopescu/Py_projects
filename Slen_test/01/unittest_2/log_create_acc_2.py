@@ -42,7 +42,7 @@ class RegisterNewUser(unittest.TestCase):
         news_letter_subscription = driver.find_element_by_id("is_subscribed")
         submit_button = driver.\
             find_element_by_xpath("//button[@title='Register']")
-
+#  
         # check maxlength of first name and # last name textbox
         self.assertEqual("255", first_name.get_attribute("maxlength"))
         self.assertEqual("255", last_name.get_attribute("maxlength"))

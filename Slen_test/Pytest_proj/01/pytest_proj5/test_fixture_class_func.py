@@ -2,30 +2,32 @@ import pytest
 from unnecessary_math import multiply
 
 
-def setup_module(module):
-    print("\nsetup_module      module: {}".format(module.__name__))
+# def setup_module(module):
+#     print("\nsetup_module      module: {}\n".format(module.__name__))
+
+# # def setup_module():
+# #     print("\nI am just a dummy setup\n")
+
+# def teardown_module(module):
+#     print("\nteardown_module   module: {}\n".format(module.__name__))
 
 
-def teardown_module(module):
-    print("\nteardown_module   module: {}".format(module.__name__))
+# def setup_function(function):
+#     print("\nsetup_function    function: {}\n".format(function.__name__))
 
 
-def setup_function(function):
-    print("setup_function    function: {}".format(function.__name__))
+# def teardown_function(function):
+#     print("\nteardown_function function: {}\n".format(function.__name__))
 
 
-def teardown_function(function):
-    print("\nteardown_function function: {}\n".format(function.__name__))
+# def test_numbers_3_4():
+#     print("test_numbers_3_4  <============================ actual test code\n")
+#     assert multiply(3, 4) == 12
 
 
-def test_numbers_3_4():
-    print("\ntest_numbers_3_4  <============================ actual test code")
-    assert multiply(3, 4) == 12
-
-
-def test_strings_a_3():
-    print("\ntest_strings_a_3  <============================ actual test code")
-    assert multiply('a', 3) == 'aaa'
+# def test_strings_a_3():
+#     print("test_strings_a_3  <============================ actual test code\n")
+#     assert multiply('a', 3) == 'aaa'
 
 
 class TestUM:

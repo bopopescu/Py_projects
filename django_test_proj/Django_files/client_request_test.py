@@ -67,6 +67,12 @@ def test_good_vote(self):
 'status_code'
 'headers'
 
+print(response.content)           # To print response bytes
+print(response.text)              # To print unicode response string
+jsonRes = response.json()         # To get response dictionary as JSON
+# output: Python Requests : Requests are awesome
+print(jsonRes['title'], jsonRes['body'], sep=' : ')
+
 import requests
 response = requests.get('https://api.github.com')s
 Out[2]: < Response[200] >
@@ -246,8 +252,15 @@ Out[2]: 200
 In[3]: r.history
 Out[3]: [ < Response [301] > , < Response [301] > ]
 
+# As you can see the redirection process is automatically handled by requests, 
+# so you don't need to deal with it yourself. The history property contains the 
+# list of all response objects created to complete the redirection. In our example, 
+# two Response objects were created with the 301 response code. HTTP 301 and 302 responses 
+# are used for permanent and temporary redirection, respectively.
 
-#@@  Authentication
+# If you don't want the Requests library to automatically follow redirects, then you can 
+# disable it by passing the allow_redirects = False parameter along with the request.
+#@@ 6.  Authentication
 In[1]: from getpass import getpass
 In[5]: import requests
 In[6]: requests.get('https://api.github.com/user')
@@ -267,7 +280,7 @@ Password:
 Out[13]: < Response[200] >
 
 
-#@@  Security: SSL Certificate Verification
+#@@  7.  Security: SSL Certificate Verification
 requests verify SSL certificate by default with  verify=True
 requests.get('https://api.github.com', verify=False)
 c: \users\jsun\appdata\local\programs\python\python37-32\lib\site-packages\urllib3\connectionpool.py: 847:
@@ -276,9 +289,17 @@ InsecureRequestWarning: Unverified HTTPS request is being made.
 InsecureRequestWarning)
     Out[14]: < Response[200] >
 
-#@@ Performance
+#@@  8.Performance
 # Timeout
     # By default, requests will wait indefinitely on the response
+
+
+    # The timeout can be configured for both the "connect" and "read" 
+    # operations of the request using a tuple, which allows you to specify both values separately:
+
+    import requests
+    requests.get('http://www.google.com', timeout = 1)
+    requests.get('http://www.google.com', timeout = (5, 14))
 
 # The Session Object
     # high level requests APIs such as get() and post().
@@ -302,6 +323,25 @@ InsecureRequestWarning)
     # You can inspect the response just like you did before
         print(response.headers)
         print(response.json())
+
+##
+    import requests
+
+    first_session=requests.Session()
+    second_session=requests.Session()
+
+    first_session.get('http://httpbin.org/cookies/set/cookieone/111')
+    r=first_session.get('http://httpbin.org/cookies')
+    print(r.text)
+
+    second_session.get('http://httpbin.org/cookies/set/cookietwo/222')
+    r=second_session.get('http://httpbin.org/cookies')
+    print(r.text)
+
+    r=first_session.get('http://httpbin.org/anything')
+    print(r.text)
+
+    ##
         
 
 
@@ -325,6 +365,91 @@ InsecureRequestWarning)
     session.get('https://api.github.com')
     except ConnectionError as ce:
     print(ce)
+
+
+#@@ 9. Cookies
+    # Common uses include session tracking, maintaining data across multiple visits, 
+    # holding shopping cart contents, storing login details, and more.
+    # Because of their privacy implications, cookies can be read only from the issuing domain.
+
+custom_cookie = {'cookie_name': 'cookie_value'}
+r = requests.get('http://www.examplesite.com/cookies', cookies=custom_cookie)
+r.cookies['cookie_name']
+
+    jar=requests.cookies.RequestsCookieJar()
+    jar.set('cookie_one', 'one', domain = 'httpbin.org', path = '/cookies')
+    jar.set('cookie_two', 'two', domain = 'httpbin.org', path = '/other')
+
+    r=requests.get('https://httpbin.org/cookies', cookies = jar)
+    print(r.text)
+
+    #@@ 10. Proxies
+    http="http://10.10.1.10:1080"
+    https="https://10.10.1.11:3128"
+    ftp="ftp://10.10.1.10:8080"
+
+    proxy_dict={
+"http": http,
+"https": https,
+"ftp": ftp
+}
+
+    r = requests.get('http://sampleurl.com', proxies=proxy_dict)
+
+    #@@ 11. Downloading a file
+
+    r = requests.get(
+'https://cdn.pixabay.com/photo/2018/07/05/02/50/sun-hat-3517443_1280.jpg', stream = True)
+    downloaded_file=open("sun-hat.jpg", "wb")
+    for chunk in r.iter_content(chunk_size = 256):
+        if chunk:
+            downloaded_file.write(chunk)
+    
+    #@@ 12. Errors and Exceptions
+    # 
+    # requests throws different types of exception and errors if there is ever a network problem. 
+    # All exceptions are inherited from requests.exceptions.RequestException class.
+
+    # Here is a short description of the common erros you may run in to:
+
+    # ConnectionError exception is thrown in case of DNS failure, refused connection or any other connection related issues.
+    # Timeout is raised if a request times out.
+    # TooManyRedirects is raised if a request exceeds the maximum number of predefined redirections.
+    # HTTPError exception is raised for invalid HTTP responses.
+    
+
+#@@ 12 Get again
+# importing the requests library 
+import requests 
+  
+# api-endpoint 
+URL = "http://maps.googleapis.com/maps/api/geocode/json"
+    In[9]: r.url
+    Out[9]: 'http://maps.googleapis.com/maps/api/geocode/json?address=delhi+technological+university'
+  
+# location given here 
+location = "delhi technological university"
+  
+# defining a params dict for the parameters to be sent to the API 
+PARAMS = {'address':location} 
+  
+# sending get request and saving the response as response object 
+r = requests.get(url = URL, params = PARAMS) 
+  
+# extracting data in json format 
+data = r.json() 
+  
+  
+# extracting latitude, longitude and formatted address  
+# of the first matching location 
+latitude = data['results'][0]['geometry']['location']['lat'] 
+longitude = data['results'][0]['geometry']['location']['lng'] 
+formatted_address = data['results'][0]['formatted_address'] 
+  
+# printing the output 
+print("Latitude:%s\nLongitude:%s\nFormatted Address:%s"
+      %(latitude, longitude,formatted_address)) 
+
 
 
 

@@ -28,7 +28,7 @@ class SearchTest(unittest.TestCase):
         # currently on result page using find_element_by_xpath method
         products = self.driver.find_elements_by_xpath(
             "//h2[@class='product-name']/a")
-        self.assertEqual(3, len(products))
+        self.assertEqual(1, len(products))
 
     def test_search_by_name(self):
         # get the search textbox
