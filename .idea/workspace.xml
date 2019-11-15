@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03748fe-b02e-4e20-a2b6-63e4ee1c1a92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Slen_test/Pytest_proj/cmd_note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slen_test/Pytest_proj/cmd_note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_test_proj/Django_files/client_request_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_test_proj/Django_files/client_request_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slen_test/html_css_js/log1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Slen_test/html_css_js/log1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slen_test/html_css_js/log2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Slen_test/html_css_js/log2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slen_test/html_css_js/log3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Slen_test/html_css_js/log3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slen_test/html_css_js/log3_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Slen_test/html_css_js/log3_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slen_test/html_css_js/log_form_9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Slen_test/html_css_js/log_form_9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/log_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +21,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/log_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+            <state relative-caret-position="462">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -165,11 +178,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-12" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-3" />
     <option name="y" value="2" />
-    <option name="width" value="1940" />
-    <option name="height" value="1128" />
+    <option name="width" value="970" />
+    <option name="height" value="564" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -179,7 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,6 +214,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,15 +409,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="1" width="970" height="564" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1170" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28265524" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28259337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1626344" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989429" visible="true" weight="0.5264368" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989429" weight="0.40053764" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.312566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -714,23 +727,6 @@
     <entry file="file://$PROJECT_DIR$/Py_op/File_op/file_rd_wr1.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="60" column="48" lean-forward="true" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Untitled-1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -739,6 +735,23 @@
         <state>
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_op/py_dataStruc/b_list_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

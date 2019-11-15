@@ -7,7 +7,27 @@ nums.reverse()
 
 max, min
 
-#@@ 1.  list passed to a function
+#@@ 1. list passed as an argument
+arr = [[100,200],2,3,4,5]
+
+def change_list(arr):
+    arr[0][0]= 20000
+    arr[1] = 999
+    # arr[4]  = 99 IndexError: list assignment index out of range
+
+change_list(arr[0:2]) # arr[0:2] is shallow copy of arr[0:2]; it is a new list of size 2.
+print(f"arr is {arr}") # arr is [[20000, 200], 2, 3, 4, 5]
+
+change_list(arr)  #  arr is  arr, not  a shallow copy of arr
+print(f"arr is {arr}") # arr is [[20000, 200], 999, 3, 4, 5]
+
+a_tuple = ([1,2],3)
+print(type(a_tuple), a_tuple)
+
+# a_set = {[1,2],3}  TypeError: unhashable type: 'list'
+# print(type(a_set), a_set)
+
+#@@ 1.1  list passed to a function
 s = [1,2,3]
 def no_change_to_list(s):
     s[0] = 100

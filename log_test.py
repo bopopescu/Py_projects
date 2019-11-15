@@ -6,6 +6,21 @@ import datetime
 import zipfile
 
 
+def countSubstrings(self, s: str) -> int:
+    size = len(s)
+
+    queue = collections.deque((x, x) for x in range(size))
+
+    for x in range(size - 1):
+        if s[x] == s[x + 1]:
+            queue.append((x, x + 1))
+    ans = 0
+    while queue:
+        x, y = queue.popleft()
+        ans += 1
+        if x - 1 >= 0 and y + 1 < size and s[x - 1] == s[y + 1]:
+            queue.append((x - 1, y + 1))
+    return ans
 # install package
 def install_pkg(package_loc, package_p_drive, package_name):
     # copy package first
@@ -64,12 +79,6 @@ print("start")
 # ltr_list = ltr_str.split("")
 # print(ltr_list)
 
-import pytest
-@pytest.mark.parametrize('in1,in2, expected', [(3,5,8), (4,8,12)])
-def test_sum(in1,in2,  expected):
-    
-
-# run test flows
 #
 #
 # use args, and kwargs
