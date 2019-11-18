@@ -97,3 +97,44 @@ sss = [""]
 print("".join(sss))
 
 
+###
+def checkValidString(s: str) -> bool:
+    def helper(start, size, q, s):
+        if size == 0:
+            if not q:
+                return True
+            else:
+                return False
+
+        else:
+            if s[start] == '(':
+                q.append('(')
+                return helper(start + 1, size - 1, q, s)
+            elif s[start] == ')':
+                if not q:
+                    return False
+                else:
+                    q.pop()
+                    return helper(start + 1, size - 1, q, s)
+            elif s[start] == '*':
+                rst = helper(start + 1, size - 1, q[:], s)
+                q.append('(')
+                rst_left = helper(start + 1, size - 1, q[:], s)
+                q.pop()
+                rst_right = False
+                if q:
+                    q.pop()
+                    rst_right = helper(start + 1, size - 1, q[:], s)
+                return rst or rst_left or rst_right
+
+    q = []
+    start = 0
+    size = len(s)
+    return helper(start, size, q, s)
+
+s = "(*))"
+print(s)
+print(checkValidString(s))
+
+
+
