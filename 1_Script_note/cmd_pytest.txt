@@ -1,23 +1,30 @@
+#@@ 10/4/19
+#@@ 11/22/19
+
+
 
 Pytest syntax for writing tests-
 1. File names should start with “test_”, or end with "_test".
 2. If tests are defined as methods on a class, the class name should start with “Test".
     The class should not have an __init__ method.
 3. Test method names or function names should start with “test_”.
+
 Methods with names that don’t match this pattern won’t be executed as tests.
 
+#@@ 1.
+1)
 python -m pytest -v
 
-2) Run tests by substring matching
+2) Run tests by substring matching of test method
 pytest -k method2 -v
 
-2) Run tests by markers @pytest.mark
+3) Run tests by markers @pytest.mark
 pytest -m set1
 
-3) parallel test
+4) parallel test
 pytest -n 4 -v
 
-4) @pytest.fixture
+5) @pytest.fixture
 Fixtures can be used to share test data between tests, execute setup and teardown methods before
 and after test executions respectively.
 
@@ -34,14 +41,20 @@ def test_sum(get_sum_test_data):
                 expected = data[2]
                 assert sum(num1, num2) == expected
 
-** Scope of fixture- Scope controls how often a fixture gets called. The default is function.
+** Scope of fixture- Scope controls how often a fixture gets called. 
+The default is function.
 Here are the options for scope:
 function: Run once per test
 class: Run once per class of tests
 module: Run once per module
 session: Run once per session
+autouse: default is False, if True, all the tests will run the fixture.
 
-5) define @pytest.fixture in  conftest.py so multiple test_.py
+scope="session"If we need to perform an action before and after for a set of methods
+in a folder or project we session scope (scope=“session”). 
+It creates single fixture for set of methods in a project or modules in some path.
+
+5.1) define @pytest.fixture in  conftest.py so multiple test_.py
 can use it
 
 6) Parameterized tests
@@ -63,7 +76,6 @@ def test_sum(get_sum_test_data):
                 expected = data[2]
                 assert sum(num1, num2) == expected
 
-7) Test case markings
 7) Xfail / Skip tests
 
 execute tests with recording either pass or fail status
@@ -96,7 +108,6 @@ def test_sum(num1, num2, expected):
         assert sum(num1, num2) == expected
 _____________________________________________________
 Summary
-In this pytest tutorial, we covered
 
 Install pytest using pip install pytest=2.9.1
 Simple pytest program and run it with py.test command.
@@ -161,10 +172,47 @@ pytest -s demo_tests/
 pytest — lf
 
 ____________________________________________________________
-
+8) 
 Coverage Test
 # 
 pip install coverage
 coverage run test.py arg1 arg2
 coverage report -m
 coverage html
+
+9) conftest.py
+
+10) mock, mockito
+
+11) examples
+@pytest.fixture
+def supply_AA_BB_CC():
+    aa=25
+    bb =35
+    cc=45
+    return [aa,bb,cc]
+
+
+python -m pytest -v test_ex1.py -m set1
+test_ex1.py::test_file1_method2 PASSED
+@pytest.mark.set1
+def test_file1_method2():
+    x, y = 5, 6
+    assert x + 1 == y, "x + 1 == y Failed"
+
+
+@pytest.mark.parametrize("input1, input2, output",[(5,5,10),(3,5,12)])
+def test_add(input1, input2, output):
+	assert input1+input2 == output, "failed"
+
+@pytest.mark.skip
+def testadd_2():
+	assert 100+200 == 300,"failed"
+
+
+@pytest.mark.xfail
+def testadd_3():
+	assert 15+13 == 28,"failed"
+
+12)
+

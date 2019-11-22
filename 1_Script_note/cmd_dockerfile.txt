@@ -1,4 +1,6 @@
 #@@ 9/30/19
+#@@ 1.
+use # to make comments in Dockerfile
 # 
 1.  container start up an isolated and secure runtime environment for the application
 2. Docker package is complete runtime environments for the application 
@@ -55,6 +57,7 @@ docker-compose build test
 
 
 #######################################################################################
+#@@ 2.
 # @@ Release stage
 FROM alpine
 LABEL application=todobackend
@@ -989,3 +992,579 @@ Removing todobackend_migrate_1             ... done
 Removing todobackend_db_1                  ... done
 Removing network todobackend_default
 Removing volume todobackend_public
+
+######################################################################################################
+#@@ 2.  
+#docker
+
+# /usr/bin  for python version
+#1.sudo apt-get update
+sudo apt-get dist-upgrade
+
+
+cd /usr/bin
+rm python3
+ln -s python3.5 python3
+
+
+sudo apt-get remove python3-apt
+sudo apt-get install python3-apt
+#2. install necessary packages required to use a repository over https
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+
+#3. install Docker's official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+#4. Add Docker�s stable repository:
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+#5. Update the apt packaage index
+
+#6.Install Docker:
+sudo apt-get install docker-ce
+
+We can avoid having to type sudo by following these steps:
+
+WARNINGThe Docker group rights are still equivalent to the root user.
+1.	
+Create the docker group:
+
+sudo groupadd docker
+ 
+2.	
+Add your user to the docker group:
+
+sudo usermod -aG docker $USER
+ 
+3.	
+Log out and log back in. Run the command shown in Listing 2-5 to confirm the Docker has been installed correctly.
+#logout
+gnome-session-quit
+
+docker run --rm hello-world
+
+##
+docker info
+docker help
+docker help pull
+Docker Root Dir: /var/lib/doc
+
+# Check available Docker images. To do this, type the following command:
+docker image ls
+#Let�s look at the hello-world image now
+docker image inspect hello-world
+
+#To pull down the nginx image, type the following:
+docker pull nginx
+
+Using default tag: latest
+latest: Pulling from library/nginx
+e7bb522d92ff: Pull complete
+6edc05228666: Pull complete
+cd866a17e81f: Pull complete
+Digest: sha256:285b49d42c703fdf257d1e2422765c4ba9d3e37768d6ea83d7fe2043dad6e63d
+Status: Downloaded newer image for nginx:latest
+
+#Let�s try to pull the 1.12-alpine-perl version of nginx
+docker pull nginx:1.12-alpine-perl
+
+1.12-alpine-perl: Pulling from library/nginx
+550fe1bea624: Pull complete
+20a55c7b3b0e: Pull complete
+552be5624b14: Pull complete
+40fc04944e91: Pull complete
+Digest: sha256:b7970b06de2b70acca1784ab92fb06d60f4f714e901a55b6b5211c22a446dbd2
+Status: Downloaded newer image for nginx:1.12-alpine-perl
+
+# docker pull from docker Hub by default, if pull from a different registry
+docker pull docker-private.registry:1337/nginx
+#docker log in for registrt needs authentication
+docker login docker-private.registry:1337
+
+#To start a container and run the associated image, you have to type docker run.
+
+docker run -p 80:80 nginx
+
+#Let�s try making a curl request to see if the nginx webserver is running:
+
+curl http://localhost:80
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and working. Further configuration is required.</p>
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+
+#
+#We can confirm that the image publishes the port using the docker inspect command:
+
+sudo apt-get install -y jq
+
+docker image inspect nginx | jq .[].Config.ExposedPorts
+{
+  "80/tcp": {}
+}
+
+#
+#To list all the running containers, you can type 
+docker ps:
+
+CONTAINER ID   IMAGE   COMMAND                    CREATED STATUS         PORTS                  NAMES
+fac5e92fdfac   nginx   "nginx -g 'daemon of..."   5 seconds ago Up 3 seconds   0.0.0.0:80->80/tcp     elastic_hugle
+3ed1222964de   nginx   "nginx -g 'daemon of..."   16 minutes agoUp 16 minutes  0.0.0.0:8080->80/tcp   clever_thompson
+The point to note is the NAMES column. Docker automatically assigns a random name when a container is started. 
+
+#We can change the port on which the service is published on the Docker host by changing the first parameter after the -p flag:
+
+docker run -p 8080:80 nginx
+#Now, try running a curl request to port 8080:
+
+curl http://localhost:8080
+
+#o stop the container, you have to type docker stop:
+
+docker stop <container-id>
+
+# To list all the containers, you have to type docker stop:
+
+docker stop <container-id>
+
+# Even though the containers have been stopped and/or killed, these containers continue to exist in the local filesystem. 
+# You can remove the containers by typing the following:
+
+docker rm <container-id>
+docker rm fac5e92fdfac
+fac5e92fdfac
+
+##
+Similarly, you can list all the images present in the system by typing the following:
+
+docker image ls
+
+##
+#Let�s try to remove the nginx image:, image can only be removed after all containers of the image are 
+# removed first
+
+docker rmi 3f8a4339aadd
+
+##
+Install Telegram via Snap
+The recommended approach to install Telegram on Ubuntu 18.04 is by using the snap command. 
+The following linux command will install Telegram on your Ubuntu 18.04 system:
+$ sudo snap install telegram-desktop
+Furthermore, you may also wish to install the command line tool telegram-cli to 
+access Telegram's API from your terminal:
+$ sudo snap install telegram-cli
+
+##
+Install Telegram via Official package
+Alternatively, you can install the latest version of Telegram from the official 
+Telegram source package. Open up terminal and enter:
+$ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
+$ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+
+##
+Launch Telegram
+You can start the Telegram application from your terminal by executing:
+$ telegram-desktop
+
+#https://api.telegram.org/bot<token>/METHOD_NAME
+curl https://api.telegram.org/bot/getMe
+#without token 
+{
+  "ok": false,
+  "error_code": 404,
+  "description": "Not Found"
+}
+#eith token
+curl https://api.telegram.org/bot824573243:AAGDAhzVBhVV9H36PhoBnFueIEu2IQQAq1Aq1Y/getMe
+{
+  "ok": true,
+  "result": {
+    "id": 824573243,
+    "is_bot": true,
+    "first_name": "SubRedditFetcherBot",
+    "username": "SSubRedditFetcher_Bot"
+  }
+}
+
+###
+pip3 --version
+pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6)
+
+## create requirements.txt
+sudo sh -c 'sudo pip freeze > requirements.txt'
+
+
+### Docker file
+FROM ubuntu:latest
+LABEL author="sathyabhat"
+LABEL description="An example Dockerfile"
+RUN apt-get install python
+COPY hello-world.py
+CMD python hello-world.py
+
+docker build https://github.com/sathyabhat/sample-repo.git#mybranch
+Similarly, to build images based on your Git tags, the build command would look like this:
+docker build https://github.com/sathyabhat/sample-repo.git#mytag
+
+Working on a feature via a pull request? 
+Want to try out that pull request? Not a problem; 
+you can even set the context to a pull request as follows:
+
+docker build https://github.com/sathyabhat/sample-repo.git#pull/1337/head
+
+##
+Dockerfile Listing
+
+FROM ubuntu:latestCMD echo Hello World!
+#Now build this image:
+
+docker build .
+#You should see a response like this:
+
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+latest: Pulling from library/ubuntu
+22dc81ace0ea: Pull complete
+1a8b3c87dba3: Pull complete
+91390a1c435a: Pull complete
+07844b14977e: Pull complete
+b78396653dae: Pull complete
+Digest: sha256:e348fbbea0e0a0e73ab0370de151e7800684445c509d46195aef73e090a49bd6
+Status: Downloaded newer image for ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> Running in 26723ca45a12
+Removing intermediate container 26723ca45a12
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+#
+docker build .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> Using cache
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+#
+To run this image, use the docker run command followed by the image ID 7ae54947f6a4:
+
+docker run 7ae54947f6a4
+Hello World!
+
+# Give image a name
+docker tag image_id tag_name
+docker tag 7ae54947f6a4 sathya:hello-world
+
+#
+You can also do this as part of the build process itself:
+
+docker build -t sathya:hello-world .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> Using cache
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+Successfully tagged sathya:hello-world
+The last line tells you that the image was tagged successfully. 
+You can verify this by searching for docker images as follows:
+
+docker images sathya:hello-world
+REPOSITORY          TAG                 IMAGE IDCREATED             SIZE
+sathya              hello-world         7ae54947f6a4        24 minutes ago      112MB
+
+#
+#DOCKERFILE INSTRUCTIONS
+When looking at a Dockerfile, you�re mostly likely to 
+run into the following instructions:
+FROM
+
+ADD
+
+COPY
+
+RUN
+
+CMD
+
+ENTRYPOINT
+
+ENV
+
+VOLUME
+
+LABEL
+
+EXPOSE
+
+##
+Dockerfile Listing
+
+FROM ubuntu
+CMD echo Hello World!
+#Build the image
+docker build .
+
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+Now modify the Dockerfile to include the latest tag, as shown.
+
+Dockerfile Listing
+
+FROM ubuntu:latest
+CMD echo Hello World!
+#Build the image:
+
+docker build .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/2 : CMD echo Hello World!
+ ---> 7ae54947f6a4
+Successfully built 7ae54947f6a4
+
+##
+WORKDIR /path/to/directory
+WORKDIR can be set multiple times in a Dockerfile and, if a relative directory succeeds a previous WORKDIR instruction, it will be relative to the previously set working directory. The following example demonstrates this.
+
+Dockerfile Listing
+
+FROM ubuntu:latest
+WORKDIR /usr
+CMD pwd
+
+#
+docker build -t sathyabhat:workdir .
+Sending build context to Docker daemon  2.048kB
+Step 1/3 : FROM ubuntu:latest
+ ---> f975c5035748
+Step 2/3 : WORKDIR /usr
+ ---> Using cache
+ ---> 8b0b5742b476
+Step 3/3 : CMD pwd
+ ---> Using cache
+ ---> 4a827ca4a571
+Successfully built 4a827ca4a571
+Successfully tagged sathyabhat:workdir
+docker run sathyabhat:workdir
+/usr
+
+############
+For example, if you want to move the requirements.txt file from the current working 
+directory to the /usr/share/app directory, the instruction would be as follows:
+
+ADD requirements.txt /usr/share/app
+COPY  requirements.txt /usr/share/app
+
+##
+1.	
+#Start by creating an nginx container:
+# image name: nginx
+# container name: nginx-test
+
+docker run -d --name nginx-test  nginx
+
+2. open a terminal within the container nginx-test
+docker exec -it nginx-test bash
+
+^d to quit container bash
+
+3.	
+Create a copy of nginx�s default.conf to a new config:
+
+cd /etc/nginx/conf.d
+cp default.conf nginx-test.conf
+ 
+4.	
+We won�t be modifying the contents of nginx-test.conf since it�s immaterial. 
+Now we�ll stop the container. From the Docker host terminal, type:
+
+docker stop nginx-test
+ 
+5.	
+Start the container again:
+
+docker start nginx-test
+ 
+6.	
+Open a terminal within the container:
+
+docker exec -it nginx-test bash
+ 
+7.	
+Now, see if the changes are still around:
+
+cd /etc/nginx/conf.d
+ls
+default.conf  nginx-test.conf
+ 
+8.	
+Since the container was only stopped, the data persists. Let�s stop, 
+remove the container, and then bring up a new one and observe what happens.
+
+docker stop nginx-test
+docker rm nginx-test
+ 
+9.	
+Start a new container:
+
+docker run -d --name nginx-test  nginx
+ 
+10.	
+Now that a new container is up and running, let�s connect to the container�s terminal:
+
+docker exec -it nginx-test bash
+ 
+11.	
+Examine contents of the conf.d directory of nginx:
+
+cd /etc/nginx/conf.d
+ls
+default.conf
+
+##
+To create a tmpfs mount, you can use the --mount or --tmpfs flag when running a container, as shown here:
+
+docker run -it --name tmpfs-test --mount type=tmpfs, target=/tmpfs-mount ubuntu bash
+docker run -it --name tmpfs-test --tmpfs /tmpfs-mount ubuntu bash
+
+##
+We�ll try to mount our Docker host�s home directory to a directory called host-home within the container. To do this, type the following command:
+
+docker run -it --name mount-test --mount type=bind,source="$HOME",target=/host-home ubuntu bash
+docker run -it --name mount-test -v $HOME:/host-home ubuntu bash
+Inspecting the created container tells us the different characteristics about the mount.
+
+docker inspect mount-test | jq .[0].Mounts
+[
+  {
+    "Type": "bind",
+    "Source": "/Users/sathyabhat",
+    "Destination": "/host-home",
+    "Mode": "",
+    "RW": true,
+    "Propagation": "rprivate"
+  }
+]
+
+## Creat Volume
+docker volume create --name=nginx-volume
+This creates a named volume called nginx-volume.
+
+##inspect
+docker volume inspect nginx-volume
+This would bring up a result as shown here:
+
+docker volume inspect nginx-volume
+[
+    {
+        "CreatedAt": "2018-04-17T13:51:02Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/nginx-volume/_data",
+        "Name": "nginx-volume",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+
+##
+##Using Volumes When Starting a Container
+The syntax for using a volume when starting a container is nearly the same as using a bind host. 
+Let�s run the following command:
+
+docker run -it --name volume-test --mount target=/data-volume ubuntu bash
+docker run -it --name volume-test -v:/data-volume
+
+docker inspect volume-test | jq .[0].Mounts
+[
+  {
+    "Type": "volume",
+    "Name": "5fe950de3ac2b428873cb0af6281f3fb3817af933fbad32070b1a3101be4927f",
+    "Source": "/var/lib/docker/volumes/5fe950de3ac2b428873cb0af6281f3fb3817af933fbad32070b1a3101be4927f/_data",
+    "Destination": "/data-volume",
+    "Driver": "local",
+    "Mode": "z",
+    "RW": true,
+    "Propagation": ""
+  }
+]
+
+###Create a volume, and provide volume name to Docker when running a container
+docker volume create volume-test
+
+
+#
+docker volume inspect volume-test
+[
+    {
+        "CreatedAt": "2018-04-15T12:58:32Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/volume-test/_data",
+        "Name": "volume-test",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+#
+We can now refer to this volume when creating/running a container. 
+Note the extra source= flag with the --mount flag and the parameter after -v flag. 
+These indicate the volume name to which the container has to be attached.
+
+docker run -it --name volume-test --mount source=volume-test,target=/data-volume ubuntu bash
+docker run -it --name volume-test -v:volume-test:/data-volume ubuntu bash
+
+# Created volume exists in Docker file-system only, if a container is removed, the created volume is still there 
+and can be used by other containers.
+
+##
+version: '3'
+services:
+    database:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: dontusethisinprod
+    webserver:
+        image: nginx:alpine
+        ports:
+            - 8080:80
+        depends_on:
+            - cache
+            - database
+    cache:
+        image: redis
+
+##

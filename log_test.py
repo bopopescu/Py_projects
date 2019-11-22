@@ -5,25 +5,25 @@ import shutil
 import datetime
 import zipfile
 
+cnt_dict = {'a':4, 'b':8, 'c':10, 'd':4, 'e':10, 'f':5, 'h':5, 'g':5}
+cnt_list = []
 
-def countSubstrings(self, s: str) -> int:
-    size = len(s)
+for letter in cnt_dict.items():
+    print(letter, end=", ")
+    cnt_list.append(letter)
 
-    queue = collections.deque((x, x) for x in range(size))
+cnt_order_list = sorted(cnt_list, key=lambda x: (x[1],x[0]), reverse=True)
+print(type(letter))
+print(f"cnt_list is {cnt_list}")
+print(f"cnt_order_list is {cnt_order_list}")
+print()
 
-    for x in range(size - 1):
-        if s[x] == s[x + 1]:
-            queue.append((x, x + 1))
-    ans = 0
-    while queue:
-        x, y = queue.popleft()
-        ans += 1
-        if x - 1 >= 0 and y + 1 < size and s[x - 1] == s[y + 1]:
-            queue.append((x - 1, y + 1))
-    return ans
+
+
+
 # install package
 def install_pkg(package_loc, package_p_drive, package_name):
-    # copy package first
+    # copy package fitime_strList
     package_to_copy = os.path.join(package_p_drive, package_name)
     shutil.copy2(package_to_copy, package_loc)
 
@@ -96,45 +96,79 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sss = [""]
 print("".join(sss))
 
+##############################################
 
-###
-def checkValidString(s: str) -> bool:
-    def helper(start, size, q, s):
-        if size == 0:
-            if not q:
-                return True
+class Solution:
+    def log_time(self, time: str) -> str:
+        # Create time
+        # size = 4, time_strList=[], tmp_str=''
+        def time_gen(digit_chrSet, size, time_strList, tmp_str):
+            if size == 0:
+                time_strList.append(tmp_str)
+                return
             else:
-                return False
+                for char in digit_chrSet:
+                    # //improvement
+                    time_gen(digit_chrSet, size - 1, time_strList, tmp_str + char)
 
-        else:
-            if s[start] == '(':
-                q.append('(')
-                return helper(start + 1, size - 1, q, s)
-            elif s[start] == ')':
-                if not q:
-                    return False
+        # save digits to a set
+
+        loc_colon = 0
+        digit_chrSet = set()
+        for i, char in enumerate(time):
+            if char == ':':
+                loc_colon = i
+            else:
+                digit_chrSet.add(char)
+
+        size = 4
+        time_strList, tmp_str = [], ""
+
+        time_gen(digit_chrSet, size, time_strList, tmp_str)
+
+        min_time = float("inf")
+        hr_st = int(time[0:loc_colon])
+        min_st = int(time[loc_colon + 1:])
+        time_strList_str = ""
+
+        for time_str in time_strList:
+            hrs = int(time_str[0:2])
+            mins = int(time_str[2:])
+
+            if hrs==hr_st  and mins == min_st:
+                time_strList_str =   "00:00"
+                break
+
+            if hrs > 24 or mins > 59:
+                continue
+            else:
+                if hr_st > hrs:
+                    hr_diff = 24 - hr_st - 1 + hrs
+                    min_diff = 60 - min_st + mins
+                elif hr_st < hrs:
+                    hr_diff = hrs - hr_st - 1
+                    min_diff = 60 - min_st + mins
                 else:
-                    q.pop()
-                    return helper(start + 1, size - 1, q, s)
-            elif s[start] == '*':
-                rst = helper(start + 1, size - 1, q[:], s)
-                q.append('(')
-                rst_left = helper(start + 1, size - 1, q[:], s)
-                q.pop()
-                rst_right = False
-                if q:
-                    q.pop()
-                    rst_right = helper(start + 1, size - 1, q[:], s)
-                return rst or rst_left or rst_right
 
-    q = []
-    start = 0
-    size = len(s)
-    return helper(start, size, q, s)
+                    if mins >= min_st:
+                        hr_diff = 0
+                        min_diff = mins - min_st
+                    else:
+                        hr_diff = 23
+                        min_diff = 59
+                time_diff = hr_diff * 60 + min_diff
 
-s = "(*))"
-print(s)
-print(checkValidString(s))
+                if time_diff < min_time:
+                    hrs_str = str(hrs) if hrs > 10 else '0' + str(hrs)
+                
+                    if mins < 10:
+                        mins_str = '0' + str(mins)
+                    else:
+                        mins_str = str(mins)
 
+                    time_strList_str = hrs_str + ":" + mins_str
+                    min_time = time_diff
+
+        return time_strList_str
 
 
