@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker_AWS/Docker_proj_11_26/Docker_AWS/Code/docker-in-aws" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker_AWS/Docker_proj_11_26/Docker_AWS/proj_1/todobackend" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Py_op/py_auto/Hands-On-Enterprise-Automation-with-Python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Py_op/py_auto/db_py/nsot" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Py_op/py_auto/infoblox/infoblox-client" vcs="Git" />

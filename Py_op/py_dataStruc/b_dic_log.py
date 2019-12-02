@@ -1,4 +1,21 @@
 # dictionary not sorted by default
+
+cnt_dict = {'a':4, 'b':8, 'c':10, 'd':4, 'e':10, 'f':5, 'h':5, 'g':5}
+# print(len(cnt_dict)) # 8
+chr_key = cnt_dict.keys()
+# print(f"type(chr_key) is {chr_key}")
+# print(list(chr_key)) ['a', 'b', 'c', 'd', 'e', 'f', 'h', 'g']
+# type(chr_key) is dict_keys(['a', 'b', 'c', 'd', 'e', 'f', 'h', 'g'])
+num_values = cnt_dict.values()
+# print(list(num_values)) [4, 8, 10, 4, 10, 5, 5, 5]
+# print(f"type(num_values) is {type(num_values)}")
+# type(num_values) is <class 'dict_values'>
+item_tuple = cnt_dict.items()
+# print(list(item_tuple)) [('a', 4), ('b', 8), ('c', 10), ('d', 4), ('e', 10), ('f', 5), ('h', 5), ('g', 5)]
+# print(f"type(item_tuple) is {type(item_tuple)}")
+# type(item_tuple) is <class 'dict_items'>
+
+
 my_dic = dict([("ID", 1),("Test", "wifi")])# a list of tuples
 #print(my_dic.get("Test")) # "wifi" , "return None if key is wrong"
 

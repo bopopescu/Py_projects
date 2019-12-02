@@ -4,23 +4,59 @@ import subprocess
 import shutil
 import datetime
 import zipfile
-
+from collections import Counter
 cnt_dict = {'a':4, 'b':8, 'c':10, 'd':4, 'e':10, 'f':5, 'h':5, 'g':5}
+chr_key  = cnt_dict.keys()
+# print(next(chr_key))
+# Traceback (most recent call last):
+#   File "C:/Users/jsun/Documents/Py_projects/log_test.py", line 10, in <module>
+#     print(next(chr_key))
+# TypeError: 'dict_keys' object is not an iterator
+key_iter = iter(chr_key)
+print(next(key_iter)) # 'a'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 cnt_list = []
 
 for letter in cnt_dict.items():
-    print(letter, end=", ")
+    # print(letter, end=", ")
     cnt_list.append(letter)
 
 cnt_order_list = sorted(cnt_list, key=lambda x: (x[1],x[0]), reverse=True)
-print(type(letter))
-print(f"cnt_list is {cnt_list}")
-print(f"cnt_order_list is {cnt_order_list}")
-print()
+# print(type(letter))
+# print(f"cnt_list is {cnt_list}")
+# print(f"cnt_order_list is {cnt_order_list}")
+# print()
 
 
 
+##
+# ————————————————
 
+##
+
+##
 # install package
 def install_pkg(package_loc, package_p_drive, package_name):
     # copy package fitime_strList
@@ -86,15 +122,15 @@ print("start")
 
 import os
 cur_dir = os.path.abspath(__file__)
-print(cur_dir)
+# print(cur_dir)
 bb= os.path.dirname(cur_dir)
-print(os.path.dirname(cur_dir))
+# print(os.path.dirname(cur_dir))
 cc = os.path.dirname(bb)
-print(cc)
+# print(cc)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 sss = [""]
-print("".join(sss))
+# print("".join(sss))
 
 ##############################################
 

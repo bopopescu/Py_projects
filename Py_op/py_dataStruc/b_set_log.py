@@ -7,9 +7,9 @@ test1 = ((),)
 test2 = (2,)
 
 testt = (["wifi"]) # type of list, not tuple
-## set is unique and ordered
-t_set = {1,2,3} #{1, 2, 3}
-#print(t_set)
+
+#@@ 1.  set is unique and unordered
+t_set = { 1,2,3 } #{1, 2, 3}
 
 t_list = [1,2,3,2]
 v_set = set(t_list) #{1, 2, 3}
@@ -17,13 +17,19 @@ v_set = set(t_list) #{1, 2, 3}
 a = {} # empty dict
 b = set() # empty set
 
+#@@ 2. +
 old_set = {1,2,3}
 old_set.add(10)
-old_set.update([7,8,9])
+# old_set is {10, 1, 2, 3}
+# old_set.add([11,12]) # TypeError: unhashable type: 'list'
 
-print(old_set) # {1, 2, 3, 7, 8, 9, 10}
-old_set.update([11,12],{20,21}) #{1, 2, 3, 7, 8, 9, 10, 11, 12, 20, 21}
-print(old_set)
+old_set.update([7,8,9])
+# print(old_set) # {1, 2, 3, 7, 8, 9, 10}
+
+old_set.update([11,12], {20,21}) #{1, 2, 3, 7, 8, 9, 10, 11, 12, 20, 21}
+
+# old_set.update(100) TypeError: 'int' object is not iterable
+# print(old_set)
 
 # Get the ASCII number of a character
 char = 'a'
@@ -32,7 +38,7 @@ number = ord(char)
 # Get the character given by an ASCII number
 char = chr(number)
 
-"-"
+#@@ 3. "-"
 x = 10
 old_set.discard(x)
 print("after removing 10, old_set is {}".format(old_set))

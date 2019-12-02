@@ -1,10 +1,10 @@
-#@@ 1. 
-GET
-
-curl  http://localhost:8000/drone-categories/  | jq
+#11/27/2019
+#@@ 1. GET 
+#1.0)
+# i option to show HTTP header
+curl    http://localhost:8000/drone-categories/  | jq
 curl -i http://localhost:8000/drone-categories/
 
-#@@
 test_master@jsun-mbpw10:~$ http ":8000/drone-categories/"
 HTTP/1.0 200 OK
 Allow: GET, POST, HEAD, OPTIONS
@@ -43,7 +43,7 @@ X-Frame-Options: SAMEORIGIN
     ]
 }
 
-#// GET
+# 1.1)
 test_master@jsun-mbpw10:~$ http ":8000/drone-categories/1"
 HTTP/1.0 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
@@ -64,8 +64,8 @@ X-Frame-Options: SAMEORIGIN
     "pk": 1,
     "url": "http://localhost:8000/drone-categories/1"
 
-#@@ POST
-
+#@@ 2.POST
+#2.1
 test_master@jsun-mbpw10:~$ http POST ":8000/drone-categories/" name='Hexocopter'
 HTTP/1.0 201 Created
 Allow: GET, POST, HEAD, OPTIONS
@@ -83,7 +83,8 @@ X-Frame-Options: SAMEORIGIN
     "pk": 3,
     "url": "http://localhost:8000/drone-categories/3"
 } 
-#// using curl, always include -H "Content-Type: application/json"
+#2.2 
+# curl, always include -H "Content-Type: application/json"
 
 curl -iX POST -H "Content-Type: application/json" -d '{"name":"Fortnite", "release_date": "2017-05-18T03:02:00.776594Z"}' "localhost:8000/games/"
 curl -iX POST localhost:8000/drone-categories/ -H "Content-Type: application/json" -d '{"name": "Geocopter"}'
@@ -97,9 +98,11 @@ Allow: GET, POST, HEAD, OPTIONS
 X-Frame-Options: SAMEORIGIN
 Content-Length: 88
 
-#@@ PUT
+#@@ 3.PUT
 #// PUT: updates the existing one with a new instance.
 test_master@jsun-mbpw10:~$ curl -iX PUT -H "Content-Type: application/json" -d '{"name": "Xyenocopter"}' localhost:8000/drone-categories/6
+curl -iX PUT -H "Content-Type: application/json" -d '{"name": "Xyenocopter"}' localhost:8000/drone-categories/6
+
 HTTP/1.0 200 OK
 Date: Tue, 15 Oct 2019 18:58:33 GMT
 Server: WSGIServer/0.2 CPython/3.7.2
@@ -127,10 +130,10 @@ X-Frame-Options: SAMEORIGIN
     "url": "http://localhost:8000/drone-categories/6"
 }
 
-#@@  PATCH
+#@@ 4.  PATCH
 #//PATCH
-test_master@jsun-mbpw10:~$ curl -iX PATCH -H "Content-Type: application/json" -d '{"name": "CurlPatchOcopter"}' localhost:8000/drone-categories/6
-test_master@jsun-mbpw10:~$ http PATCH ":8000/drone-categories/6" name="ZPATCHEDocopter"
+curl -iX PATCH -H "Content-Type: application/json" -d '{"name": "CurlPatchOcopter"}' localhost:8000/drone-categories/6
+http PATCH ":8000/drone-categories/6" name="ZPATCHEDocopter"
 HTTP/1.0 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Content-Length: 94
@@ -147,9 +150,10 @@ X-Frame-Options: SAMEORIGIN
     "url": "http://localhost:8000/drone-categories/6"
 }
 
-#@@ DELETE
-#// DELETE
-test_master@jsun-mbpw10:~$ http DELETE :8000/drone-categories/7
+#@@ 5. DELETE
+#5.1
+http DELETE :8000/drone-categories/7
+
 HTTP/1.0 204 No Content
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Content-Length: 0
@@ -158,8 +162,9 @@ Server: WSGIServer/0.2 CPython/3.7.2
 Vary: Accept, Cookie
 X-Frame-Options: SAMEORIGIN
 
-#//
-test_master@jsun-mbpw10:~$ curl -iX DELETE localhost:8000/drone-categories/8
+
+#5.2
+curl -iX DELETE localhost:8000/drone-categories/8
 HTTP/1.0 204 No Content
 Date: Tue, 15 Oct 2019 20:30:06 GMT
 Server: WSGIServer/0.2 CPython/3.7.2

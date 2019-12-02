@@ -7,7 +7,36 @@ nums.reverse()
 
 max, min
 
-#@@ 1. list passed as an argument
+
+#@@1.0
+
+# shallow copy of list
+nums_lt =  [3,[11,11,11],[22,  22, 22],2,1]
+nums_sublt = nums_lt[:3]
+nums_sublt[0] = 30
+nums_sublt[1] = 111
+nums_sublt[2][0] = 333
+
+# print(f"nums_lt is    {nums_lt}")
+# print(f"nums_sublt is {nums_sublt}")
+# nums_lt is    [3, [11, 11, 11], [333, 22, 22], 2, 1]
+# nums_sublt is [30, 111, [333, 22, 22]]
+
+# shallow copy in functions
+def listShallowCpy(listOrin, listCpy):
+    listCpy[0] =  30
+    listCpy[1] = 111
+    listCpy[2][0] = 333
+
+num_lt =  [3,[11,11,11],[22,  22, 22],2,1]
+listCpy = num_lt[:3]
+
+listShallowCpy(num_lt, listCpy)
+print(f"num_lt   is {num_lt}")
+print(f"listCpy  is {listCpy}")
+# num_lt   is [3, [11, 11, 11], [333, 22, 22], 2, 1]
+# listCpy  is [30, 111, [333, 22, 22]]
+#@@ 1.1 list passed as an argument
 arr = [[100,200],2,3,4,5]
 
 def change_list(arr):
@@ -38,6 +67,21 @@ print(f"no change is {no_change}")
 print(f's is not changed {s}')
 # no change is [100, 2]
 # s is not changed [1, 2, 3]
+
+#@@ 2.1
+
+cnt_dict = {'a':4, 'b':8, 'c':10, 'd':4, 'e':10, 'f':5, 'h':5, 'g':5}
+cnt_list = []
+
+for letter in cnt_dict.items():
+    print(letter, end=", ")
+    cnt_list.append(letter)
+
+cnt_order_list = sorted(cnt_list, key=lambda x: (x[1],x[0]), reverse=True)
+print(type(letter))
+print(f"cnt_list is {cnt_list}")
+print(f"cnt_order_list is {cnt_order_list}")
+print()
 
 #@@ 2.
 str = "  this is  a good book  "
