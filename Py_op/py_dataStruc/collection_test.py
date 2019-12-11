@@ -3,6 +3,7 @@
 from collections import Counter
 b = Counter("")
 print(len(b)) # 0
+# b = {}
 
 
 a = Counter({'d': 2, 'b': 1, "c": 3, 'a': 3})

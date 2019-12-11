@@ -3,6 +3,88 @@ import time
 import subprocess
 import shutil
 import datetime
+
+# Input: "()"
+# Output: 1
+# Example 2:
+#
+# Input: "(())"
+# Output: 2
+# Example 3:
+#
+# Input: "()()"
+# Output: 2
+# Example 4:
+#
+# Input: "(()(()))"
+# Output: 6
+
+
+
+
+
+
+class Solution:
+    def log_test(self, S: str):
+
+        if not S:
+            return 0
+
+        stack = []
+        cnt = 0
+
+        for char in S:
+            if char == '(':
+                stack.append(char)
+            else:  # char == ')'
+                top_char = stack.pop()
+                if top_char == '(':
+                    cnt = 1
+                    while stack:
+                        top_char = stack.pop()
+                        if top_char != '(':
+                            cnt += top_char
+                            # if not stack:
+                            #     stack.append(cnt)
+                            #     cnt = 0
+                            #     break
+                        else:
+                            stack.append('(')
+                            break
+                            # if stack:
+                            #     stack.extend(['(', cnt])
+                            # else:
+                            #     stack.append(cnt)
+                            # break
+                    stack.append(cnt)
+                    cnt = 0
+
+                else:  # top_char == num
+                    cnt += top_char * 2
+                    stack.pop()  # '('
+                    while stack:
+                        top_char = stack.pop()
+                        if top_char != '(':
+                            cnt += top_char
+                        else:
+                            stack.append('(')
+                            break
+                    stack.append(cnt)
+                    cnt = 0
+        return stack[0]
+
+
+
+
+
+
+
+
+
+
+
+
+
 import zipfile
 from collections import Counter
 cnt_dict = {'a':4, 'b':8, 'c':10, 'd':4, 'e':10, 'f':5, 'h':5, 'g':5}
@@ -15,27 +97,46 @@ chr_key  = cnt_dict.keys()
 key_iter = iter(chr_key)
 print(next(key_iter)) # 'a'
 
+import copy
+S = 'abc'
+shifts = [3,5,9]
 
+# tmp = shifts[:]
+tmp = copy.copy(shifts)
+tmp[0] = 100
+print(shifts)
+print("****")
 
+def shiftingLetters(S, shifts) -> str:
+    rst = ""
+    if len(S) < len(shifts):
+        shifts = shifts[:len(S)]
+    tmp_lst = shifts[:]
+    tmp_lst[0] = 0
+    print(f'shifts is {shifts}')
 
+    for i in range(1, len(tmp_lst)):
+        tmp_lst[i] = tmp_lst[i - 1] + shifts[i - 1]
 
+    print(f'shifts is {shifts}')
+    total = sum(shifts)
+    print(f"total  is {total}")
+    for i in range(len(tmp_lst)):
+        tmp_lst[i] = total - tmp_lst[i]
+        num = tmp_lst[i] + ord(S[i])
+        if num <= ord('z'):
+            rst += chr(num)
+        else:
+            num = (num - ord('z')) % 26
+            rst += chr(ord('a') + num)
 
+    if len(S) > len(shifts):
+        rst += S[len(shifts):]
 
+    return rst
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+rst = shiftingLetters(S, shifts)
+print(rst)
 
 cnt_list = []
 
@@ -89,8 +190,6 @@ def install_pkg(package_loc, package_p_drive, package_name):
             shutil.rmtree(file_to_delete)
 # _________________________________________
 
-
-#__________________________________________
 # copy test flows to bin
 
 def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
@@ -109,6 +208,9 @@ print("start")
 # 1170 , 8/29
 # 9/25
 # 10_23
+# 12_9
+
+
 
 #*****
 # ltr_str = "abcd"
@@ -133,78 +235,26 @@ sss = [""]
 # print("".join(sss))
 
 ##############################################
+Example 1:
 
-class Solution:
-    def log_time(self, time: str) -> str:
-        # Create time
-        # size = 4, time_strList=[], tmp_str=''
-        def time_gen(digit_chrSet, size, time_strList, tmp_str):
-            if size == 0:
-                time_strList.append(tmp_str)
-                return
-            else:
-                for char in digit_chrSet:
-                    # //improvement
-                    time_gen(digit_chrSet, size - 1, time_strList, tmp_str + char)
+Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FB"
+Output: [true,false,true,true,false]
+Explanation:
+"FooBar" can be generated like this "F" + "oo" + "B" + "ar".
+"FootBall" can be generated like this "F" + "oot" + "B" + "all".
+"FrameBuffer" can be generated like this "F" + "rame" + "B" + "uffer".
+Example 2:
 
-        # save digits to a set
+Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FoBa"
+Output: [true,false,true,false,false]
+Explanation:
+"FooBar" can be generated like this "Fo" + "o" + "Ba" + "r".
+"FootBall" can be generated like this "Fo" + "ot" + "Ba" + "ll".
+Example 3:
 
-        loc_colon = 0
-        digit_chrSet = set()
-        for i, char in enumerate(time):
-            if char == ':':
-                loc_colon = i
-            else:
-                digit_chrSet.add(char)
+Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FoBaT"
+Output: [false,true,false,false,false]
+Explanation:
+"FooBarTe
 
-        size = 4
-        time_strList, tmp_str = [], ""
-
-        time_gen(digit_chrSet, size, time_strList, tmp_str)
-
-        min_time = float("inf")
-        hr_st = int(time[0:loc_colon])
-        min_st = int(time[loc_colon + 1:])
-        time_strList_str = ""
-
-        for time_str in time_strList:
-            hrs = int(time_str[0:2])
-            mins = int(time_str[2:])
-
-            if hrs==hr_st  and mins == min_st:
-                time_strList_str =   "00:00"
-                break
-
-            if hrs > 24 or mins > 59:
-                continue
-            else:
-                if hr_st > hrs:
-                    hr_diff = 24 - hr_st - 1 + hrs
-                    min_diff = 60 - min_st + mins
-                elif hr_st < hrs:
-                    hr_diff = hrs - hr_st - 1
-                    min_diff = 60 - min_st + mins
-                else:
-
-                    if mins >= min_st:
-                        hr_diff = 0
-                        min_diff = mins - min_st
-                    else:
-                        hr_diff = 23
-                        min_diff = 59
-                time_diff = hr_diff * 60 + min_diff
-
-                if time_diff < min_time:
-                    hrs_str = str(hrs) if hrs > 10 else '0' + str(hrs)
-                
-                    if mins < 10:
-                        mins_str = '0' + str(mins)
-                    else:
-                        mins_str = str(mins)
-
-                    time_strList_str = hrs_str + ":" + mins_str
-                    min_time = time_diff
-
-        return time_strList_str
-
-
+def camelMatch(self, queries: List[str], pattern: str) -> List[bool]:

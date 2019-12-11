@@ -1,12 +1,22 @@
 
 #nums is a list
+import operator
 import copy
-reverse() vs reversed()
-sort() vs sorted()
-nums.reverse()
+# reverse() vs reversed()
+# sort() vs sorted()
+# nums.reverse()
 
 max, min
 
+#@@ 1.0.0 shallow copy: shifts[:] or copy.copy(shifts)
+import copy
+
+shifts = [3,5,9]
+tmp = shifts[:]
+# tmp = copy.copy(shifts)
+
+tmp[0] = 100
+# print(shifts) [3, 5, 9]
 
 #@@1.0
 
@@ -88,7 +98,54 @@ str = "  this is  a good book  "
 str_list_1 = str.split(" ") #   ['', '', 'this', 'is', '', 'a', 'good', 'book', '', '']
 str_list_2 = str.split()     #  ['this', 'is', 'a', 'good', 'book']
 
-#@@ 3.
+#@@ 3. Sort with lambda
+
+wd_cnt_lst = [('a', 10), ('b', 5), ('a', 5), ('a', 7), ('c', 15)]
+
+# print(sorted(wd_cnt_lst))
+# [('a', 5), ('a', 7), ('a', 10), ('b', 5), ('c', 15)]
+
+# print(sorted(wd_cnt_lst, key= lambda x: x[1]))
+# [('b', 5), ('a', 5), ('a', 7), ('a', 10), ('c', 15)]
+
+# print(sorted(wd_cnt_lst, key= lambda x: x[0], reverse=True))
+# [('c', 15), ('b', 5), ('a', 10), ('a', 5), ('a', 7)]
+
+str_lst = [("abc", 4),  ("cd", 4), ("avdk", 10),
+           ("ab", 5), ("helf", 12), ("aaaa", 8)]
+# print(sorted(str_lst, key=lambda x: (len(x[0]))))
+# [('cd', 4), ('ab', 5), ('abc', 4), ('avdk', 10), ('helf', 12), ('aaaa', 8)]
+
+# print(sorted(str_lst, key=lambda x: (len(x[0]), x[0])))
+[('ab', 5), ('cd', 4), ('abc', 4), ('aaaa', 8), ('avdk', 10), ('helf', 12)]
+
+# print(sorted(str_lst, key=lambda x: (len(x[0]), x[0]), reverse=True))
+# [('helf', 12), ('avdk', 10), ('aaaa', 8), ('abc', 4), ('cd', 4), ('ab', 5)]
+
+str_list = ["abc", "aaa", "def", "ab", "ba", "cd", "fhef", "kdfj", "efgh"]
+# print(sorted(str_list, key=len))
+# ['ab', 'ba', 'cd', 'abc', 'aaa', 'def', 'fhef', 'kdfj', 'efgh']
+# print(sorted(str_list, key=(len, lambda x: x[0]))) # TypeError: 'tuple' object is not callable
+# print(sorted(str_list, key=lambda x: (len(x))))
+# ['ab', 'ba', 'cd', 'abc', 'aaa', 'def', 'fhef', 'kdfj', 'efgh']
+# print(sorted(str_list, key=lambda x: (len(x), x)))
+['ab', 'ba', 'cd', 'aaa', 'abc', 'def', 'efgh', 'fhef', 'kdfj']
+
+str1_list = ["abc", "Aaa", "def", "ab", "Ba", "cd", "fhef", "Kdfj", "efgh"]
+# print(sorted(str1_list, key=len))
+# ['ab', 'Ba', 'cd', 'abc', 'Aaa', 'def', 'fhef', 'Kdfj', 'efgh']
+print(sorted(str1_list, key=str.lower))
+# ['Aaa', 'ab', 'abc', 'Ba', 'cd', 'def', 'efgh', 'fhef', 'Kdfj']
+print(sorted(str1_list, key=lambda x: x.lower()))
+# ['Aaa', 'ab', 'abc', 'Ba', 'cd', 'def', 'efgh', 'fhef', 'Kdfj']
+print(sorted(str1_list, key=lambda x: [len(x), x.lower()]))
+# ['ab', 'Ba', 'cd', 'Aaa', 'abc', 'def', 'efgh', 'fhef', 'Kdfj']
+
+
+
+
+
+___________________________________________
 p = [10,3,0,5,3]
 sp = [2,10,1,1,3]
 p_s = list(zip(p,sp))
@@ -138,6 +195,27 @@ print(f"ss[-5:-3] is !{ss[-5:-3]}!") # ss[-5:-3] is ![]!
 print(f"sss[0:0] is !{sss[0:0]}!") # ss[0:0] is !!
 print(f"sss[3:] is !{sss[3:]}!") # sss[3:] is !!
 # print(f"sss[3] is !{sss[3]}!") # IndexError: string index out of range
+
+
+#@@ 4.1
+#
+arr = [(100, 'wifi', 5), (34, 'opt', 88), (34, 'opt', 45), (99, 'ac', 'ka')]
+print(arr)
+arr.sort()
+print(arr)
+print(sorted(arr))
+# [(100, 'wifi', 5), (34, 'opt', 88), (34, 'opt', 45), (99, 'ac', 'ka')]
+# [(34, 'opt', 45), (34, 'opt', 88), (99, 'ac', 'ka'), (100, 'wifi', 5)]
+# [(34, 'opt', 45), (34, 'opt', 88), (99, 'ac', 'ka'), (100, 'wifi', 5)]
+
+t = [(100, 100, 100), (200, 200, 0), (100, 100, 0), (200, 200, 200), (0, 255, 0)]
+t1 = sorted(t, key=lambda x: (x[0], x[1], x[2]))
+print("t1 ", t1)
+t.sort(key=operator.itemgetter(0, 1, 2))
+print("t ", t)
+
+# t1  [(0, 255, 0), (100, 100, 0), (100, 100, 100), (200, 200, 0), (200, 200, 200)]
+# t  [(0, 255, 0), (100, 100, 0), (100, 100, 100), (200, 200, 0), (200, 200, 200)]
 
 #@@ 5.
 
