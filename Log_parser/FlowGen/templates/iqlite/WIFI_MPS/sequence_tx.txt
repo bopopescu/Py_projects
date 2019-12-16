@@ -1,3 +1,0 @@
-%%include TEST_PREPARE.txt%%
-%%iterate_section TX_TEST_ADD.txt %%
-%%include TEST_RUN.txt%%

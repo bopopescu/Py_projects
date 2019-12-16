@@ -1,3 +1,0 @@
-%%include tech_header.txt%%
-%%iterate_sequences TEST E,M,P,S:sequence_tx.txt L,H,S:sequence_rx.txt %%
-%%include tech_tail.txt%%
