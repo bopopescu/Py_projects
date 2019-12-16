@@ -4,81 +4,34 @@ import subprocess
 import shutil
 import datetime
 
-# Input: "()"
-# Output: 1
-# Example 2:
-#
-# Input: "(())"
-# Output: 2
-# Example 3:
-#
-# Input: "()()"
-# Output: 2
-# Example 4:
-#
-# Input: "(()(()))"
-# Output: 6
+# pytest
+# skip test: -m, -v, -k
 
+# @pytest.mark.skip
 
+# run selected testes @mark
+# pytest -k 
 
+# group tests
+# @pytest.mark.Group_name
+#pytest -m Group_name
 
+# run except test
+# pytest -m "not Group_name"
+ 
+# execute setup b4 or after each test.
+# @pytest.fixture(scope="module")
+# def setup()
+#     global driver
+#     driver = webdriver.Chrome()
+# Everything after yield executed after test is done 
+    #   yield
+    #   driver.close()
 
+# def test_reg(setup):
+#     pass
 
-class Solution:
-    def log_test(self, S: str):
-
-        if not S:
-            return 0
-
-        stack = []
-        cnt = 0
-
-        for char in S:
-            if char == '(':
-                stack.append(char)
-            else:  # char == ')'
-                top_char = stack.pop()
-                if top_char == '(':
-                    cnt = 1
-                    while stack:
-                        top_char = stack.pop()
-                        if top_char != '(':
-                            cnt += top_char
-                            # if not stack:
-                            #     stack.append(cnt)
-                            #     cnt = 0
-                            #     break
-                        else:
-                            stack.append('(')
-                            break
-                            # if stack:
-                            #     stack.extend(['(', cnt])
-                            # else:
-                            #     stack.append(cnt)
-                            # break
-                    stack.append(cnt)
-                    cnt = 0
-
-                else:  # top_char == num
-                    cnt += top_char * 2
-                    stack.pop()  # '('
-                    while stack:
-                        top_char = stack.pop()
-                        if top_char != '(':
-                            cnt += top_char
-                        else:
-                            stack.append('(')
-                            break
-                    stack.append(cnt)
-                    cnt = 0
-        return stack[0]
-
-
-
-
-
-
-
+##________________________________##
 
 
 
@@ -135,20 +88,10 @@ def shiftingLetters(S, shifts) -> str:
 
     return rst
 
-rst = shiftingLetters(S, shifts)
-print(rst)
 
-cnt_list = []
 
-for letter in cnt_dict.items():
-    # print(letter, end=", ")
-    cnt_list.append(letter)
 
-cnt_order_list = sorted(cnt_list, key=lambda x: (x[1],x[0]), reverse=True)
-# print(type(letter))
-# print(f"cnt_list is {cnt_list}")
-# print(f"cnt_order_list is {cnt_order_list}")
-# print()
+
 
 
 
@@ -210,18 +153,160 @@ print("start")
 # 10_23
 # 12_9
 
+###
+import json, requests, jsonpath
+odices='{"k1":1, "k2":2}'
+rst = json.loads(odices)
+# print(type(rst)) # <class 'dict'>
+# print(rst['k2']) # 2
+#
 
+# API with parameters.
+#1.
+url = "https://reqres.in/api/users?page=2"
+response_1 = requests.get(url)
+# print(type(response_1), response_1, sep=" --> ")
+# <class 'requests.models.Response'> --> <Response [200]>
 
-#*****
-# ltr_str = "abcd"
-# ltr_list = ltr_str.split("")
-# print(ltr_list)
+content  = response_1.content
+# print(type(content))  # <class 'bytes'>
+# print(content)
+# b'{"page":2,"per_page":6}'
 
 #
+header = response_1.headers
+print(type(header), header, sep=" --> ")
+# <class 'requests.structures.CaseInsensitiveDict'> -->
+{'Date': 'Wed, 11 Dec 2019 23:17:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=df6e47f7f298a5764dd4c33fdc28683151576106255; expires=Fri, 10-Jan-20 23:17:35 GMT; path=/; domain=.reqres.in; HttpOnly; Secure', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"414-k36Lu9tCb0XMJeh2/UG19C4xbw4"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '4275', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '543b2c406a1eed7f-SJC', 'Content-Encoding': 'gzip'}
+# print(header["Date"])
+# Wed, 11 Dec 2019 23:19:08 GMT
 #
-# use args, and kwargs
-# str, built-in
+json_content = response_1.json
+# print(type(json_content), json_content, sep="  -->  \n")
+# <class 'method'>  -->
+# <bound method Response.json of <Response [200]>>
 
+# Convert to Json format
+json_response = json.loads(response_1.text)
+# print(type(json_response), json_response, sep=" -->  \n")
+# <class 'dict'> -->
+# {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg'}, {'id': 8, 'email': 'lindsay.ferguson@reqres.in', 'first_name': 'Lindsay', 'last_name': 'Ferguson', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg'}, {'id': 9, 'email': 'tobias.funke@reqres.in', 'first_name': 'Tobias', 'last_name': 'Funke', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg'}, {'id': 10, 'email': 'byron.fields@reqres.in', 'first_name': 'Byron', 'last_name': 'Fields', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg'}, {'id': 11, 'email': 'george.edwards@reqres.in', 'first_name': 'George', 'last_name': 'Edwards', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg'}, {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg'}]}
+
+response_text = response_1.text
+# print(type(response_text), response_text, sep="   --> \n")
+# <class 'str'>   -->
+# {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"}]}
+
+#
+{
+    "page": 2,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 7,
+            "email": "michael.lawson@reqres.in",
+            "first_name": "Michael",
+            "last_name": "Lawson",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
+        },
+        {
+            "id": 8,
+            "email": "lindsay.ferguson@reqres.in",
+            "first_name": "Lindsay",
+            "last_name": "Ferguson",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"
+        },
+        {
+            "id": 9,
+            "email": "tobias.funke@reqres.in",
+            "first_name": "Tobias",
+            "last_name": "Funke",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"
+        },
+        {
+            "id": 10,
+            "email": "byron.fields@reqres.in",
+            "first_name": "Byron",
+            "last_name": "Fields",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"
+        },
+        {
+            "id": 11,
+            "email": "george.edwards@reqres.in",
+            "first_name": "George",
+            "last_name": "Edwards",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
+        },
+        {
+            "id": 12,
+            "email": "rachel.howell@reqres.in",
+            "first_name": "Rachel",
+            "last_name": "Howell",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"
+        }
+    ]
+}
+pages = jsonpath.jsonpath(json_response, "total_pages")
+# print(type(pages), pages[0], sep=" --> \n")
+# print(type(pages), pages, sep=" --> \n")
+# <class 'list'> -->
+# 2
+# <class 'list'> -->
+# [2]
+
+data  = jsonpath.jsonpath(json_response, "data")
+# print(len(data), data[0][2], sep="  --> \n")
+# 1  -->
+# {'id': 9, 'email': 'tobias.funke@reqres.in', 'first_name': 'Tobias', 'last_name': 'Funke', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg'}
+# print(len(data[0]))
+# for i in data[0]:
+#     print(i["first_name"], end=", ")
+# print()
+# Michael, Lindsay, Tobias, Byron, George, Rachel,
+
+data1 = data  = jsonpath.jsonpath(json_response, "data[0].first_name")
+print(data1[0]) # Michael
+
+
+#
+status = response_1.status_code
+# print(type(status), status, sep="  -->  \n")
+# <class 'int'>  -->
+# 200
+# assert status == 201
+#     assert status == 201
+# AssertionError
+#
+# response_1.
+# print(response_1.headers.get("Date"))
+# Wed, 11 Dec 2019 23:39:53 GMT
+
+# print(response_1.cookies)
+# <RequestsCookieJar[<Cookie __cfduid=da79160fddc3496b271e2d8d789be04551576107652 for .reqres.in/>]>
+
+# print(response_1.elapsed)
+# 0:00:00.096220
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##
+import math
+print(int(math.log2(8)) == math.log2(8) )
+#_____________________________________________________________
+#_______________________________________________________________
 import os
 cur_dir = os.path.abspath(__file__)
 # print(cur_dir)
@@ -234,27 +319,4 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sss = [""]
 # print("".join(sss))
 
-##############################################
-Example 1:
 
-Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FB"
-Output: [true,false,true,true,false]
-Explanation:
-"FooBar" can be generated like this "F" + "oo" + "B" + "ar".
-"FootBall" can be generated like this "F" + "oot" + "B" + "all".
-"FrameBuffer" can be generated like this "F" + "rame" + "B" + "uffer".
-Example 2:
-
-Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FoBa"
-Output: [true,false,true,false,false]
-Explanation:
-"FooBar" can be generated like this "Fo" + "o" + "Ba" + "r".
-"FootBall" can be generated like this "Fo" + "ot" + "Ba" + "ll".
-Example 3:
-
-Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FoBaT"
-Output: [false,true,false,false,false]
-Explanation:
-"FooBarTe
-
-def camelMatch(self, queries: List[str], pattern: str) -> List[bool]:

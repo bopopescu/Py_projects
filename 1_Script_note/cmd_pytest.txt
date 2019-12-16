@@ -1,5 +1,35 @@
 #@@ 10/4/19
 #@@ 11/22/19
+#@@ 12/13/19
+
+ pytest
+# skip test: -m, -v, -k
+
+# @pytest.mark.skip("reason to skip")
+# @pytest.mark.skipif(a > 10, reason="Give a reason")
+
+# run selected testes @mark
+# pytest -k 
+
+# group tests
+# @pytest.mark.Group_name
+#pytest -m Group_name
+
+# run except test
+# pytest -m "not Group_name"
+ 
+# execute setup b4 or after each test.
+# @pytest.fixture(scope="module")
+# def setup()
+#     global driver
+#     driver = webdriver.Chrome()
+# Everything after yield executed after test is done 
+    #   yield
+    #   driver.close()
+
+# def test_reg(setup):
+#     pass
+
 
 
 
