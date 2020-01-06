@@ -183,3 +183,88 @@ curl -s localhost:8000/todos | jq
        -d '{"completed": true}'
 
  
+
+ 
+####@@ Docker AWS
+@@Dokcer
+Docker Compose: This allows you to orchestrate and run multi-container environments both locally and on Docker Swarm clusters
+Git: This is required to fork and clone the sample application from GitHub and create your own Git repositories for the various applications and environments you will create in this book
+GNU Make 3.82 or higher: This provides task automation, allowing you run simple commands (for example, make test) to execute a given task
+jq: A command-line utility for parsing JSON
+curl: A command-line HTTP client
+tree: A command-line client for displaying folder structures in the shell
+Python interpreter: This is required for Docker Compose and the AWS Command-Line Interface (CLI) tool that we will install in a later chapter
+pip: A Python package manager for installing Python applications such as the AWS CLI
+
+## Remove old Docker
+
+## Application
+## Install Dependency
+pip3 install -r requirements.txt --user
+
+##
+# retrive souce code of a webpage
+src> curl localhost:8000
+{"todos":"http://localhost:8000/todos"}
+
+## -o
+# save output to a file
+curl -o vue-v2.5.16.js https://cdn.jsdelivr.net/npm/vue/dist/vue.js
+# Uppercase -O will save the file with its original filename:
+curl -O https://cdn.jsdelivr.net/npm/vue/dist/vue.js
+
+##
+The -I option allows you to fetch only the HTTP headers, no content 
+of the specified resource:
+curl -I https://www.ubuntu.com
+
+## include header: -i and content
+curl -i https://www.ubuntu.com
+
+## -L follow redirect
+ curl -L google.com
+
+## -X
+curl -X GET http://example.com -I
+
+## -X GET. The -X signifies the method used for the request. 
+Common options are GET, POST, DELETE, PUT.
+
+## -H : submit the request header
+## -d : data
+
+curl -X POST -H "Content-Type: application/json" localhost:8000/todos \
+       -d '{"title": "Wash the car", "order": 2}'
+#Linux version
+curl -X POST -H "Content-Type: application/json" localhost:8000/api/articles/ -d '{"title": "Run Post Test", "description": "First Trial", "body": "Running 2 tests", "author_id": 11}'
+#windows version
+curl -X POST -H "Content-Type: application/json" localhost:8000/api/subscriber -d "{\"name\": \"4378 Station\", \"age\": 2, \"email\": \"4378@litepoint.com\"}"      
+## 
+curl -s localhost:8000/todos | jq
+
+## curl -X PATCH -H "Content-Type: application/json" localhost:8000/todos/1 \
+    -d '{"completed": true}'
+
+## curl -X POST -H "Content-Type: application/json" localhost:8000/todos \
+    -d '{"title": "Walk the dog", "completed": false, "order": 1}'
+[
+  {
+    "url": "http://localhost:8000/todos/1",
+    "title": "Wash the car",
+    "completed": true,
+    "order": 2
+  },
+  {
+    "url": "http://localhost:8000/todos/2",
+    "title": "Walk the dog",
+    "completed": false,
+    "order": 1
+  }
+]
+
+##
+$ python3 manage.py test --settings todobackend.settings_test
+
+ssqa@ssqa:~/Documents/Docker_AWS/proj_1/todobackend/src$ python3 manage.py test --settings todobackend.settings_test
+
+@@ Build applications with Docker

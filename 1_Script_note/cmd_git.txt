@@ -22,7 +22,27 @@ git clone https://github.com/brb45/sampleproject
 git add b_file_op1.py b_file_op2.py
 git add .
 
-git rm --cached b_file_op2.py
+git rm --cached b_file_op2.py  # reverse add opration
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ git add empty.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ git status -s
+ m Docker_AWS/Docker_proj_11_26/Docker_AWS/Code/docker-in-aws
+ m Docker_AWS/Docker_proj_11_26/Docker_AWS/proj_1/todobackend
+A  empty.py
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ git rm --cached empty.py
+rm 'empty.py'
+
+jsun@jsun-mbpw10 MINGW64 ~/Documents/Py_projects (master)
+$ git status -s
+ m Docker_AWS/Docker_proj_11_26/Docker_AWS/Code/docker-in-aws
+ m Docker_AWS/Docker_proj_11_26/Docker_AWS/proj_1/todobackend
+?? empty.py
+
+
 git commit -m "b_file_1 draft1" b_file_op1.py
 git commit -am "Second Line" 3.txt   # -a , add and commit
 
