@@ -1,5 +1,19 @@
-10/31/19
+initial:  10/31/19
+Review: 
+1. 1/3/2020
+
+@*************************************
+
 #@@ 1.
+docker info
+docker ps
+docker build
+docker images
+docker push
+
+docker-compose build release
+
+
  
 > ssh -i ~/.ssh/admin.pem ec2-user@34.201.120.79
 The authenticity of host '34.201.120.79 (34.201.120.79)' can't be established.

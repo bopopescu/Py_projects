@@ -1,4 +1,6 @@
 #1/24/2019
+# review 1/6/2020
+
 10.201.9.79
 relational database
 client/server architecture

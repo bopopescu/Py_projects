@@ -14,3 +14,7 @@ class TestOne:
     def test_e2e(self, setup):
         pass
 
+from pprint import pprint
+grid = [[[0] * 5 for y in range(4)] for z in range(3)]
+
+pprint(grid[3])
