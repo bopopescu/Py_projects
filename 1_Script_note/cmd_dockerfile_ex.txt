@@ -519,6 +519,7 @@ USER app
 3) Build Test Stage
 ssqa@ssqa:~/Documents/Docker_AWS/proj_2.1/todobackend$ 
 docker build --target test -t todobackend-test .
+
 Sending build context to Docker daemon  40.45kB
 Step 1/12 : FROM alpine AS test
  ---> 965ea09ff2eb
@@ -561,7 +562,9 @@ Successfully tagged todobackend-test:latest
 4) Run test - image
 run test on todobackend-test image
 ssqa@ssqa:~/Documents/Docker_AWS/proj_2.1/todobackend$ docker run -it --rm todobackend-test
-nosetests --verbosity=2 --nologcapture --with-coverage --cover-package=todo --with-spec --spec-color --with-xunit --xunit-file=./unittests.xml --cover-xml --cover-xml-file=./coverage.xml
+nosetests --verbosity=2 --nologcapture --with-coverage --cover-package=todo --with-spec 
+--spec-color --with-xunit --xunit-file=./unittests.xml --cover-xml --cover-xml-file=./coverage.xml
+
 Creating test database for alias 'default'...
 
 Ensure we can create a new todo item
@@ -707,9 +710,14 @@ Successfully tagged odobackend-release:latest
 ssqa@ssqa:~/Documents/Docker_AWS/proj_2.1/todobackend$
 
 6) Run release_image (application)-->  server is up
-docker run --name odobackend_poj2.1 -it --rm  -p 8000:8000 odobackend-release uwsgi --http=0.0.0.0:8000 --module=todobackend.wsgi --master
+docker run --name odobackend_poj2.1 -it --rm  -p 8000:8000 odobackend-release uwsgi 
+--http=0.0.0.0:8000 --module=todobackend.wsgi --master
 
-ssqa@ssqa:~/Documents/Docker_AWS/proj_2.1/todobackend$ docker run --name odobackend_poj2.1 -it --rm  -p 8000:8000 odobackend-release uwsgi --http=0.0.0.0:8000 --module=todobackend.wsgi --master
+ssqa@ssqa:~/Documents/Docker_AWS/proj_2.1/todobackend$ 
+docker run --name odobackend_poj2.1 -it --rm  -p 8000:8000 odobackend-release uwsgi 
+--http=0.0.0.0:8000 --module=todobackend.wsgi --master
+
+
 *** Starting uWSGI 2.0.17 (64bit) on [Mon Nov 25 21:49:34 2019] ***
 compiled with version: 8.3.0 on 25 November 2019 19:34:05
 os: Linux-5.0.0-32-generic #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019
@@ -748,6 +756,8 @@ CONTAINER ID        IMAGE                COMMAND                  CREATED       
 6.2) Start another instance with different port  mappings
 ssqa@ssqa:~/Documents/Docker_AWS/proj_2.1/todobackend$ docker run --name odobackend_poj2.1_02 -it --rm  -p 8001:8001 odobackend-release uwsgi --http=0.0.
 0.0:8000 --module=todobackend.wsgi --master
+
+
 *** Starting uWSGI 2.0.17 (64bit) on [Mon Nov 25 22:01:32 2019] ***
 compiled with version: 8.3.0 on 25 November 2019 19:34:05
 os: Linux-5.0.0-32-generic #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019
@@ -797,6 +807,7 @@ CONTAINER ID        IMAGE                COMMAND                  CREATED       
 
 8) docker inspect
 ssqa@ssqa:~$ docker inspect odobackend_poj2.1_detached
+
 [
     {
         "Id": "66d426f3aa17762125b9a7d86acc1ba744da23fc859b381416f3087c732ae158",
