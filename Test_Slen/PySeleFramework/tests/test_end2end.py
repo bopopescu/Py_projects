@@ -54,5 +54,7 @@ class Solution:
         return helper(s, p, 0, 0, len(s), len(p))
 
 
+dic = {"a":1,"b":2,"c":3}
 
+print(f"len_dict is {len(dic)}")
 
