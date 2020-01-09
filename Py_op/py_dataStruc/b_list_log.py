@@ -5,8 +5,47 @@ import copy
 # reverse() vs reversed()
 # sort() vs sorted()
 # nums.reverse()
+# strs1_st = sorted(strs1, key=len)
+# sorted(strs, key=str.lower)  # ['aa', 'BB', 'CC', 'zz']
+# (sorted(strs, key=str.upper))
 
 max, min
+# passed to a function:
+# arr: is arr itself
+
+# arr[1:3], arr + [5]: both are shallow copy of part of arr or exention.  
+
+# arr is a list
+# func(arr): pass arr as an argument, it is like pass a reference arr, any changes to arr in func, will actually change arr.
+# func(arr[1:5]): complete different!. arr[1:5] is a new list, which is a shallow copy of arr's 2nd through 6th elements
+##
+# new_list_1 is shallow copy of arr, Not completely independent of new_list
+new_list_1 = arr[1:3]
+# new_list_2 is an extension of shallow copy of arr
+new_list_2 = arr + [8] # arr + [8] does Not modify arr
+
+
+arr = [[1, 2, 3], [4, 5, 6], 10]
+new_list_1 = arr + [99]
+# print(f"new_list_1 is {new_list_1}") # new_list_1 is [[1, 2, 3], [4, 5, 6], 10, 99]
+# print(f"arr is {arr}") # arr is [[1, 2, 3], [4, 5, 6], 10]
+
+new_list_1[0][0] = 999
+# new_list_1 is [[999, 2, 3], [4, 5, 6], 10, 99]
+print(f"new_list_1 is {new_list_1}")
+print(f"arr is {arr}")  # arr is [[999, 2, 3], [4, 5, 6], 10]
+
+
+##
+s_arr = ['ab', 'abc', 'Cba', 'ddf', 'Dh', 'Ag']
+s_sorted = sorted(s_arr, key=lambda x: (len(x), x.lower()))
+# print(s_sorted)  ['ab', 'Ag', 'Dh', 'abc', 'Cba', 'ddf']
+ss_sorted = sorted(s_arr, key=len)
+# print(ss_sorted) ['ab', 'Dh', 'Ag', 'abc', 'Cba', 'ddf']
+sss_sorted = sorted(s_arr, key=str.lower)
+# print(sss_sorted) ['ab', 'abc', 'Ag', 'Cba', 'ddf', 'Dh']
+
+##
 
 #@@ 1.0.0 shallow copy: shifts[:] or copy.copy(shifts)
 import copy
@@ -72,12 +111,15 @@ def no_change_to_list(s):
     s[0] = 100
     return s
 
-no_change = no_change_to_list(s[0:2])
+no_change_to_list(s) # pass s as reference will change s
+print(s)  # [100, 2, 3]
+
+no_change = no_change_to_list(s[0:2]) # pass a new list which is a shallow copy of partial s.
 print(f"no change is {no_change}")
 print(f's is not changed {s}')
 # no change is [100, 2]
 # s is not changed [1, 2, 3]
-
+#_____________________________________________________________________________________________
 #@@ 2.1
 
 cnt_dict = {'a':4, 'b':8, 'c':10, 'd':4, 'e':10, 'f':5, 'h':5, 'g':5}
@@ -92,6 +134,12 @@ print(type(letter))
 print(f"cnt_list is {cnt_list}")
 print(f"cnt_order_list is {cnt_order_list}")
 print()
+# ('a', 4), ('b', 8), ('c', 10), ('d', 4), ('e', 10), ('f', 5), ('h', 5), ('g', 5), 
+# < class 'tuple' >
+# cnt_list is [('a', 4), ('b', 8), ('c', 10), ('d', 4),
+#              ('e', 10), ('f', 5), ('h', 5), ('g', 5)]
+# cnt_order_list is [('e', 10), ('c', 10), ('b', 8), ('h', 5),
+#                    ('g', 5), ('f', 5), ('d', 4), ('a', 4)]
 
 #@@ 2.
 str = "  this is  a good book  "
@@ -152,6 +200,7 @@ p_s = list(zip(p,sp))
 print(p_s)
 # [(10, 2), (3, 10), (0, 1), (5, 1), (3, 3)]
 
+# convert list of tuple to dict
 p_s1 = dict(p_s)  # {10: 2, 3: 3, 0: 1, 5: 1}
 
 ps = sorted(p_s, key = lambda x: (x[0], x[1]))
@@ -449,9 +498,9 @@ test[-1]                #last element "ad"
 # a[:end]      # items from the beginning through end-1
 # a[:]         # a copy of the whole array
 
-a[-1]    # last item in the array
-a[-2:]   # last two items in the array
-a[:-2]   # everything except the last two items
+a[-1]    # simple int of last item in the array
+a[-2:]   # a list of last two items in the array
+a[:-2]   # a list of everything except the last two items
 
 #
 a = [0,1,2,3,4]
@@ -470,7 +519,7 @@ print(list(range(2, 20, 3))) # Output: [2, 5, 8, 11, 14, 17]
 t_str = "automation test"
 for i, v in enumerate(t_str):
     print(i, v, end=", ")
-#0 a, 1 u, 2 t, 3 o, 4 m, 5 a, 6 t, 7 i, 8 o, 9 n, 10  , 11 t, 12 e, 13 s, 14 t,
+#  0 a, 1 u, 2 t, 3 o, 4 m, 5 a, 6 t, 7 i, 8 o, 9 n, 10  , 11 t, 12 e, 13 s, 14 t,
 
 t_str = "auto test"
 t_enum = list(enumerate(t_str))
@@ -533,7 +582,8 @@ else: # num of row in matrix len(matrix) is  1
 
 if not matrix[0]: # True
     print("empty column")  # empty column
-    # len(matrix[0]) : num of columns
+    print(len(matrix[0]))  # 0
+    
 
 arr2 = [[1]*3 for _ in range(5)]
 print(" num of row: {}\n num of column: {}".format(len(arr2), len(arr2[0])))
@@ -592,6 +642,17 @@ print(arr[:-4]) #[1, 2, 3, 4]
 ltr_str = "abcd"
 ltr_list = ltr_str.split("") # ValueError: empty separator
 
+#@@ 28
+
+ss = "this is a test"
+list_from_str = list(ss)
+back_to_str = "".join(list_from_str)
+print(f"list_from_str is {list_from_str}")
+print(f"back_to_str is {back_to_str}")
+# list_from_str is ['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 't', 'e', 's', 't']
+# back_to_str is this is a test
+
+# _______________________________
 # convert string to a list or a tuple
 In[11]: tuple("Test")
 Out[11]: ('T', 'e', 's', 't')

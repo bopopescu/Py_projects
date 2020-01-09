@@ -53,3 +53,9 @@ old_set.pop()
 print("after popping, old_set is {}".format(old_set))
 #This operation removes and return an arbitrary element from the set.
 #If there are no elements to remove, it raises a KeyError.
+
+#@@ 4. len of set
+t_set = {1, 2, 3}
+len_t = len(t_set)
+# print(len_t)  3
+ 

@@ -800,13 +800,16 @@ These four SQL lines should be part of a single transaction and satisfy the foll
 
 Atomicity: Either all the SQLs should be successful or all should fail. There should not be any partial updates.
  If this property is not obeyed and if the database crashes after running two SQLs, then A would lose 100.
+
 Consistency: A transaction must change affected data only in allowed ways. In this example, if account_number
  with B does not exist, the whole transaction should be rolled back.
+
 Isolation: Transactions that occur at the same time (concurrent transactions) should not lead the database to
  an inconsistent state. Each of the transactions should be executed as if it were the only transaction in the
  system. No transaction should affect the existence of any other transaction. Suppose A transfers all of this
  600 exactly at the same time while transferring to B; both transactions should act independently, ensuring
  the balance before transferring the amount.
+ 
 Durability: The data should be persistent on disk and should not be lost despite any database or system failure.
 
 mysql> CREATE DATABASE bank;

@@ -179,6 +179,20 @@ def isfloat(value):
  #   As a convenient special case s.split() (with no arguments) splits on all whitespace chars.
  #  return a list of one element if no delim found in the string
 
+
+ss = "a b c d"
+print(ss.split(maxsplit=1))
+# ['a', 'b c d']
+print(ss.split(maxsplit=2))
+# ['a', 'b', 'c d']
+
+ltr_str = "abcd"
+ltr_list = ltr_str.split()
+print(ltr_list)
+
+# ltr_list_error = ltr_str.split("") # ValueError: empty separator
+
+
 word = "\nthis is first page\nthis is 2nd page\nthis is third page\n"
 word.split("\n") #['', 'this is first page', 'this is 2nd page', 'this is third page', '']
 word.splitlines()#['', 'this is first page', 'this is 2nd page', 'this is third page']

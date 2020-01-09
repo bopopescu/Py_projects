@@ -1,8 +1,10 @@
 #@@ 10/4/19
 #@@ 11/22/19
 #@@ 12/13/19
+#@@ 1/7/20
 
- pytest
+ pytest Summary
+ #_______________________________________________________________
 # skip test: -m, -v, -k
 
 # @pytest.mark.skip("reason to skip")
@@ -30,9 +32,10 @@
 # def test_reg(setup):
 #     pass
 
+# Tree-like: --collect-only
+#________________________________________________________________
 
-
-##
+## 1.
 ## pytest command
 pytest test_name.py
 pytest -v
@@ -47,7 +50,7 @@ collected 1 item
 
 tasks/test_four.py::test_asdict PASSED
 
-##
+## 2. 
 (env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v tasks\test_four.py::test_asdict  tasks\test_four.py::test_replace
 pytest -v tasks\test_four.py::test_asdict  tasks\test_four.py::test_replace
 ========================================================================================== test session starts ===========================================================================================
@@ -59,7 +62,8 @@ collected 2 items
 tasks/test_four.py::test_asdict PASSED                                                                                                                                                              [ 50%]
 tasks/test_four.py::test_replace PASSED
 
-## Show results tree-like
+## 3. 
+Show results tree-like
 (env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest --collect-only
 ========================================= test session starts =========================================
 platform win32 -- Python 3.7.2, pytest-5.1.2, py-1.8.0, pluggy-0.13.0
@@ -81,7 +85,7 @@ collected 7 items
 ##
 pytest  -k "asdict or defaults" --collect-only
 
-##
+## 4. -m group_name
 (env_3.7) C:\Users\jsun\Documents\Py_projects\Pytest_proj\pytest_02\pytest_proj_1>pytest -v -m run_these_please
 pytest -v -m run_these_please
 ========================================================================================== test session starts ===========================================================================================
@@ -92,21 +96,21 @@ collected 7 items / 6 deselected / 1 selected
 
 tasks/test_four.py::test_asdict PASSED
 
-## skip the rest if fail
+## 5. skip the rest if fail
 pytest -x
 
 ## turn off stack - trace
 pytest -v --tb=no
 pytest --maxfail=1 --tb=no
 
-## output print statement
+## 6. output print statement
 pytest --capture=no
 pytest -s
 
-## Run last failed test
+## 7. Run last failed test
 pytest --lf
 
-## run the first failed and the rest.
+## 8. run the first failed and the rest.
 pytest --ff
 C:\Program Files\MongoDB\Server\4.2\data\
 ## pip local install
@@ -122,7 +126,7 @@ Successfully installed tasks-0.1.0
 pytest -v -k "_raises and not delete"
 
 
-##
+## 9.
 pytest -v test_add.py -k valid_id
 ## Run to show fixture process
 pytest --setup-show test_add.py -k valid_
@@ -170,7 +174,7 @@ pip install git+https://github.com/pytest-dev/pytest-cov@master
 
 
 
-##
+##_______________________________________________________________________________________
 Pytest syntax for writing tests-
 1. File names should start with “test_”, or end with "_test".
 2. If tests are defined as methods on a class, the class name should start with “Test".

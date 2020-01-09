@@ -1,12 +1,8 @@
 # cnt lines
 find . -name \*.py | xargs wc -l
 
-
-#@@   2. Linux
-
 ls -R # list items from sub-directory
 
-Linux:
 nmap:10.0.2.15
 awk, sed,
 ps aux

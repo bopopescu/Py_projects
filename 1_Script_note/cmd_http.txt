@@ -1,5 +1,11 @@
 #11/27/2019
 #1/6/2020
+
+#Linux version
+curl -X POST -H "Content-Type: application/json" localhost:8000/api/articles/ -d '{"title": "Run Post Test", "description": "First Trial", "body": "Running 2 tests", "author_id": 11}'
+#windows version
+curl -X POST -H "Content-Type: application/json" localhost:8000/api/subscriber -d "{\"name\": \"4378 Station\", \"age\": 2, \"email\": \"4378@litepoint.com\"}"  
+
 #@@ 1. GET 
 #1.0)
 # i option to show HTTP header
@@ -189,7 +195,9 @@ curl -s localhost:8000/todos | jq
 ####@@ Docker AWS
 @@Dokcer
 Docker Compose: This allows you to orchestrate and run multi-container environments both locally and on Docker Swarm clusters
-Git: This is required to fork and clone the sample application from GitHub and create your own Git repositories for the various applications and environments you will create in this book
+
+Git: This is required to fork and clone the sample application from GitHub and create your own Git repositories for the various 
+applications and environments you will create in this book
 GNU Make 3.82 or higher: This provides task automation, allowing you run simple commands (for example, make test) to execute a given task
 jq: A command-line utility for parsing JSON
 curl: A command-line HTTP client
@@ -234,12 +242,14 @@ Common options are GET, POST, DELETE, PUT.
 ## -H : submit the request header
 ## -d : data
 
-curl -X POST -H "Content-Type: application/json" localhost:8000/todos \
-       -d '{"title": "Wash the car", "order": 2}'
+curl -X POST -H "Content-Type: application/json" localhost:8000/todos -d '{"title": "Wash the car", "order": 2}'
+       
 #Linux version
 curl -X POST -H "Content-Type: application/json" localhost:8000/api/articles/ -d '{"title": "Run Post Test", "description": "First Trial", "body": "Running 2 tests", "author_id": 11}'
 #windows version
 curl -X POST -H "Content-Type: application/json" localhost:8000/api/subscriber -d "{\"name\": \"4378 Station\", \"age\": 2, \"email\": \"4378@litepoint.com\"}"      
+
+
 ## 
 curl -s localhost:8000/todos | jq
 
