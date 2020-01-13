@@ -152,253 +152,83 @@ print("start")
 # 9/25
 # 10_23
 # 12_9
-class Solution:
-    def removeDuplicateLetters(self, s: str) -> str:
+# 1_10
+class TestSolution:
+    def numIs(self, grid):
+        # 1/9/2020, 11:41
+        # 1/10 8:17, 8:51
 
-        # 12/19/2019, 9:33 --> 10:28 --> 11:04 --> 11:18
-        letter_dict = {}
-        letter_set = set()
-        stack = []
+        def helper(grid, i, j, visited):
 
-        for letter in s:
-            if letter in letter_dict:
-                letter_dict[letter] += 1
-            else:
-                letter_dict[letter] = 1
-        i = 0
-        while i < len(s):
-            if not stack:
-                stack.append(s[i])  ## error 1: use append not push
-                letter_dict[s[i]] -= 1
-                letter_set.add(s[i])
-            else:
-                top = stack[-1]
-                if s[i] == top:
-                    letter_dict[s[i]] -= 1
-                elif s[i] < top:
-                    if letter_dict[top] == 0:
-                        if s[i] in letter_set:
-                            letter_dict[s[i]] -= 1
-                            # continue
-                        else:
-                            stack.append(s[i])
-                            letter_dict[s[i]] -= 1
-                            letter_set.add(s[i])
-                    else:
-                        # letter_dict[top] -= 1   # error 2: biggest bug
-                        ## Error: 3added missing code
-                        if s[i] in letter_set:
-                            letter_dict[s[i]] -= 1
-                        else:
-                            ## ended of Error: 3
-                            stack.pop()
-                            letter_set.remove(top)
-                            i -= 1
-                        # stack.append(top)
-                else:  # char > top
-                    if s[i] in letter_set:
-                        letter_dict[s[i]] -= 1
-                    else:
-                        stack.append(s[i])
-                        letter_dict[s[i]] -= 1
-                        letter_set.add(s[i])
+            if 0 <= i < len(grid) and 0 <= j < len(grid[0]):
 
-            i += 1
+                if grid[i][j] == '0':
+                    return True
+                if visited[i][j]:
+                    return True
 
-        return "".join(stack)
+                visited[i][j] = 1
+                return helper(grid, i, j + 1, visited) and helper(grid, i + 1, j, visited) and helper(grid, i - 1, j,
+                                                                                                      visited) and helper(
+                    grid, i, j - 1, visited)
+            return True
 
+        if len(grid) == 0 or grid[0] == 0:
+            return 0
+
+        num_row, num_col = len(grid), len(grid[0])
+        visited = [[0] * num_col for _ in range(num_row)]
+        cnt = 0
+
+        for i in range(num_row):
+            for j in range(num_col):
+                if grid[i][j] == '0' or visited[i][j]:
+                    continue
+                if helper(grid, i, j, visited):
+                    cnt += 1
+
+        return cnt
 
 class Solution:
-    def removeDuplicateLetters(self, s: str) -> str:
+    def numIs(self, grid):
+        # 1/10 4:53 --> 5:05
 
-        # 12/19/2019, 9:33 --> 10:28
-        letter_dict = {}
-        letter_set = set()
-        stack = []
+        def helper(grid, i, j, visit):
+            if i < 0 or i == len(grid) or j < 0 or j==len(grid[0]):
+                return
+            elif grid[i][j] == '0' or visit[i][j]  ==  1:
+                return
 
-        for letter in s:
-            if letter in letter_dict:
-                letter_dict[letter] += 1
-            else:
-                letter_dict[letter] = 1
-        i = 0
-        while i < len(s):
-            if not stack:
-                stack.append(s[i])  ## error 1: use append not push
-                letter_dict[s[i]] -= 1
-                letter_set.add(s[i])
-            else:
-                top = stack[-1]
-                if s[i] == top:
-                    letter_dict[s[i]] -= 1
-                    # continue
-                elif s[i] < top:
-                    if letter_dict[top] == 0:
-                        if s[i] in letter_set:
-                            letter_dict[s[i]] -= 1
-                            # continue
-                        else:
-                            stack.append(s[i])
-                            letter_dict[s[i]] -= 1
-                            letter_set.add(s[i])
-                    else:
-                        # letter_dict[top] -= 1
-                        stack.pop()
-                        letter_set.remove(top)
-                        i -= 1
-                        # stack.append(top)
-                else:  # char > top
-                    if s[i] in letter_set:
-                        letter_dict[s[i]] -= 1
-                    else:
-                        stack.append(s[i])
-                        letter_dict[s[i]] -= 1
-                        letter_set.add(s[i])
+            move = [(-1,0), (1,0), (0,-1), (0,1)]
+            visit[i][j] = 1
+            for m in move:
+                helper(grid, i + m[0], j + m[1], visit)
 
-            i += 1
 
-        return "".join(stack)
 
-aaa = Solution()
-cc = aaa.removeDuplicateLetters("cbbbcaa")
-print(cc)
-#
-# ###
-# import json, requests, jsonpath
-# odices='{"k1":1, "k2":2}'
-# rst = json.loads(odices)
-# # print(type(rst)) # <class 'dict'>
-# # print(rst['k2']) # 2
-# #
-#
-# # API with parameters.
-# #1.
-# url = "https://reqres.in/api/users?page=2"
-# response_1 = requests.get(url)
-# # print(type(response_1), response_1, sep=" --> ")
-# # <class 'requests.models.Response'> --> <Response [200]>
-#
-# content  = response_1.content
-# # print(type(content))  # <class 'bytes'>
-# # print(content)
-# # b'{"page":2,"per_page":6}'
-#
-# #
-# header = response_1.headers
-# print(type(header), header, sep=" --> ")
-# # <class 'requests.structures.CaseInsensitiveDict'> -->
-# {'Date': 'Wed, 11 Dec 2019 23:17:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=df6e47f7f298a5764dd4c33fdc28683151576106255; expires=Fri, 10-Jan-20 23:17:35 GMT; path=/; domain=.reqres.in; HttpOnly; Secure', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"414-k36Lu9tCb0XMJeh2/UG19C4xbw4"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '4275', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '543b2c406a1eed7f-SJC', 'Content-Encoding': 'gzip'}
-# # print(header["Date"])
-# # Wed, 11 Dec 2019 23:19:08 GMT
-# #
-# json_content = response_1.json
-# # print(type(json_content), json_content, sep="  -->  \n")
-# # <class 'method'>  -->
-# # <bound method Response.json of <Response [200]>>
-#
-# # Convert to Json format
-# json_response = json.loads(response_1.text)
-# # print(type(json_response), json_response, sep=" -->  \n")
-# # <class 'dict'> -->
-# # {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg'}, {'id': 8, 'email': 'lindsay.ferguson@reqres.in', 'first_name': 'Lindsay', 'last_name': 'Ferguson', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg'}, {'id': 9, 'email': 'tobias.funke@reqres.in', 'first_name': 'Tobias', 'last_name': 'Funke', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg'}, {'id': 10, 'email': 'byron.fields@reqres.in', 'first_name': 'Byron', 'last_name': 'Fields', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg'}, {'id': 11, 'email': 'george.edwards@reqres.in', 'first_name': 'George', 'last_name': 'Edwards', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg'}, {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg'}]}
-#
-# response_text = response_1.text
-# # print(type(response_text), response_text, sep="   --> \n")
-# # <class 'str'>   -->
-# # {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"}]}
-#
-# #
-# {
-#     "page": 2,
-#     "per_page": 6,
-#     "total": 12,
-#     "total_pages": 2,
-#     "data": [
-#         {
-#             "id": 7,
-#             "email": "michael.lawson@reqres.in",
-#             "first_name": "Michael",
-#             "last_name": "Lawson",
-#             "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
-#         },
-#         {
-#             "id": 8,
-#             "email": "lindsay.ferguson@reqres.in",
-#             "first_name": "Lindsay",
-#             "last_name": "Ferguson",
-#             "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"
-#         },
-#         {
-#             "id": 9,
-#             "email": "tobias.funke@reqres.in",
-#             "first_name": "Tobias",
-#             "last_name": "Funke",
-#             "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"
-#         },
-#         {
-#             "id": 10,
-#             "email": "byron.fields@reqres.in",
-#             "first_name": "Byron",
-#             "last_name": "Fields",
-#             "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"
-#         },
-#         {
-#             "id": 11,
-#             "email": "george.edwards@reqres.in",
-#             "first_name": "George",
-#             "last_name": "Edwards",
-#             "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
-#         },
-#         {
-#             "id": 12,
-#             "email": "rachel.howell@reqres.in",
-#             "first_name": "Rachel",
-#             "last_name": "Howell",
-#             "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"
-#         }
-#     ]
-# }
-# pages = jsonpath.jsonpath(json_response, "total_pages")
-# # print(type(pages), pages[0], sep=" --> \n")
-# # print(type(pages), pages, sep=" --> \n")
-# # <class 'list'> -->
-# # 2
-# # <class 'list'> -->
-# # [2]
-#
-# data  = jsonpath.jsonpath(json_response, "data")
-# # print(len(data), data[0][2], sep="  --> \n")
-# # 1  -->
-# # {'id': 9, 'email': 'tobias.funke@reqres.in', 'first_name': 'Tobias', 'last_name': 'Funke', 'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg'}
-# # print(len(data[0]))
-# # for i in data[0]:
-# #     print(i["first_name"], end=", ")
-# # print()
-# # Michael, Lindsay, Tobias, Byron, George, Rachel,
-#
-# data1 = data  = jsonpath.jsonpath(json_response, "data[0].first_name")
-# print(data1[0]) # Michael
-#
-#
-# #
-# status = response_1.status_code
-# # print(type(status), status, sep="  -->  \n")
-# # <class 'int'>  -->
-# # 200
-# # assert status == 201
-# #     assert status == 201
-# # AssertionError
-# #
-# # response_1.
-# # print(response_1.headers.get("Date"))
-# # Wed, 11 Dec 2019 23:39:53 GMT
-#
-# # print(response_1.cookies)
-# # <RequestsCookieJar[<Cookie __cfduid=da79160fddc3496b271e2d8d789be04551576107652 for .reqres.in/>]>
-#
-# # print(response_1.elapsed)
-# # 0:00:00.096220
-#
+
+
+        # return True or False
+
+        row, col = len(grid), len(grid[0])
+        if row == 0 or col == 0:
+            return 0
+        visit = [[0]*col for _ in range(row)]
+        cnt = 0
+
+        for i in range(row):
+            for j in range(col):
+                if grid[i][j] == '0' or visit[i][j] == 1:
+                    continue
+                helper(grid, i, j, visit)
+                cnt += 1
+
+        return cnt
+
+k = TestSolution()
+grid = [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]
+
+print(f"k.numIs(grid) {k.numIs(grid)}")
 
 
 
