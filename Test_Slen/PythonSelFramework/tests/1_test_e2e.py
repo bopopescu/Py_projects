@@ -25,8 +25,9 @@ class TestOne(BaseClass):
             cardText = card.text
             log.info(cardText)
             if cardText == "Blackberry":
-                checkoutpage.getCardFooter()[i].click()
+                checkoutpage.getCardFooter()[i].click()  # Add Cart button
 
+        # click on  Checkout() button
         self.driver.find_element_by_css_selector("a[class*='btn-primary']").click()
 
         confirmpage = checkoutpage.checkOutItems()
