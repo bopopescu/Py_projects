@@ -6,6 +6,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (PythonSelFramework)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="selenium_with_python" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="REST" />

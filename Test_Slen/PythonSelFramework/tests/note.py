@@ -14,4 +14,5 @@
 
 # 7. Parameterize WebDriver tests with data sets
 
-# 8.
+# 8. pip install pytest-html
+# 9. pytest --html=report.html

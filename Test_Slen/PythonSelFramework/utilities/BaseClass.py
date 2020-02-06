@@ -27,6 +27,6 @@ class BaseClass:
         element = WebDriverWait(self.driver, 10).until(
         EC.presence_of_element_located((By.LINK_TEXT, text)))
 
-    def selectOptionByText(self,locator,text):
+    def selectOptionByText(self, locator, text):
         sel = Select(locator)
         sel.select_by_visible_text(text)

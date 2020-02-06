@@ -21,4 +21,32 @@ print(response.text)
 #   "url": "https://httpbin.org/get"
 # }
 print(response.headers)
-# {'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json', 'Date': 'Thu, 12 Dec 20
+
+
+# ('Date', 'Fri, 24 Jan 2020 06:02:54 GMT')
+# ('Content-Type', 'application/json')
+# ('Content-Length', '438')
+# ('Connection', 'keep-alive')
+# ('Server', 'gunicorn/19.9.0')
+# ('Access-Control-Allow-Origin', '*')
+# ('Access-Control-Allow-Credentials', 'true')
+
+for key, value in response.json().items():
+    print(key, value)
+
+args {}
+headers {
+'Accept': '*/*', 
+'Accept-Encoding': 'gzip, deflate', 
+'Content-Type': 'applications/json', 
+'Email': 'qa@litepoint.com',
+ 'Host': 'httpbin.org', 
+ 'Name': 'BRCM-4389', 
+ 'Number': '408-880-9080', 
+ 'User-Agent': 'python-requests/2.22.0', 
+ 'X-Amzn-Trace-Id': 
+ 'Root=1-5e2a8977-ba4224299942c80d0a160dde'}
+
+
+origin 73.92.34.32
+url https: // httpbin.org/get

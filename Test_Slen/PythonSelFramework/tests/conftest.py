@@ -12,7 +12,9 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="class")
 def setup(request):
     global driver
-    browser_name=request.config.getoption("browser_name")
+    browser_name=request.config.getoption("--browser_name")
+
+    # pytest --browser_name chrome
     if browser_name == "chrome":
         driver = webdriver.Chrome()
         # driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")

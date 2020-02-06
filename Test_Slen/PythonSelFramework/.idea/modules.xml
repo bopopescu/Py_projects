@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonSelFramework.iml" filepath="$PROJECT_DIR$/.idea/PythonSelFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../selenium_with_python/.idea/selenium_with_python.iml" filepath="$PROJECT_DIR$/../selenium_with_python/.idea/selenium_with_python.iml" />
     </modules>
   </component>
 </project>

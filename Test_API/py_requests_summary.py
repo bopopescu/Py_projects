@@ -7,8 +7,8 @@ response = requests.get(
 )
 # response.content -> raw bytes
 # response.encoding = "utf-8"
-# response.text   --> json string
 
+# response.text   --> json string
 # reponse.json()  --> python dict
 # json.loads(response.text) --> python dict
 
@@ -21,6 +21,7 @@ response = requests.get(
 
 # print(response.request)
 # <PreparedRequest [GET]>
+
 # Inspecting request through response.request
 # >>> response = requests.post('https://httpbin.org/post', json={'key':'value'})
 # >>> response.request.headers['Content-Type']
