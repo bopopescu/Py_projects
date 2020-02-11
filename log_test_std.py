@@ -3,33 +3,33 @@ from collections import Counter
 import time
 import time
 
-# 1/30, 2/3,
-# 80
-def rm_duplicates(nums):
-    n = len(nums)
-    cnt = 1
-    pre, cur = 0, 1
-    while cur < n:
-        if nums[pre] == nums[cur] and cnt > 1:
-            cur += 1
-        else:
-            if nums[pre] != nums[cur]:
-                cnt  = 1
-            else:
-                cnt += 1
-            pre += 1
-            nums[pre] = nums[cur]
-            cur += 1
-    print(nums[:pre+1])
-    return pre+1
-nums = [0,0,1,1,1,2,3,3]
-print(rm_duplicates(nums))
+# 1/30, 2/3,2/10
 #_____________________________________________
-# 2/5
 
-############
-res = float('inf')
 #_____________________________________________
+
+# 611
+def triangleNumber(self, nums: List[int]) -> int:
+    # 2/11 9:22 --> 9:43
+    cnt = 0
+    n = len(nums)
+    for i in range(n):
+        for j in range(i + 1, n):
+            sum_two = nums[i] + nums[j]
+            lt, rt = j + 1, n - 1
+            while lt < rt:
+                mid = lt + (rt - lt) // 2
+                if nums[mid] > sum_two:
+                    rt = mid
+                else:
+                    lt = mid + 1
+            if lt == rt:
+                if j == n - 2 and sum_two > nums[n - 1]:
+                    cnt += 1
+                elif j != n - 2:
+                    cnt += n - 1 - rt + 1
+
+    return cnt
 
 #_____________________________________________
 
