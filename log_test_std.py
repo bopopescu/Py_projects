@@ -32,9 +32,48 @@ def triangleNumber(self, nums: List[int]) -> int:
     return cnt
 
 #_____________________________________________
+    def triangleNumber(self, nums: List[int]) -> int:
+        # 2/11 9:22 --> 9:43
+        cnt = 0
+        n = len(nums)
+        nums.sort()
+        for i in range(n):
+            for j in range(i + 1, n):
+                sum_two = nums[i] + nums[j]
+                lt, rt = j + 1, n
+                mid = 0
+                while lt < rt:
+                    mid = lt + (rt - lt) // 2
+                    if nums[mid] < sum_two:
+                        lt = mid + 1
+                    else:
+                        rt = mid
+                cnt += rt - j - 1
 
+                # if lt == rt:
+                #     cnt += lt - j +1
+
+                # if j == n-2 and sum_two > nums[n-1]:
+                #     cnt += 1
+                # elif j != n-2 and sum_two > nums[mid]:
+                #     cnt += n-1-rt + 1
+
+        return cnt
 #_____________________________________________
-
+n = len(nums)
+        nums.sort()
+        cnt = 0
+        # for i in range(n-1,3,-1): bug
+        for i in range(n-1,1,-1):
+            left = 0
+            right = i-1
+            while left < right:
+                if nums[left] + nums[right] > nums[i]:
+                    cnt += right - left
+                    right -= 1
+                else:
+                    left += 1
+        return cnt
 #_____________________________________________
 
 #_____________________________________________

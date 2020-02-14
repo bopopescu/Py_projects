@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
-import time
+import time, selenium
 driver = webdriver.Chrome()
 url = "https://rahulshettyacademy.com/angularpractice/"
 driver.get(url)
@@ -9,6 +9,7 @@ driver.get(url)
 # driver.maximize_window()
 
 from selenium.webdriver.common.by import By
+print(f"selenium.__version__  is {selenium.__version__}")
 # by_class_name can't have space
 # name_text_field.is_displayed()
 # is_displayed() --> visible on webpage

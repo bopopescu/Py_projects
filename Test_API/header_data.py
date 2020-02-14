@@ -34,19 +34,19 @@ print(response.headers)
 for key, value in response.json().items():
     print(key, value)
 
-args {}
-headers {
-'Accept': '*/*', 
-'Accept-Encoding': 'gzip, deflate', 
-'Content-Type': 'applications/json', 
-'Email': 'qa@litepoint.com',
- 'Host': 'httpbin.org', 
- 'Name': 'BRCM-4389', 
- 'Number': '408-880-9080', 
- 'User-Agent': 'python-requests/2.22.0', 
- 'X-Amzn-Trace-Id': 
- 'Root=1-5e2a8977-ba4224299942c80d0a160dde'}
+# args {}
+# headers {
+# 'Accept': '*/*',
+# 'Accept-Encoding': 'gzip, deflate',
+# 'Content-Type': 'applications/json',
+# 'Email': 'qa@litepoint.com',
+#  'Host': 'httpbin.org',
+#  'Name': 'BRCM-4389',
+#  'Number': '408-880-9080',
+#  'User-Agent': 'python-requests/2.22.0',
+#  'X-Amzn-Trace-Id':
+#  'Root=1-5e2a8977-ba4224299942c80d0a160dde'}
 
 
-origin 73.92.34.32
-url https: // httpbin.org/get
+# origin 73.92.34.32
+# url https: // httpbin.org/get

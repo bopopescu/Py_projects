@@ -6,6 +6,12 @@ import datetime
 
 # Cassandra, ElasticSearch and Kafka, big data
 # beautifulsoup, saucelabs
+# Gatling, JMeter, and Locust are some load testing tools
+# Swagger
+# SoapUI or Apache JMeter
+# Using SoapUI for load testing
+# Testing SOAP/REST Web Services Using JMeter
+# katalon API testing
 #
 ##________________________________##
 
