@@ -3,7 +3,7 @@ from collections import Counter
 import time
 import time
 
-# 1/30, 2/3,2/10
+
 #_____________________________________________
 
 #_____________________________________________
@@ -15,20 +15,7 @@ import time
 #_____________________________________________
 
 #_____________________________________________
-def maximumSwap(self, num):
-    """
-    :type num: int
-    :rtype: int
-    """
-    nums = map(int, str(num))
-    numt = sorted(nums, reverse=True)
-    for (i, m), n in zip(enumerate(nums), numt):
-        if m == n: continue
-        maxv = max(nums[i + 1:])
-        j = nums[i + 1:][::-1].index(maxv) + 1
-        nums[i], nums[-j] = nums[-j], nums[i]
-        break
-    return int(''.join(map(str, nums)))
+
 #_____________________________________________
 
 #_____________________________________________
