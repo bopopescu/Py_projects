@@ -88,11 +88,21 @@ cp test1_dir/* test2_dir  # make sure test2_dir exists
 # grep: Searches files for a specified string or expression
 -i , ignore word cases
 -r , search recursively
+-w , word only
+-v not matching
+grep -w boo will ignor fooboo, boohoo
+
+-c count times that pattern found
+
+-l list files containing 'main'
+grep -l 'main' *.py
 
 grep -w -c , combined with wc
 grep -w "pattern" -c file
 
 ##
+grep keyword filename
+-i : ignore case
 ssqa@ssqa:~/Documents/sys_cmd$ grep -c migration top_log.txt
 8
 ssqa@ssqa:~/Documents/sys_cmd$ grep -wc migration top_log.txt

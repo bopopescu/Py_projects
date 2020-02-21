@@ -8,6 +8,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="selenium_with_python" />
     <orderEntry type="module" module-name="Test_API" />
+    <orderEntry type="module" module-name="prodigyqa" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="REST" />
