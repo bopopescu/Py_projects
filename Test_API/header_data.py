@@ -1,8 +1,11 @@
 import json, requests, jsonpath
 
-# post
+# Get
+# response = requests.get(url, headers=headerdata)
 url = "https://httpbin.org/get"
-headerdata = {"name": "BRCM-4389", "email":"qa@litepoint.com", "number":"408-880-9080", "Content-Type": "applications/json"}
+
+headerdata = {"name": "BRCM-4389", "email":"qa@litepoint.com", "number":"408-880-9080", \
+              "Content-Type": "applications/json"}
 response = requests.get(url, headers=headerdata)
 print(response.text)
 # {

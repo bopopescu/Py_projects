@@ -144,6 +144,7 @@ As with the If-Modified-Since header, if the current version has the same ETag v
 cached copy, then an HTTP status of 304 is returned.
 
 # Etag example
+standard suggests that ETags be returned with all requests
 3. Client-Server Communication With curl
 We can break down a simple Client-Server communication involving ETags into the steps:
 
@@ -224,9 +225,157 @@ This is a race condition and leads to problematic behaviors, which are difficult
 Conditional requests allow implementing the optimistic locking algorithm (used by most wikis or source control systems). 
 The concept is to allow all clients to get copies of the resource, then let them modify it locally, 
 controlling concurrency by successfully allowing the first client submitting an update. 
-All subsequent updates, based on the now obsolete version of the resource, are rejected:
+All subsequent updates, based on the now obsolete version of the resource, are rejected (412 Precondition Failed)
+
+step 1) client1 --> Get /doc HTTP/1.1
+step 1.1) client2 --> Get /doc HTTP/1.1
+STEP 2) SERVER --> HTTP/1.1 200 OK , Last-Modified: date, Etag: "xyz"
+step 3) client1 --> PUT /doc HTTP/1.1 If-Match:  "xyz", If-Unmodified-Since: date
+step 4) server --> HTTP/1.1 204 No Content  Last-Modified: date2 Etag: "xyx2"
+step 5) client2 -> PUT /doc HTTP/1.1 If-Match: "xyz" If-Unmodified-Since: date
+step 6) server --> HTTP/1.1 412 Precondition Failed
+
+Conditional PUT requests are used to avoid the lost update problem when multiple agents are acting in parallel on the same resource 
+(using optimistic locking). Let us assume the value of a resource is
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+ETag: "0"
+
+{ "value": 0 }
+Now two clients simultaneously want to increment the value and send a PUT request with a body which contains the new value, 
+together with an If-Match header.
+
+PUT /value HTTP/1.1
+Content-Type: application/json
+If-Match: "0“
+
+{ "value": 1 }
+The server answers on the first request with status 200 (OK) and on the second one with status 412 (Precondition Failed), 
+i.e. the second client has to repeat his task (GET, update resource and PUT it with an If-Match header with the new etag value).
+
+The server has the current state of the resource (metadata such as ETag and content). That's sufficient to process the conditional request
 
 
+    #**if you want to increase an upvote counter, and want to make sure the count accurately reflects multiple, 
+simultaneous upvotes, use a conditional request to write the new value to the counter. 
+Instead of two writes that change the counter to the same number, one of the write requests fails and you can then retry 
+the request with the new value.
+    You can request an ETag with any method other than PATCH. The following example uses a GET request.
+curl -i 'https://test.example.com/posts/12345/upvotes.json' -H 'X-Firebase-ETag: true'
+
+Specifically calling the ETag in the header returns the ETag of the specified location in the HTTP response.
+HTTP/1.1 200 OK
+Content-Length: 6
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+ETag: [ETAG_VALUE]
+Cache-Control: no-cache
+
+10 // Current value of upvotes at the specified location
+
+Include the returned ETag in your next PUT or DELETE request to update data that specifically matches that ETag value. 
+Following our example, to update the counter to 11, or 1 larger than the initial fetched value of 10, 
+and fail the request if the value no longer matches, use the following code:
+curl -iX PUT -d '11' 'https://[PROJECT_ID].firebaseio.com/posts/12345/upvotes.json' -H 'if-match:[ETAG_VALUE]'
+
+If the value of the data at the specified location is still 10, the ETag in the PUT request matches, 
+and the request succeeds, writing 11 to the database.
+HTTP/1.1 200 OK
+Content-Length: 6
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+Cache-Control: no-cache
+
+11 // New value of the data at the specified location, written by the conditional request
+
+If the location no longer matches the ETag, which might occur if another user wrote a new value to the database, 
+the request fails without writing to the location. The return response includes the new value and ETag.
+HTTP/1.1 412 Precondition Failed
+Content-Length: 6
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: *
+ETag: [ETAG_VALUE]
+Cache-Control: no-cache
+
+12 // New value of the data at the specified location
+
+Use the new information if you decide to retry the request. Realtime Database does not automatically retry conditional 
+requests that have failed. However, you can use the new value and ETag to build a new conditional request 
+with the information returned by the fail response.
+
+    REST-based conditional requests implement the HTTP if-match standard. However, they differ from the standard in the following ways:
+1) You can only supply one ETag value for each if-match request, not multiple.
+2) While the standard suggests that ETags be returned with all requests, Realtime Database only returns ETags with requests 
+including the X-Firebase-ETag header. This reduces billing costs for standard requests.
+Conditional requests might also be slower than typical REST requests.
+
+
+To generate a unique, timestamp-based key for every child added to a Firebase database reference we can send a POST request. 
+For our users path, it made sense to define our own keys since each user has a unique username. 
+But when users add blog posts to the app, we'll use a POST request to auto-generate a key for each blog post:
+
+curl -X POST -d '{
+  "author": "alanisawesome",
+  "title": "The Turing Machine"
+}' 'https://docs-examples.firebaseio.com/rest/saving-data/fireblog/posts.json'
+
+Our posts path now has the following data:
+
+{
+  "posts": {
+    "-JSOpn9ZC54A4P4RoqVa": {
+      "author": "alanisawesome",
+      "title": "The Turing Machine"
+    }
+  }
+}
+
+Notice that the key -JSOpn9ZC54A4P4RoqVa was automatically generated for us because we used a POST request. 
+A successful request will be indicated by a 200 OK HTTP status code, and the response will contain the key of the new data that was added:
+
+{"name":"-JSOpn9ZC54A4P4RoqVa"}
+
+example 1:
+GET /product/1 HTTP/1.1
+Host: myshop.com
+
+HTTP/1.1 200 OK
+Content-Length: 265
+Content-Type: application/json
+ETag: “686897696a7c876b7e”
+{
+ “name”: “WeberFamilyBBQ”,
+ “description”: “Great for parties and cooks a neat roast too.”,
+ “price”: 399,
+ “status”: “InStock”
+}
+
+PUT /product/1 HTTP/1.1
+Host: myshop.com
+If-Match: “686897696a7c876b7e”
+{
+ “name”: “WeberFamilyBBQ”,
+ “description”: “Great for parties and cooks a neat roast too.”,
+ “price”: 399,
+ “status”: “InStock”
+}
+HTTP/1.1 204 No Content
+ETag: “616898r96a8cy86b8eee11”
+
+PUT /product/1 HTTP/1.1
+Host: myshop.com
+If-Match: “686897696a7c876b7e”
+{
+ “name”: “WeberFamilyBBQ”,
+ “description”: “Great for parties and cooks a neat roast too.”,
+ “price”: 399,
+ “status”: “InStock”
+}
+HTTP/1.1 412 Precondition Failed
+
+The service then determines that someone is trying to change the same product, using an out-of-date 
+resource representation (ETags are different!), and responds with a 412 Precondition Failed code. No race conditions whatsoever!
 
 
 

@@ -9,6 +9,7 @@
     <orderEntry type="module" module-name="selenium_with_python" />
     <orderEntry type="module" module-name="Test_API" />
     <orderEntry type="module" module-name="prodigyqa" />
+    <orderEntry type="module" module-name="Test_API" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="REST" />

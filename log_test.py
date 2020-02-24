@@ -3,7 +3,13 @@ import time
 import subprocess
 import shutil
 import datetime
-
+# test_master@jsun-mbpw10:~$ ssh ssqa@10.201.8.240
+# helptell
+#
+# Last login: Mon Jan  6 17:33:23 2020 from 10.201.12.206
+# locust --> performance Test
+# Selenium Grid: cross browser testing
+# mock
 # Cassandra, ElasticSearch and Kafka, big data
 # beautifulsoup, saucelabs
 # Gatling, JMeter, and Locust are some load testing tools
