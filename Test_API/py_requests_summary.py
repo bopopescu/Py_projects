@@ -1,41 +1,36 @@
 import requests
 
 #@@ 1.
+# https://api.github.com/search/repositories?q=requests%2Blanguage%3Apython
 response = requests.get(
     'https://api.github.com/search/repositories',
     params={'q': 'requests+language:python'},
 )
 # response.content -> raw bytes
-# response.encoding = "utf-8"
-
 # response.text   --> json string
-# reponse.json()  --> python dict
+# response.json()  --> python dict
 # json.loads(response.text) --> python dict
 
+# response.encoding = "utf-8"
 # response.headers --> python dict
-
-response = requests.get(
-    'https://api.github.com/search/repositories',
-    params={'q': 'requests+language:python'},
-)
-
+# response.url
+# response1.request.url
+# response.status_code
+#
 # print(response.request)
 # <PreparedRequest [GET]>
+# response.request.headers #dictionary
+# response.request.headers["content-type"]  #  applications/json
 
-# Inspecting request through response.request
-# >>> response = requests.post('https://httpbin.org/post', json={'key':'value'})
-# >>> response.request.headers['Content-Type']
+
+response = requests.post('https://httpbin.org/post', json={'key':'value'})
+# response.request.headers['Content-Type']
 # 'application/json'
-# >>> response.request.url
-# 'https://httpbin.org/post'
-# >>> response.request.body
+# response.request.url   # 'https://httpbin.org/post'
+
+# response.request.body
 # b'{"key": "value"}'
-
-
-
-
-# print(response.url)
-# https://api.github.com/search/repositories?q=requests%2Blanguage%3Apython
+# for GET: response.request.body returns None
 
 # pass by the bytes
 requests.get(
@@ -55,6 +50,7 @@ response = requests.get(
 #     print(key)
 # print(response.headers["Accept"])
 
+
 ## post
 response_post = requests.post('https://httpbin.org/post', data={'key':'value'})
 response_put  = requests.put('https://httpbin.org/put', data={'key':'value'})
@@ -73,6 +69,8 @@ response_options =  requests.options('https://httpbin.org/get')
 # payload is passed in the message body for post, put, and patch
 
 # get: can pass data in query string-- params
+
+
 
 # Authentication
 
@@ -134,4 +132,37 @@ r = requests.get('https://httpbin.org/get', params=payload)
 
 ##
 # print(f"r.cookies is {r.cookies}")  r.cookies is <RequestsCookieJar[]>
-print(f"r.cookies is {r.cookies["cookie_name"]}")
+# print(f"r.cookies is {r.cookies["cookie_name"]}")
+
+
+#@@ Upload a file
+#!/usr/bin/env python3
+
+import requests as req
+
+url = 'http://localhost:5000/upload'
+
+with open('sid.jpg', 'rb') as f:
+
+    files = {'image': f}
+
+    r = req.post(url, files=files)
+    print(r.text)
+
+#@@ Streaming the data
+#!/usr/bin/env python3
+
+import requests as req
+
+url = "https://docs.oracle.com/javase/specs/jls/se8/jls8.pdf"
+
+local_filename = url.split('/')[-1]
+
+r = req.get(url, stream=True)
+
+with open(local_filename, 'wb') as f:
+
+    for chunk in r.iter_content(chunk_size=1024):
+
+        f.write(chunk)
+#@@

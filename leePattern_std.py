@@ -4,17 +4,27 @@ import time
 import time
 
 
-#_____________________________________________
+# _________________________________________
+# 1. Dictionary look up :
+# 1) Two Sum
 
 #_____________________________________________
-
-# 611
-
-#_____________________________________________
-
-#_____________________________________________
+# 2. Double Pointer
+# 11) Container with Most water
+# 15) 3Sum (sorted)
+# 16) 3Sum Closest (sorted)
 
 #_____________________________________________
+# 3. Pure Implementation Check
+# 31) Next Permutation
+#_____________________________________________
+# 4.Binary Search :sorted  array
+# 33. Search in Rotated Sorted Array
+# 34. Find First and Last Position of Element in Sorted Array
+# __________________________________________
+# 4. DFS
+# 39. Combinational Sum
+# 40. Combinational Sum II
 
 #_____________________________________________
 

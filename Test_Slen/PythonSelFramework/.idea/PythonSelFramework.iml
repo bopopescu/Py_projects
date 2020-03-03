@@ -10,6 +10,8 @@
     <orderEntry type="module" module-name="Test_API" />
     <orderEntry type="module" module-name="prodigyqa" />
     <orderEntry type="module" module-name="Test_API" />
+    <orderEntry type="module" module-name="Load" />
+    <orderEntry type="module" module-name="Py_projects" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="REST" />

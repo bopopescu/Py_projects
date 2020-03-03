@@ -29,28 +29,6 @@ import datetime
 
 ######______________________________________
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #____________________________________________
 
 # install package
@@ -84,27 +62,6 @@ def install_pkg(package_loc, package_p_drive, package_name):
         else:
             shutil.rmtree(file_to_delete)
 # _________________________________________
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
-
-#
-
-#
-
 
 # copy test flows to bin
 

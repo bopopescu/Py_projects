@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Test_API/Load/.idea/Load.iml" filepath="$PROJECT_DIR$/../../Test_API/Load/.idea/Load.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../.idea/Py_projects.iml" filepath="$PROJECT_DIR$/../../.idea/Py_projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonSelFramework.iml" filepath="$PROJECT_DIR$/.idea/PythonSelFramework.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../Test_API/.idea/Test_API.iml" filepath="$PROJECT_DIR$/../../Test_API/.idea/Test_API.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../prodigyqa/.idea/prodigyqa.iml" filepath="$PROJECT_DIR$/../../prodigyqa/.idea/prodigyqa.iml" />
