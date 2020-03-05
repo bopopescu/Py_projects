@@ -70,6 +70,13 @@ tmp_str=""
 # Male
 # Female
 
+driver.set_page_load_timeout(60)
+driver.get("https://www.finance.yahoo.com")
+driver.maximize_window()
+driver.implicitly_wait(20)
+driver.get_screenshot_as_file("yahoo_finance.png")
+driver.find_element_by_name("yfin-usr-qry").send_keys("IBM")
+driver.find_element_by_id("search-button").click()
 
 
 

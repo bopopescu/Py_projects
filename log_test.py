@@ -90,6 +90,26 @@ matrix1 = [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]]
 # [[-1,-1,2],[-1,0,1],[-1,1,0],[-1,2,-1],[0,1,-1]]
 # [[-1,-1,2],[-1,0,1]]
 #457
+n = 5
+for i in range(n,-1,-1):
+    print(i, end=", ")
+print(i)
+for i in reversed(range(n+1)):
+    print(i, end=", ")
+
+
+# void rotate(vector<vector<int>>& matrix) {
+#         int n = matrix.size();
+#         for (int i = 0; i < n / 2; ++i) {
+#             for (int j = i; j < n - 1 - i; ++j) {
+#                 int tmp = matrix[i][j];
+#                 matrix[i][j] = matrix[n - 1 - j][i];
+#                 matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];
+#                 matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i];
+#                 matrix[j][n - 1 - i] = tmp;
+#             }
+#         }
+#     }
 
 def copy_flows(run_dir, flow_to_test, flowfile_loc, setupfile_loc):
     for flow_name in os.listdir(flowfile_loc):

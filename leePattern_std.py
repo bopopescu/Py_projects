@@ -16,7 +16,10 @@ import time
 
 #_____________________________________________
 # 3. Pure Implementation Check
+# master of for and while loop
 # 31) Next Permutation
+# 56) Merge Intervals
+# 73. Set Matrix Zeroes
 #_____________________________________________
 # 4.Binary Search :sorted  array
 # 33. Search in Rotated Sorted Array
@@ -25,12 +28,19 @@ import time
 # 4. DFS
 # 39. Combinational Sum
 # 40. Combinational Sum II
+# 74. Search a 2D Matrix
 
 #_____________________________________________
+# 5. Matrix rotation
+# 48. Rotate Image
 
 #_____________________________________________
-
-#_____________________________________________
+# 6. dp
+#_62. Unique Path_____
+# 63. Unique Path II
+# 64. Minimum Path Sum, check yang
+#
+# _______________________________________
 
 #_____________________________________________
 

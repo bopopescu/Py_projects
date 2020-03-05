@@ -1,10 +1,5 @@
 from selenium import webdriver
-from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 
 import time
 # ActionChains
@@ -31,6 +26,21 @@ text_ver = driver.find_element(By.CSS_SELECTOR, "div[class='search-purpose'] h1"
 print(text_ver) # Search Genealogies
 
 
+# ex1
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+driver = webdriver.Firefox(executable_path="")
+driver.get("https://UrlToOpen")
+
+action = ActionChains(driver)
+
+firstLevelMenu = driver.find_element_by_id("menu")
+action.move_to_element(firstLevelMenu).perform()
+
+secondLevelMenu = driver.find_element_by_xpath("//a[contains(text(),'menu1')]")
+action.move_to_element(secondLevelMenu).perform()
+secondLevelMenu.click()
 
 
 
