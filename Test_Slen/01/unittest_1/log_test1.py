@@ -12,6 +12,7 @@ class RunChromeTestWindows():
         driver.get("http://www.letskodeit.com")
         # driver.get("http://www.yahoo.com")
         time.sleep(10)
+        driver.close()
 
 
 

@@ -1,5 +1,5 @@
 from selenium import webdriver
-from log_login_3 import LoginPage
+from .log_auth_2 import LoginPage
 import unittest
 
 

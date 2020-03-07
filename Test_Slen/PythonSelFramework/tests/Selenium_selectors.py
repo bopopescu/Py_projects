@@ -20,6 +20,12 @@ import time
 # //tagname[text()="values"]
 # text_field = driver.find_element_by_xpath("//[text()='Your content goes here.']")
 
+# xpath: array: index start from 1
+# url = "https://en.wikipedia.org"
+# Logo = (By.XPATH, '/html/body/div[5]/div[2]/div[1]/a')
+# logo = driver.find_element(*Logo)
+
+
 # create xpath and css by traversing tags
 # xpath: valid_Parent_xpath/ChildTag
 # css: valid_parent_css childTag

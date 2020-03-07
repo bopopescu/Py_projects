@@ -19,7 +19,7 @@ class Browser():
         
         
     
-    ### find_element by arribute
+    ### find_element by attribute
     # NoSuchElementException
     # <input id = "search" type = "text" name = "q" value = "" class = "input-text" maxlength = "128" autocomplete = "off" >
     # find_element_by_id()
@@ -47,7 +47,7 @@ class Browser():
 
     < ul class="promos" >
       < li >
-        < a href="http://demo.magentocommerce.com/home-decor.html" >
+        < a href="https://magento.com/" >
         < img src="/media/wysiwyg/homepage-three-column-promo-01B.png" alt="Physical &amp; Virtual Gift Cards" >
         < / a >
       < / li >

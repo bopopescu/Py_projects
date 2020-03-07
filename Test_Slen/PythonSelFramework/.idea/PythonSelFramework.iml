@@ -12,6 +12,8 @@
     <orderEntry type="module" module-name="Test_API" />
     <orderEntry type="module" module-name="Load" />
     <orderEntry type="module" module-name="Py_projects" />
+    <orderEntry type="module" module-name="01" />
+    <orderEntry type="module" module-name="02" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="REST" />

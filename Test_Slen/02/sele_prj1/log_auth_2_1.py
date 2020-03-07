@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from log_locator_1 import WikipediaHomepage, WikipediaArticle
+from .log_locator_1 import WikipediaHomepage, WikipediaArticle
 import os, time
-from log_auth_2 import LoginPage, CreateAccountPage
+from .log_auth_2 import LoginPage, CreateAccountPage
 
 class RunChromeTestWindows():
     def test(self):

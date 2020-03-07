@@ -16,7 +16,15 @@ class RegisterNewUser(unittest.TestCase):
         driver = self.driver
 
         # click on Log In link to open Login page
+        # < span
+        #
+        # class ="label" > Account < / span >
         driver.find_element_by_link_text("ACCOUNT").click()
+
+        # < a
+        # href = "http://demo-store.seleniumacademy.com/customer/account/"
+        # title = "My Account" > My
+        # Account < / a >
         driver.find_element_by_link_text("My Account").click()
 
         # get the Create Account button
@@ -31,7 +39,7 @@ class RegisterNewUser(unittest.TestCase):
         create_account_button.click()
 
         # check title
-        self.assertEquals("Create New Customer Account", driver.title)
+        self.assertEqual("Create New Customer Account", driver.title)
 
         # get all the fields from Create an Account form
         first_name = driver.find_element_by_id("firstname")
@@ -69,7 +77,8 @@ class RegisterNewUser(unittest.TestCase):
         # check new user is registered
         self.assertEqual("Hello, Test " + user_name + "!",
                          driver.find_element_by_css_selector("p.hello > strong").text)
-        print(driver.find_element_by_css_selector("p.hello > strong").text)
+        # print(driver.find_element_by_css_selector("p.hello > strong").text)
+        print(driver.find_element_by_css_selector("p.hello").text)
         driver.find_element_by_link_text("ACCOUNT").click()
         self.assertTrue(driver.find_element_by_link_text(
             "Log Out").is_displayed())
