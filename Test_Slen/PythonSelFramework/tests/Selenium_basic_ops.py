@@ -1,21 +1,21 @@
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.by import By
 import time, selenium
+
 driver = webdriver.Chrome()
 url = "https://rahulshettyacademy.com/angularpractice/"
-driver.get(url)
-# time.sleep(5)
-# driver.close()
+# driver.get(url)
 # driver.maximize_window()
+# driver.close()
 
-from selenium.webdriver.common.by import By
-print(f"selenium.__version__  is {selenium.__version__}")
-# by_class_name can't have space
-# name_text_field.is_displayed()
-# is_displayed() --> visible on webpage
+# selenium.__version__
+# ???
 
-# name_text_field.is_enabled()
-# simply means the element is working
+
+#
+#
+
 
 # name_text_field.is_selected()
 # name_text_field.screenshot("filename")
@@ -32,6 +32,7 @@ print(f"selenium.__version__  is {selenium.__version__}")
 # sel.select_by_value(val)
 
 # 0. is_displayed()
+# is_displayed() --> Element is visible on webpage
 # <label>Name</label>
 # name_field = driver.find_element_by_xpath("//label[text()='Name']")
 # print(f"name_field is {name_field.text}")
@@ -43,10 +44,11 @@ print(f"selenium.__version__  is {selenium.__version__}")
 #     print(f"name_field is NOT displayed")
 # driver.close()
 
+tmp_str = ""
 # 1. click(link)
 # <a class="nav-link" href="/angularpractice/shop">Shop</a>
 #  https://rahulshettyacademy.com/angularpractice
-tmp_str=""
+
 # driver.find_element_by_tag_name(tmp_str)
 # driver.find_elements_by_tag_name(tmp_str)
 #
@@ -63,21 +65,46 @@ tmp_str=""
 
 # selenium.common.exceptions.InvalidSelectorException: Message:
 
-
-
-#
-# 2
-# Male
-# Female
-
 driver.set_page_load_timeout(60)
-driver.get("https://www.finance.yahoo.com")
-driver.maximize_window()
-driver.implicitly_wait(20)
-driver.get_screenshot_as_file("yahoo_finance.png")
-driver.find_element_by_name("yfin-usr-qry").send_keys("IBM")
-driver.find_element_by_id("search-button").click()
+driver.current_url
+driver.current_window_handle
+driver.delete_all_cookies()
+driver.delete_cookies(tmp_str)
+driver.forward()
+driver.back()
+driver.execute_script()
+driver.get_cookies()
+driver.get_network_conditions()
 
+driver.implicitly_wait(time_to_wait  = 1)
+driver.fullscreen_window()
+driver.get_log()
+driver.launch_app(id)
+driver.maximize_window()
+driver.minimize_window()
+driver.quit()
+driver.refresh()
+
+driver.session_id
+driver.switch_to.alert
+driver.switch_to.window(window_name)
+driver.switch_to.default_content()
+
+driver.switch_to.frame(frame_ref)
+driver.switch_to.parent_frame()
+driver.switch_to.
+
+driver.get_screenshot_as_png()
+driver.get_screenshot_as_file()
+driver.save_screenshot(file_name)
+driver.get_screenshot_as_file("yahoo_finance.png")
+
+driver.page_source
+with open('html_element.html', 'w') as f:
+    f.write(name_text_field.get_attribute('outerHTML'))
+
+with  open("html_src_code.html", "w", encoding="utf-8") as fout:
+    fout.write(driver.page_source)
 
 
 

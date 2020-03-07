@@ -345,7 +345,11 @@ from selenium.webdriver.common.keys import Keys
 
 # driver.get('https://www.google.com')  # point to window_handles[0]
 # # Open a new tab
-# # driver.execute_script("window.open('');")
+# driver.execute_script("window.open('');")
+# driver.execute_script("window.open(''), new_tab;")
+# driver.switch_to.window(driver.window_handles[])
+# snd_page = driver.current_window_handle
+
 # driver.execute_script("window.open('');")
 # main_page = driver.current_window_handle
 # # Switch to the new tab since the focus would still be on the old window
@@ -365,18 +369,18 @@ from selenium.webdriver.common.keys import Keys
 
 # 13.  Sroll on page
 # window.scrollTo
-driver.get("https://www.lambdatest.com/")
-time.sleep(2)
-
-''' Scroll to the end of the page '''
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-time.sleep(2)
-
-''' Scroll again to the top of the page '''
-driver.execute_script("window.scrollTo(0, 0);")
-
-time.sleep(2)
-driver.quit()
+# driver.get("https://www.lambdatest.com/")
+# time.sleep(2)
+#
+# ''' Scroll to the end of the page '''
+# driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+# time.sleep(2)
+#
+# ''' Scroll again to the top of the page '''
+# driver.execute_script("window.scrollTo(0, 0);")
+#
+# time.sleep(2)
+# driver.quit()
 
 
 

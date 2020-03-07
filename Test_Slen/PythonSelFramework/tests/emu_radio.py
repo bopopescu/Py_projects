@@ -7,6 +7,7 @@ import time
 driver = webdriver.Chrome()
 url = "https://rahulshettyacademy.com/AutomationPractice/"
 driver.get(url)
+# <input value="radio1" name="radioButton" class="radioButton" type="radio">
 radiobuttons =  driver.find_elements(By.NAME, "radioButton")
 
 for radiobutton in radiobuttons:

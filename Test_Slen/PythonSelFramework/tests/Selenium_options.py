@@ -22,5 +22,7 @@ print(driver.title)  # ProtoCommerce
 
 
 
+
+
 time.sleep(3)
 driver.close()

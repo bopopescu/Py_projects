@@ -8,6 +8,7 @@ driver = webdriver.Chrome()
 url = "https://rahulshettyacademy.com/AutomationPractice/"
 driver.get(url)
 checkboxes =  driver.find_elements(By.XPATH, "//input[@type='checkbox']")
+# <input id="checkBoxOption1" value="option1" name="checkBoxOption1" type="checkbox">
 
 for checkbox in checkboxes:
     attribute_val = checkbox.get_attribute("value")

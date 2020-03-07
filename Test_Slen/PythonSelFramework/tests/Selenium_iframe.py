@@ -20,9 +20,10 @@ driver.implicitly_wait(2)
 # default content
 print(driver.find_element_by_tag_name("h3").text)
 # frame id, frame name
-# <iframe id="mce_0_ifr" src="javascript:&quot;&quot;" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" style="width: 100%; height: 100px; display: block;"></iframe>
-driver.switch_to.frame("mce_0_ifr")
-# text_field = driver.find_element_by_xpath("//[text()='Your content goes here.'")
+# <iframe id="mce_0_ifr" src="javascript:&quot;&quot;" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" style="width: 100%; height: 100px; display: block;">
+# </iframe>
+driver.switch_to.frame("mce_0_ifr") # use id="mce_0_ifr"
+# text_field = driver.find_element_by_xpath("//[text()='Your content goes here.']")
 text_field = driver.find_element_by_css_selector("body#tinymce")
 # text_field.click()
 time.sleep(2)
