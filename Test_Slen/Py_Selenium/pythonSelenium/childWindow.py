@@ -32,9 +32,8 @@ driver.get(url)
 driver.find_element_by_link_text("Click Here").click()
 
 childwindow = driver.window_handles[1]
-
-
 driver.switch_to.window(childwindow)
+
 print(driver.find_element_by_tag_name("h3").text)
 assert driver.find_element_by_tag_name("h3").text == "New Window"
 driver.close()

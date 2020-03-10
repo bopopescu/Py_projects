@@ -13,7 +13,7 @@ import time
 
 
 driver = webdriver.Chrome()
-url = "https://rahulshettyacademy.com/seleniumPractise"
+url = "https://rahulshettyacademy.com/seleniumPractise/"
 driver.get(url)
 driver.implicitly_wait(14)
 
@@ -22,15 +22,15 @@ driver.implicitly_wait(14)
 # driver.find_element(By.CSS_SELECTOR, "input[class='search-keyword']").send_keys("ber")
 # driver.find_element_by_css_selector("input.search-keyword").send_keys("ber")
 driver.find_element_by_xpath("//input[@class='search-keyword']").send_keys("ber")
-
+time.sleep(1) # key point to delay
 # <button class="" type="button">ADD TO CART</button>
 # "//button[text()='ADD TO CART']"
 # //div[@class='product']/div/button
-product_list = driver.find_elements_by_xpath("//div[@class='products']/div")
+# product_list = driver.find_elements_by_xpath("//div[@class='products']/div")
 # assert len(product_list) == 3
 
 add_to_cart_buttons = driver.find_elements_by_xpath("//div[@class='product-action']/button")
-print(len(add_to_cart_buttons))
+print(f"add_to_cart_buttons is {len(add_to_cart_buttons)}")
 i = 0
 # for button in add_to_cart_buttons:
 #     if i < 3:

@@ -75,7 +75,7 @@ response_options =  requests.options('https://httpbin.org/get')
 # Authentication
 
 from getpass import getpass
-res_auth = requests.get('https://api.github.com/user', auth=("brb45","zhonghuaF99" ), timeout=1)
+res_auth = requests.get('https://api.github.com/user', auth=("brb45","zh" ), timeout=1)
 # res_auth = requests.get('https://api.github.com/user', auth=('username', getpass()))
 # print(res_auth.status_code)
 

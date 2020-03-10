@@ -19,10 +19,14 @@ element = driver.find_element_by_id("fromCity")
 element.click()
 css_sel = "input[placeholder='From']"
 css_selector = driver.find_element_by_css_selector(css_sel)
+city_list = driver.find_elements_by_css_selector("p[class*='blackText']")
+print(f"num of cities is {len(city_list)}")
+
 css_selector.send_keys("del")
 time.sleep(2)
 
 city_list = driver.find_elements_by_css_selector("p[class*='blackText']")
+print(f"num of cities is {len(city_list)}")
 for c in city_list:
     if c.text  == "Delhi, India":
         # print(c.text)  Delhi, India

@@ -10,7 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 list = []
 list2 = []
-driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+driver = webdriver.Chrome()
 
 driver.get("https://rahulshettyacademy.com/seleniumPractise/")
 driver.find_element_by_css_selector("input.search-keyword").send_keys("ber")
@@ -58,6 +58,6 @@ totalAmount = int(driver.find_element_by_class_name("totAmt").text)
 assert sum == totalAmount
 
 
-
+driver.close()
 
 

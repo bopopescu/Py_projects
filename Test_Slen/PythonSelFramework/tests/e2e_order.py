@@ -28,6 +28,8 @@ url ="https://rahulshettyacademy.com/seleniumPractise/"
 driver.get(url)
 # driver.maximize_window()
 
+item_select_list = []
+veg_list = []
 # @@ 5. wait
 css_select = "input[class='search-keyword']"
 # or
@@ -41,11 +43,17 @@ products = driver.find_elements_by_xpath(xpath_sel)
 # assert len(products) == 3
 print(len(products))
 
+#
+add_to_cart_buttons = driver.find_elements_by_xpath("//div[@class='product-action']/button")
+print(f"add_to_cart_buttons is {len(add_to_cart_buttons)}")
+#
 
 buttons_to_click = driver.find_elements_by_xpath("//div[@class='product-action']/button")
-
+# //div[@class='product-action']/button/parent::div/parent::div/h4
 for button in buttons_to_click:
+    item_select_list.append((button.find_element_by_xpath("parent::div/parent::div/h4").text))
     button.click()
+    time.sleep(1)
     # break
 # time.sleep(29)
 shopping_cart = driver.find_element_by_css_selector("img[alt='Cart']")
@@ -57,40 +65,45 @@ checkout.click()
 explicit_wait = WebDriverWait(driver, 5)
 explicit_wait.until(EC.presence_of_element_located((By.CLASS_NAME, "promoCode")))
 
+veg = driver.find_elements_by_css_selector("p.product-name")
+for item in veg:
+    veg_list.append(item.text)
+
+originalAmount = driver.find_element_by_css_selector(".discountAmt").text
+
 promo_code = driver.find_element_by_class_name("promoCode")
 promo_code.send_keys("rahulshettyacademy")
 
 driver.find_element_by_css_selector(".promoBtn").click()
 
-
-# EC.presence_of_all_elements_located
-# EC.presence_of_element_located
-
-# EC.text_to_be_present_in_element
-# EC.text_to_be_present_in_element_value
-# EC.title_contains
-# EC.title_is
-# EC.url_contains
-
-# EC.visibility_of_any_elements_located
-# EC.visibility_of_any_elements_located
-# EC.visibility_of_all_elements_located
-
-# EC.alert_is_present
-# EC.element_to_be_clickable
-# EC.element_to_be_selected
-# EC.frame_to_be_available_and_switch_to_it
-# EC.new_window_is_opened
-
-
-
 explicit_wait = WebDriverWait(driver, 10)
 explicit_wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "span.promoInfo")))
+
+#
+discountAmount = driver.find_element_by_css_selector(".discountAmt").text
+assert float(discountAmount) < float(originalAmount)
+
 # time.sleep(10)
 print(driver.find_element_by_css_selector("span.promoInfo").text)
 
+amounts = driver.find_elements_by_xpath("//tr/td[5]/p")
+sum = 0
+for amount in amounts:
+    sum += int(amount.text)
+total = int(driver.find_element_by_class_name("totAmt").text)
+
+print(f"{total} == {sum}")
+# assert total == amounts
+
+# Test case
+assert  item_select_list == veg_list
+print(f"item_select_list is {item_select_list}")
+print(f"veg_list is         {veg_list}")
+
+
+
 time.sleep(3)
-# driver.close()
+driver.close()
 
 
 
