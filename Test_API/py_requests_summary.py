@@ -166,3 +166,29 @@ with open(local_filename, 'wb') as f:
 
         f.write(chunk)
 #@@
+
+#
+response = requests.get("https://api.nasa.gov/planetary/apod", params={"api_key": "DEMO_KEY", "date": "2019-04-11"})
+# returns an instance of the requests.models.Response class.
+# response.json() --> json-encoded content of the response
+# response.reason --> 'OK'
+# response.status_code
+# response.headers
+
+
+## Download a file
+url = "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.7.tar.xz"
+with requests.get(url, stream=True) as response:
+    with open("latest-kernel.tar.xz", "wb") as tarball:
+        for chunk in response.iter_content(16384):
+            tarball.write(chunk)
+# upload a file
+response = requests.post("https://httpbin.org/post", files={'file': open('nasa_black_hole.png', 'rb')})
+
+# Sessions
+# The requests library allow us to use sessions: when requests are sent from a session context,
+# cookies are preserved between one request and another. This is the recommended way of performing
+# multiple requests to the same host, since even the same TCP connection will be reused.
+session = requests.Session()
+response = session.get("https://httpbin.org/cookies/set?lastname=skywalker")
+

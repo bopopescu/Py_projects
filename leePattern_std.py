@@ -5,43 +5,52 @@ import time
 
 
 # _________________________________________
-# 1. Dictionary look up :
+# [1]. Dictionary look up :
 # 1) Two Sum
 
 #_____________________________________________
-# 2. Double Pointer
+# [2]. Double Pointer
 # 11) Container with Most water
 # 15) 3Sum (sorted)
 # 16) 3Sum Closest (sorted)
+# 80) Remove Duplicates from Sorted Array II
 
 #_____________________________________________
-# 3. Pure Implementation Check
+# [3]. Pure Implementation Check
+# skills of scanning the whole array
 # master of for and while loop
 # 31) Next Permutation
 # 56) Merge Intervals
 # 73. Set Matrix Zeroes
+# 153. Find Minimum in Rotated Sorted Array
+# 775. Global and Local Inversions
 #_____________________________________________
-# 4.Binary Search :sorted  array
+# [4].Binary Search :sorted  array
 # 33. Search in Rotated Sorted Array
 # 34. Find First and Last Position of Element in Sorted Array
+# 153. Find Minimum in Rotated Sorted Array
 # __________________________________________
-# 4. DFS
+# [5]. DFS
 # 39. Combinational Sum
 # 40. Combinational Sum II
 # 74. Search a 2D Matrix
 # 78. Subsets
+# 90) subset II
+# 79 word search
 
 #_____________________________________________
-# 5. Matrix rotation
+# [6]. Matrix rotation
 # 48. Rotate Image
 
 #_____________________________________________
-# 6. dp
+# [7]. dp
 #_62. Unique Path_____
 # 63. Unique Path II
 # 64. Minimum Path Sum, check yang
 #
 # _______________________________________
+# [8]. Greedy
+# 769. Max Chunks To Make Sorted
 
 #_____________________________________________
 

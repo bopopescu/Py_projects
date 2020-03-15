@@ -2,6 +2,7 @@ import os
 import time
 import subprocess
 import shutil
+import pandas
 import datetime
 # test_master@jsun-mbpw10:~$ ssh ssqa@10.201.8.240
 # helptell
@@ -97,7 +98,9 @@ print(i)
 for i in reversed(range(n+1)):
     print(i, end=", ")
 
-
+print()
+for x, y in [[0,-1],[0,1],[-1,0],[1,0]]:
+    print(x,y)
 # void rotate(vector<vector<int>>& matrix) {
 #         int n = matrix.size();
 #         for (int i = 0; i < n / 2; ++i) {
@@ -177,6 +180,40 @@ def min_num(A, B):
     bottom_list = sorted(dom_list, key = lambda arr: arr[1], reverse=True)
 
 
+print()
+def rmv(nums):
+    pre=0
+    cur=1
+    cnt = 1
+    n = len(nums)
+
+    while cur < n:
+        if nums[pre] == nums[cur] and cnt == 0:
+            cur+= 1
+        else:
+            if nums[pre]==nums[cur]:
+                cnt -= 1
+            else:
+                cnt += 1
+                pre += 1
+                nums[pre]=nums[cur]
+                cur += 1
+    if not nums:
+        return 0
+    else:
+        return pre+1
+# nums=[0,1,2,3 ,4, 5]
+# for i in range(len(nums)):
+#     if i % 2 == 0:
+#         nums.pop(i)
+# print(nums)
+
+nums = [ 2,5, 4, 6, 3]
+# nums[2:].sort()
+a = nums[2:]
+a.sort()
+print(f"type of a is {type(a)}")
+print(nums)
 
 
 
