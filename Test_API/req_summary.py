@@ -1,4 +1,6 @@
 import requests
+import json
+import jsonpath
 
 #@@ 1.
 # https://api.github.com/search/repositories?q=requests%2Blanguage%3Apython
@@ -165,6 +167,7 @@ with open(local_filename, 'wb') as f:
     for chunk in r.iter_content(chunk_size=1024):
 
         f.write(chunk)
+
 #@@
 
 #
@@ -192,3 +195,51 @@ response = requests.post("https://httpbin.org/post", files={'file': open('nasa_b
 session = requests.Session()
 response = session.get("https://httpbin.org/cookies/set?lastname=skywalker")
 
+
+# Performance
+# When using requests, especially in a production application environment, it’s important to consider
+# performance implications. Features like timeout control, sessions, and retry limits can
+# help you keep your application running smoothly.
+#
+# Timeouts
+# When you make an inline request to an external service, your system will need to wait upon the response before moving on. If your application waits too long for that response, requests to your service could back up, your user experience could suffer, or your background jobs could hang.
+#
+# By default, requests will wait indefinitely on the response, so you should almost always specify a timeout duration to prevent these things from happening. To set the request’s timeout, use the timeout parameter. timeout can be an integer or float representing the number of seconds to wait on a response before timing out:
+#
+# >> > requests.get('https://api.github.com', timeout=1)
+# <Response[200] >
+# >> > requests.get('https://api.github.com', timeout=3.05)
+# <Response[200] >
+
+
+with open("src1.json", "r") as fin:
+    json_input_str = fin.read()
+    # print(f"type: {type(json_input_str)}\n  {json_input_str}")
+    # type: <class 'str'>
+    # {
+    #     "name": "morpheus",
+    #     "job": "leader"
+    # }
+    req_json = json.loads(json_input_str)
+    # print(f"type: {type(req_json)}\n  {req_json}")
+    # type: <class 'dict'>
+    # {'name': 'morpheus', 'job': 'leader'}
+    response = requests.post(url, req_json)
+    # print(response.status_code) # 201
+    # print(response.content)
+    # b'{"name":"morpheus","job":"leader","id":"530","createdAt":"2019-12-12T19:41:32.341Z"}'
+
+    ##
+    content_len = response.headers.get("Content-Length")
+    response_json = json.loads(response.text)
+    # print(f"\nresponse_json from POST is {response_json}\n")
+    # response_json
+    # from POST is {'name': 'BRCM_4389', 'job': '11AX on MW-7G', 'id': '598', 'createdAt': '2019-12-12T22:09:57.259Z'}
+
+    id = jsonpath.jsonpath(response_json, 'id')
+    # print(f"id is {id[0]}")  # id is 716
+    createdAt= jsonpath.jsonpath(response_json,"createdAt")
+    # print(f"createdAt is {createdAt[0]}")  # createdAt is 2019-12-13T22:37:08.370Z
+
+
+##
