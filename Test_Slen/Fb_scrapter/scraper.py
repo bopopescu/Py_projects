@@ -197,6 +197,7 @@ class CollectPosts(object):
             if mfa_code_input is None:
                 return
 
+            #
             mfa_code_input.send_keys(input("Enter MFA code: "))
             self.browser.find_element_by_id('checkpointSubmitButton').click()
 
