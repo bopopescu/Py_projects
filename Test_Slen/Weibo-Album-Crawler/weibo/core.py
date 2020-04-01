@@ -8,7 +8,7 @@ from time import sleep
 from colorama import Fore, Style
 
 import settings
-from weibo.api import WeiboApi
+from .api import WeiboApi
 
 
 class Crawler(object):

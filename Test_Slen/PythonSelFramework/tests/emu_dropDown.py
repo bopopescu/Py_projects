@@ -40,7 +40,11 @@ to_city = driver.find_element_by_xpath("//p[text()='Mumbai, India']")
 print(f"to_city: {to_city.text}")
 to_city.click()
 
-# <div class="DayPicker-Day DayPicker-Day--selected" tabindex="-1" role="gridcell" aria-label="Fri Mar 06 2020" aria-disabled="false" aria-selected="true"><div class="dateInnerCell"><p>6</p></div></div>
+# <div class="DayPicker-Day DayPicker-Day--selected" tabindex="-1" role="gridcell" aria-label="Fri Mar 06 2020" aria-disabled="false" aria-selected="true">
+#   <div class="dateInnerCell">
+#       <p>6</p>
+#   </div>
+# </div>
 date_field = driver.find_element_by_xpath("//div[@aria-label='Fri Mar 06 2020']/div/p")
 print(date_field.text)
 date_field.click()
@@ -50,5 +54,5 @@ date_field.click()
 
 # 2.
 
-time.sleep(1)
+time.sleep(10)
 driver.close()

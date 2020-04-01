@@ -31,6 +31,16 @@
 #
 # test_func()
 
+def run_test(func):
+    def wrapper(func):
+        func()
+    return wrapper(func)
+
+@run_test
+def test_f():
+    print("whatever")
+
+
 
 def decorator3(func):
     def wrapper():
@@ -47,19 +57,24 @@ test_func()
 
 
 # pass function with parameters
-# def func_called(func):
-#     def wrapper():
-#         print("func_called is called!")
-#         print("func is called ".format(func()))
-#     return wrapper()
-#
-#
-# @func_called
-# def foo(a,b):
-#     print("foo is called!")
-#     return a+b
-#
-# foo(100,200)
+def func_called(func):
+    def wrapper(a, b):
+        print("func_called is called!")
+        print(f"{func(a,b)}")
+    return wrapper
+
+
+@func_called
+def foo(a,b):
+    print("foo is called!")
+    return a+b
+
+print(foo(100,200))
+# func_called is called!
+# foo is called!
+# 300
+# None
+
 
 print("________________Python decorator 1 _____________")
 

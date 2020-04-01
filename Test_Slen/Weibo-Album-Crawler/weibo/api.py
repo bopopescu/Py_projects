@@ -5,8 +5,8 @@ from time import time
 
 import requests
 
-import settings
-from weibo.browser import WeiboBrowser
+import .settings
+from .browser import WeiboBrowser
 
 
 class Url(object):

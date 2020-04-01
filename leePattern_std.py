@@ -52,7 +52,13 @@ import time
 # [8]. Greedy
 # 769. Max Chunks To Make Sorted
 
-#_____________________________________________
+#___________________________________________
+[10]. Parenthesis
+# 20. Valid Parentheses
+32. Longest Valid Parentheses
+
+#___________________________________________
+[11]. Palindrom
 
 
 def run_flow1(run_dir, flow_to_test, result_dir):

@@ -115,9 +115,6 @@ num_str = "123"
     #
     # In[16]: ss='foo goo foo goo'
     #
-    # In[17]: ss.find(foo)
-    # Out[17]: -1
-    #
     # In[18]: ss.find('foo')
     # Out[18]: 0
     #
@@ -188,7 +185,7 @@ print(ss.split(maxsplit=2))
 
 ltr_str = "abcd"
 ltr_list = ltr_str.split()
-print(ltr_list)
+print(ltr_list)  # ['abcd']
 
 # ltr_list_error = ltr_str.split("") # ValueError: empty separator
 
@@ -270,6 +267,9 @@ s = ss.split('a')
 w1 = "---".join({'a','c','b'})
 # print(w1)
 # w1 is random: a---c---b, or a---b---c, c---a---b ...
+
+w1 = "---".join({'a'})
+print(w1) # 'a'
 
 # #_______________________________________________________________
 # s[1:4] #is 'ell' #-- chars starting at index 1 and extending up to but not including index 4

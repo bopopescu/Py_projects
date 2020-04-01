@@ -58,4 +58,5 @@ print("after popping, old_set is {}".format(old_set))
 t_set = {1, 2, 3}
 len_t = len(t_set)
 # print(len_t)  3
- 
+# empty a set
+t_set.clear() # len(t_set) = 0

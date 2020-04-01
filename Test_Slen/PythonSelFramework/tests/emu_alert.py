@@ -13,6 +13,8 @@ driver.implicitly_wait(4)
 
 # <input id="name" name="enter-name" class="inputs" placeholder="Enter Your Name" type="text">
 alert_field = driver.find_element(By.CSS_SELECTOR, "input#name")
+# alert_field = driver.find_element_by_css_selector("input.inputs")  # using short for "input[class='inputs']"
+# alert_field = driver.find_element_by_xpath("//input[contains(@placeholder,'Enter')]")
 alert_field.send_keys("options 4")
 # driver.get_screenshot_as_png()
 

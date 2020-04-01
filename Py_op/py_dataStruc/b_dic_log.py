@@ -162,3 +162,6 @@ ee = list(ee)
 for i in ee:
     print(i, end=", ")
 # (1, 'wifi'), (2, 'UWB'), (3, 'OFDMA'), (10, 'ax'),
+#
+ck.clear() # empty the dict, and len = 0
+len(ck)  # show len of dict

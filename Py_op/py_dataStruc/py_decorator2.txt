@@ -49,7 +49,7 @@ Here is a fun fact about python classes: If you change the value of an attribute
 
 For example: By changing the self.last name you might expect the self.full attribute, which is derived from self.last to update. But unexpectedly it doesn’t. This can provide potentially misleading information about the person.
 
-However, notice the email() works as intended, eventhough it is derived from self.last.
+However, notice the email() works as intended, even though it is derived from self.last.
 
 # Changing the `last` name does not change `self.full` name, but email() works
 person.last = 'prasanna'
@@ -83,9 +83,11 @@ Now the convert to method solution works.
 
 But there is a problem.
 
-Since we are using person.fullname() method with a '()' instead of person.fullname as attribute, it will break whatever code that used the self.fullname attribute. If you are building a product/tool, the chances are, other developers and users of your module used it at some point and all their code will break as well.
+Since we are using person.fullname() method with a '()' instead of person.fullname as attribute, it will break whatever code that used the self.fullname attribute.
+If you are building a product/tool, the chances are, other developers and users of your module used it at some point and all their code will break as well.
 
-So a better solution (without breaking your user’s code) is to convert the method as a property by adding a @property decorator before the method’s definition. By doing this, the fullname() method can be accessed as an attribute instead of as a method with '()'. See example below.
+So a better solution (without breaking your user’s code) is to convert the method as a property by adding a @property decorator before the method’s definition.
+# By doing this, the fullname() method can be accessed as an attribute instead of as a method with '()'. See example below.
 
 # Adding @property provides the right fullname and does not break code!
 class Person():

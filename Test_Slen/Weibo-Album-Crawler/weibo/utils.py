@@ -5,8 +5,8 @@ import re
 
 from colorama import Fore
 
-import settings
-from weibo.api import Formatter
+import .settings
+from .api import Formatter
 
 
 def load_targets_from_folder():

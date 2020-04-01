@@ -9,7 +9,16 @@ import copy
 # sorted(strs, key=str.lower)  # ['aa', 'BB', 'CC', 'zz']
 # (sorted(strs, key=str.upper))
 
+# Not working
+# word = sorted(word, key=(len), key=str.lower)
+# word = sorted(word, key=(len,str.lower))
+
+# working
+# s_sorted = sorted(s_arr, key=lambda x: (len(x), x.lower()))
+
+
 max, min
+arr = [1,2,3,4,5,6,7,8]
 # passed to a function:
 # arr: is arr itself
 
@@ -107,25 +116,37 @@ print(type(a_tuple), a_tuple)
 
 #@@ 1.1  list passed to a function
 s = [1,2,3]
-def no_change_to_list(s):
+def change_to_list(s):
     s[0] = 100
     return s
 
-no_change_to_list(s) # pass s as reference will change s
+change_to_list(s) # pass s as reference will change s
 print(s)  # [100, 2, 3]
 
-no_change = no_change_to_list(s[0:2]) # pass a new list which is a shallow copy of partial s.
+no_change = change_to_list(s[0:2]) # pass a new list which is a shallow copy of partial s[0:2].
 print(f"no change is {no_change}")
 print(f's is not changed {s}')
 # no change is [100, 2]
 # s is not changed [1, 2, 3]
+
+word = ["Abd",'abc','aBc','abC',"ABCD",'ABCDE','ac']
+
+# print(word[:2])    ['Abd', 'abc']
+
+# print(word[4:])    ['ABCD', 'ABCDE', 'ac']
+
+# print(word[4:-1])  ['ABCD', 'ABCDE']
+
+# print(word[4:-1:-1]) []
+
+
 #_____________________________________________________________________________________________
 #@@ 2.1
 
 cnt_dict = {'a':4, 'b':8, 'c':10, 'd':4, 'e':10, 'f':5, 'h':5, 'g':5}
 cnt_list = []
 
-for letter in cnt_dict.items():
+for letter in cnt_dict.items():  # letter is of type tuple
     print(letter, end=", ")
     cnt_list.append(letter)
 
@@ -153,30 +174,30 @@ wd_cnt_lst = [('a', 10), ('b', 5), ('a', 5), ('a', 7), ('c', 15)]
 # print(sorted(wd_cnt_lst))
 # [('a', 5), ('a', 7), ('a', 10), ('b', 5), ('c', 15)]
 
-# print(sorted(wd_cnt_lst, key= lambda x: x[1]))
+print(sorted(wd_cnt_lst, key= lambda x: x[1]))
 # [('b', 5), ('a', 5), ('a', 7), ('a', 10), ('c', 15)]
 
-# print(sorted(wd_cnt_lst, key= lambda x: x[0], reverse=True))
+print(sorted(wd_cnt_lst, key= lambda x: x[0], reverse=True))
 # [('c', 15), ('b', 5), ('a', 10), ('a', 5), ('a', 7)]
 
 str_lst = [("abc", 4),  ("cd", 4), ("avdk", 10),
            ("ab", 5), ("helf", 12), ("aaaa", 8)]
-# print(sorted(str_lst, key=lambda x: (len(x[0]))))
+print(sorted(str_lst, key=lambda x: (len(x[0]))))
 # [('cd', 4), ('ab', 5), ('abc', 4), ('avdk', 10), ('helf', 12), ('aaaa', 8)]
 
 # print(sorted(str_lst, key=lambda x: (len(x[0]), x[0])))
 [('ab', 5), ('cd', 4), ('abc', 4), ('aaaa', 8), ('avdk', 10), ('helf', 12)]
 
-# print(sorted(str_lst, key=lambda x: (len(x[0]), x[0]), reverse=True))
+print(sorted(str_lst, key=lambda x: (len(x[0]), x[0]), reverse=True))
 # [('helf', 12), ('avdk', 10), ('aaaa', 8), ('abc', 4), ('cd', 4), ('ab', 5)]
 
 str_list = ["abc", "aaa", "def", "ab", "ba", "cd", "fhef", "kdfj", "efgh"]
 # print(sorted(str_list, key=len))
 # ['ab', 'ba', 'cd', 'abc', 'aaa', 'def', 'fhef', 'kdfj', 'efgh']
-# print(sorted(str_list, key=(len, lambda x: x[0]))) # TypeError: 'tuple' object is not callable
+print(sorted(str_list, key=(len, lambda x: x[0]))) # TypeError: 'tuple' object is not callable
 # print(sorted(str_list, key=lambda x: (len(x))))
 # ['ab', 'ba', 'cd', 'abc', 'aaa', 'def', 'fhef', 'kdfj', 'efgh']
-# print(sorted(str_list, key=lambda x: (len(x), x)))
+print(sorted(str_list, key=lambda x: (len(x), x)))
 ['ab', 'ba', 'cd', 'aaa', 'abc', 'def', 'efgh', 'fhef', 'kdfj']
 
 str1_list = ["abc", "Aaa", "def", "ab", "Ba", "cd", "fhef", "Kdfj", "efgh"]
@@ -190,10 +211,7 @@ print(sorted(str1_list, key=lambda x: [len(x), x.lower()]))
 # ['ab', 'Ba', 'cd', 'Aaa', 'abc', 'def', 'efgh', 'fhef', 'Kdfj']
 
 
-
-
-
-___________________________________________
+_________________________________________
 p = [10,3,0,5,3]
 sp = [2,10,1,1,3]
 p_s = list(zip(p,sp))
@@ -241,7 +259,7 @@ sss='bB'
 print(f"ss[0:0] is !{ss[0:0]}!") # ss[0:0] is ![]!
 print(f"ss[5:] is !{ss[5:]}!") # ss[5:] is ![]!
 print(f"ss[-5:-3] is !{ss[-5:-3]}!") # ss[-5:-3] is ![]!
-print(f"sss[0:0] is !{sss[0:0]}!") # ss[0:0] is !!
+print(f"sss[0:0] is !{sss[0:0]}!") # ss[0:0] is !!  --> empty string ""
 print(f"sss[3:] is !{sss[3:]}!") # sss[3:] is !!
 # print(f"sss[3] is !{sss[3]}!") # IndexError: string index out of range
 

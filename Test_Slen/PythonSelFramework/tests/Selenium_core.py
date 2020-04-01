@@ -118,7 +118,6 @@ url  = "https://rahulshettyacademy.com/angularpractice"
 # Option with value  in html
 # <option value="foo">Bar1</option>
 
-
 # menu_field = driver.find_element(By.ID, "exampleFormControlSelect1")
 # menu_field = driver.find_element(By.XPATH, "//select[@id='exampleFormControlSelect1']")
 # menu_field = driver.find_element(By.CSS_SELECTOR, "select#exampleFormControlSelect1")
@@ -278,6 +277,8 @@ from selenium.webdriver.common.keys import Keys
 # time.sleep(2)
 # driver.quit()
 
+# ActionChains(driver).key_down(Keys.CONTROL).send_keys(Keys.F5).key_up(Keys.CONTROL).perform()
+
 
 
 
@@ -381,6 +382,24 @@ from selenium.webdriver.common.keys import Keys
 #
 # time.sleep(2)
 # driver.quit()
+
+
+# Taking screenshot
+# driver = webdriver.Firefox();
+#
+# driver.get("https://www.facebook.com/");
+#
+# driver.save_screenshot('screenshot_1.png');
+#
+# driver.get_screenshot_as_file('screenshot_2.png');
+#
+# screenshot = driver.get_screenshot_as_png();
+# screenshot_size = (20, 10, 480, 600);
+#
+# image = Image.open (StringIO.StringIO(screen));
+# region = image.crop(screenshot_size);
+# region.save('screenshot_3.jpg', 'JPEG', optimize=True);
+#  answered Jul 22, 2019 by Abha • 27,800 points
 
 
 
