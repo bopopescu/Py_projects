@@ -1,4 +1,5 @@
 12_3_19
+r: 4/10/20
 
 1. Use  Jenkins to perform CI with software Dev Lifecycle
 2. Install  Jenkins using Docker

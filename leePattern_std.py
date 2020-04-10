@@ -55,10 +55,18 @@ import time
 #___________________________________________
 [10]. Parenthesis
 # 20. Valid Parentheses
-32. Longest Valid Parentheses
+# 32. Longest Valid Parentheses
+# 921. Minimum Add to Make Parentheses Valid
+# 1190. Reverse Substrings Between Each Pair of Parentheses
+# 856. Score of Parentheses
+# 1249. Minimum Remove to Make Valid Parentheses
 
 #___________________________________________
 [11]. Palindrom
+
+#___________________________________________
+[12]. Linked List
+# 86. Partition List
 
 
 def run_flow1(run_dir, flow_to_test, result_dir):
