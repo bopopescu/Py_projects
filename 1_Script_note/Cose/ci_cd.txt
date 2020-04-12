@@ -15,7 +15,7 @@ Jenkins:
 3. lots  of plugins available
 
 CI/CD:
-CI: merging working copies from develpers to a shared mainline several 
+CI: merging working copies from developers to a shared mainline several
 times a day.
 
 CD: Continuous  Delivery
@@ -32,7 +32,7 @@ be built and tested by Jenkins
 Jenkins doesn't merge code or resolve code conflicts. that's git or other
 merge tools' job.
 
-jenkins provides feedback loop to develper to fix build 
+jenkins provides feedback loop to developer to fix build
 errors
 
 Jenkins auto-build, auto-test and publish and deployed
@@ -40,10 +40,17 @@ to dev/qa/staging server. advance SDLC faster
 
 #____________________________________
 Why use Docker with Jenkins?
-While you can absolutely use Jenkins without Docker, using Docker provides two big advantages: ease of setup, and replicability. Both of these are due to how Docker uses images and containers.
-Docker containers are like running programs — they generally fulfill a specific purpose — like running a Jenkins instance — and can be terminated or restarted similar to a regular executable program. Docker images are like the blueprints for containers, allowing Docker to build and run a container on any system that supports Docker.
-Because of this, the same container can potentially run on a Mac, Linux, or modern Windows operating system without modification beyond certain command line options or file system considerations.
-What this means for our purposes is that if we have a Docker image for Jenkins we can run a container for Jenkins on any machine that supports Docker with little modification and easily repeat the process across multiple machines.
+While you can absolutely use Jenkins without Docker, using Docker provides two big advantages:
+ease of setup, and replicability. Both of these are due to how Docker uses images and containers.
+Docker containers are like running programs — they generally fulfill a specific purpose — like running a Jenkins instance
+ — and can be terminated or restarted similar to a regular executable program.
+Docker images are like the blueprints for containers, allowing Docker to build and run a container on any system that supports Docker.
+Because of this, the same container can potentially run on a Mac, Linux, or modern Windows operating system
+without modification beyond certain command line options or file system considerations.
+
+What this means for our purposes is that if we have a Docker image for Jenkins,
+ we can run a container for Jenkins on any machine that supports Docker with little modification
+ and easily repeat the process across multiple machines.
 
 #____________________________________
 Node.js : 

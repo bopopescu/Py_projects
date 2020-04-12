@@ -65,7 +65,7 @@ import time
 [11]. Palindrom
 
 #___________________________________________
-[12]. Linked List
+# [12]. Linked List
 # 86. Partition List
 
 

@@ -1,4 +1,18 @@
-1. run  on root 
+rev: 4/12/2020
+
+sudo vs su vs su -
+hostname
+~/.bash_profile
+id
+useradd
+passwd
+usermod
+chown
+ssh-copy-id
+/etc/ssh/sshd_config
+
+
+1. run  on root
 sudo su -
 2 
 [root@ip-172-31-29-253 ~]# java -version
@@ -115,11 +129,14 @@ Complete!
 [root@ip-172-31-29-253 ~]#
 
 4. setup .bash_profile under /home directory
+
 5. Install Jenkins with Redhat/Fedora
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 [root@ip-172-31-29-253 ~]# yum install jenkins
-6
+
+
+6. Start Jenkins
 [root@ip-172-31-29-253 ~]# service jenkins status
 jenkins is stopped
 [root@ip-172-31-29-253 ~]# service jenkins start
@@ -181,34 +198,14 @@ hello-world
 [root@Jenkins hello-world]# git pull
 Already up-to-date.
 
-[root@Jenkins webapp]# git commint -m "Modified webapp/index.jsp"
-git: 'commint' is not a git command. See 'git --help'.
-
-The most similar command is
-        commit
-[root@Jenkins webapp]# git commit -m "Modified webapp/index.jsp"
-
-*** Please tell me who you are.
-
-Run
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: unable to auto-detect email address (got 'root@Jenkins.(none)')
 [root@Jenkins webapp]# git config --global user.email sunusd@yahoo.com
 [root@Jenkins webapp]# git config --global user.name brb45
 [root@Jenkins webapp]# git commit -m "Modified webapp/index.jsp"
 [master a02613f] Modified webapp/index.jsp
  1 file changed, 3 insertions(+), 3 deletions(-)
 
-
 ## Docker
-[root@docker-host ~]# docker ps -a
-Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the do
+
 [root@docker-host ~]# service docker status
 docker is stopped
 [root@docker-host ~]# service docker start
@@ -218,8 +215,7 @@ Starting docker:        .                                  [  OK  ]
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 [root@docker-host ~]#
 
-## 
-
+##
 [root@docker-host ~]# service docker status
 docker (pid  2909) is running...
 [root@docker-host ~]#
@@ -240,7 +236,7 @@ The output should look something like this:
 
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS                      PORTS               NAMES
 cc3f2ff51cab        centos                  "/bin/bash"              2 months ago        Created                                         competent_nightingale
-cd20b396a061        solita/ubuntu-systemd   "/bin/bash -c 'exec …"   2 months ago        Exited (137) 2 months ago                       systemd
+cd20b396a061        solita/ubuntu-systemd   "/bin/bash -c 'exec ï¿½"   2 months ago        Exited (137) 2 months ago                       systemd
 fb62432cf3c1        ubuntu                  "/bin/bash"              3 months ago        Exited (130) 3 months ago                       jolly_mirzakhani
 Once you know the CONTAINER ID of the containers you want to delete, pass it to the docker container rm command. For example, to remove the first two containers listed in the output above run:
 
@@ -290,7 +286,7 @@ webapp.war
 # remove container: docker rm container_id
 
 
-###
+### Ansible Server
 [root@Ansible ~]# mkdir /etc/ansible
 [root@Ansible ~]# useradd ansadmin
 [root@Ansible ~]# passwd ansadmin
@@ -331,12 +327,8 @@ and check to make sure that only the key(s) you wanted were added.
 
 ##
 [ansadmin@Ansible root]$ cd /opt/
-[ansadmin@Ansible opt]$ mkdir docker
-mkdir: cannot create directory ¡®docker¡¯: Permission denied
+
 [ansadmin@Ansible opt]$ sudo mkdir docker
-[ansadmin@Ansible opt]$ sudo chown -R ansadmin:ansadmin
-chown: missing operand after ¡®ansadmin:ansadmin¡¯
-Try 'chown --help' for more information.
 [ansadmin@Ansible opt]$ sudo chown -R ansadmin:ansadmin /opt/docker/
 [ansadmin@Ansible opt]$ ls -l  /opt
 total 12
@@ -752,15 +744,13 @@ localhost | SUCCESS => {
 }
 [ansadmin@ansible-control-node ~]$
 
-
+##______________________________________________________________________________________________________________##
 ## 19. Jenkins/ansible/docker-host: Three PCs run the CI/CD.
 Jenkin push build to ansible machine, ansible push image to docker-host machine, and docker-host run the container
 
 ## 20. 
 [ansadmin@ansible-control-node ec2-user]$ cd /opt
 [ansadmin@ansible-control-node opt]$ sudo mkdir docker
-[ansadmin@ansible-control-node opt]$ sudo chown -R ansadmin:asnadmin /opt/docker/
-chown: invalid group: ¡®ansadmin:asnadmin¡¯
 [ansadmin@ansible-control-node opt]$ sudo chown -R ansadmin:ansadmin /opt/docker/
 [ansadmin@ansible-control-node opt]$ ls -l /opt/
 total 12
@@ -768,7 +758,6 @@ drwxr-xr-x 5 root     root     4096 Aug 26 18:05 aws
 drwx--x--x 4 root     root     4096 Dec  8 22:46 containerd
 drwxr-xr-x 2 ansadmin ansadmin 4096 Dec  9 01:56 docker
 [ansadmin@ansible-control-node opt]$
-
 
 ## 21 build result save @ "Remote directory"
 [ansadmin@ansible-control-node opt]$ ls -l /opt/docker/
@@ -909,6 +898,12 @@ tomcat                latest              6408fdc94212        2 weeks ago       
   - name: create container using simple-devops-image
     command: docker run -d --name simple-devops-container -p 8080:8080 simple-devops-image
 
+# Create a docker image with "docker build"
+docker build -t image_name .
+# Create a docker container with "docker"
+docker run   -d --name container_name -p 8080:8080 image_name
+# ansible to run a container, "ansible-playbook"
+ansible-playbook -i hosts run_container.yml
 #30  run yml with starting a container
 [ansadmin@ansible-control-node docker]$ ansible-playbook -i hosts simple-devops-project.yml
 
@@ -948,9 +943,7 @@ total 20
 REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
 simple-devops-image   latest              8bb203ad6ddf        54 seconds ago      507MB
 tomcat                latest              6408fdc94212        2 weeks ago         507MB
-[ansadmin@ansible-control-node docker]$ docker ps
-CONTAINER ID        IMAGE                 COMMAND             CREATED              STATUS              PORTS                                                             NAMES
-adb482a40df0        simple-devops-image   "catalina.sh run"   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp                                            simple-devops-container
+
 [ansadmin@ansible-control-node docker]$ docker ps
 CONTAINER ID        IMAGE                 COMMAND             CREATED              STATUS              PORTS                    NAMES
 adb482a40df0        simple-devops-image   "catalina.sh run"   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp   simple-devops-container
@@ -967,6 +960,7 @@ total 24
 -rw-r--r-- 1 root root   38 Dec  7 06:06 README.md
 drwxr-xr-x 3 root root 4096 Dec  7 06:06 server
 drwxr-xr-x 3 root root 4096 Dec  7 06:06 webapp
+
 [root@Jenkins hello-world]# vim webapp/src/main/webapp/index.jsp
 
 ## git modify
@@ -1001,12 +995,14 @@ drwxr-xr-x 8 root root 4096 Dec  7 06:14 .git
 -rw-r--r-- 1 root root   38 Dec  7 06:06 README.md
 drwxr-xr-x 3 root root 4096 Dec  7 06:06 server
 drwxr-xr-x 3 root root 4096 Dec  7 06:06 webapp
+
 [root@Jenkins hello-world]# git status -s
  M webapp/src/main/webapp/index.jsp
 [root@Jenkins hello-world]# git add .
 [root@Jenkins hello-world]# git commit -m "change index.jsp"
 [master 93158e3] change index.jsp
  1 file changed, 3 insertions(+), 1 deletion(-)
+
 [root@Jenkins hello-world]# git push
 Username for 'https://github.com': brb45
 Password for 'https://brb45@github.com':
@@ -1018,7 +1014,6 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/brb45/hello-world.git
    a02613f..93158e3  master -> master
 [root@Jenkins hello-world]#
-
  
 #@@ 33. Push image to docker hub
 [ansadmin@ansible-control-node ec2-user]$ cd /opt/docker/
