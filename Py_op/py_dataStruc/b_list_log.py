@@ -16,7 +16,18 @@ import copy
 # working
 # s_sorted = sorted(s_arr, key=lambda x: (len(x), x.lower()))
 
+a = [1,2 ,3]
+b = a[::]
+c = a[:]
 
+b[0] = 100
+
+print(a)
+print(b)
+print(c)
+# [1, 2, 3]
+# [100, 2, 3]
+# [1, 2, 3]
 max, min
 arr = [1,2,3,4,5,6,7,8]
 # passed to a function:

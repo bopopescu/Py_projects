@@ -1,3 +1,5 @@
+#  nums = str(100).split('')
+# ValueError: empty separator
 
 #@@ 1. # chr vs ord
 # str vs int

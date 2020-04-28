@@ -1,6 +1,8 @@
 initial:  10/31/19
 Review: 
 1. 1/3/2020
+2. 4/12/20
+
 
 @*************************************
 
@@ -13,7 +15,38 @@ docker push
 
 docker-compose build release
 
+Access a Remote Server: ssh
+ssh username@ip_add
+ssh username@192.168.100.2
+ssh username@hostname
 
+By Default: ssh server listens at port 22
+connect remotely with custom port number: -p
+ssh username@hostname -p 3322
+
+Generate public key from client side:
+ssh-keygen -t rsa
+public key generated: id_rsa_pub
+
+# Copy pub.key to ssh server:
+ssh-copy-id hostname_or_serverIP
+
+Copy a file to server remotely: scp
+scp client_filename user@serverIP:/home/username/server_destination -P 6564
+
+#Copy file from remote to client
+scp user@host:file_server client_path
+
+# Copy dir
+scp -r user@host:path/server_dir client/dir
+
+# Edit server ssh config file
+sudo vim /etc/ssh/sshd_config
+sudo ssh service restart
+
+Remotely execute a command from client
+ssh user@serverIP rm -r ~/Desktop/Dir1/
+sshd : open ssh server
  
 > ssh -i ~/.ssh/admin.pem ec2-user@34.201.120.79
 The authenticity of host '34.201.120.79 (34.201.120.79)' can't be established.

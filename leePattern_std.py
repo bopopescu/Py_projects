@@ -3,6 +3,15 @@ from collections import Counter
 import time
 import time
 
+# infrastructure automation tools like Chef, Puppet, Ansible, SaltStack or Windows PowerShell DSC.
+# Git : Version Control System tool
+# Jenkins : Continuous Integration tool
+# Selenium : Continuous Testing tool
+# Puppet, Chef, Ansible : Configuration Management and Deployment tools
+# Nagios : Continuous Monitoring tool
+# Docker : Containerization tool
+
+
 
 # _________________________________________
 # [1]. Dictionary look up :
@@ -63,8 +72,11 @@ import time
 
 #___________________________________________
 [11]. Palindrom
+# 267. Palindrome Permutation II
+# 1177. Can Make Palindrome from Substring
 
-#___________________________________________
+#_______________________________
+# ____________
 # [12]. Linked List
 # 86. Partition List
 

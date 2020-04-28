@@ -114,7 +114,53 @@ Sonarqube: code quality
 
 
 
-docker exec   
+docker exec
+
+Jenkins CI
+    Each developer should work in their own branch, and ideally your CI would build each developer's branch as
+    they commit to it... catching any build failures early during the development phase.
+    After the new feature is complete or whatever, and the builds are passing for their own branch,
+    then the developer would push/merge into master (triggering another build to test all the changes together).
+    Your CI should never make code changes automatically, but instead it should email/notify the offending
+    committer about their build-breaking changes.
+
+    This belief (branches vs. CI) is incorrect. Consider keeping one stable branch, where you commit only unit
+    tested changes. The rest (feature branches and local branches) should be the responsibility
+    of each developer and not part of your CI policy in any way.
+
+    In feature branches you want to be isolated from other developers. This allows you to:
+
+        perform exploratory coding
+
+        experiment with the code base
+
+        perform partial commits (effectively commit non-working code) to set up backup points (in case you screw up),
+        to create more meaningfull change history (through commit messages), and to back up your work and
+        switch completely to something else (in the time it takes you to write "git commit && git checkout ")
+
+        perform low-priority tasks that take a long time (e.g. you want to perform a refactoring that alters
+        all 80 classes of the data layer: you change two per day, until you change all of them an the code
+        compiles (but you can do this without affecting anyone until you can make a single commit).
+
+    The CI should never alter the commit history of the repo.
+
+The correct solution here is for no commits to be added to master branch if they haven't been tested and verified.
+
+Do you work on feature branches, have the CI run automatically on those, and if the builds fail, don't merge them into master.
+
+You can have an additional build that tests merges if those are a concern, by running on the feature branch,
+and during the build merging master/integration/whatever into the local branch, then running tests.
+
+
+What you should be doing though is these steps
+
+    work off master if you like(that is fine and keep pulling changes from everyone) BUT do NOT commit to master locally
+    JUST BEFORE you are going to commit your changes to master, create a branch with submit_XXXXXX
+    have your automated build pick up all submit_XXX branches build
+    Option 1: build breaks, or merge breaks...change rejected and it never lands on master
+    Option 2: build works, jenkins pushes master and updates it
+    THEN, what we do is put a git commit hook in preventing EVERYONE from actualy committing to master.
+    It works great....NO broken builds ever and NO reverting commits from master either.
 
 
 
